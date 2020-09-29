@@ -8,25 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\rasmu\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\rasmus.muhrbeck\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rasmu\\OneDrive\\Documents\\Skola\\UppsalaUniversitet\\NetProgramming\\Exercises\\MemberForm\\MemberForm.csproj",
+      "projectUniqueName": "C:\\Users\\rasmus.muhrbeck\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Exercises\\MemberForm\\MemberForm.csproj",
       "projectName": "MemberForm",
-      "projectPath": "C:\\Users\\rasmu\\OneDrive\\Documents\\Skola\\UppsalaUniversitet\\NetProgramming\\Exercises\\MemberForm\\MemberForm.csproj",
-      "packagesPath": "C:\\Users\\rasmu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rasmu\\OneDrive\\Documents\\Skola\\UppsalaUniversitet\\NetProgramming\\Exercises\\MemberForm\\obj\\",
+      "projectPath": "C:\\Users\\rasmus.muhrbeck\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Exercises\\MemberForm\\MemberForm.csproj",
+      "packagesPath": "C:\\Users\\rasmus.muhrbeck\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rasmus.muhrbeck\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Exercises\\MemberForm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rasmu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\rasmus.muhrbeck\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -66,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

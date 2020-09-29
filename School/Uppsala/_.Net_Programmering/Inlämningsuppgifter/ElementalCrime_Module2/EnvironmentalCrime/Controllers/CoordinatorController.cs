@@ -44,10 +44,11 @@ namespace EnvironmentalCrime.Controllers
             return View();
         }
 
-        public ViewResult Validate()
+        [HttpPost]
+        public ViewResult Validate(Errand errand)
         {
             ViewBag.Title = "Coordinator Validate";
-            return View();
+            return View(errand);
         }
     }
 }
