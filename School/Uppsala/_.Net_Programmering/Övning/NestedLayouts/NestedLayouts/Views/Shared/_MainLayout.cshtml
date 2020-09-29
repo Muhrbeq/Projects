@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>@ViewBag.Title</title>
+  <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="wrapper">
+    <header><h1>Global Enterprises</h1></header>
+    <nav>
+      <a asp-controller="Home" asp-action="Index">Home</a> |
+      <a href="#">About</a> |
+      <a href="#">Engineering</a> |
+      <a asp-controller="Home" asp-action="Electronics">Electronics</a> |
+      <a asp-controller="Home" asp-action="Automation">Automation</a> |
+      <a href="#">Corporate</a> |
+      <a href="#">Contact Us</a>
+    </nav>
+    @RenderBody()
+  </div>
+</body>
+</html>

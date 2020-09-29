@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/stil.css" />
+</head>
+<body>
+    <div id="wrapper">
+
+        <header>
+            <p id="logo">
+                <a asp-controller="Home" asp-action="Index"><img src="~/images/logga.gif" alt="Knottens logga" width="138" height="144" /></a>
+            </p>
+            <p id="textlogo">
+                <a asp-controller="Home" asp-action="Index"><img src="~/images/knottensgrontunn.gif" width="467" height="73" alt="bild på textlogga för Knottens bokförlag" /></a>
+            </p>
+        </header>
+
+        <div id="content">
+            @RenderBody()
+        </div>
+
+    </div>
+</body>
+</html>

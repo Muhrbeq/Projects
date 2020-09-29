@@ -1,0 +1,41 @@
+﻿@model Member
+
+<form asp-controller="Home" asp-action="NewMember" method="post">
+
+    <h2>Ny Medlem</h2>
+    <div asp-validation-summary="All" class="error"></div>
+
+    <p>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="textinput" />
+        <span asp-validation-for="Name" class="error"></span>
+    </p>
+
+    <p>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="textinput" />
+        <span asp-validation-for="Email" class="error"></span>
+    </p>
+
+    <p>
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" class="textinput" />
+        <span asp-validation-for="Phone" class="error"></span>
+    </p>
+
+    <p>
+        <label asp-for="Story"></label>
+        <textarea asp-for="Story" rows="3" cols="30" placeholder="Inte mer än 300 tecken"></textarea>
+    </p>
+
+    <fieldset id="newsletter">
+        <legend>Nyhetsbrev</legend>
+        <label><input asp-for="News" />Ja tack till nyhetsbrev</label>
+    </fieldset>
+
+    <p>
+        <input type="submit" value="Bli medlem!" />
+        <input type="reset" />
+    </p>
+
+</form>

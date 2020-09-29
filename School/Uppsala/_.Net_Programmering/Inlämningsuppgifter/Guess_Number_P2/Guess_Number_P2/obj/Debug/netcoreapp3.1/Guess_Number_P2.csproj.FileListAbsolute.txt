@@ -1,0 +1,13 @@
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\obj\Debug\netcoreapp3.1\Guess_Number_P2.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\obj\Debug\netcoreapp3.1\Guess_Number_P2.AssemblyInfoInputs.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\obj\Debug\netcoreapp3.1\Guess_Number_P2.AssemblyInfo.cs
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\obj\Debug\netcoreapp3.1\Guess_Number_P2.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\bin\Debug\netcoreapp3.1\Guess_Number_P2.exe
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\bin\Debug\netcoreapp3.1\Guess_Number_P2.deps.json
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\bin\Debug\netcoreapp3.1\Guess_Number_P2.runtimeconfig.json
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\bin\Debug\netcoreapp3.1\Guess_Number_P2.runtimeconfig.dev.json
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\bin\Debug\netcoreapp3.1\Guess_Number_P2.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\bin\Debug\netcoreapp3.1\Guess_Number_P2.pdb
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\obj\Debug\netcoreapp3.1\Guess_Number_P2.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\obj\Debug\netcoreapp3.1\Guess_Number_P2.pdb
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Ramu_Projects\School\Uppsala\_.Net_Programmering\Guess_Number_P2\Guess_Number_P2\obj\Debug\netcoreapp3.1\Guess_Number_P2.genruntimeconfig.cache

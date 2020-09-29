@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "_MainLayout";
+}
+
+@model Errand
+
+<h2>Välkommen att fylla i din anmälan av miljöbrott</h2>
+<p class="info">I Småstad är inga brott för små för att anmälas</p>
+
+<p>Fyll i formuläret nedan, alla rutor markerade med stjärna (*) måste fyllas i.</p>
+
+<form method="post" asp-controller="Citizen" asp-action="Validate">
+    <p>
+        <input type="hidden" name="isSubmitted" value="true" />
+    </p>
+    <p>
+        <span class="label"><label asp-for="Place"></label></span><br />
+        <input asp-for="Place" name="place" /> *
+    </p>
+    <p>
+        <span class="label"><label asp-for="TypeOfCrime"></label></span><br />
+        <input asp-for="TypeOfCrime" name="crime" /> *
+    </p>
+    <p>
+        <span class="label"><label asp-for="DateOfObservation"></label></span><br />
+        <input asp-for="DateOfObservation" name="crimeDate" /> *
+    </p>
+    <p>
+        <span class="label"><label asp-for="InformerName"></label></span><br />
+        <input asp-for="InformerName" name="informersName" /> *
+    </p>
+    <p>
+        <span class="label"><label asp-for="InformerPhone"></label></span><br />
+        <input asp-for="InformerPhone" name="phone" /> *
+    </p>
+    <p>
+        <span class="label">Beskriv din observation<br /> (ex. namn på misstänkt person):</span><br />
+        <textarea name="observation" rows="5" cols="16"></textarea>
+    </p>
+    <p>
+        <input class="button" type="submit" value="Skicka in" />
+    </p>
+</form>
