@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "GmIBJaM+P5UdXzg4ZFC4Gje6LiljMWOyJdJIgFHxnWUvT5bmbp2F9I5xlTk2ndCYNju/RPJuOGQsi0LxI4Op4g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\millu256\\source\\repos\\SessionTest\\SessionTest\\SessionTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\millu256\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\millu256\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

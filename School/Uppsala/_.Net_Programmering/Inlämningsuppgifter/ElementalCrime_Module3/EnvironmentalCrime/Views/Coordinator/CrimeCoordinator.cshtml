@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "_CoordinatorLayout";
+}
+
+@model IEnumerable<Department>
+
+<h2>Detaljer för ärendet</h2>
+<p class="info">Du är inloggad som samordnare</p>
+
+@await  Component.InvokeAsync("CrimeList", ViewBag.ID)
+
+<section id="bottomColumn">
+    <h3>Redigera ärende</h3>
+    <p>
+        Ange enhet:
+        <select name="department">
+            <option selected="selected">Välj</option>
+            @foreach (Department department in Model)
+            {
+                <option value="@department.DepartmentId">@department.DepartmentName</option>
+            }
+
+        </select>
+    </p>
+    <p><input class="button" type="submit" value="Spara" /></p>
+</section>
