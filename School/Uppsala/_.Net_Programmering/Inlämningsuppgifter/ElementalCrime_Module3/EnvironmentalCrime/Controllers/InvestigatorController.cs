@@ -21,6 +21,7 @@ namespace EnvironmentalCrime.Controllers
         // GET: /<controller>/
         public ViewResult CrimeInvestigator(int id)
         {
+            //Save id to ViewBag to access it in view
             ViewBag.ID = id;
             ViewBag.Title = "Investigator CrimeInvestigator";
             return View(repository.Departments);

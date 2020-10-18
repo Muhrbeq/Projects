@@ -22,6 +22,7 @@ namespace EnvironmentalCrime.Controllers
         public ViewResult CrimeManager(int id)
         {
             ViewBag.Title = "Manager CrimeManager";
+            //Save id to ViewBag to access it in view
             ViewBag.ID = id;
             return View(repository.Employees);
         }

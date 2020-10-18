@@ -1,0 +1,22 @@
+Modul 4 - Filhantering
+Vi ska börja med att ändra för samordnaren för att den ska kunna välja avdelning
+Använder mig av en IactionResult för att kunna redirecta till samma sida.
+Jag kollar om dep.id är skiljt från "Välj" och "D00" som inte ska gå att välja.
+För att kunna få listan med olika departments så använde jag mig utav ViewBag
+Sen så sparas ärendet till databasen
+Jag har valt att man kommer stannar kvar på sidan.
+
+Steg 2:
+I steg 2 ska vi ändra vad chefen kan göra.
+Chefen kan klicka i checkboxen för action elelr no action, den utvärderas i kontrollen som en bool
+Om det är så att det inte ska vara någon action så hårdkodas S_B in och kommentarerna förs in i ärendet i db.
+
+Steg 3:
+I steg 3 ska vi ändra vad handläggaren kan göra.
+Precis som för de tidigare två stegen så kommer kommentarer på händelser och informationen läggas på den 
+befintliga med hjälp av +=
+För att kunna spara filer så lade jag till i wwwroot-mappen en mapp för pictures och en för samples.
+I min komtrollerfil så får jag in två IFormFile- variabler som jag använder för att skapa mina filer och länka dem
+Jag kollar alltid ifall att det finns nägon fil eller om det är tomt. För att kunna göra klickbara länkar så sparar jag 
+de unika IDna i SampleName och PictureName för att kunna komma åt dem i vyn. Där så laddar jag filerna från 
+Model.Pictures för att sedan jämföra om errandID hos diverse bild stämmer överrens och då länkar jag till dokumentet

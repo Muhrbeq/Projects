@@ -44,7 +44,7 @@
     {
         <tr>
             <td>@errand.DateOfObservation.ToShortDateString()</td>
-            <td><a asp-controller="Coordinator" asp-action="CrimeCoordinator" asp-route-id="@errand.ErrandId">@errand.ErrandId</a></td>
+            <td><a asp-controller="Coordinator" asp-action="CrimeCoordinator" asp-route-id="@errand.ErrandId">@errand.RefNumber</a></td>
             <td>@errand.TypeOfCrime</td>
             <td>@errand.StatusId</td>
             <td>@errand.DepartmentId</td>
