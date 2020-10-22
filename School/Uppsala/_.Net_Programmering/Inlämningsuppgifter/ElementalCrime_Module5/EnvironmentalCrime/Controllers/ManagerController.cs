@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EnvironmentalCrime.Infrastructure;
 using EnvironmentalCrime.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,7 +34,9 @@ namespace EnvironmentalCrime.Controllers
         public ViewResult StartManager()
         {
             ViewBag.Title = "Manager CrimeManager";
-            
+
+            ViewBag.ManID = HttpContext.Session.GetJson<LoginModel>("NewLogin").UserName;
+
             return View(repository);
         }
 

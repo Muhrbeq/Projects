@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EnvironmentalCrime.Infrastructure;
 using EnvironmentalCrime.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -59,6 +60,7 @@ namespace EnvironmentalCrime.Controllers
                         }
                         if(await userManager.IsInRoleAsync(user, "Manager"))
                         {
+                            HttpContext.Session.SetJson("NewLogin", loginModel);
                             return Redirect("/Manager/StartManager");
                         }
                     }
@@ -73,6 +75,9 @@ namespace EnvironmentalCrime.Controllers
         public async Task<IActionResult> Logout(string returnURL = "/")
         {
             await signInManager.SignOutAsync();
+
+            HttpContext.Session.Remove("NewLogin");
+
             return Redirect(returnURL);
         }
 

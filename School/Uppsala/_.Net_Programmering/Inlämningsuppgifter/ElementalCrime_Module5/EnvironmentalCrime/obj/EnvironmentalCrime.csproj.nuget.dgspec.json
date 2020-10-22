@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj": {}
+    "C:\\Users\\rasmus.muhrbeck\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj": {
+    "C:\\Users\\rasmus.muhrbeck\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj",
+        "projectUniqueName": "C:\\Users\\rasmus.muhrbeck\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj",
         "projectName": "EnvironmentalCrime",
-        "projectPath": "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj",
-        "packagesPath": "C:\\Users\\rasmu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\obj\\",
+        "projectPath": "C:\\Users\\rasmus.muhrbeck\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj",
+        "packagesPath": "C:\\Users\\rasmus.muhrbeck\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rasmus.muhrbeck\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\rasmu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\rasmus.muhrbeck\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -83,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
