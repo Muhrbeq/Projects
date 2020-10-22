@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "_ManagerLayout";
+}
+
+@model Errand
+
+<h2>Detaljer för ärendet</h2>
+<p class="info">Du är inloggad som avdelningschef</p>
+
+@await Component.InvokeAsync("CrimeList", ViewBag.ID)
+
+<section id="bottomColumn">
+    <h3>Redigera ärende</h3>
+    <form asp-controller="Manager" asp-action="UpdateErrandManager" method="post">
+        <p>
+            Ange handläggare:
+            <select asp-for="@Model.EmployeeId" asp-items="@(new SelectList(ViewBag.ListOfEmployees, "EmployeeId", "EmployeeName"))">
+                <option selected="selected">Välj</option>
+                @*foreach (Employee employee in Model)
+                {
+                    <option value="@employee.EmployeeId">@employee.EmployeeName</option>
+                }*@
+            </select>
+        </p>
+        <p><input type="checkbox" name="noAction" value="true" /> Ingen åtgärd:<textarea asp-for="InvestigatorInfo" rows="3" cols="30"></textarea></p>
+        <p><input class="button" type="submit" value="Spara" /></p>
+    </form>
+</section>

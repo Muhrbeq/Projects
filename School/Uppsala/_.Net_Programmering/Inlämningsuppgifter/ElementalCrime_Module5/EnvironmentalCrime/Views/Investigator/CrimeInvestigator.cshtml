@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "_InvestigatorLayout";
+}
+
+@model Errand
+
+<h2>Detaljer för ärendet</h2>
+<p class="info">Du är inloggad som handläggare</p>
+
+@await Component.InvokeAsync("CrimeList", ViewBag.ID)
+
+<section id="bottomColumn">
+    <form asp-controller="Investigator" asp-action="UpdateStatusInvestigator" method="post" enctype="multipart/form-data" multiple>
+        <h3>Redigera ärende</h3>
+        <p class="label">Händelser:</p>
+        <textarea asp-for="InvestigatorAction" rows="5" cols="60"></textarea>
+
+        <p class="label">Mer information:</p>
+        <textarea asp-for="InvestigatorInfo" rows="5" cols="60"></textarea>
+
+        <p class="label">Prover:</p>
+        <input type="file" name="loadSample" />
+
+        <p class="label">Ladda upp bilder:</p>
+        <input type="file" name="loadImage" />
+
+
+        <p class="label">Ändring av status:</p>
+        <select asp-for="StatusId" asp-items="@(new SelectList(ViewBag.ListOfErrandStatus, "StatusId", "StatusName"))">
+            <option selected="selected">Välj</option>
+        </select>
+
+        <p>
+            <input class="button" type="submit" value="Spara ändringarna" />
+        </p>
+    </form>
+</section>

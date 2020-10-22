@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "_MainLayout";
+}
+
+@model LoginModel
+
+<h2>Inloggning för Småstads personal</h2>
+<p class="info">En säker tjänst från Småstads IT-avdelning</p>
+
+<form method="post" asp-controller="Account" asp-action="Login">
+    <!-- Check if changing to asp-controller etc-->
+    <p>
+        <input type="hidden" name="isSubmitted" value="true" />
+    </p>
+    <p>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+    </p>
+    <p>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </p>
+    <p>
+        <input type="hidden" asp-for="ReturnURL" />
+    </p>
+    <p>
+        <input class="button" type="submit" value="Inloggning" />
+        <br />
+        <!--Dessa länkar ska sedan tas bort då det är meningen att vid kontrollen av inloggningsuppgifter så hämtas rätt sida-->
+        @*<a class="button" asp-controller="Manager" asp-action="StartManager">Inloggning av chefer</a><br />
+        <a class="button" asp-controller="Investigator" asp-action="StartInvestigator">Inloggning av handläggare</a>*@
+    </p>
+    <div asp-validation-summary="All"></div>
+</form>
