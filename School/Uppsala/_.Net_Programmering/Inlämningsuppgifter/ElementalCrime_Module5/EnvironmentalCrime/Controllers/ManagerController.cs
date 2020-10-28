@@ -37,6 +37,8 @@ namespace EnvironmentalCrime.Controllers
 
             ViewBag.ManID = HttpContext.Session.GetJson<LoginModel>("NewLogin").UserName;
 
+
+
             return View(repository);
         }
 
