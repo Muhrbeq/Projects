@@ -50,15 +50,15 @@
         <th>Handläggare</th>
         <th>Uppladdade filer</th>
     </tr>
-    @foreach (Errand errand in Model.Errands)
+    @foreach (MyErrand errand in ViewBag.ListOfMyErrands)
     {
         <tr>
             <td>@errand.DateOfObservation.ToShortDateString()</td>
             <td><a asp-controller="Manager" asp-action="CrimeManager" asp-route-id="@errand.ErrandId">@errand.RefNumber</a></td>
             <td>@errand.TypeOfCrime</td>
-            <td>@errand.StatusId</td>
-            <td>@errand.DepartmentId</td>
-            <td>@errand.EmployeeId</td>
+            <td>@errand.StatusName</td>
+            <td>@errand.DepartmentName</td>
+            <td>@errand.EmployeeName</td>
             <td>
                 @foreach (Picture picture in Model.Pictures)
                 {
@@ -67,7 +67,7 @@
                         <p><a href="~/Pictures/@picture.PictureName">picture_@picture.PictureId</a></p>
                     }
                 }
-                @foreach (Sample sample in errand.Samples)
+                @foreach (Sample sample in Model.Samples)
                 {
                     @if (sample.ErrandId == errand.ErrandId)
                     {

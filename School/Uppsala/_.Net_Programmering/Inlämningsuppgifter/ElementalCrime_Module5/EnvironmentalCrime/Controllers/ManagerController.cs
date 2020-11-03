@@ -26,7 +26,7 @@ namespace EnvironmentalCrime.Controllers
             //Save id to ViewBag to access it in view
             ViewBag.ID = id;
             TempData["Manager_ID"] = id;
-            ViewBag.ListOfEmployees = repository.Employees;
+            ViewBag.ListOfEmployees = repository.GetManagerEmployees();
 
             return View();
         }
@@ -35,7 +35,7 @@ namespace EnvironmentalCrime.Controllers
         {
             ViewBag.Title = "Manager CrimeManager";
 
-            ViewBag.ManID = HttpContext.Session.GetJson<LoginModel>("NewLogin").UserName;
+            ViewBag.ListOfMyErrands = repository.GetFilteredErrands();
 
             return View(repository);
         }

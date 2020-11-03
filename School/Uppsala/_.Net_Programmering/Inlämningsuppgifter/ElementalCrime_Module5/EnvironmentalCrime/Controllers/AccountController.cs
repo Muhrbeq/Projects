@@ -60,7 +60,6 @@ namespace EnvironmentalCrime.Controllers
                         }
                         if(await userManager.IsInRoleAsync(user, "Manager"))
                         {
-                            HttpContext.Session.SetJson("NewLogin", loginModel);
                             return Redirect("/Manager/StartManager");
                         }
                     }
@@ -75,8 +74,6 @@ namespace EnvironmentalCrime.Controllers
         public async Task<IActionResult> Logout(string returnURL = "/")
         {
             await signInManager.SignOutAsync();
-
-            HttpContext.Session.Remove("NewLogin");
 
             return Redirect(returnURL);
         }

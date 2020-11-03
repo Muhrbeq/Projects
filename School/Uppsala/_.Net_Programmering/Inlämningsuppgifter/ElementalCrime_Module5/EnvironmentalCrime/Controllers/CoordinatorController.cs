@@ -57,6 +57,9 @@ namespace EnvironmentalCrime.Controllers
         public ViewResult StartCoordinator()
         {
             ViewBag.Title = "Coordinator StartCoordinator";
+
+            ViewBag.ListOfMyErrands = repository.GetFilteredErrands();
+
             return View(repository);
         }
 

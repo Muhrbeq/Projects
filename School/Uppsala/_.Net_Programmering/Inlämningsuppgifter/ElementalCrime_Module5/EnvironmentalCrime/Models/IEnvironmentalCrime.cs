@@ -18,5 +18,10 @@ namespace EnvironmentalCrime.Models
         int GetSequenceDetails();
         string SaveErrand(Errand errand);
         Errand DeleteErrand(int id);
+        public Employee GetEmployeeDetail(string empID);
+        public IQueryable<MyErrand> GetFilteredErrands();
+        public IQueryable<Employee> GetManagerEmployees();
+        //public IQueryable<MyErrand> GetIvestigatorErrands();
+        //public IQueryable<MyErrand> GetManagerErrands();
     }
 }

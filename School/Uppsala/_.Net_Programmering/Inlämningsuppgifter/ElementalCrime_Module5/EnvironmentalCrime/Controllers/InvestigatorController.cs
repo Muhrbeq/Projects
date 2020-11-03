@@ -38,6 +38,9 @@ namespace EnvironmentalCrime.Controllers
         public ViewResult StartInvestigator()
         {
             ViewBag.Title = "Investigator CrimeInvestigator";
+
+            ViewBag.ListOfMyErrands = repository.GetFilteredErrands();
+
             return View(repository);
         }
 
