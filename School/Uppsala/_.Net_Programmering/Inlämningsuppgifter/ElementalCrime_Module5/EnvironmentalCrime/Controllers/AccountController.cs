@@ -50,6 +50,7 @@ namespace EnvironmentalCrime.Controllers
 
                     if((await signInManager.PasswordSignInAsync(user, loginModel.Password, false, false)).Succeeded)
                     {
+                        /* Check which role the user has */
                         if (await userManager.IsInRoleAsync(user, "Coordinator"))
                         {
                             return Redirect("/Coordinator/StartCoordinator");

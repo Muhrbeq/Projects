@@ -60,6 +60,9 @@ namespace EnvironmentalCrime.Controllers
 
             ViewBag.ListOfMyErrands = repository.GetFilteredErrands();
 
+            /* Assign role to go into ViewComponent */
+            ViewBag.Role = "Coordinator";
+
             return View(repository);
         }
 

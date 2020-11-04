@@ -32,6 +32,7 @@ namespace EnvironmentalCrime.Controllers
             TempData["InvestigatorID"] = id;
             ViewBag.ListOfErrandStatus = repository.ErrandStatuses;
             ViewBag.Title = "Investigator CrimeInvestigator";
+
             return View();
         }
 
@@ -39,13 +40,16 @@ namespace EnvironmentalCrime.Controllers
         {
             ViewBag.Title = "Investigator CrimeInvestigator";
 
-            ViewBag.ListOfMyErrands = repository.GetFilteredErrands();
+            /* Assign role that goes into ViewComponent*/
+            ViewBag.Role = "Investigator";
 
             return View(repository);
         }
 
+        /*  */
         public async Task<IActionResult> UpdateStatusInvestigator(Errand errand, IFormFile loadSample, IFormFile loadImage)
         {
+            /* Get investigator ID and errand detail */
             int someID = int.Parse(TempData["InvestigatorID"].ToString());
             var errandDetail = repository.Errands.Where(ed => ed.ErrandId == someID).First();
 
@@ -63,7 +67,7 @@ namespace EnvironmentalCrime.Controllers
                 errandDetail.StatusId = errand.StatusId;
             }
 
-            
+            /* Get temp file name */
             var tempSample = Path.GetTempFileName();
             string uniqueFileName = Guid.NewGuid().ToString() + "_";
 
@@ -78,10 +82,10 @@ namespace EnvironmentalCrime.Controllers
 
                     string uniqueSample = uniqueFileName + loadSample.FileName;
 
-                    //Skapa ny sökväg
+                    //Create path
                     var path = Path.Combine(environment.WebRootPath, "Samples", uniqueSample);
 
-                    //Flytta den temp filen rätt
+                    //Move temp to correct place
                     System.IO.File.Move(tempSample, path);
 
                     Sample sample = new Sample();
@@ -116,6 +120,7 @@ namespace EnvironmentalCrime.Controllers
                 }
             }
             
+            /* Save errand */
             repository.SaveErrand(errandDetail);
 
             return RedirectToAction("CrimeInvestigator", new { id = someID });

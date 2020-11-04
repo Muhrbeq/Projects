@@ -40,41 +40,4 @@
 </table>
 
 <!--Nedan ser man en lista på ärenden-->
-<table>
-    <tr>
-        <th>Ärende anmält</th>
-        <th>Ärendenummer</th>
-        <th>Miljöbrott</th>
-        <th>Status</th>
-        <th>Avdelning</th>
-        <th>Handläggare</th>
-        <th>Uppladdade filer</th>
-    </tr>
-    @foreach (MyErrand errand in ViewBag.ListOfMyErrands)
-    {
-        <tr>
-            <td>@errand.DateOfObservation.ToShortDateString()</td>
-            <td><a asp-controller="Manager" asp-action="CrimeManager" asp-route-id="@errand.ErrandId">@errand.RefNumber</a></td>
-            <td>@errand.TypeOfCrime</td>
-            <td>@errand.StatusName</td>
-            <td>@errand.DepartmentName</td>
-            <td>@errand.EmployeeName</td>
-            <td>
-                @foreach (Picture picture in Model.Pictures)
-                {
-                    @if (picture.ErrandId == errand.ErrandId)
-                    {
-                        <p><a href="~/Pictures/@picture.PictureName">picture_@picture.PictureId</a></p>
-                    }
-                }
-                @foreach (Sample sample in Model.Samples)
-                {
-                    @if (sample.ErrandId == errand.ErrandId)
-                    {
-                        <p><a href="~/Samples/@sample.SampleName">sample_@sample.SampleId</a></p>
-                    }
-                }
-            </td>
-        </tr>
-    }
-</table>
+@await Component.InvokeAsync("MyErrand", ViewBag.Role)

@@ -39,39 +39,46 @@ namespace EnvironmentalCrime.Models
             });
         }
 
-        public IQueryable<MyErrand> GetFilteredErrands()
+
+        public Task<IQueryable<MyErrand>> GetFilteredErrands()
         {
             var userName = contextAcc.HttpContext.User.Identity.Name;
 
             var employeeDetail = GetEmployeeDetail(userName);
 
             //var tempName = userName;
+            //Check which role the user has
             if(employeeDetail.RoleTitle.Equals("Coordinator"))
             {
-                var errandList = from err in Errands
-                        join stat in ErrandStatuses on err.StatusId equals stat.StatusId
-                        join dep in Departments on err.DepartmentId equals dep.DepartmentId
-                        into departmentErrand
-                        from deptE in departmentErrand.DefaultIfEmpty()
-                        join em in Employees on err.EmployeeId equals em.EmployeeId
-                        into employeeErrand
-                        from empE in employeeErrand.DefaultIfEmpty()
-                        orderby err.RefNumber descending
-                        select new MyErrand
-                        {
-                            DateOfObservation = err.DateOfObservation,
-                            ErrandId = err.ErrandId,
-                            RefNumber = err.RefNumber,
-                            TypeOfCrime = err.TypeOfCrime,
-                            StatusName = stat.StatusName,
-                            DepartmentName = (err.DepartmentId == null ? "ej tillsatt" : deptE.DepartmentName),
-                            EmployeeName = (err.EmployeeId == null ? "ej tillsatt" : empE.EmployeeName)
-                        };
-                return errandList;
+                return Task.Run(() =>
+                {
+                    var errandList = from err in Errands
+                                     join stat in ErrandStatuses on err.StatusId equals stat.StatusId
+                                     join dep in Departments on err.DepartmentId equals dep.DepartmentId
+                                     into departmentErrand
+                                     from deptE in departmentErrand.DefaultIfEmpty()
+                                     join em in Employees on err.EmployeeId equals em.EmployeeId
+                                     into employeeErrand
+                                     from empE in employeeErrand.DefaultIfEmpty()
+                                     orderby err.RefNumber descending
+                                     select new MyErrand
+                                     {
+                                         DateOfObservation = err.DateOfObservation,
+                                         ErrandId = err.ErrandId,
+                                         RefNumber = err.RefNumber,
+                                         TypeOfCrime = err.TypeOfCrime,
+                                         StatusName = stat.StatusName,
+                                         DepartmentName = (err.DepartmentId == null ? "ej tillsatt" : deptE.DepartmentName),
+                                         EmployeeName = (err.EmployeeId == null ? "ej tillsatt" : empE.EmployeeName)
+                                     };
+                    return errandList;
+                });
             }
             else if(employeeDetail.RoleTitle.Equals("Investigator"))
             {
-                var errandList = from err in Errands
+                return Task.Run(() =>
+                {
+                    var errandList = from err in Errands
                         join stat in ErrandStatuses on err.StatusId equals stat.StatusId
                         join dep in Departments on employeeDetail.DepartmentId equals dep.DepartmentId
                         into departmentErrand
@@ -79,6 +86,7 @@ namespace EnvironmentalCrime.Models
                         join em in Employees on err.EmployeeId equals em.EmployeeId
                         into employeeErrand
                         from empE in employeeErrand.DefaultIfEmpty()
+                        where err.EmployeeId == employeeDetail.EmployeeId
                         orderby err.RefNumber descending
                         select new MyErrand
                         {
@@ -91,10 +99,13 @@ namespace EnvironmentalCrime.Models
                             EmployeeName = (err.EmployeeId == null ? "ej tillsatt" : empE.EmployeeName)
                         };
                 return errandList;
+                });
             }
             else if(employeeDetail.RoleTitle.Equals("Manager"))
             {
-                var errandList = from err in Errands
+                return Task.Run(() =>
+                {
+                    var errandList = from err in Errands
                     join stat in ErrandStatuses on err.StatusId equals stat.StatusId
                     join dep in Departments on err.DepartmentId equals dep.DepartmentId
                     into departmentErrand
@@ -115,6 +126,7 @@ namespace EnvironmentalCrime.Models
                         EmployeeName = (err.EmployeeId == null ? "ej tillsatt" : empE.EmployeeName)
                     };
                 return errandList;
+                });
             }
 
             return null;
@@ -127,6 +139,7 @@ namespace EnvironmentalCrime.Models
 
             var employeeDetail = GetEmployeeDetail(userName);
 
+            /* Get list of employees from the department, but not the manager */
             var errandList = from emp in Employees
                              where emp.DepartmentId == employeeDetail.DepartmentId && emp.EmployeeName != employeeDetail.EmployeeName
                              select new Employee
@@ -137,6 +150,36 @@ namespace EnvironmentalCrime.Models
                                  RoleTitle = emp.RoleTitle
                              };
             return errandList;
+        }
+
+        /* Returns a "MyErrand" */
+        public MyErrand GetMyErrandDetail(int errandID)
+        {
+            var errandList = from err in Errands
+                             join stat in ErrandStatuses on err.StatusId equals stat.StatusId
+                             join dep in Departments on err.DepartmentId equals dep.DepartmentId
+                             into departmentErrand
+                             from deptE in departmentErrand.DefaultIfEmpty()
+                             join em in Employees on err.EmployeeId equals em.EmployeeId
+                             into employeeErrand
+                             from empE in employeeErrand.DefaultIfEmpty()
+                             orderby err.RefNumber descending
+                             where err.ErrandId == errandID
+                select new MyErrand
+                {
+                    DateOfObservation = err.DateOfObservation,
+                    ErrandId = err.ErrandId,
+                    RefNumber = err.RefNumber,
+                    TypeOfCrime = err.TypeOfCrime,
+                    StatusName = stat.StatusName,
+                    DepartmentName = (err.DepartmentId == null ? "ej tillsatt" : deptE.DepartmentName),
+                    EmployeeName = (err.EmployeeId == null ? "ej tillsatt" : empE.EmployeeName)
+                };
+
+            /* Not the best way to get single object from list */
+            var myErrandDetail = errandList.Where(me => me.ErrandId == errandID).FirstOrDefault();
+
+            return myErrandDetail;
         }
 
         public Employee GetEmployeeDetail(string empID)

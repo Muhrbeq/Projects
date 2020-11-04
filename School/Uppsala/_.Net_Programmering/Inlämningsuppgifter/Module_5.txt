@@ -1,0 +1,50 @@
+Module 5- Säkerhet
+[ÖPPNA IdentityInitializer, AppIdentityDb, AccountController]
+Steg 1/2: Steg 1 gick ut på att göra en hårdkodad användare för att logga in, 
+detta gjordes och en ny databas skapades för att hålla reda på Indentitys.
+I accountcontrollern så hanteras inloggningen och beroende på vilken roll 
+man har så redirectas man till den sida som rollen stämmer överens med.
+
+[ KÖR PROGRAMMET ]
+Testa att köra programmet och logga in med konstiga uppgifter
+Testa med coordinator E001 Pass01?
+Testa med Chef E100 Pass02?
+Testa med investigator E101 Pass03?
+Och visa en tom med E102 Pass04?
+
+
+[STEG 3:] 
+[ÖPPNA Repository]
+
+För att få ut den filtrerade listan av ärenden så gjorde jag en
+stor funktion i repositoryt för att alla ska controllers ska komma åt den.
+Funktionen börjar med att hämta namnet på den som loggat in (employee ID) 
+och sen tar den fram dens employeedetails.
+Sedan så tittar den på vilken roll som användaren har och returnerar listan 
+med filtrerade ärenden. 
+För coordinatorn så returneras alla ärenden som finns
+För chefen så syns endast ärendena för departmenten
+För investigeraren så syns basra ärendena som stämmer överens med employeeID
+
+För chefen så syns också bara dens anställda i dropdownlistan.
+Alla "D01" (konstiga benämningar) är nu utbytta till text
+För att det ska synas som text-benämningar så gjorde jag en funktion 
+som letar i listan och returnerar ärendet som MyErrand
+Denna används i viewComponenten som kommer pratas om näst
+
+[STEG 4:]
+[Öppna MyErrandViewComponent, StartManager, ManagerController]
+Om vi börjar i ManagerController så sätter jag in i ViewBag.Role
+vilken roll som användaren har, för coordinatorn så är det coordinator
+och likaså till investigeraren. Denn variabel läggs sedan in i await-anroppet
+och förs med till MyErrand-Viewcomponent.
+Här så förs bara variabeln vidare in i nästa vy, detta för att man ska kunna klicka 
+rätt och länkas rätt när man klickar på ärendena.
+I Viewcomponenten så har jag lagt till if-satser för att bestämma vart man kommer 
+om man klickar på ärendeIDt.
+
+Steg 5 vaar att göra refactoring av koden och det känner jag att jag gjort.
+
+
+
+

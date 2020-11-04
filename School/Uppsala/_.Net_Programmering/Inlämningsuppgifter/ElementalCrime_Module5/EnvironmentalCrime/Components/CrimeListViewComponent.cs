@@ -20,6 +20,8 @@ namespace EnvironmentalCrime.Components
         {
             var errandDetails = await repository.GetErrandDetails(errandID);
 
+            ViewBag.myErrandDetail = repository.GetMyErrandDetail(errandID);
+
             ViewBag.ListOfPictures = repository.Pictures;
             ViewBag.ListOfSamples = repository.Samples;
 

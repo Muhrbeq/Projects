@@ -33,15 +33,18 @@
     <h3>Utredning</h3>
     <p>
         <span class="label">Status:</span><br />
-        @Model.StatusId
+        @*Model.StatusId*@
+        @ViewBag.myErrandDetail.StatusName
     </p>
     <p>
         <span class="label">Ansvarig avdelning: </span><br />
-        @Model.DepartmentId
+        @*Model.DepartmentId*@
+        @ViewBag.myErrandDetail.DepartmentName
     </p>
     <p>
         <span class="label">Handläggare: </span><br />
-        @Model.EmployeeId
+        @*Model.EmployeeId*@
+        @ViewBag.myErrandDetail.EmployeeName
     </p>
     <p>
         <span class="label">Provtagning: </span><br />
@@ -52,13 +55,6 @@
                 <p><a href="~/Pictures/@sample.SampleName">sample_@sample.SampleId</a></p>
             }
         }
-        @*
-            @foreach (Sample sample in Model.Samples)
-            {
-                <a href="~/Samples/@sample.SampleName">@sample.SampleId</a>
-            }
-        *@
-        </p>
         <p>
             <span class="label">Ytterligare information: </span><br />
             @Model.InvestigatorInfo
@@ -76,11 +72,4 @@
                 <p><a href="~/Pictures/@picture.PictureName">picture_@picture.PictureId</a></p>
                 }
             }
-            @*
-                @foreach (Picture pic in Model.Pictures)
-                {
-                    <a href="~/Pictures/@pic.PictureName">@pic.PictureId</a>
-                }
-            *@
-            </p>
         </section>

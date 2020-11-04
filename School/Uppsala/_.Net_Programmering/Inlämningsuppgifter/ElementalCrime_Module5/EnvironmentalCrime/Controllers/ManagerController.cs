@@ -37,13 +37,15 @@ namespace EnvironmentalCrime.Controllers
 
             ViewBag.ListOfMyErrands = repository.GetFilteredErrands();
 
-
+            /* Assign role for ViewComponent */
+            ViewBag.Role = "Manager";
 
             return View(repository);
         }
 
         public IActionResult UpdateErrandManager(bool noAction, Errand errand)
         {
+            /* Get Manager ID */
             int someID = int.Parse(TempData["Manager_ID"].ToString());
             var errandDetail = repository.Errands.Where(ed => ed.ErrandId == someID).First();
 
@@ -61,6 +63,7 @@ namespace EnvironmentalCrime.Controllers
 
             }
 
+            /* Save errand */
             repository.SaveErrand(errandDetail);
 
             return RedirectToAction("CrimeManager", new { id = someID });
