@@ -1,0 +1,26 @@
+Removed Member From Class: ClassName=4G Member=*
+Removed Member From Class: ClassName=GPS Member=*
+Added Component: Designator=IC1(VSSOP-10)
+Added Component: Designator=U1(LQFP64)
+Add component (AddParameter): Name = "Man. Part no"; Value = "1337"; VariantName = "[No Variations]"
+Added Component: Designator=U2(SOT563 (6))
+Added Component: Designator=U3(LGA-12)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "LIS2DH12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LGA-12 STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/LIS2DH12/STMicroelectronics/view-part/480350/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U4(LGA-16)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "497-13931-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/stmicroelectronics/L3GD20HTR/497-13931-1-ND/4357644?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "L3GD20HTR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LGA-16 STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/L3GD20HTR/STMicroelectronics/view-part/125620/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U5(SARA-XX)
+Added Component: Designator=U6(SAM-M8)
+Added Member To Class: ClassName=4G Member=Component U5 SARA-R4
+Added Member To Class: ClassName=GPS Member=Component U6 SAM-M8
