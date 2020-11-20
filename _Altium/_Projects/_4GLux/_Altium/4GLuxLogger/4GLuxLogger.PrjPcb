@@ -191,23 +191,6 @@ GenerateClassCluster=0
 DocumentUniqueId=NOVCNFJU
 
 [Document10]
-DocumentPath=ADC.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=8
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=XVXKUFZU
-
-[Document11]
 DocumentPath=4GLL.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -224,7 +207,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GHRKIUPV
 
-[Document12]
+[Document11]
 DocumentPath=GPS.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -241,7 +224,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VLIZVNEZ
 
-[Document13]
+[Document12]
 DocumentPath=4GLL.PCBDwf
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -258,7 +241,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document14]
+[Document13]
 DocumentPath=..\..\..\..\_Library\Exeger_PCB_library.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -275,7 +258,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document15]
+[Document14]
 DocumentPath=..\..\..\..\_Library\Exeger_schematic_library.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
