@@ -58,6 +58,7 @@
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
+
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -123,7 +124,10 @@ int main(void)
   /* USER CODE END 3 */
 }
 
-
+/**
+  * @brief System Clock Configuration
+  * @retval None
+  */
 
 /* USER CODE BEGIN 4 */
 
