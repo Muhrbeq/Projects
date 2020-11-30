@@ -18,7 +18,7 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "tim.h"
+#include <LowLevel/tim.h>
 
 /* USER CODE BEGIN 0 */
 

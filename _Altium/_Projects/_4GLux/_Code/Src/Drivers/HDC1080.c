@@ -5,7 +5,7 @@
  *      Author: andreas.fredlund
  */
 
-#include "HDC1080.h"
+#include <Drivers/HDC1080.h>
 
 
 /*

@@ -18,7 +18,7 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "i2c.h"
+#include <LowLevel/i2c.h>
 
 /* USER CODE BEGIN 0 */
 

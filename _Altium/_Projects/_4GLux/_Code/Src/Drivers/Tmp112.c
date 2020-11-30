@@ -6,8 +6,8 @@
  */
 
 //#include "Global.h"
-#include "Tmp112.h"
-#include "i2c.h"
+#include <Drivers/Tmp112.h>
+#include <LowLevel/i2c.h>
 #include "__ExegerGeneric.h"
 //#include "Error.h"
 //#include "utils.h"

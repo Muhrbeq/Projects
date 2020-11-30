@@ -116,6 +116,12 @@ void debugLedToggle(void);
 void debugLedOn(void);
 void debugLedOff(void);
 
+#define BitSet(arg , posn) ((arg) |= (1L << (posn)))
+#define BitClr(arg , posn) ((arg) &= ~(1L << (posn)))
+#define BitTst(arg , posn) BOOL((arg) & (1L << (posn)))
+#define BitFlp(arg , posn) ((arg) ^= (1L << (posn)))
+#define BOOL(x) (!(!(x)))
+
 void Set_bit_bc(uint32_t *x, uint8_t bitNum, uint8_t VariableSize);
 void Set_bit(uint16_t *x, uint8_t bitNum);
 void Clear_bit_bc(uint32_t *x, uint8_t bitNum, uint8_t VariableSize);

@@ -5,8 +5,8 @@
  *      Author: Rasmus.Muhrbeck
  */
 
-#include "Battery.h"
-#include "adc.h"
+#include <Drivers/Battery.h>
+#include <LowLevel/adc.h>
 
 void EnableBatterySensePin(void)
 {

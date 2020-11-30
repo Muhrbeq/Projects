@@ -18,7 +18,7 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "sdmmc.h"
+#include <LowLevel/sdmmc.h>
 
 /* USER CODE BEGIN 0 */
 

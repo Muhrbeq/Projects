@@ -5,10 +5,9 @@
  *      Author: Rasmus.Muhrbeck
  */
 
-#include "LIS2DW12.h"
-
+#include <Drivers/LIS2DW12.h>
+#include <LowLevel/i2c.h>
 #include "__ExegerGeneric.h"
-#include "i2c.h"
 
 float accSensitivity;
 

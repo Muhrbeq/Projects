@@ -29,20 +29,20 @@
 #include "main.h"
 
 #ifdef USE_USART_FUNCTIONS
-#include "usart.h" /* If "Generate peripheral initialization as a pair of '.c/.h'files per peripheral"
+#include <LowLevel/usart.h> /* If "Generate peripheral initialization as a pair of '.c/.h'files per peripheral"
  	 	 	 	 	 not checked in CubeMX, comment out #include */
 #endif
 
 #ifdef USE_RTC_FUNCTIONS
 #ifdef HAL_RTC_MODULE_ENABLED
-#include "rtc.h" /* If "Generate peripheral initialization as a pair of '.c/.h'files per peripheral"
+#include <LowLevel/rtc.h> /* If "Generate peripheral initialization as a pair of '.c/.h'files per peripheral"
  	 	 	 	 	 not checked in CubeMX, comment out #include */
 #endif
 #endif
 
 #ifdef USE_IWDG_FUNCTIONS
 #ifdef HAL_IWDG_MODULE_ENABLED
-#include "iwdg.h" /* If "Generate peripheral initialization as a pair of '.c/.h'files per peripheral"
+#include <LowLevel/iwdg.h> /* If "Generate peripheral initialization as a pair of '.c/.h'files per peripheral"
  	 	 	 	 	 not checked in CubeMX, comment out #include */
 #endif
 #endif

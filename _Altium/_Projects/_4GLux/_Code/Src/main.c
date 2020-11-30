@@ -19,22 +19,19 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
+#include <LowLevel/adc.h>
+#include <LowLevel/crc.h>
+#include <LowLevel/gpio.h>
+#include <LowLevel/i2c.h>
+#include <LowLevel/iwdg.h>
+#include <LowLevel/LowLevel.h>
+#include <LowLevel/rtc.h>
+#include <LowLevel/sdmmc.h>
+#include <LowLevel/spi.h>
+#include <LowLevel/tim.h>
+#include <LowLevel/usart.h>
 #include "main.h"
-#include "adc.h"
-#include "crc.h"
-#include "i2c.h"
-#include "iwdg.h"
-#include "rtc.h"
-#include "sdmmc.h"
-#include "spi.h"
-#include "tim.h"
-#include "usart.h"
-#include "gpio.h"
-
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
 #include "__ExegerGeneric.h"
-#include "LowLevel.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

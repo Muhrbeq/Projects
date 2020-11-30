@@ -18,7 +18,7 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "adc.h"
+#include <LowLevel/adc.h>
 
 /* USER CODE BEGIN 0 */
 
