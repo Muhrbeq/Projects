@@ -1,0 +1,16 @@
+Flash.c:50:9:Flash_Write	48	static
+Flash.c:81:9:Flash_Verify	32	static
+Flash.c:112:6:Flash_Read	8	static
+Flash.c:132:9:Flash_Erase	56	static
+Flash.c:161:6:FlashReadLux	24	static
+Flash.c:250:10:Flash_EOF	12	static
+Flash.c:303:10:Flash_GetNextAddress	16	static
+Flash.c:311:9:Flash_GetDayCounter	16	static
+Flash.c:324:10:Flash_GetAddressDayX	16	static
+Flash.c:339:9:Flash_SetNextAddress	144	static
+Flash.c:365:6:Flash_Reset	16	static
+Flash.c:378:10:Flash_Calc_Nb_Pages	0	static
+Flash.c:516:9:Flash_data_subtractDay	136	static
+Flash.c:554:9:Flash_data_setup	48	static
+Flash.c:465:9:Flash_data_addDay	160	static
+Flash.c:408:9:Flash_data_Write	32	static

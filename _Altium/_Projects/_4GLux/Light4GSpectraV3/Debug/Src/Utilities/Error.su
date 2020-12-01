@@ -1,0 +1,12 @@
+Error.c:20:6:ErrorStruct_init	0	static
+Error.c:41:6:ErrorAddLog	24	static
+Error.c:97:6:ResetInfoStruct	0	static
+Error.c:75:6:InitInfoStruct	0	static
+Error.c:117:6:InfoLogAdd	24	static
+Error.c:158:10:InfoGetSize	0	static
+Error.c:164:6:InfoPrintLog	48	static
+Error.c:183:6:CopyTempToInfo	40	static
+Error.c:218:10:ErrorGetSize	0	static
+Error.c:227:6:ErrorPrintLog	48	static
+Error.c:250:6:ErrorTimerHourly	40	static
+Error.c:272:6:ErrorTimerHourlyCheck	64	static

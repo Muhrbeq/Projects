@@ -1,0 +1,5 @@
+MultiSensor.c:22:6:MultiSensor_takeMeasurements	24	static
+MultiSensor.c:36:6:MultiSensor_takeMeasurementsRaw	0	static
+MultiSensor.c:44:6:DataStruct_init	0	static
+MultiSensor.c:73:10:GetDataSize	0	static
+MultiSensor.c:87:6:PrintSensorData	48	static

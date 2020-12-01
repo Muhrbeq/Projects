@@ -1,0 +1,8 @@
+TimeFunc.c:97:6:printTime	24	static
+TimeFunc.c:29:9:RTC_GetElapsedSeconds	24	static
+TimeFunc.c:64:6:GetTime	40	static
+TimeFunc.c:103:9:TimeToSend	16	static
+TimeFunc.c:155:9:CopyTime	0	static
+TimeFunc.c:173:10:CalculateAverage	8	static
+TimeFunc.c:190:9:EvaluatePeaks	12	static
+TimeFunc.c:427:9:ConfigureSendTime	64	static

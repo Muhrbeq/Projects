@@ -1,0 +1,13 @@
+StateMachine.c:66:13:StartTurnOffCounter	8	static
+StateMachine.c:72:16:CompareTurnOffTimers	8	static
+StateMachine.c:89:16:ResetRadio	8	static
+StateMachine.c:33:14:GetSensorState	0	static
+StateMachine.c:39:14:SetSensorState	0	static
+StateMachine.c:45:6:SensorResetState	0	static
+StateMachine.c:54:13:GetRadioState	0	static
+StateMachine.c:60:13:SetRadioState	0	static
+StateMachine.c:108:6:RadioResetState	32	static
+StateMachine.c:157:6:RadioFirstRunFinished	16	static
+StateMachine.c:845:6:RadioStateMachine	304	static
+StateMachine.c:1052:6:SensorStateMachine	16	static
+StateMachine.c:1082:6:SleepStateMachine	8	static

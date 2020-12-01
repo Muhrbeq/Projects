@@ -1,0 +1,6 @@
+Error.c:20:6:ErrorStruct_init	0	static
+Error.c:41:6:ErrorAddLog	24	static
+Error.c:75:10:ErrorGetSize	0	static
+Error.c:84:6:ErrorPrintLog	48	static
+Error.c:103:6:ErrorTimerHourly	40	static
+Error.c:125:6:ErrorTimerHourlyCheck	40	static

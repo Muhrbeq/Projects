@@ -1,0 +1,2 @@
+utils.c:17:9:CharToHex	0	static
+utils.c:47:9:StringToHEX	24	static

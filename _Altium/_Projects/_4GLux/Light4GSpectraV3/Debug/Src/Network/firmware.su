@@ -1,0 +1,3 @@
+firmware.c:16:9:CopySettings	8	static
+firmware.c:26:9:ServerMessage	8	static
+firmware.c:45:9:ServerDo	704	static

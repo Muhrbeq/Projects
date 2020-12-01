@@ -1,0 +1,4 @@
+sdmmc.c:63:6:MX_SDMMC1_SD_Init	0	static
+sdmmc.c:76:6:HAL_SD_MspInit	48	static
+sdmmc.c:113:6:HAL_SD_MspDeInit	8	static
+sdmmc.c:140:6:SD_DeInitTest	48	static

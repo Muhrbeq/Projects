@@ -1,0 +1,6 @@
+rtc.c:61:6:MX_RTC_Init	112	static
+rtc.c:153:6:HAL_RTC_MspInit	8	static
+rtc.c:173:6:HAL_RTC_MspDeInit	0	static
+rtc.c:193:10:RTC_Get_DateTime_Comp	32	static
+rtc.c:213:6:RTC_SetAlarm	120	static
+rtc.c:253:6:RTC_SetAlarmB	120	static

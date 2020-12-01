@@ -1,0 +1,11 @@
+LowLevel.c:19:6:SystemPower_Config	8	static
+LowLevel.c:220:6:DisableSD_Card	48	static
+LowLevel.c:245:6:GPIOSetAnalogSensor	72	static
+LowLevel.c:443:6:CheckResetCause	0	static
+LowLevel.c:534:6:SystemClock_Config	200	static
+LowLevel.c:116:6:SystemSleepAndWakeUp	80	static
+LowLevel.c:308:6:EnterStopRadioNetwork	72	static
+LowLevel.c:424:6:SleepForApproxMs	8	static
+LowLevel.c:404:6:SleepForApproxMsSpectra	0	static
+LowLevel.c:488:6:InitAll	8	static
+LowLevel.c:625:6:GPIO_Set_Analog	72	static

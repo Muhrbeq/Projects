@@ -1,0 +1,8 @@
+gpio.c:73:6:MX_GPIO_Init	64	static
+gpio.c:188:6:GPIOInitRadio	64	static
+gpio.c:294:6:GPIOInitSensor	64	static
+gpio.c:388:6:DisEnableSensorPins	8	static
+gpio.c:417:6:DisEnableBatteryPin	8	static
+gpio.c:433:6:DisEnableRadioPin	8	static
+gpio.c:449:6:DisEnableSDPin	40	static
+gpio.c:478:6:DisEnableSaraPin	8	static

@@ -1,0 +1,6 @@
+Global.c:40:7:GetDataStruct	0	static
+Global.c:45:8:GetErrorStruct	0	static
+Global.c:50:7:GetTimeStruct	0	static
+Global.c:86:13:GetSaraConfigurationStruct	0	static
+Global.c:91:13:GetErrorFlagsStruct	0	static
+Global.c:96:13:GetErrorTimerStruct	0	static

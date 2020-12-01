@@ -1,0 +1,8 @@
+Tmp112.c:14:9:TMP112_writeRegister	48	static
+Tmp112.c:33:10:TMP112_readRegister	48	static
+Tmp112.c:64:6:TMP112_Init	16	static
+Tmp112.c:79:9:TMP112_StartOneShot	16	static
+Tmp112.c:92:9:TMP112_WaitForOneShot	24	static
+Tmp112.c:117:9:TMP112_GetTemperature_raw	16	static
+Tmp112.c:136:10:TMP112_ReadTemp_raw	40	static
+Tmp112.c:176:9:TMP112_ReadTemp	24	static

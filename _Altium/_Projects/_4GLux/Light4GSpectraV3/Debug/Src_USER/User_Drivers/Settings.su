@@ -1,0 +1,11 @@
+Settings.c:14:9:SetUnitID	8	static
+Settings.c:25:9:SetPORT	8	static
+Settings.c:35:9:SetRevision	8	static
+Settings.c:46:9:SetIP	8	static
+Settings.c:57:9:SetServerToDo	8	static
+Settings.c:67:9:SetUpdateFrequency	8	static
+Settings.c:77:9:SetHourToSend	8	static
+Settings.c:87:9:FirstMessageToResend	8	static
+Settings.c:97:9:LastMessageToResend	8	static
+Settings.c:110:11:ParseJSMNForHeader	48	static
+Settings.c:274:9:ParseSettingsString	1144	static

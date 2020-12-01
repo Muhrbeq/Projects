@@ -1,0 +1,5 @@
+Battery.c:36:10:Battery_GetLevel_Raw	32	static
+Battery.c:13:9:Battery_GetLevel	16	static
+Battery.c:60:6:Battery_init	24	static
+Battery.c:77:6:MX_ADC_DeInit	0	static
+Battery.c:91:9:Battery_GetLevel2	32	static
