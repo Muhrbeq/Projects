@@ -1,0 +1,11 @@
+Change Component Description : Designator=U15 Old Description= New Description=Spectrum Sensor
+Change component parameters: Designator = "L4" ("L4"); Footprint = "0402"; UniqueID = "\KHGILPCC\RMCPKDNC" ("\KHGILPCC\RMCPKDNC")
+Change component parameters (AddParameter): Name = "Value"; Value = "X"; VariantName = "[No Variations]"
+Change component parameters: Designator = "L5" ("L5"); Footprint = "0402"; UniqueID = "\KHGILPCC\AYXXXTXT" ("\KHGILPCC\AYXXXTXT")
+Change component parameters (AddParameter): Name = "Value"; Value = "X"; VariantName = "[No Variations]"
+Change component parameters: Designator = "L6" ("L6"); Footprint = "0603"; UniqueID = "\KHGILPCC\VLIQCLGB" ("\KHGILPCC\VLIQCLGB")
+Change component parameters (AddParameter): Name = "Value"; Value = "X"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=Screen_RST Pin=P9-15
+Added Pin To Net: NetName=Screen_RST Pin=R17-1
+Added Pin To Net: NetName=Screen_RST Pin=U1-38
+Added Net: Name=Screen_RST

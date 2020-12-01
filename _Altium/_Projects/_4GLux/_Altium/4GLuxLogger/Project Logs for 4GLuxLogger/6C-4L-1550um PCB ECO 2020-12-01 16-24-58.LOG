@@ -1,0 +1,763 @@
+Removed Pin From Net: NetName=PREVGL Pin=D21-1
+Removed Pin From Net: NetName=NetC79_1 Pin=D21-2
+Removed Pin From Net: NetName=NetC79_1 Pin=D22-1
+Removed Pin From Net: NetName=GND Pin=D22-2
+Removed Pin From Net: NetName=NetC79_2 Pin=D23-1
+Removed Pin From Net: NetName=PREVGH Pin=D23-2
+Removed Pin From Net: NetName=GND Pin=IC1-1
+Removed Pin From Net: NetName=GND Pin=IC1-2
+Removed Pin From Net: NetName=I2C4_SDA Pin=IC1-4
+Removed Pin From Net: NetName=I2C4_SCL Pin=IC1-5
+Removed Pin From Net: NetName=VDD_Sensor Pin=IC1-6
+Removed Pin From Net: NetName=GND Pin=IC1-7
+Removed Pin From Net: NetName=NetC22_1 Pin=IC1-9
+Removed Pin From Net: NetName=NetC22_2 Pin=IC1-10
+Removed Pin From Net: NetName=GND Pin=IC2-1
+Removed Pin From Net: NetName=SIM_IO Pin=IC2-3
+Removed Pin From Net: NetName=SIM_CLK Pin=IC2-6
+Removed Pin From Net: NetName=SIM_RST Pin=IC2-7
+Removed Pin From Net: NetName=VSIM Pin=IC2-8
+Removed Pin From Net: NetName=VDD_Screen Pin=L7-1
+Removed Pin From Net: NetName=NetC79_2 Pin=L7-2
+Removed Pin From Net: NetName=NetC91_2 Pin=P9-1
+Removed Pin From Net: NetName=PREVGL Pin=P9-2
+Removed Pin From Net: NetName=NetC89_2 Pin=P9-3
+Removed Pin From Net: NetName=PREVGH Pin=P9-4
+Removed Pin From Net: NetName=NetC87_2 Pin=P9-5
+Removed Pin From Net: NetName=NetC86_2 Pin=P9-6
+Removed Pin From Net: NetName=NetC85_2 Pin=P9-7
+Removed Pin From Net: NetName=GND Pin=P9-8
+Removed Pin From Net: NetName=VDD_Screen Pin=P9-9
+Removed Pin From Net: NetName=VDD_Screen Pin=P9-10
+Removed Pin From Net: NetName=SPI_MOSI_Screen Pin=P9-11
+Removed Pin From Net: NetName=SPI_SCK_Screen Pin=P9-12
+Removed Pin From Net: NetName=CS Pin=P9-13
+Removed Pin From Net: NetName=D/C Pin=P9-14
+Removed Pin From Net: NetName=Screen_RST Pin=P9-15
+Removed Pin From Net: NetName=BUSY Pin=P9-16
+Removed Pin From Net: NetName=BS Pin=P9-17
+Removed Pin From Net: NetName=NetC81_2 Pin=P9-20
+Removed Pin From Net: NetName=NetC80_2 Pin=P9-21
+Removed Pin From Net: NetName=RESE Pin=P9-22
+Removed Pin From Net: NetName=GDR Pin=P9-23
+Removed Pin From Net: NetName=GND Pin=P9-25
+Removed Pin From Net: NetName=GND Pin=P9-26
+Removed Pin From Net: NetName=GND Pin=Q2-3
+Removed Pin From Net: NetName=NetQ3_4 Pin=Q4-1
+Removed Pin From Net: NetName=GND Pin=Q4-3
+Removed Pin From Net: NetName=Sara_Reset Pin=Q5-1
+Removed Pin From Net: NetName=NetC58_2 Pin=Q5-2
+Removed Pin From Net: NetName=GND Pin=Q5-3
+Removed Pin From Net: NetName=Sara_Power Pin=Q6-1
+Removed Pin From Net: NetName=NetC59_2 Pin=Q6-2
+Removed Pin From Net: NetName=GND Pin=Q6-3
+Removed Pin From Net: NetName=NetD20_2 Pin=Q7-1
+Removed Pin From Net: NetName=GND Pin=Q7-3
+Removed Pin From Net: NetName=VDD Pin=U1-1
+Removed Pin From Net: NetName=Spectrum_Enable Pin=U1-2
+Removed Pin From Net: NetName=NetC17_2 Pin=U1-3
+Removed Pin From Net: NetName=NetC18_2 Pin=U1-4
+Removed Pin From Net: NetName=NetC20_2 Pin=U1-5
+Removed Pin From Net: NetName=NetC19_2 Pin=U1-6
+Removed Pin From Net: NetName=RST Pin=U1-7
+Removed Pin From Net: NetName=VBAT_Sense Pin=U1-8
+Removed Pin From Net: NetName=VBAT_Sense_Enable Pin=U1-9
+Removed Pin From Net: NetName=Revision_Enable Pin=U1-10
+Removed Pin From Net: NetName=ADC_Revision Pin=U1-11
+Removed Pin From Net: NetName=GND Pin=U1-12
+Removed Pin From Net: NetName=NetC16_2 Pin=U1-13
+Removed Pin From Net: NetName=SendData_EXTI0 Pin=U1-14
+Removed Pin From Net: NetName=NetStatus_Out Pin=U1-15
+Removed Pin From Net: NetName=USART2_TX Pin=U1-16
+Removed Pin From Net: NetName=USART2_RX Pin=U1-17
+Removed Pin From Net: NetName=GND Pin=U1-18
+Removed Pin From Net: NetName=VDD Pin=U1-19
+Removed Pin From Net: NetName=Radio Enable Pin=U1-20
+Removed Pin From Net: NetName=Sara_Power_MCU Pin=U1-21
+Removed Pin From Net: NetName=Sara_Reset_MCU Pin=U1-22
+Removed Pin From Net: NetName=USART3_TX Pin=U1-24
+Removed Pin From Net: NetName=USART3_RX Pin=U1-25
+Removed Pin From Net: NetName=GPS_Enable Pin=U1-26
+Removed Pin From Net: NetName=Screen_Enable Pin=U1-27
+Removed Pin From Net: NetName=Accelerometer_Enable Pin=U1-28
+Removed Pin From Net: NetName=I2C2_SCL Pin=U1-29
+Removed Pin From Net: NetName=I2C2_SDA Pin=U1-30
+Removed Pin From Net: NetName=GND Pin=U1-31
+Removed Pin From Net: NetName=VDD Pin=U1-32
+Removed Pin From Net: NetName=CS Pin=U1-33
+Removed Pin From Net: NetName=SPI_SCK Pin=U1-34
+Removed Pin From Net: NetName=SPI_MISO Pin=U1-35
+Removed Pin From Net: NetName=SPI_MOSI Pin=U1-36
+Removed Pin From Net: NetName=D/C Pin=U1-37
+Removed Pin From Net: NetName=Screen_RST Pin=U1-38
+Removed Pin From Net: NetName=SDData0 Pin=U1-39
+Removed Pin From Net: NetName=SDData1 Pin=U1-40
+Removed Pin From Net: NetName=BUSY Pin=U1-41
+Removed Pin From Net: NetName=USART1_TX Pin=U1-42
+Removed Pin From Net: NetName=USART1_RX Pin=U1-43
+Removed Pin From Net: NetName=LED_Green Pin=U1-44
+Removed Pin From Net: NetName=LED_Red Pin=U1-45
+Removed Pin From Net: NetName=SWDIO Pin=U1-46
+Removed Pin From Net: NetName=GND Pin=U1-47
+Removed Pin From Net: NetName=VDD Pin=U1-48
+Removed Pin From Net: NetName=SWCLK Pin=U1-49
+Removed Pin From Net: NetName=SD_Enable Pin=U1-50
+Removed Pin From Net: NetName=SDData2 Pin=U1-51
+Removed Pin From Net: NetName=SDData3 Pin=U1-52
+Removed Pin From Net: NetName=SDCLK Pin=U1-53
+Removed Pin From Net: NetName=SDCMD Pin=U1-54
+Removed Pin From Net: NetName=SWO Pin=U1-55
+Removed Pin From Net: NetName=USB_Detect Pin=U1-56
+Removed Pin From Net: NetName=Sensor_Enable Pin=U1-57
+Removed Pin From Net: NetName=I2C4_SCL Pin=U1-58
+Removed Pin From Net: NetName=I2C4_SDA Pin=U1-59
+Removed Pin From Net: NetName=BOOT0 Pin=U1-60
+Removed Pin From Net: NetName=I2C1_SCL Pin=U1-61
+Removed Pin From Net: NetName=I2C1_SDA Pin=U1-62
+Removed Pin From Net: NetName=GND Pin=U1-63
+Removed Pin From Net: NetName=VDD Pin=U1-64
+Removed Pin From Net: NetName=I2C4_SCL Pin=U2-1
+Removed Pin From Net: NetName=GND Pin=U2-2
+Removed Pin From Net: NetName=GND Pin=U2-4
+Removed Pin From Net: NetName=VDD_Sensor Pin=U2-5
+Removed Pin From Net: NetName=I2C4_SDA Pin=U2-6
+Removed Pin From Net: NetName=NetL2_2 Pin=U3-1
+Removed Pin From Net: NetName=GND Pin=U3-2
+Removed Pin From Net: NetName=NetL2_2 Pin=U3-3
+Removed Pin From Net: NetName=GND Pin=U3-4
+Removed Pin From Net: NetName=NetL2_2 Pin=U3-5
+Removed Pin From Net: NetName=GND Pin=U3-6
+Removed Pin From Net: NetName=DGND Pin=U3-7
+Removed Pin From Net: NetName=DGND Pin=U3-8
+Removed Pin From Net: NetName=NetC9_2 Pin=U3-9
+Removed Pin From Net: NetName=ICSPCLK Pin=U3-10
+Removed Pin From Net: NetName=ICSPDAT Pin=U3-11
+Removed Pin From Net: NetName=PWM Pin=U3-12
+Removed Pin From Net: NetName=NetC8_2 Pin=U3-15
+Removed Pin From Net: NetName=VCC Pin=U3-16
+Removed Pin From Net: NetName=ICSP Pin=U3-18
+Removed Pin From Net: NetName=PWM Pin=U3-19
+Removed Pin From Net: NetName=VCC Pin=U3-21
+Removed Pin From Net: NetName=VCC Pin=U3-22
+Removed Pin From Net: NetName=NetL2_2 Pin=U3-23
+Removed Pin From Net: NetName=VCC Pin=U3-24
+Removed Pin From Net: NetName=NetL2_2 Pin=U3-25
+Removed Pin From Net: NetName=NetL2_2 Pin=U3-26
+Removed Pin From Net: NetName=GND Pin=U3-27
+Removed Pin From Net: NetName=GND Pin=U3-28
+Removed Pin From Net: NetName=GND Pin=U3-29
+Removed Pin From Net: NetName=GND Pin=U4-1
+Removed Pin From Net: NetName=VDD Pin=U4-2
+Removed Pin From Net: NetName=GND Pin=U4-3
+Removed Pin From Net: NetName=GND Pin=U4-4
+Removed Pin From Net: NetName=GND Pin=U4-5
+Removed Pin From Net: NetName=VDD Pin=U4-6
+Removed Pin From Net: NetName=VBAT Pin=U4-7
+Removed Pin From Net: NetName=VBAT Pin=U4-8
+Removed Pin From Net: NetName=GND Pin=U4-9
+Removed Pin From Net: NetName=GND Pin=U5-1
+Removed Pin From Net: NetName=GND Pin=U5-3
+Removed Pin From Net: NetName=NetC63_2 Pin=U5-4
+Removed Pin From Net: NetName=GND Pin=U5-5
+Removed Pin From Net: NetName=NetR54_2 Pin=U5-9
+Removed Pin From Net: NetName=NetR56_2 Pin=U5-10
+Removed Pin From Net: NetName=GND Pin=U5-14
+Removed Pin From Net: NetName=Sara_Power Pin=U5-15
+Removed Pin From Net: NetName=NetStatus Pin=U5-16
+Removed Pin From Net: NetName=Sara_Reset Pin=U5-18
+Removed Pin From Net: NetName=GND Pin=U5-20
+Removed Pin From Net: NetName=GND Pin=U5-21
+Removed Pin From Net: NetName=GND Pin=U5-22
+Removed Pin From Net: NetName=GND Pin=U5-30
+Removed Pin From Net: NetName=GND Pin=U5-32
+Removed Pin From Net: NetName=SIM_CLK Pin=U5-38
+Removed Pin From Net: NetName=SIM_IO Pin=U5-39
+Removed Pin From Net: NetName=SIM_RST Pin=U5-40
+Removed Pin From Net: NetName=VSIM Pin=U5-41
+Removed Pin From Net: NetName=GND Pin=U5-43
+Removed Pin From Net: NetName=GND Pin=U5-50
+Removed Pin From Net: NetName=VDD_Sara Pin=U5-51
+Removed Pin From Net: NetName=VDD_Sara Pin=U5-52
+Removed Pin From Net: NetName=VDD_Sara Pin=U5-53
+Removed Pin From Net: NetName=GND Pin=U5-54
+Removed Pin From Net: NetName=GND Pin=U5-55
+Removed Pin From Net: NetName=NetC74_2 Pin=U5-56
+Removed Pin From Net: NetName=GND Pin=U5-57
+Removed Pin From Net: NetName=GND Pin=U5-58
+Removed Pin From Net: NetName=GND Pin=U5-59
+Removed Pin From Net: NetName=GND Pin=U5-60
+Removed Pin From Net: NetName=GND Pin=U5-61
+Removed Pin From Net: NetName=NetR61_2 Pin=U5-62
+Removed Pin From Net: NetName=GND Pin=U5-63
+Removed Pin From Net: NetName=GND Pin=U5-64
+Removed Pin From Net: NetName=GND Pin=U5-65
+Removed Pin From Net: NetName=GND Pin=U5-66
+Removed Pin From Net: NetName=GND Pin=U5-67
+Removed Pin From Net: NetName=GND Pin=U5-68
+Removed Pin From Net: NetName=GND Pin=U5-69
+Removed Pin From Net: NetName=GND Pin=U5-70
+Removed Pin From Net: NetName=GND Pin=U5-71
+Removed Pin From Net: NetName=GND Pin=U5-72
+Removed Pin From Net: NetName=GND Pin=U5-73
+Removed Pin From Net: NetName=GND Pin=U5-74
+Removed Pin From Net: NetName=GND Pin=U5-75
+Removed Pin From Net: NetName=GND Pin=U5-76
+Removed Pin From Net: NetName=GND Pin=U5-77
+Removed Pin From Net: NetName=GND Pin=U5-78
+Removed Pin From Net: NetName=GND Pin=U5-79
+Removed Pin From Net: NetName=GND Pin=U5-80
+Removed Pin From Net: NetName=GND Pin=U5-81
+Removed Pin From Net: NetName=GND Pin=U5-82
+Removed Pin From Net: NetName=GND Pin=U5-83
+Removed Pin From Net: NetName=GND Pin=U5-84
+Removed Pin From Net: NetName=GND Pin=U5-85
+Removed Pin From Net: NetName=GND Pin=U5-86
+Removed Pin From Net: NetName=GND Pin=U5-87
+Removed Pin From Net: NetName=GND Pin=U5-88
+Removed Pin From Net: NetName=GND Pin=U5-89
+Removed Pin From Net: NetName=GND Pin=U5-90
+Removed Pin From Net: NetName=GND Pin=U5-91
+Removed Pin From Net: NetName=GND Pin=U5-92
+Removed Pin From Net: NetName=GND Pin=U5-93
+Removed Pin From Net: NetName=GND Pin=U5-94
+Removed Pin From Net: NetName=GND Pin=U5-95
+Removed Pin From Net: NetName=GND Pin=U5-96
+Removed Pin From Net: NetName=I2C2_SCL Pin=U7-1
+Removed Pin From Net: NetName=Accelerometer_Enable Pin=U7-2
+Removed Pin From Net: NetName=Accelerometer_Enable Pin=U7-3
+Removed Pin From Net: NetName=I2C2_SDA Pin=U7-4
+Removed Pin From Net: NetName=GND Pin=U7-5
+Removed Pin From Net: NetName=GND Pin=U7-6
+Removed Pin From Net: NetName=GND Pin=U7-7
+Removed Pin From Net: NetName=GND Pin=U7-8
+Removed Pin From Net: NetName=Accelerometer_Enable Pin=U7-9
+Removed Pin From Net: NetName=Accelerometer_Enable Pin=U7-10
+Removed Pin From Net: NetName=GND Pin=U8-1
+Removed Pin From Net: NetName=VDD_Sensor Pin=U8-2
+Removed Pin From Net: NetName=GND Pin=U8-3
+Removed Pin From Net: NetName=GND Pin=U8-4
+Removed Pin From Net: NetName=GND Pin=U8-5
+Removed Pin From Net: NetName=VDD_Sensor Pin=U8-6
+Removed Pin From Net: NetName=VBAT Pin=U8-7
+Removed Pin From Net: NetName=Sensor_Enable Pin=U8-8
+Removed Pin From Net: NetName=GND Pin=U8-9
+Removed Pin From Net: NetName=GND Pin=U9-1
+Removed Pin From Net: NetName=VDD_GPS Pin=U9-2
+Removed Pin From Net: NetName=GND Pin=U9-3
+Removed Pin From Net: NetName=GND Pin=U9-4
+Removed Pin From Net: NetName=GND Pin=U9-5
+Removed Pin From Net: NetName=VDD_GPS Pin=U9-6
+Removed Pin From Net: NetName=VBAT Pin=U9-7
+Removed Pin From Net: NetName=GPS_Enable Pin=U9-8
+Removed Pin From Net: NetName=GND Pin=U9-9
+Removed Pin From Net: NetName=USBVDD Pin=U10-1
+Removed Pin From Net: NetName=NetR11_2 Pin=U10-2
+Removed Pin From Net: NetName=GND Pin=U10-3
+Removed Pin From Net: NetName=NetR12_2 Pin=U10-4
+Removed Pin From Net: NetName=NetD2_2 Pin=U10-5
+Removed Pin From Net: NetName=GND Pin=U10-7
+Removed Pin From Net: NetName=NetD3_2 Pin=U10-8
+Removed Pin From Net: NetName=NetR13_2 Pin=U10-9
+Removed Pin From Net: NetName=VBAT Pin=U10-10
+Removed Pin From Net: NetName=GND Pin=U10-11
+Removed Pin From Net: NetName=GND Pin=U12-1
+Removed Pin From Net: NetName=VDD_GPS Pin=U12-2
+Removed Pin From Net: NetName=GND Pin=U12-4
+Removed Pin From Net: NetName=GND Pin=U12-5
+Removed Pin From Net: NetName=GND Pin=U12-6
+Removed Pin From Net: NetName=GND Pin=U12-10
+Removed Pin From Net: NetName=GND Pin=U12-11
+Removed Pin From Net: NetName=NetR9_2 Pin=U12-13
+Removed Pin From Net: NetName=NetR10_2 Pin=U12-14
+Removed Pin From Net: NetName=GND Pin=U12-15
+Removed Pin From Net: NetName=GND Pin=U12-16
+Removed Pin From Net: NetName=VDD_GPS Pin=U12-17
+Removed Pin From Net: NetName=GND Pin=U12-20
+Removed Pin From Net: NetName=GND Pin=U14-1
+Removed Pin From Net: NetName=VDD_Spectrum Pin=U14-2
+Removed Pin From Net: NetName=GND Pin=U14-3
+Removed Pin From Net: NetName=GND Pin=U14-4
+Removed Pin From Net: NetName=GND Pin=U14-5
+Removed Pin From Net: NetName=VDD_Spectrum Pin=U14-6
+Removed Pin From Net: NetName=VBAT Pin=U14-7
+Removed Pin From Net: NetName=Spectrum_Enable Pin=U14-8
+Removed Pin From Net: NetName=GND Pin=U14-9
+Removed Pin From Net: NetName=NetR48_1 Pin=U15-2
+Removed Pin From Net: NetName=NetU13_6 Pin=U15-3
+Removed Pin From Net: NetName=NetU13_5 Pin=U15-4
+Removed Pin From Net: NetName=NetU13_2 Pin=U15-5
+Removed Pin From Net: NetName=NetR47_1 Pin=U15-6
+Removed Pin From Net: NetName=NetR53_2 Pin=U15-7
+Removed Pin From Net: NetName=NetR50_1 Pin=U15-8
+Removed Pin From Net: NetName=I2C1_SCL Pin=U15-11
+Removed Pin From Net: NetName=I2C1_SDA Pin=U15-12
+Removed Pin From Net: NetName=NetR49_1 Pin=U15-13
+Removed Pin From Net: NetName=VDD_Spectrum Pin=U15-14
+Removed Pin From Net: NetName=NetR52_1 Pin=U15-15
+Removed Pin From Net: NetName=GND Pin=U15-16
+Removed Pin From Net: NetName=VDD_Spectrum Pin=U15-17
+Removed Pin From Net: NetName=NetR51_1 Pin=U15-18
+Removed Pin From Net: NetName=GND Pin=U17-1
+Removed Pin From Net: NetName=VDD_SD Pin=U17-2
+Removed Pin From Net: NetName=GND Pin=U17-3
+Removed Pin From Net: NetName=GND Pin=U17-4
+Removed Pin From Net: NetName=GND Pin=U17-5
+Removed Pin From Net: NetName=VDD_SD Pin=U17-6
+Removed Pin From Net: NetName=VBAT Pin=U17-7
+Removed Pin From Net: NetName=SD_Enable Pin=U17-8
+Removed Pin From Net: NetName=GND Pin=U17-9
+Removed Pin From Net: NetName=VBAT Pin=U18-1
+Removed Pin From Net: NetName=GND Pin=U18-2
+Removed Pin From Net: NetName=Screen_Enable Pin=U18-3
+Removed Pin From Net: NetName=VDD_Screen Pin=U18-5
+Removed Member From Class: ClassName=Designator Member=IC2
+Removed Member From Class: ClassName=Designator Member=Q4
+Removed Member From Class: ClassName=Designator Member=Q7
+Removed Member From Class: ClassName=Designator Member=U5
+Added Component: Designator=D?(SOD-123)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "08-Jul-2005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Mech Layer 1 removed."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "LED; 2 Leads"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "LED-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=D?(SOD-123)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "08-Jul-2005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Mech Layer 1 removed."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "LED; 2 Leads"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "LED-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=D?(SOD-123)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "08-Jul-2005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Mech Layer 1 removed."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "LED; 2 Leads"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "LED-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=IC?(VSSOP-10)
+Added Component: Designator=IC?(MFF2-ESIM)
+Added Component: Designator=L?(VLS5045EX)
+Add component (AddParameter): Name = "Value"; Value = "X"; VariantName = "[No Variations]"
+Added Component: Designator=P?(Flex_EInc_Connector)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Q?(SOT-23)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "TO, Flat Index; 3 In-Line, Axial Leads; Body Dia. 4.6mm; Lead Dia. 0.5 mm (max)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "E3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "1995/1996"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Q?(SOT-23)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "TO, Flat Index; 3 In-Line, Axial Leads; Body Dia. 4.6mm; Lead Dia. 0.5 mm (max)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "E3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "1995/1996"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Q?(SOT-23)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "TO, Flat Index; 3 In-Line, Axial Leads; Body Dia. 4.6mm; Lead Dia. 0.5 mm (max)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "E3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "1995/1996"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Q?(SOT-23)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "TO, Flat Index; 3 In-Line, Axial Leads; Body Dia. 4.6mm; Lead Dia. 0.5 mm (max)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "E3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "1995/1996"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Q?(SOT-23)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "TO, Flat Index; 3 In-Line, Axial Leads; Body Dia. 4.6mm; Lead Dia. 0.5 mm (max)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "E3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "1995/1996"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=U?(28-QFN_0.4mm)
+Added Component: Designator=U?(AS7262)
+Added Component: Designator=U?(LGA-12)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "LIS2DH12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LGA-12 STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/LIS2DH12/STMicroelectronics/view-part/480350/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U?(SOT563 (6))
+Add component (AddParameter): Name = "Digikey no."; Value = "296-38578-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Farnell no."; Value = "3009067"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Man. Part no."; Value = "TMP112AIDRLR"; VariantName = "[No Variations]"
+Added Component: Designator=U?(SOT-23 (5))
+Added Component: Designator=U?(VDFN8)
+Added Component: Designator=U?(VDFN8)
+Added Component: Designator=U?(VDFN8)
+Added Component: Designator=U?(VDFN8)
+Added Component: Designator=U?(HVSSOP-10)
+Added Component: Designator=U?(VDFN8)
+Added Component: Designator=U?(LQFP64)
+Add component (AddParameter): Name = "Digikey no"; Value = "497-17219-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Farnell no"; Value = "2758810"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Man. Part no"; Value = "STM32L452RET6"; VariantName = "[No Variations]"
+Added Component: Designator=U?(LQFP64)
+Add component (AddParameter): Name = "Digikey no"; Value = "497-17219-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Farnell no"; Value = "2758810"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Man. Part no"; Value = "STM32L452RET6"; VariantName = "[No Variations]"
+Added Component: Designator=U?(LQFP64)
+Add component (AddParameter): Name = "Digikey no"; Value = "497-17219-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Farnell no"; Value = "2758810"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Man. Part no"; Value = "STM32L452RET6"; VariantName = "[No Variations]"
+Added Component: Designator=U?(SAM-M8)
+Added Component: Designator=U?(SARA-XX)
+Added Pin To Net: NetName=NetC79_1 Pin=D?-1
+Added Pin To Net: NetName=NetC79_2 Pin=D?-1
+Added Pin To Net: NetName=PREVGL Pin=D?-1
+Added Pin To Net: NetName=GND Pin=D?-2
+Added Pin To Net: NetName=NetC79_1 Pin=D?-2
+Added Pin To Net: NetName=PREVGH Pin=D?-2
+Added Pin To Net: NetName=GND Pin=IC?-1
+Added Pin To Net: NetName=GND Pin=IC?-1
+Added Pin To Net: NetName=GND Pin=IC?-2
+Added Pin To Net: NetName=SIM_IO Pin=IC?-3
+Added Pin To Net: NetName=I2C4_SDA Pin=IC?-4
+Added Pin To Net: NetName=I2C4_SCL Pin=IC?-5
+Added Pin To Net: NetName=SIM_CLK Pin=IC?-6
+Added Pin To Net: NetName=VDD_Sensor Pin=IC?-6
+Added Pin To Net: NetName=GND Pin=IC?-7
+Added Pin To Net: NetName=SIM_RST Pin=IC?-7
+Added Pin To Net: NetName=VSIM Pin=IC?-8
+Added Pin To Net: NetName=NetC22_1 Pin=IC?-9
+Added Pin To Net: NetName=NetC22_2 Pin=IC?-10
+Added Pin To Net: NetName=VDD_Screen Pin=L?-1
+Added Pin To Net: NetName=NetC79_2 Pin=L?-2
+Added Pin To Net: NetName=NetC91_2 Pin=P?-1
+Added Pin To Net: NetName=PREVGL Pin=P?-2
+Added Pin To Net: NetName=NetC89_2 Pin=P?-3
+Added Pin To Net: NetName=PREVGH Pin=P?-4
+Added Pin To Net: NetName=NetC87_2 Pin=P?-5
+Added Pin To Net: NetName=NetC86_2 Pin=P?-6
+Added Pin To Net: NetName=NetC85_2 Pin=P?-7
+Added Pin To Net: NetName=GND Pin=P?-8
+Added Pin To Net: NetName=VDD_Screen Pin=P?-9
+Added Pin To Net: NetName=VDD_Screen Pin=P?-10
+Added Pin To Net: NetName=SPI_MOSI_Screen Pin=P?-11
+Added Pin To Net: NetName=SPI_SCK_Screen Pin=P?-12
+Added Pin To Net: NetName=CS Pin=P?-13
+Added Pin To Net: NetName=D/C Pin=P?-14
+Added Pin To Net: NetName=Screen_RST Pin=P?-15
+Added Pin To Net: NetName=BUSY Pin=P?-16
+Added Pin To Net: NetName=BS Pin=P?-17
+Added Pin To Net: NetName=NetC81_2 Pin=P?-20
+Added Pin To Net: NetName=NetC80_2 Pin=P?-21
+Added Pin To Net: NetName=RESE Pin=P?-22
+Added Pin To Net: NetName=GDR Pin=P?-23
+Added Pin To Net: NetName=GND Pin=P?-25
+Added Pin To Net: NetName=GND Pin=P?-26
+Added Pin To Net: NetName=NetC58_2 Pin=Q?-1
+Added Pin To Net: NetName=NetC59_2 Pin=Q?-1
+Added Pin To Net: NetName=GND Pin=Q?-2
+Added Pin To Net: NetName=GND Pin=Q?-2
+Added Pin To Net: NetName=GND Pin=Q?-2
+Added Pin To Net: NetName=GND Pin=Q?-2
+Added Pin To Net: NetName=GND Pin=Q?-2
+Added Pin To Net: NetName=NetD20_2 Pin=Q?-3
+Added Pin To Net: NetName=NetQ3_4 Pin=Q?-3
+Added Pin To Net: NetName=Sara_Power Pin=Q?-3
+Added Pin To Net: NetName=Sara_Reset Pin=Q?-3
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=I2C2_SCL Pin=U?-1
+Added Pin To Net: NetName=I2C4_SCL Pin=U?-1
+Added Pin To Net: NetName=I2C4_SDA Pin=U?-1
+Added Pin To Net: NetName=NetL2_2 Pin=U?-1
+Added Pin To Net: NetName=USBVDD Pin=U?-1
+Added Pin To Net: NetName=VBAT Pin=U?-1
+Added Pin To Net: NetName=VDD_Sensor Pin=U?-1
+Added Pin To Net: NetName=VDD Pin=U?-1
+Added Pin To Net: NetName=Accelerometer_Enable Pin=U?-2
+Added Pin To Net: NetName=GND Pin=U?-2
+Added Pin To Net: NetName=GND Pin=U?-2
+Added Pin To Net: NetName=GND Pin=U?-2
+Added Pin To Net: NetName=GND Pin=U?-2
+Added Pin To Net: NetName=GND Pin=U?-2
+Added Pin To Net: NetName=NetR11_2 Pin=U?-2
+Added Pin To Net: NetName=NetR48_1 Pin=U?-2
+Added Pin To Net: NetName=Spectrum_Enable Pin=U?-2
+Added Pin To Net: NetName=VDD_GPS Pin=U?-2
+Added Pin To Net: NetName=VDD_GPS Pin=U?-2
+Added Pin To Net: NetName=VDD_SD Pin=U?-2
+Added Pin To Net: NetName=VDD_Sensor Pin=U?-2
+Added Pin To Net: NetName=VDD_Spectrum Pin=U?-2
+Added Pin To Net: NetName=VDD Pin=U?-2
+Added Pin To Net: NetName=Accelerometer_Enable Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=NetC17_2 Pin=U?-3
+Added Pin To Net: NetName=NetL2_2 Pin=U?-3
+Added Pin To Net: NetName=NetU13_6 Pin=U?-3
+Added Pin To Net: NetName=Screen_Enable Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=I2C2_SDA Pin=U?-4
+Added Pin To Net: NetName=I2C4_SCL Pin=U?-4
+Added Pin To Net: NetName=NetC18_2 Pin=U?-4
+Added Pin To Net: NetName=NetC63_2 Pin=U?-4
+Added Pin To Net: NetName=NetR12_2 Pin=U?-4
+Added Pin To Net: NetName=NetU13_5 Pin=U?-4
+Added Pin To Net: NetName=GND Pin=U?-5
+Added Pin To Net: NetName=GND Pin=U?-5
+Added Pin To Net: NetName=GND Pin=U?-5
+Added Pin To Net: NetName=GND Pin=U?-5
+Added Pin To Net: NetName=GND Pin=U?-5
+Added Pin To Net: NetName=GND Pin=U?-5
+Added Pin To Net: NetName=GND Pin=U?-5
+Added Pin To Net: NetName=GND Pin=U?-5
+Added Pin To Net: NetName=NetC20_2 Pin=U?-5
+Added Pin To Net: NetName=NetD2_2 Pin=U?-5
+Added Pin To Net: NetName=NetL2_2 Pin=U?-5
+Added Pin To Net: NetName=NetU13_2 Pin=U?-5
+Added Pin To Net: NetName=VDD_Screen Pin=U?-5
+Added Pin To Net: NetName=VDD_Sensor Pin=U?-5
+Added Pin To Net: NetName=VDD_Sensor Pin=U?-5
+Added Pin To Net: NetName=GND Pin=U?-6
+Added Pin To Net: NetName=GND Pin=U?-6
+Added Pin To Net: NetName=GND Pin=U?-6
+Added Pin To Net: NetName=I2C4_SCL Pin=U?-6
+Added Pin To Net: NetName=I2C4_SDA Pin=U?-6
+Added Pin To Net: NetName=I2C4_SDA Pin=U?-6
+Added Pin To Net: NetName=NetC19_2 Pin=U?-6
+Added Pin To Net: NetName=NetR47_1 Pin=U?-6
+Added Pin To Net: NetName=VDD_GPS Pin=U?-6
+Added Pin To Net: NetName=VDD_SD Pin=U?-6
+Added Pin To Net: NetName=VDD_Sensor Pin=U?-6
+Added Pin To Net: NetName=VDD_Spectrum Pin=U?-6
+Added Pin To Net: NetName=VDD Pin=U?-6
+Added Pin To Net: NetName=DGND Pin=U?-7
+Added Pin To Net: NetName=GND Pin=U?-7
+Added Pin To Net: NetName=GND Pin=U?-7
+Added Pin To Net: NetName=GND Pin=U?-7
+Added Pin To Net: NetName=GND Pin=U?-7
+Added Pin To Net: NetName=NetR53_2 Pin=U?-7
+Added Pin To Net: NetName=RST Pin=U?-7
+Added Pin To Net: NetName=VBAT Pin=U?-7
+Added Pin To Net: NetName=VBAT Pin=U?-7
+Added Pin To Net: NetName=VBAT Pin=U?-7
+Added Pin To Net: NetName=VBAT Pin=U?-7
+Added Pin To Net: NetName=VBAT Pin=U?-7
+Added Pin To Net: NetName=DGND Pin=U?-8
+Added Pin To Net: NetName=GND Pin=U?-8
+Added Pin To Net: NetName=GPS_Enable Pin=U?-8
+Added Pin To Net: NetName=NetD3_2 Pin=U?-8
+Added Pin To Net: NetName=NetR50_1 Pin=U?-8
+Added Pin To Net: NetName=SD_Enable Pin=U?-8
+Added Pin To Net: NetName=Sensor_Enable Pin=U?-8
+Added Pin To Net: NetName=Spectrum_Enable Pin=U?-8
+Added Pin To Net: NetName=VBAT_Sense Pin=U?-8
+Added Pin To Net: NetName=VBAT Pin=U?-8
+Added Pin To Net: NetName=Accelerometer_Enable Pin=U?-9
+Added Pin To Net: NetName=GND Pin=U?-9
+Added Pin To Net: NetName=GND Pin=U?-9
+Added Pin To Net: NetName=GND Pin=U?-9
+Added Pin To Net: NetName=GND Pin=U?-9
+Added Pin To Net: NetName=GND Pin=U?-9
+Added Pin To Net: NetName=NetC9_2 Pin=U?-9
+Added Pin To Net: NetName=NetR13_2 Pin=U?-9
+Added Pin To Net: NetName=NetR54_2 Pin=U?-9
+Added Pin To Net: NetName=VBAT_Sense_Enable Pin=U?-9
+Added Pin To Net: NetName=Accelerometer_Enable Pin=U?-10
+Added Pin To Net: NetName=GND Pin=U?-10
+Added Pin To Net: NetName=ICSPCLK Pin=U?-10
+Added Pin To Net: NetName=NetR56_2 Pin=U?-10
+Added Pin To Net: NetName=Revision_Enable Pin=U?-10
+Added Pin To Net: NetName=VBAT Pin=U?-10
+Added Pin To Net: NetName=ADC_Revision Pin=U?-11
+Added Pin To Net: NetName=GND Pin=U?-11
+Added Pin To Net: NetName=GND Pin=U?-11
+Added Pin To Net: NetName=I2C1_SCL Pin=U?-11
+Added Pin To Net: NetName=ICSPDAT Pin=U?-11
+Added Pin To Net: NetName=GND Pin=U?-12
+Added Pin To Net: NetName=I2C1_SDA Pin=U?-12
+Added Pin To Net: NetName=PWM Pin=U?-12
+Added Pin To Net: NetName=NetC16_2 Pin=U?-13
+Added Pin To Net: NetName=NetR9_2 Pin=U?-13
+Added Pin To Net: NetName=NetR49_1 Pin=U?-13
+Added Pin To Net: NetName=GND Pin=U?-14
+Added Pin To Net: NetName=NetR10_2 Pin=U?-14
+Added Pin To Net: NetName=SendData_EXTI0 Pin=U?-14
+Added Pin To Net: NetName=VDD_Spectrum Pin=U?-14
+Added Pin To Net: NetName=GND Pin=U?-15
+Added Pin To Net: NetName=NetC8_2 Pin=U?-15
+Added Pin To Net: NetName=NetR52_1 Pin=U?-15
+Added Pin To Net: NetName=NetStatus_Out Pin=U?-15
+Added Pin To Net: NetName=Sara_Power Pin=U?-15
+Added Pin To Net: NetName=GND Pin=U?-16
+Added Pin To Net: NetName=GND Pin=U?-16
+Added Pin To Net: NetName=NetStatus Pin=U?-16
+Added Pin To Net: NetName=USART2_TX Pin=U?-16
+Added Pin To Net: NetName=VCC Pin=U?-16
+Added Pin To Net: NetName=USART2_RX Pin=U?-17
+Added Pin To Net: NetName=VDD_GPS Pin=U?-17
+Added Pin To Net: NetName=VDD_Spectrum Pin=U?-17
+Added Pin To Net: NetName=GND Pin=U?-18
+Added Pin To Net: NetName=ICSP Pin=U?-18
+Added Pin To Net: NetName=NetR51_1 Pin=U?-18
+Added Pin To Net: NetName=Sara_Reset Pin=U?-18
+Added Pin To Net: NetName=PWM Pin=U?-19
+Added Pin To Net: NetName=VDD Pin=U?-19
+Added Pin To Net: NetName=GND Pin=U?-20
+Added Pin To Net: NetName=GND Pin=U?-20
+Added Pin To Net: NetName=Radio Enable Pin=U?-20
+Added Pin To Net: NetName=GND Pin=U?-21
+Added Pin To Net: NetName=Sara_Power_MCU Pin=U?-21
+Added Pin To Net: NetName=VCC Pin=U?-21
+Added Pin To Net: NetName=GND Pin=U?-22
+Added Pin To Net: NetName=Sara_Reset_MCU Pin=U?-22
+Added Pin To Net: NetName=VCC Pin=U?-22
+Added Pin To Net: NetName=NetL2_2 Pin=U?-23
+Added Pin To Net: NetName=USART3_TX Pin=U?-24
+Added Pin To Net: NetName=VCC Pin=U?-24
+Added Pin To Net: NetName=NetL2_2 Pin=U?-25
+Added Pin To Net: NetName=USART3_RX Pin=U?-25
+Added Pin To Net: NetName=GPS_Enable Pin=U?-26
+Added Pin To Net: NetName=NetL2_2 Pin=U?-26
+Added Pin To Net: NetName=GND Pin=U?-27
+Added Pin To Net: NetName=Screen_Enable Pin=U?-27
+Added Pin To Net: NetName=Accelerometer_Enable Pin=U?-28
+Added Pin To Net: NetName=GND Pin=U?-28
+Added Pin To Net: NetName=GND Pin=U?-29
+Added Pin To Net: NetName=I2C2_SCL Pin=U?-29
+Added Pin To Net: NetName=GND Pin=U?-30
+Added Pin To Net: NetName=I2C2_SDA Pin=U?-30
+Added Pin To Net: NetName=GND Pin=U?-31
+Added Pin To Net: NetName=GND Pin=U?-32
+Added Pin To Net: NetName=VDD Pin=U?-32
+Added Pin To Net: NetName=CS Pin=U?-33
+Added Pin To Net: NetName=SPI_SCK Pin=U?-34
+Added Pin To Net: NetName=SPI_MISO Pin=U?-35
+Added Pin To Net: NetName=SPI_MOSI Pin=U?-36
+Added Pin To Net: NetName=D/C Pin=U?-37
+Added Pin To Net: NetName=Screen_RST Pin=U?-38
+Added Pin To Net: NetName=SIM_CLK Pin=U?-38
+Added Pin To Net: NetName=SDData0 Pin=U?-39
+Added Pin To Net: NetName=SIM_IO Pin=U?-39
+Added Pin To Net: NetName=SDData1 Pin=U?-40
+Added Pin To Net: NetName=SIM_RST Pin=U?-40
+Added Pin To Net: NetName=BUSY Pin=U?-41
+Added Pin To Net: NetName=VSIM Pin=U?-41
+Added Pin To Net: NetName=USART1_TX Pin=U?-42
+Added Pin To Net: NetName=GND Pin=U?-43
+Added Pin To Net: NetName=USART1_RX Pin=U?-43
+Added Pin To Net: NetName=LED_Green Pin=U?-44
+Added Pin To Net: NetName=LED_Red Pin=U?-45
+Added Pin To Net: NetName=SWDIO Pin=U?-46
+Added Pin To Net: NetName=GND Pin=U?-47
+Added Pin To Net: NetName=VDD Pin=U?-48
+Added Pin To Net: NetName=SWCLK Pin=U?-49
+Added Pin To Net: NetName=GND Pin=U?-50
+Added Pin To Net: NetName=SD_Enable Pin=U?-50
+Added Pin To Net: NetName=SDData2 Pin=U?-51
+Added Pin To Net: NetName=VDD_Sara Pin=U?-51
+Added Pin To Net: NetName=SDData3 Pin=U?-52
+Added Pin To Net: NetName=VDD_Sara Pin=U?-52
+Added Pin To Net: NetName=SDCLK Pin=U?-53
+Added Pin To Net: NetName=VDD_Sara Pin=U?-53
+Added Pin To Net: NetName=GND Pin=U?-54
+Added Pin To Net: NetName=SDCMD Pin=U?-54
+Added Pin To Net: NetName=GND Pin=U?-55
+Added Pin To Net: NetName=SWO Pin=U?-55
+Added Pin To Net: NetName=NetC74_2 Pin=U?-56
+Added Pin To Net: NetName=USB_Detect Pin=U?-56
+Added Pin To Net: NetName=GND Pin=U?-57
+Added Pin To Net: NetName=Sensor_Enable Pin=U?-57
+Added Pin To Net: NetName=GND Pin=U?-58
+Added Pin To Net: NetName=I2C4_SCL Pin=U?-58
+Added Pin To Net: NetName=GND Pin=U?-59
+Added Pin To Net: NetName=I2C4_SDA Pin=U?-59
+Added Pin To Net: NetName=BOOT0 Pin=U?-60
+Added Pin To Net: NetName=GND Pin=U?-60
+Added Pin To Net: NetName=GND Pin=U?-61
+Added Pin To Net: NetName=I2C1_SCL Pin=U?-61
+Added Pin To Net: NetName=I2C1_SDA Pin=U?-62
+Added Pin To Net: NetName=NetR61_2 Pin=U?-62
+Added Pin To Net: NetName=GND Pin=U?-63
+Added Pin To Net: NetName=GND Pin=U?-63
+Added Pin To Net: NetName=GND Pin=U?-64
+Added Pin To Net: NetName=VDD Pin=U?-64
+Added Pin To Net: NetName=GND Pin=U?-65
+Added Pin To Net: NetName=GND Pin=U?-66
+Added Pin To Net: NetName=GND Pin=U?-67
+Added Pin To Net: NetName=GND Pin=U?-68
+Added Pin To Net: NetName=GND Pin=U?-69
+Added Pin To Net: NetName=GND Pin=U?-70
+Added Pin To Net: NetName=GND Pin=U?-71
+Added Pin To Net: NetName=GND Pin=U?-72
+Added Pin To Net: NetName=GND Pin=U?-73
+Added Pin To Net: NetName=GND Pin=U?-74
+Added Pin To Net: NetName=GND Pin=U?-75
+Added Pin To Net: NetName=GND Pin=U?-76
+Added Pin To Net: NetName=GND Pin=U?-77
+Added Pin To Net: NetName=GND Pin=U?-78
+Added Pin To Net: NetName=GND Pin=U?-79
+Added Pin To Net: NetName=GND Pin=U?-80
+Added Pin To Net: NetName=GND Pin=U?-81
+Added Pin To Net: NetName=GND Pin=U?-82
+Added Pin To Net: NetName=GND Pin=U?-83
+Added Pin To Net: NetName=GND Pin=U?-84
+Added Pin To Net: NetName=GND Pin=U?-85
+Added Pin To Net: NetName=GND Pin=U?-86
+Added Pin To Net: NetName=GND Pin=U?-87
+Added Pin To Net: NetName=GND Pin=U?-88
+Added Pin To Net: NetName=GND Pin=U?-89
+Added Pin To Net: NetName=GND Pin=U?-90
+Added Pin To Net: NetName=GND Pin=U?-91
+Added Pin To Net: NetName=GND Pin=U?-92
+Added Pin To Net: NetName=GND Pin=U?-93
+Added Pin To Net: NetName=GND Pin=U?-94
+Added Pin To Net: NetName=GND Pin=U?-95
+Added Pin To Net: NetName=GND Pin=U?-96
+Added Pin To Net: NetName=NetIC?_8 Pin=IC?-8
+Added Pin To Net: NetName=NetIC?_8 Pin=R3-1
+Added Net: Name=NetIC?_8
+Added Pin To Net: NetName=NetQ?_1 Pin=Q?-1
+Added Pin To Net: NetName=NetQ?_1 Pin=R24-1
+Added Pin To Net: NetName=NetQ?_1 Pin=R25-2
+Added Net: Name=NetQ?_1
+Added Pin To Net: NetName=NetQ?_3 Pin=Q?-3
+Added Pin To Net: NetName=NetQ?_3 Pin=R23-1
+Added Net: Name=NetQ?_3
+Added Pin To Net: NetName=NetU16_11 Pin=U16-11
+Added Pin To Net: NetName=NetU16_11 Pin=U?-13
+Added Net: Name=NetU16_11
+Added Pin To Net: NetName=NetU16_12 Pin=U16-12
+Added Pin To Net: NetName=NetU16_12 Pin=U?-12
+Added Net: Name=NetU16_12
+Added Member To Class: ClassName=Designator Member=Component IC? E-SIM
+Added Member To Class: ClassName=Designator Member=Component Q? BSS123
+Added Member To Class: ClassName=Designator Member=Component Q? BSS123
+Added Member To Class: ClassName=Designator Member=Component U? SARA-R4

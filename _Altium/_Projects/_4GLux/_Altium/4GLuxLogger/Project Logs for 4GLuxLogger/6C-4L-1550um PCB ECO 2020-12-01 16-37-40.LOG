@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=GND Pin=U8-63
+Added Member To Class: ClassName=Designator Member=Component IC2 E-SIM
+Added Member To Class: ClassName=Designator Member=Component Q6 BSS123
+Added Member To Class: ClassName=Designator Member=Component Q7 BSS123
+Added Member To Class: ClassName=Designator Member=Component U8 SARA-R4
