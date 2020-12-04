@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=NetStatus_Out Pin=U16-4
+Removed Pin From Net: NetName=USART2_TX Pin=U16-5
+Removed Pin From Net: NetName=USART2_RX Pin=U16-6
+Removed Pin From Net: NetName=NetU8_13 Pin=U16-11
+Removed Pin From Net: NetName=NetU8_12 Pin=U16-12
+Removed Pin From Net: NetName=NetStatus Pin=U16-13
+Added Pin To Net: NetName=USART2_TX Pin=U16-4
+Added Pin To Net: NetName=USART2_RX Pin=U16-5
+Added Pin To Net: NetName=NetStatus_Out Pin=U16-6
+Added Pin To Net: NetName=NetStatus Pin=U16-11
+Added Pin To Net: NetName=NetU8_13 Pin=U16-12
+Added Pin To Net: NetName=NetU8_12 Pin=U16-13
+Added Room: Name=Designator
