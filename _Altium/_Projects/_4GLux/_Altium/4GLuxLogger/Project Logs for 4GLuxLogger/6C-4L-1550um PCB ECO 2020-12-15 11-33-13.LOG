@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=Sara_Power_MCU Pin=U1-21
+Removed Pin From Net: NetName=Sara_Reset_MCU Pin=U1-22
+Added Pin To Net: NetName=Sara_Reset_MCU Pin=U1-21
+Added Pin To Net: NetName=Sara_Power_MCU Pin=U1-22
