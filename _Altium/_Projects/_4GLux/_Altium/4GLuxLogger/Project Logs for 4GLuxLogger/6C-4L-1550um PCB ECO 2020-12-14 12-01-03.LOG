@@ -1,0 +1,7 @@
+Added Component: Designator=U5(USON-6)
+Added Pin To Net: NetName=VDD_Sensor Pin=U5-1
+Added Pin To Net: NetName=GND Pin=U5-2
+Added Pin To Net: NetName=GND Pin=U5-3
+Added Pin To Net: NetName=I2C4_SCL Pin=U5-4
+Added Pin To Net: NetName=I2C4_SDA Pin=U5-6
+Added Pin To Net: NetName=GND Pin=U5-7

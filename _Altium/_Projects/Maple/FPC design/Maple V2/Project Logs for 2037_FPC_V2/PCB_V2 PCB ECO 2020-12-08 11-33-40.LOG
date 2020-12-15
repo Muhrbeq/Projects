@@ -1,6 +1,0 @@
-Removed Pin From Net: NetName=N_1 Pin=*?-1
-Removed Pin From Net: NetName=N_2 Pin=*?-2
-Removed Pin From Net: NetName=N_3 Pin=*?-3
-Added Pin To Net: NetName=N_3 Pin=*?-1
-Added Pin To Net: NetName=N_1 Pin=*?-2
-Added Pin To Net: NetName=N_2 Pin=*?-3
