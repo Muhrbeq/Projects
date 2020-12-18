@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1608296023 source:c:\users\rasmu\onedrive\documents\github\projects\school\kristianstad\_c_programmering\lab 4\lab4_t2_g\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<unistd.h>
+	<limits.h>
+	<string.h>
+
