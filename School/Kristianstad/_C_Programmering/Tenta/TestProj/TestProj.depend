@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1608231404 source:c:\users\rasmu\onedrive\documents\github\projects\school\kristianstad\_c_programmering\tenta\testproj\main.c
+	<stdio.h>
+	<stdlib.h>
+
