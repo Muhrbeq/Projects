@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -231,9 +231,7 @@
 <wire x1="4.4999" y1="7.2996" x2="16.4999" y2="7.2996" width="0" layer="20"/>
 <wire x1="0" y1="8.3" x2="0" y2="0" width="0" layer="48"/>
 <wire x1="0" y1="0" x2="1.5" y2="0" width="0" layer="48"/>
-<rectangle x1="5.69" y1="7.48" x2="6.4" y2="8.3" layer="41"/>
-<rectangle x1="5.69" y1="7.48" x2="6.4" y2="8.3" layer="42"/>
-<text x="19.78" y="7.71" size="1.27" layer="22" rot="MR0">Pogo Board v2</text>
+<text x="16.38" y="7.71" size="1.27" layer="22" rot="MR0">Pogo Board v2</text>
 </plain>
 <libraries>
 <library name="project2034" urn="urn:adsk.eagle:library:23932458">
@@ -553,11 +551,11 @@ Your Eurocircuits Team
 <contactref element="U$6" pad="1"/>
 <polygon width="0.2032" layer="1">
 <vertex x="0.889" y="12.954"/>
-<vertex x="5.334" y="12.954"/>
-<vertex x="5.588" y="12.7"/>
-<vertex x="5.588" y="8.255"/>
-<vertex x="10.0584" y="3.7846"/>
-<vertex x="10.0584" y="0"/>
+<vertex x="5.588" y="12.954"/>
+<vertex x="5.588" y="7.312"/>
+<vertex x="5.65" y="7.25"/>
+<vertex x="10.2084" y="4.9346"/>
+<vertex x="10.2084" y="0"/>
 <vertex x="5.461" y="0"/>
 <vertex x="0.508" y="4.953"/>
 <vertex x="0.508" y="12.573"/>
@@ -567,11 +565,10 @@ Your Eurocircuits Team
 <via x="4.3434" y="2.286" extent="1-16" drill="0.4" diameter="1"/>
 <polygon width="0.2032" layer="16">
 <vertex x="0.889" y="12.954"/>
-<vertex x="5.334" y="12.954"/>
-<vertex x="5.588" y="12.7"/>
-<vertex x="5.588" y="8.255"/>
-<vertex x="10.287" y="3.556"/>
-<vertex x="10.287" y="0"/>
+<vertex x="5.6" y="12.954"/>
+<vertex x="5.6" y="7.266046875"/>
+<vertex x="10.187" y="4.698784375"/>
+<vertex x="10.187" y="0"/>
 <vertex x="5.461" y="0"/>
 <vertex x="0.508" y="4.953"/>
 <vertex x="0.508" y="12.573"/>
