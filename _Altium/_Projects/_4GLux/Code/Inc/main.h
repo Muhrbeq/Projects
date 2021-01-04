@@ -82,14 +82,15 @@ void Error_Handler(void);
 #define ADC_Revision_GPIO_Port GPIOC
 #define SendData_EXTI0_Pin LL_GPIO_PIN_0
 #define SendData_EXTI0_GPIO_Port GPIOA
+#define SendData_EXTI0_EXTI_IRQn EXTI0_IRQn
 #define Radio_NetStatus_Pin LL_GPIO_PIN_1
 #define Radio_NetStatus_GPIO_Port GPIOA
 #define Radio_Enable_Pin LL_GPIO_PIN_4
 #define Radio_Enable_GPIO_Port GPIOA
-#define Sara_Power_On_Pin LL_GPIO_PIN_5
-#define Sara_Power_On_GPIO_Port GPIOA
-#define Sara_Reset_Pin LL_GPIO_PIN_6
+#define Sara_Reset_Pin LL_GPIO_PIN_5
 #define Sara_Reset_GPIO_Port GPIOA
+#define Sara_Power_On_Pin LL_GPIO_PIN_6
+#define Sara_Power_On_GPIO_Port GPIOA
 #define SD_Detect_Pin LL_GPIO_PIN_7
 #define SD_Detect_GPIO_Port GPIOA
 #define GPS_Enable_Pin LL_GPIO_PIN_0
@@ -118,6 +119,7 @@ void Error_Handler(void);
 #define SD_Enable_GPIO_Port GPIOA
 #define VBUS_Detect_EXTI4_Pin LL_GPIO_PIN_4
 #define VBUS_Detect_EXTI4_GPIO_Port GPIOB
+#define VBUS_Detect_EXTI4_EXTI_IRQn EXTI4_IRQn
 #define Sensor_Enable_Pin LL_GPIO_PIN_5
 #define Sensor_Enable_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */

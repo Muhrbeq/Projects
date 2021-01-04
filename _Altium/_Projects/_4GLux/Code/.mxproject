@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/rasmus.muhrbeck/Documents/GitHub/Projects/_Altium/_Projects/_4GLux/Code/Inc
+HeaderPath=C:/Users/rasmu/OneDrive/Documents/GitHub/Projects/_Altium/_Projects/_4GLux/Code/Inc
 HeaderFiles=gpio.h;adc.h;crc.h;ffconf.h;bsp_driver_sd.h;sd_diskio.h;fatfs.h;fatfs_platform.h;i2c.h;iwdg.h;lptim.h;rtc.h;sdmmc.h;spi.h;tim.h;usart.h;stm32l4xx_it.h;stm32_assert.h;stm32l4xx_hal_conf.h;main.h;
-SourcePath=C:/Users/rasmus.muhrbeck/Documents/GitHub/Projects/_Altium/_Projects/_4GLux/Code/Src
+SourcePath=C:/Users/rasmu/OneDrive/Documents/GitHub/Projects/_Altium/_Projects/_4GLux/Code/Src
 SourceFiles=gpio.c;adc.c;crc.c;bsp_driver_sd.c;sd_diskio.c;fatfs.c;fatfs_platform.c;i2c.c;iwdg.c;lptim.c;rtc.c;sdmmc.c;spi.c;tim.c;usart.c;stm32l4xx_it.c;stm32l4xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]

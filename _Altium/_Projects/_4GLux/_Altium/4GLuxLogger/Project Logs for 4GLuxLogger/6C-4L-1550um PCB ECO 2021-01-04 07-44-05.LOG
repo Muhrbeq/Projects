@@ -1,0 +1,4 @@
+Added Component: Designator=U19(TSOP95P280X110_HS-7N)
+Added Pin To Net: NetName=GND Pin=U19-2
+Added Pin To Net: NetName=USBVDD Pin=U19-5
+Added Room: Name=Designator

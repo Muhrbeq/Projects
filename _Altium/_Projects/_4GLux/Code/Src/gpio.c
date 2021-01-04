@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under Ultimate Liberty license
@@ -57,7 +57,7 @@ void MX_GPIO_Init(void)
                           |Screen_RST_Pin);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOA, Radio_Enable_Pin|Sara_Power_On_Pin|Sara_Reset_Pin|Screen_Busy_Pin 
+  LL_GPIO_ResetOutputPin(GPIOA, Radio_Enable_Pin|Sara_Reset_Pin|Sara_Power_On_Pin|Screen_Busy_Pin 
                           |LED_Green_Pin|LED_Red_Pin|SD_Enable_Pin);
 
   /**/
@@ -80,7 +80,7 @@ void MX_GPIO_Init(void)
   LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = Radio_Enable_Pin|Sara_Power_On_Pin|Sara_Reset_Pin|Screen_Busy_Pin 
+  GPIO_InitStruct.Pin = Radio_Enable_Pin|Sara_Reset_Pin|Sara_Power_On_Pin|Screen_Busy_Pin 
                           |LED_Green_Pin|LED_Red_Pin|SD_Enable_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
@@ -136,6 +136,12 @@ void MX_GPIO_Init(void)
 
   /**/
   LL_GPIO_SetPinMode(VBUS_Detect_EXTI4_GPIO_Port, VBUS_Detect_EXTI4_Pin, LL_GPIO_MODE_INPUT);
+
+  /* EXTI interrupt init*/
+  NVIC_SetPriority(EXTI0_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  NVIC_EnableIRQ(EXTI0_IRQn);
+  NVIC_SetPriority(EXTI4_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  NVIC_EnableIRQ(EXTI4_IRQn);
 
 }
 
