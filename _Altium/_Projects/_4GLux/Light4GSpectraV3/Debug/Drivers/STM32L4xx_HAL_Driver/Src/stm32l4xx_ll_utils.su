@@ -1,6 +1,6 @@
 stm32l4xx_ll_utils.c:747:17:UTILS_GetPLLOutputFrequency	0	static
-stm32l4xx_ll_utils.c:616:20:UTILS_SetFlashLatency.part.0	0	static
 stm32l4xx_ll_utils.c:778:20:UTILS_PLL_IsBusy	0	static
+stm32l4xx_ll_utils.c:616:20:UTILS_SetFlashLatency.part.0	0	static
 stm32l4xx_ll_utils.c:817:20:UTILS_EnablePLLAndSwitchSystem	16	static
 stm32l4xx_ll_utils.c:186:6:LL_Init1msTick	0	static
 stm32l4xx_ll_utils.c:202:6:LL_mDelay	8	static

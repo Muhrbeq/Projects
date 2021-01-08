@@ -1,7 +1,6 @@
 stm32l4xx_ll_rcc.h:2126:26:LL_RCC_HSI_IsReady	0	static
 stm32l4xx_ll_rcc.h:2341:26:LL_RCC_LSE_IsReady	0	static
 stm32l4xx_ll_rcc.h:2476:26:LL_RCC_MSI_IsEnabledRangeSelect	0	static
-stm32l4xx_ll_rcc.h:3272:26:LL_RCC_GetI2CClockSource	0	static
 stm32l4xx_ll_rcc.c:205:13:LL_RCC_DeInit	0	static
 stm32l4xx_ll_rcc.c:1443:10:RCC_GetHCLKClockFreq	0	static
 stm32l4xx_ll_rcc.c:1454:10:RCC_GetPCLK1ClockFreq	0	static
@@ -20,8 +19,8 @@ stm32l4xx_ll_rcc.c:1556:10:RCC_PLL_GetFreqDomain_48M	8	static
 stm32l4xx_ll_rcc.c:1639:10:RCC_PLLSAI1_GetFreqDomain_SAI	8	static
 stm32l4xx_ll_rcc.c:804:10:LL_RCC_GetSAIClockFreq	0	static
 stm32l4xx_ll_rcc.c:1683:10:RCC_PLLSAI1_GetFreqDomain_48M	8	static
-stm32l4xx_ll_rcc.c:1067:10:LL_RCC_GetUSBClockFreq	8	static
+stm32l4xx_ll_rcc.c:939:10:LL_RCC_GetSDMMCClockFreq	8	static
 stm32l4xx_ll_rcc.c:1003:10:LL_RCC_GetRNGClockFreq	0	static
-stm32l4xx_ll_rcc.c:939:10:LL_RCC_GetSDMMCClockFreq	0	static
+stm32l4xx_ll_rcc.c:1067:10:LL_RCC_GetUSBClockFreq	0	static
 stm32l4xx_ll_rcc.c:1727:10:RCC_PLLSAI1_GetFreqDomain_ADC	8	static
 stm32l4xx_ll_rcc.c:1128:10:LL_RCC_GetADCClockFreq	0	static

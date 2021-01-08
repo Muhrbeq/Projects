@@ -1,0 +1,6 @@
+Jsmn.c:7:17:JsmnAllocToken	32	static
+Jsmn.c:30:13:JsmnFillToken	24	static
+Jsmn.c:41:16:JsmnParsePrimitive	32	static
+Jsmn.c:95:16:JsmnParseString	40	static
+Jsmn.c:160:9:JsmnParse	40	static
+Jsmn.c:323:6:JsmnInitialize	16	static

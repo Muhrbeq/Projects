@@ -60,20 +60,20 @@
 #ifdef USE_GPIO_FUNCTIONS
 #ifndef HeartBeat_Pin
 #ifdef HAL_GPIO_MODULE_ENABLED
-#define HeartBeat_Pin GPIO_PIN_13
+#define HeartBeat_Pin GPIO_PIN_11
 #else
 #define HeartBeat_Pin LL_GPIO_PIN_13
 #endif
-#define HeartBeat_GPIO_Port GPIOC
+#define HeartBeat_GPIO_Port GPIOA
 #endif
 
 #ifndef debugLed_Pin
 #ifdef HAL_GPIO_MODULE_ENABLED
-#define debugLed_Pin GPIO_PIN_7
+#define debugLed_Pin GPIO_PIN_12
 #else
 #define debugLed_Pin LL_GPIO_PIN_7
 #endif
-#define debugLed_GPIO_Port GPIOC
+#define debugLed_GPIO_Port GPIOA
 #endif
 #endif
 

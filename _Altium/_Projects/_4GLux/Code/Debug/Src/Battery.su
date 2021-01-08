@@ -1,0 +1,5 @@
+Battery.c:11:6:EnableBatterySensePin	8	static
+Battery.c:16:6:DisableBatterySensePin	8	static
+Battery.c:21:9:BatteryMeasure_Init	8	static
+Battery.c:38:10:Battery_GetLevel_Raw	16	static
+Battery.c:60:9:Battery_GetLevel	40	static

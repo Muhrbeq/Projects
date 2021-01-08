@@ -31,7 +31,7 @@ void MX_IWDG_Init(void)
 {
 
   hiwdg.Instance = IWDG;
-  hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_256;
   hiwdg.Init.Window = 4095;
   hiwdg.Init.Reload = 4095;
   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
@@ -42,7 +42,41 @@ void MX_IWDG_Init(void)
 }
 
 /* USER CODE BEGIN 1 */
+void ResetIWDG(void)
+{
+	IWDG->KR = 0x0000AAAA;
+}
 
+void Program_IWDG_Freeze_Shutdown(void)
+{
+	FLASH_OBProgramInitTypeDef myFlashOB_Program;
+	myFlashOB_Program.OptionType = OPTIONBYTE_USER;
+	myFlashOB_Program.USERType = OB_USER_IWDG_STOP;
+	myFlashOB_Program.USERConfig = 0;
+	myFlashOB_Program.RDPLevel = 0xAA;
+
+	printf("----------** FLASH Program **----------\r\n");
+
+	if (HAL_FLASH_Unlock() == HAL_OK)
+	{
+		printf("FLASH Unlocked\r\n");
+	}
+
+	if (HAL_FLASH_OB_Unlock() == HAL_OK)
+	{
+		printf("OB_Bits unlocked\r\n");
+	}
+
+	if (HAL_FLASHEx_OBProgram(&myFlashOB_Program) == HAL_OK)
+	{
+		printf("OB_Bit programmed\r\n");
+	}
+
+	HAL_FLASH_Lock();
+
+	printf("FLASH Locked\r\n");
+	printf("-------------------------\r\n");
+}
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

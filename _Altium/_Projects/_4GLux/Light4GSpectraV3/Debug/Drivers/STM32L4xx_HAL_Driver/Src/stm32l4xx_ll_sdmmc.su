@@ -30,6 +30,7 @@ stm32l4xx_ll_sdmmc.c:845:10:SDMMC_CmdGoIdleState	32	static
 stm32l4xx_ll_sdmmc.c:868:10:SDMMC_CmdOperCond	32	static
 stm32l4xx_ll_sdmmc.c:899:10:SDMMC_CmdAppCommand	40	static
 stm32l4xx_ll_sdmmc.c:927:10:SDMMC_CmdAppOperCommand	32	static
+stm32l4xx_ll_sdmmc.c:955:10:SDMMC_CmdBusWidth	40	static
 stm32l4xx_ll_sdmmc.c:978:10:SDMMC_CmdSendSCR	40	static
 stm32l4xx_ll_sdmmc.c:1002:10:SDMMC_CmdSendCID	32	static
 stm32l4xx_ll_sdmmc.c:1027:10:SDMMC_CmdSendCSD	32	static
@@ -37,5 +38,4 @@ stm32l4xx_ll_sdmmc.c:1052:10:SDMMC_CmdSetRelAdd	40	static
 stm32l4xx_ll_sdmmc.c:1077:10:SDMMC_CmdSendStatus	40	static
 stm32l4xx_ll_sdmmc.c:1100:10:SDMMC_CmdStatusRegister	40	static
 stm32l4xx_ll_sdmmc.c:1125:10:SDMMC_CmdOpCondition	32	static
-stm32l4xx_ll_sdmmc.c:1149:10:SDMMC_CmdSwitch	40	static
-stm32l4xx_ll_sdmmc.c:955:10:SDMMC_CmdBusWidth	0	static
+stm32l4xx_ll_sdmmc.c:1149:10:SDMMC_CmdSwitch	0	static

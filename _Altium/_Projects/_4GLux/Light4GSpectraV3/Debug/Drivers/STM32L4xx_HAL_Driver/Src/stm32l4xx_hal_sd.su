@@ -23,11 +23,11 @@ stm32l4xx_hal_sd.c:464:19:HAL_SD_InitCard	112	static
 stm32l4xx_hal_sd.c:365:19:HAL_SD_Init	8	static
 stm32l4xx_hal_sd.c:2525:19:HAL_SD_GetCardStatus	120	static
 stm32l4xx_hal_sd.c:2573:19:HAL_SD_GetCardInfo	0	static
-stm32l4xx_hal_sd.c:2598:19:HAL_SD_ConfigWideBusOperation	56	static
+stm32l4xx_hal_sd.c:2598:19:HAL_SD_ConfigWideBusOperation	64	static
 stm32l4xx_hal_sd.c:2698:25:HAL_SD_GetCardState	8	static
 stm32l4xx_hal_sd.c:2963:13:SD_DMAError	8	static
-stm32l4xx_hal_sd.c:3042:13:SD_DMARxAbort	8	static
+stm32l4xx_hal_sd.c:3003:13:SD_DMATxAbort	8	static
 stm32l4xx_hal_sd.c:1693:6:HAL_SD_IRQHandler	32	static
-stm32l4xx_hal_sd.c:3003:13:SD_DMATxAbort	0	static
+stm32l4xx_hal_sd.c:3042:13:SD_DMARxAbort	0	static
 stm32l4xx_hal_sd.c:2721:19:HAL_SD_Abort	8	static
 stm32l4xx_hal_sd.c:2789:19:HAL_SD_Abort_IT	16	static

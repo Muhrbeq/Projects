@@ -36,13 +36,23 @@
 #define LOG_FUNC_TEMPERATURE_SENS	0x15
 #define LOG_FUNC_HUMIDITY_SENS		0x16
 #define LOG_FUNC_SPECTRUM_SENS		0x17
-#define LOG_FUNC_ERROR				0x18
+#define LOG_FUNC_SD					0x18
+#define LOG_FUNC_RADIO				0x19
+#define LOG_FUNC_ERROR				0x99
 
 
 /* 8bit
  * #define LOG_SUB_FUNCTIONNAME */
 #define LOG_SUB_NONE				0x11
-#define LOG_SUB_ADD					0x12
+#define LOG_SUB_INIT				0x12
+#define LOG_SUB_ADD					0x13
+#define LOG_SUB_DELETE				0x14
+#define LOG_SUB_WRITE				0x15
+#define LOG_SUB_READ				0x16
+#define LOG_SUB_MOUNT				0x17
+#define LOG_SUB_MEASURE				0x18
+#define LOG_SUB_VERIFY				0x19
+
 
 /* 8 bits
  * #define LOG_TYPE_WhatFunctionIsDoingNAME */
@@ -50,6 +60,12 @@
 #define LOG_TYPE_READ               0x12
 #define LOG_TYPE_WRITE              0x13
 #define LOG_TYPE_BUFFER_FULL		0x14
+#define LOG_TYPE_MOUNT				0x15
+#define LOG_TYPE_ID					0x16
+#define LOG_TYPE_INIT				0x17
+#define LOG_TYPE_OPEN				0x18
+#define LOG_TYPE_SEEK				0x19
+#define LOG_TYPE_COMPARE			0x1A
 
 /* 8 bits
  * #define LOG_STATUS_ResultNAME */

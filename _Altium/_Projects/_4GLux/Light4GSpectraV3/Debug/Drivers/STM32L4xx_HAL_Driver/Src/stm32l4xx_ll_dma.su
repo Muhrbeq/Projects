@@ -1,4 +1,4 @@
-stm32l4xx_ll_dma.h:1597:22:LL_DMA_SetPeriphRequest	8	static
+stm32l4xx_ll_dma.h:1597:22:LL_DMA_SetPeriphRequest	8	static,ignoring_inline_asm
 stm32l4xx_ll_dma.c:179:10:LL_DMA_DeInit	16	static
 stm32l4xx_ll_dma.c:303:10:LL_DMA_Init	24	static
 stm32l4xx_ll_dma.c:379:6:LL_DMA_StructInit	0	static
