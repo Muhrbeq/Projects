@@ -38,7 +38,7 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=JOB_V11_4.OutJob
+DocumentPath=JOB_V1.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -55,7 +55,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document2]
-DocumentPath=PCB_V11_4.PcbDoc
+DocumentPath=PCB_V1.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -72,7 +72,7 @@ GenerateClassCluster=0
 DocumentUniqueId=NWADRUAN
 
 [Document3]
-DocumentPath=PCB_V11_4.PCBDwf
+DocumentPath=PCB_V1.PCBDwf
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -89,7 +89,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document4]
-DocumentPath=SCH_V11_4.SchDoc
+DocumentPath=SCH_V1.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -105,53 +105,47 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NDDVXDLP
 
-[GeneratedDocument1]
-DocumentPath=Output\Gerber\2022_V11_4.EXTREP
+[Document5]
+DocumentPath=..\..\..\_Library\Flex_PCB_footprints.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
 DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BARSAIFQ
 
-[GeneratedDocument2]
-DocumentPath=Output\Gerber\2022_V11_4.GBO
+[Document6]
+DocumentPath=..\..\..\_Library\Flex_SCH_symbols.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
 DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Output\Gerber\2022_V11_4.GM4
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Output\Gerber\2022_V11_4.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Output\Gerber\2022_V11_4.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Output\Gerber\2022_V11_4.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Output\Gerber\2022_V11_4.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Output\Gerber\2022_V11_4.REP
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Output\Gerber\2022_V11_4.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for LSD_Flex_board\Design Rule Check - PCB_V11_4.html
-DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
 
 [Parameter1]
-Name=Project
-Value=2022
+Name=Revision
+Value=V1
 
 [Parameter2]
-Name=Revision
-Value=V11_4
+Name=Project
+Value=Zelda
 
 [Configuration1]
 Name=Sources
@@ -275,7 +269,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=\\PRT1\Secure Print PCL
+TargetPrinter=Microsoft Print to PDF
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
@@ -685,46 +679,16 @@ OutputName9=Specctra Design PCB
 OutputDocumentPath9=
 OutputVariantName9=
 OutputDefault9=0
-OutputType10=Ansoft Neutral
-OutputName10=Ansoft Neutral (AutoPCB)
+OutputType10=MBAExportPARASOLID
+OutputName10=Export PARASOLID
 OutputDocumentPath10=
 OutputVariantName10=
 OutputDefault10=0
-OutputType11=HyperLynx
-OutputName11=HyperLynx (AutoPCB)
+OutputType11=MBAExportSTEP
+OutputName11=Export STEP
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
-OutputType12=Orcad v7 Capture Design
-OutputName12=Orcad v7 Capture Design (AutoSCH)
-OutputDocumentPath12=
-OutputVariantName12=
-OutputDefault12=0
-OutputType13=P-CAD ASCII
-OutputName13=P-CAD ASCII (AutoPCB)
-OutputDocumentPath13=
-OutputVariantName13=
-OutputDefault13=0
-OutputType14=P-CAD V16 Schematic Design
-OutputName14=P-CAD V16 Schematic Design (AutoSCH)
-OutputDocumentPath14=
-OutputVariantName14=
-OutputDefault14=0
-OutputType15=SiSoft
-OutputName15=SiSoft (AutoPCB)
-OutputDocumentPath15=
-OutputVariantName15=
-OutputDefault15=0
-OutputType16=MBAExportPARASOLID
-OutputName16=Export PARASOLID
-OutputDocumentPath16=
-OutputVariantName16=
-OutputDefault16=0
-OutputType17=MBAExportSTEP
-OutputName17=Export STEP
-OutputDocumentPath17=
-OutputVariantName17=
-OutputDefault17=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
