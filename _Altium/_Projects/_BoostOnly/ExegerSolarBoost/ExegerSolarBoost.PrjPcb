@@ -106,12 +106,12 @@ GenerateClassCluster=0
 DocumentUniqueId=UACBRLVJ
 
 [Parameter1]
-Name=Project
-Value=1337
+Name=Revision
+Value=v2
 
 [Parameter2]
-Name=Revision
-Value=V1
+Name=Project
+Value=Exeger mBoost
 
 [Configuration1]
 Name=Sources
@@ -232,7 +232,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=\\PRT1\Secure Print PCL
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
