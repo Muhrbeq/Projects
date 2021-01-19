@@ -41,6 +41,7 @@
 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.o"
 "Middlewares/Third_Party/FatFs/src/option/syscall.o"
 "Src/Jsmn.o"
+"Src/OPT3001.o"
 "Src/_AS726X.o"
 "Src/_Battery.o"
 "Src/_Global.o"

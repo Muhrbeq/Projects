@@ -9,7 +9,7 @@
 #include <math.h>
 #include <stdbool.h>
 
-#include "debugPrint.h"
+//#include "debugPrint.h"
 
 uint8_t send_read_cmd(uint8_t);
 uint8_t read_data(uint8_t*);
@@ -41,13 +41,13 @@ uint8_t read_data(uint8_t *receive_buffer)
 		}
 		else
 		{
-			debug_printf("read_data I2C ready fail\n\r");
+			printf("read_data I2C ready fail\n\r");
 			return HAL_ERROR;
 		}
 	}
 	else
 	{
-		debug_printf("read_data Receive fail\n\r");
+		printf("read_data Receive fail\n\r");
 		return HAL_ERROR;
 	}
 }
@@ -119,7 +119,7 @@ uint8_t OPT_3001_request_reading(void)
 	}
 	else
 	{
-		debug_printf("request reading ERROR\n\r");
+		printf("request reading ERROR\n\r");
 		return HAL_ERROR;
 	}
 }
@@ -153,13 +153,13 @@ uint8_t OPT_3001_reading_ready(void)
 		}
 		else
 		{
-			debug_printf("read_data ERROR\n\r");
+			printf("read_data ERROR\n\r");
 			return HAL_ERROR;
 		}
 	}
 	else
 	{
-		debug_printf("send_read_command ERROR\n\r");
+		printf("send_read_command ERROR\n\r");
 		return HAL_ERROR;
 	}
 }
@@ -185,13 +185,13 @@ uint8_t OPT_3001_get_reading(float* lux_ptr)
 		}
 		else
 		{
-			debug_printf("OPT_3001_get_reading read_data error\n\r");
+			printf("OPT_3001_get_reading read_data error\n\r");
 			return HAL_ERROR;
 		}
 	}
 	else
 	{
-		debug_printf("OPT_3001_get_reading send_read_cmd error\n\r");
+		printf("OPT_3001_get_reading send_read_cmd error\n\r");
 		return HAL_ERROR;
 	}
 }

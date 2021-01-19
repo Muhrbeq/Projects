@@ -334,3 +334,34 @@ uint8_t SaraCheckCommand(const char *sendCommand, const char *receiveCommand, ui
 	return true;
 
 }
+
+/* Gets the internet clock from Sara */
+void SARA_getRealTimeClock(char *time)
+{
+	int i = 0;
+	char *p;
+	uint8_t tmp[64] = { '\0' };
+
+	/* Command to Sara to send the internet clock */
+	SaraSendCommand("AT+CCLK?\r");
+
+	/* Wait for Response with the clock */
+	SaraWaitForResponse(tmp, sizeof tmp - 1, 100);
+
+	/* See if there is a "+CCLK:" in the answer */
+	if (NULL != (p = strstr((char*) tmp, "+CCLK:")))
+	{
+		i = 8;
+		while (*(p + i) != '\"' && *(p + i) != '\0')
+		{
+			/* Assign clock to Time */
+			*(time++) = *(p + i);
+			i++;
+		}
+	}
+	else
+	{
+		/* Read Real Time Clock Failed */
+		return;
+	}
+}
