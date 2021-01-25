@@ -21,7 +21,7 @@
 #include "crc.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "string.h"
 /* USER CODE END 0 */
 
 CRC_HandleTypeDef hcrc;
@@ -76,6 +76,45 @@ void HAL_CRC_MspDeInit(CRC_HandleTypeDef* crcHandle)
 } 
 
 /* USER CODE BEGIN 1 */
+uint8_t GetCRC(uint8_t *get, uint32_t *cCrc)
+{
+	uint32_t bSize = 0;
+
+	/* Reset local CRC calculator */
+	__HAL_CRC_DR_RESET(&hcrc);
+
+	/* define size of string */
+	bSize = strlen((char*) get);
+
+	/* Calculated CRC-32/MPEG-2 for the buffer */
+	*cCrc = HAL_CRC_Accumulate(&hcrc, (uint32_t*) get, bSize);
+
+	return 1;
+}
+
+uint8_t VerifyFile(uint8_t *get, uint32_t *fCrc, uint32_t *cCrc)
+{
+	uint32_t bSize = 0;
+
+	/* Reset local CRC calculator */
+	__HAL_CRC_DR_RESET(&hcrc);
+
+	/* define size of string */
+	bSize = strlen((char*) get);
+
+	/* Calculated CRC for the entire application just flashed */
+	*cCrc = HAL_CRC_Accumulate(&hcrc, (uint32_t*) get, bSize);
+
+	/* If calculated CRC is the same as server CRC */
+	if (*cCrc == *fCrc) {
+		return 1;
+	}
+
+	else /* Message corrupted */
+	{
+		return 0;
+	}
+}
 
 /* USER CODE END 1 */
 

@@ -53,7 +53,8 @@ Src/usart.o: ../Src/usart.c ../Inc/usart.h ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_cortex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_utils.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h ../Inc/_Global.h \
+ ../Inc/__ExegerGeneric.h
 
 ../Inc/usart.h:
 
@@ -168,3 +169,7 @@ Src/usart.o: ../Src/usart.c ../Inc/usart.h ../Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h:
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h:
+
+../Inc/_Global.h:
+
+../Inc/__ExegerGeneric.h:

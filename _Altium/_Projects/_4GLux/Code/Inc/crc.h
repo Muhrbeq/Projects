@@ -39,7 +39,8 @@ extern CRC_HandleTypeDef hcrc;
 void MX_CRC_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+uint8_t GetCRC(uint8_t *get, uint32_t *cCrc);
+uint8_t VerifyFile(uint8_t *get, uint32_t *fCrc, uint32_t *cCrc);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

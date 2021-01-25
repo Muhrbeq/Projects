@@ -8,6 +8,8 @@
 #ifndef SARAR4_H_
 #define SARAR4_H_
 
+void USART2_Callback(void);
+
 uint8_t SaraIsAlive();
 uint8_t StartUpSara();
 uint8_t SaraInitAtCommands();

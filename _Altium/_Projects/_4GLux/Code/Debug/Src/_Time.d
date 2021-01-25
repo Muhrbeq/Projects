@@ -1,5 +1,5 @@
-Src/_SdCard.o: ../Src/_SdCard.c ../Inc/__ExegerGeneric.h ../Inc/main.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
+Src/_Time.o: ../Src/_Time.c ../Inc/_Time.h ../Inc/__ExegerGeneric.h \
+ ../Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h \
@@ -53,16 +53,10 @@ Src/_SdCard.o: ../Src/_SdCard.c ../Inc/__ExegerGeneric.h ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_cortex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_utils.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h ../Inc/_SDCard.h \
- ../Inc/_Global.h ../Inc/__ExegerGeneric.h ../Inc/_LowLevel.h \
- ../Inc/rtc.h ../Inc/_Time.h ../Inc/_Global.h \
- ../Middlewares/Third_Party/FatFs/src/ff.h \
- ../Middlewares/Third_Party/FatFs/src/integer.h ../Inc/ffconf.h \
- ../Inc/bsp_driver_sd.h ../Inc/fatfs_platform.h ../Inc/bsp_driver_sd.h \
- ../Inc/fatfs.h ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
- ../Middlewares/Third_Party/FatFs/src/diskio.h \
- ../Middlewares/Third_Party/FatFs/src/ff.h ../Inc/sd_diskio.h \
- ../Inc/sdmmc.h ../Inc/rtc.h
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h ../Inc/_Global.h \
+ ../Inc/rtc.h
+
+../Inc/_Time.h:
 
 ../Inc/__ExegerGeneric.h:
 
@@ -178,42 +172,6 @@ Src/_SdCard.o: ../Src/_SdCard.c ../Inc/__ExegerGeneric.h ../Inc/main.h \
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h:
 
-../Inc/_SDCard.h:
-
 ../Inc/_Global.h:
-
-../Inc/__ExegerGeneric.h:
-
-../Inc/_LowLevel.h:
-
-../Inc/rtc.h:
-
-../Inc/_Time.h:
-
-../Inc/_Global.h:
-
-../Middlewares/Third_Party/FatFs/src/ff.h:
-
-../Middlewares/Third_Party/FatFs/src/integer.h:
-
-../Inc/ffconf.h:
-
-../Inc/bsp_driver_sd.h:
-
-../Inc/fatfs_platform.h:
-
-../Inc/bsp_driver_sd.h:
-
-../Inc/fatfs.h:
-
-../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
-
-../Middlewares/Third_Party/FatFs/src/diskio.h:
-
-../Middlewares/Third_Party/FatFs/src/ff.h:
-
-../Inc/sd_diskio.h:
-
-../Inc/sdmmc.h:
 
 ../Inc/rtc.h:

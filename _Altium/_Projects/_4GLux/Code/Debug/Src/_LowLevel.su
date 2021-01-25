@@ -4,6 +4,7 @@ _LowLevel.c:32:6:SystemClock_Config	200	static
 _LowLevel.c:108:6:InitPeripherals	8	static
 _LowLevel.c:146:9:CheckResetCause	4	static
 _LowLevel.c:193:6:SystemPower_Config	16	static
-_LowLevel.c:210:13:SystemSleepGPIO	56	static
-_LowLevel.c:278:6:SystemSleepAndWakeUp	8	static
-_LowLevel.c:309:6:SleepMax2s	32	static
+_LowLevel.c:210:13:LowLevel_TotalSleepGPIO	56	static
+_LowLevel.c:267:13:SystemSleepGPIO	56	static
+_LowLevel.c:335:6:SystemSleepAndWakeUp	8	static
+_LowLevel.c:366:6:SleepMax2s	32	static

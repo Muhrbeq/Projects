@@ -9,6 +9,7 @@
 #include "_SDCard.h"
 #include "_Global.h"
 #include "_LowLevel.h"
+#include "_Time.h"
 
 #include "ff.h"
 #include "bsp_driver_sd.h"
@@ -401,15 +402,15 @@ uint8_t SDWriteChars(char* filename)
 	/* Open or create file */
 	if (f_open(&charFile, filename, FA_OPEN_APPEND | FA_WRITE) != FR_OK)
 	{
-		ErrorAddLog(
-				LOG_FUNC_SD,
-				LOG_SUB_WRITE,
-				LOG_TYPE_OPEN,
-				LOG_STATUS_FAIL,
-				1,
-				0,
-				0,
-				GetErrorStruct());
+//		ErrorAddLog(
+//				LOG_FUNC_SD,
+//				LOG_SUB_WRITE,
+//				LOG_TYPE_OPEN,
+//				LOG_STATUS_FAIL,
+//				1,
+//				0,
+//				0,
+//				GetErrorStruct());
 	}
 	else
 	{

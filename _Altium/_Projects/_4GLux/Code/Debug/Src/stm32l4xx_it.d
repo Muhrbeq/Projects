@@ -54,7 +54,9 @@ Src/stm32l4xx_it.o: ../Src/stm32l4xx_it.c ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_utils.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h \
- ../Inc/stm32l4xx_it.h
+ ../Inc/stm32l4xx_it.h ../Inc/_Global.h ../Inc/main.h \
+ ../Inc/__ExegerGeneric.h ../Inc/__ExegerGeneric.h ../Inc/_GPS.h \
+ ../Inc/_SaraR4.h
 
 ../Inc/main.h:
 
@@ -169,3 +171,15 @@ Src/stm32l4xx_it.o: ../Src/stm32l4xx_it.c ../Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h:
 
 ../Inc/stm32l4xx_it.h:
+
+../Inc/_Global.h:
+
+../Inc/main.h:
+
+../Inc/__ExegerGeneric.h:
+
+../Inc/__ExegerGeneric.h:
+
+../Inc/_GPS.h:
+
+../Inc/_SaraR4.h:

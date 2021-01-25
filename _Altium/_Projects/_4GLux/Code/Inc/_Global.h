@@ -118,6 +118,9 @@ SensorFlags sFlags;
 SaraConfig sConfig;
 InfoLog iLog;
 Data dataGlobal;
+UART uart1;
+UART uart2;
+UART uart3;
 
 
 #endif /* GLOBAL_H_ */

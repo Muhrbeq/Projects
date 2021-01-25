@@ -207,6 +207,63 @@ void SystemPower_Config(void)
 
 /* Optimal GPIO settings for sleep current  (EXAMPLE)*/
 //todo
+static void LowLevel_TotalSleepGPIO(void)
+{
+	GPIO_InitTypeDef GPIO_InitStructure;
+
+	__HAL_RCC_GPIOA_CLK_ENABLE()
+	;
+	__HAL_RCC_GPIOB_CLK_ENABLE()
+	;
+	__HAL_RCC_GPIOC_CLK_ENABLE()
+	;
+	__HAL_RCC_GPIOD_CLK_ENABLE()
+	;
+	__HAL_RCC_GPIOH_CLK_ENABLE()
+	;
+	__HAL_RCC_GPIOE_CLK_ENABLE()
+	;
+
+	/* All GPIO A that shouldn't have internal pullup/pulldowns init as nopull */
+	GPIO_InitStructure.Mode = GPIO_MODE_ANALOG;
+	GPIO_InitStructure.Pull = GPIO_NOPULL;
+	GPIO_InitStructure.Pin = GPIO_PIN_All;
+
+	HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+
+	/* All GPIO B that shouldn't have internal pullup/pulldowns init as nopull */
+	GPIO_InitStructure.Mode = GPIO_MODE_ANALOG;
+	GPIO_InitStructure.Pull = GPIO_NOPULL;
+	GPIO_InitStructure.Pin = GPIO_PIN_All;
+
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+	/* All GPIO C that shouldn't have internal pullup/pulldowns init as nopull */
+	GPIO_InitStructure.Mode = GPIO_MODE_ANALOG;
+	GPIO_InitStructure.Pull = GPIO_NOPULL;
+	GPIO_InitStructure.Pin = GPIO_PIN_All;
+	HAL_GPIO_Init(GPIOC, &GPIO_InitStructure);
+
+	/* All GPIO D that shouldn't have internal pullup/pulldowns init as nopull */
+	GPIO_InitStructure.Mode = GPIO_MODE_ANALOG;
+	GPIO_InitStructure.Pull = GPIO_NOPULL;
+	GPIO_InitStructure.Pin = GPIO_PIN_All;
+	HAL_GPIO_Init(GPIOD, &GPIO_InitStructure);
+	HAL_GPIO_Init(GPIOH, &GPIO_InitStructure);
+	HAL_GPIO_Init(GPIOE, &GPIO_InitStructure);
+
+	/* Disable GPIOs clock */
+	__HAL_RCC_GPIOA_CLK_DISABLE();
+	__HAL_RCC_GPIOB_CLK_DISABLE();
+	__HAL_RCC_GPIOC_CLK_DISABLE();
+	__HAL_RCC_GPIOD_CLK_DISABLE();
+	__HAL_RCC_GPIOH_CLK_DISABLE();
+	__HAL_RCC_GPIOE_CLK_DISABLE();
+}
+
+/* Optimal GPIO settings for sleep current  (EXAMPLE)*/
+//todo
 static void SystemSleepGPIO(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;

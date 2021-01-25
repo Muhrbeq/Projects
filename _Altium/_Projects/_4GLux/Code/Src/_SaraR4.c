@@ -8,13 +8,11 @@
 
 #include "_Global.h"
 #include "__ExegerGeneric.h"
+#include "usart.h"
 
 #include <_SaraR4.h>
 
-UART uart2;
-
-/* UART buffer init */
-volatile uint8_t uart_Buffer[TX_BUFF_SIZE] = { 0 };
+volatile uint8_t uart2_Buffer[TX_BUFF_SIZE] = { 0 };
 
 /* Usart2 IRQ handler */
 void USART2_Callback(void)
@@ -32,7 +30,7 @@ void USART2_Callback(void)
 			if (data != '\n')
 			{
 				/* Add data to Buffer */
-				uart_Buffer[uart2.Head] = data;
+				uart2_Buffer[uart2.Head] = data;
 				uart2.Head++;
 			}
 		}
@@ -44,6 +42,8 @@ void USART2_Callback(void)
 		}
 	}
 }
+
+
 
 /* See if Sara is alive */
 uint8_t SaraIsAlive()
@@ -207,7 +207,7 @@ uint16_t SaraWaitForResponse(uint8_t *get, uint16_t count, uint32_t timeout_ms)
 			for (int i = 0; i < count; i++)
 			{
 				/* Assign received buffer the values of UART buffer */
-				get[i] = uart_Buffer[uart2.Tail];
+				get[i] = uart2_Buffer[uart2.Tail];
 
 				/* Tail jumps one position */
 				uart2.Tail++;
@@ -256,7 +256,7 @@ uint16_t SaraWaitForResponse(uint8_t *get, uint16_t count, uint32_t timeout_ms)
 	for (int i = 0; i < u_counter; i++)
 	{
 		/* Received buffer = uart buffer */
-		get[i] = uart_Buffer[uart2.Tail];
+		get[i] = uart2_Buffer[uart2.Tail];
 
 		/* Tail jumps one position */
 		uart2.Tail++;

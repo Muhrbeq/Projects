@@ -1,0 +1,5 @@
+_Time.c:14:10:Time_RTCGetDateTime	40	static
+_Time.c:38:9:Time_RTCSetAlarmA	120	static
+_Time.c:85:9:Time_RTCSetAlarmB	120	static
+_Time.c:132:6:GetTime	40	static
+_Time.c:165:6:printTime	40	static
