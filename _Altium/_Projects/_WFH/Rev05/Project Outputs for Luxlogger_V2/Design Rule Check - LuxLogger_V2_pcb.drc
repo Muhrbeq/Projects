@@ -1,10 +1,11 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc
 Date     : 2021-01-26
-Time     : 21:48:02
+Time     : 22:44:21
 
 Processing Rule : Clearance Constraint (Gap=0.2mm) (OnLayer('Layer 1') OR OnLayer('Layer 4')),(All)
-Rule Violations :0
+   Violation between Clearance Constraint: (0.175mm < 0.2mm) Between Track (36.025mm,11.051mm)(39.775mm,7.301mm) on Layer 4 And Via (38.5mm,9.425mm) from Layer 1 to Layer 4 
+Rule Violations :1
 
 Processing Rule : Clearance Constraint (Gap=0.2mm) (OnLayer('Layer 2') OR OnLayer('Layer 3')),(All)
 Rule Violations :0
@@ -14,23 +15,32 @@ Rule Violations :0
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
    Violation between Short-Circuit Constraint: Between Pad P3-1(32.855mm,27.25mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P3-2(11.07mm,3.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P3-2(11.07mm,3.2mm) on Multi-Layer And Polygon Region (11 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P3-2(11.07mm,3.2mm) on Multi-Layer And Polygon Region (46 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
    Violation between Short-Circuit Constraint: Between Pad P3-2(34.125mm,27.25mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P3-2(34.125mm,27.25mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P3-2(34.125mm,27.25mm) on Multi-Layer And Polygon Region (46 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
    Violation between Short-Circuit Constraint: Between Pad P3-3(35.395mm,27.25mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P3-3(35.395mm,27.25mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P3-3(9.8mm,3.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P3-4(8.53mm,3.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P3-5(7.26mm,3.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P3-3(35.395mm,27.25mm) on Multi-Layer And Polygon Region (46 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P3-3(9.8mm,3.2mm) on Multi-Layer And Polygon Region (11 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P3-4(8.53mm,3.2mm) on Multi-Layer And Polygon Region (11 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P3-5(7.26mm,3.2mm) on Multi-Layer And Polygon Region (11 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
    Violation between Short-Circuit Constraint: Between Pad P4-1(30.98mm,27.2mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P4-1(30.98mm,27.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P4-1(30.98mm,27.2mm) on Multi-Layer And Polygon Region (46 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
    Violation between Short-Circuit Constraint: Between Pad P4-2(29.71mm,27.2mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P4-3(28.44mm,27.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P4-3(28.44mm,27.2mm) on Multi-Layer And Polygon Region (46 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
    Violation between Short-Circuit Constraint: Between Pad P4-4(27.17mm,27.2mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P4-4(27.17mm,27.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P4-4(27.17mm,27.2mm) on Multi-Layer And Polygon Region (46 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
    Violation between Short-Circuit Constraint: Between Pad P4-5(25.9mm,27.2mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P4-5(25.9mm,27.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Pad P4-6(24.63mm,27.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P4-5(25.9mm,27.2mm) on Multi-Layer And Polygon Region (46 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad P4-6(24.63mm,27.2mm) on Multi-Layer And Polygon Region (46 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (1 hole(s)) Layer 2 - GND And Via (12.525mm,14.9mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (11 hole(s)) Layer 2 - GND And Via (10.4mm,5.1mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (11 hole(s)) Layer 2 - GND And Via (2mm,23.5mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (11 hole(s)) Layer 2 - GND And Via (2mm,24.5mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (11 hole(s)) Layer 2 - GND And Via (2mm,25.5mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (11 hole(s)) Layer 2 - GND And Via (3.25mm,24.5mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (11 hole(s)) Layer 2 - GND And Via (3.25mm,25.5mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (11 hole(s)) Layer 2 - GND And Via (9.2mm,5.1mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
    Violation between Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Track (24.5mm,15.35mm)(26.2mm,15.35mm) on Layer 3 - PWR Location : [X = 50.157mm][Y = 60.611mm]
    Violation between Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Track (26.2mm,15.35mm)(27.375mm,16.525mm) on Layer 3 - PWR Location : [X = 50.157mm][Y = 60.611mm]
    Violation between Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (25.725mm,16.525mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
@@ -54,59 +64,55 @@ Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
    Violation between Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (46.205mm,20.295mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
    Violation between Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (47.625mm,12.375mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
    Violation between Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (47.65mm,11.125mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (10.4mm,5.1mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (12.525mm,14.9mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (13.35mm,10.275mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (13.7mm,9.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (19.625mm,20.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (19.7mm,13.9mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (21.725mm,18.25mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (23.1mm,24.225mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (24.25mm,19.375mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (24.3mm,8.725mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (24.5mm,15.35mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (24.5mm,17.85mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (26.25mm,24.225mm) from Layer 1 to Layer 4 Location : [X = 50.15mm][Y = 69.625mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (26.475mm,12.3mm) from Layer 1 to Layer 4 Location : [X = 50.375mm][Y = 57.7mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (27.375mm,16.525mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (29.7mm,13mm) from Layer 1 to Layer 4 Location : [X = 53.6mm][Y = 58.4mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (33.475mm,20.425mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (33.975mm,15.125mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (34.95mm,20.425mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (36.025mm,15.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (38.5mm,9.425mm) from Layer 1 to Layer 4 Location : [X = 62.4mm][Y = 54.825mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (38.825mm,14.075mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (39.3mm,15.925mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (40.375mm,7.275mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (40.65mm,27.575mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (42.95mm,7.475mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (43.375mm,21.15mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (44.425mm,7.475mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (44.475mm,25.05mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (45.65mm,23.075mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (46.205mm,20.295mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (47.1mm,26.5mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (47.625mm,12.375mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (47.65mm,11.125mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (48.625mm,24.325mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (54.7mm,14.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (54.7mm,17.95mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (60.515mm,17mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (62.225mm,8mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (62.625mm,10.85mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (62.625mm,9.775mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-   Violation between Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (9.2mm,5.1mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
-Rule Violations :83
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (10.4mm,5.1mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (13.35mm,10.275mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (13.7mm,9.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (19.625mm,20.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (19.7mm,13.9mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (21.725mm,18.25mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (23.1mm,24.225mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (24.25mm,19.375mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (24.3mm,8.725mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (24.5mm,15.35mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (24.5mm,17.85mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (26.25mm,24.225mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (26.475mm,12.3mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (27.375mm,16.525mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (29.7mm,13mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (33.475mm,20.425mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (33.975mm,15.125mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (34.95mm,20.425mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (36.025mm,15.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (38.5mm,9.425mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (38.825mm,14.075mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (39.3mm,15.925mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (40.375mm,7.275mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (40.65mm,27.575mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (42.95mm,7.475mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (43.375mm,21.15mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (44.425mm,7.475mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (44.475mm,25.05mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (45.65mm,23.075mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (46.205mm,20.295mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (47.1mm,26.5mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (47.625mm,12.375mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (47.65mm,11.125mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (48.625mm,24.325mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (54.7mm,14.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (54.7mm,17.95mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (60.515mm,17mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (62.225mm,8mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (62.625mm,10.85mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Polygon Region (46 hole(s)) Layer 2 - GND And Via (62.625mm,9.775mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]
+Rule Violations :90
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
    Violation between Un-Routed Net Constraint: Net VDD Between Pad D2-3(43.05mm,24.625mm) on Layer 1 And Pad D2-1(43.05mm,25.625mm) on Layer 1 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (1.25mm,14.25mm) from Layer 1 to Layer 4 And Pad Free-1(6.9mm,14.4mm) on Layer 4 
-   Violation between Un-Routed Net Constraint: Net Solar+ Between Pad L01-1(5.475mm,22.25mm) on Layer 1 And Pad Free-2(6.9mm,21.9mm) on Layer 4 
-   Violation between Un-Routed Net Constraint: Net GND Between Track (12.2mm,3.34mm)(12.34mm,3.2mm) on Layer 1 And Pad MH1-1(18.5mm,3mm) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MH2-1(18.25mm,26mm) on Multi-Layer And Track (20mm,22.709mm)(20.066mm,22.775mm) on Layer 1 
-   Violation between Un-Routed Net Constraint: Net EXT_BAT Between Track (21.4mm,8.175mm)(21.4mm,8.95mm) on Layer 1 And Via (62.225mm,8mm) from Layer 1 to Layer 4 
+   Violation between Un-Routed Net Constraint: Net EXT_BAT Between Pad R29-1(22.7mm,7.875mm) on Layer 1 And Pad D3-1(58.4mm,7.535mm) on Layer 1 
+   Violation between Un-Routed Net Constraint: Net GND Between Track (12.2mm,3.34mm)(12.2mm,5.5mm) on Layer 1 And Pad MH1-1(18.5mm,3mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad MH2-1(18.25mm,26mm) on Multi-Layer And Track (20.066mm,22.775mm)(21.2mm,22.775mm) on Layer 1 
    Violation between Un-Routed Net Constraint: Net 5V_USB Between Via (62.625mm,9.775mm) from Layer 1 to Layer 4 And Track (56.989mm,10.289mm)(62.625mm,10.289mm) on Layer 1 
-Rule Violations :7
+Rule Violations :5
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
@@ -164,6 +170,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 97
+Violations Detected : 103
 Waived Violations : 0
 Time Elapsed        : 00:00:02
