@@ -1,0 +1,10 @@
+Output: Pick and Place
+Type  : Pick Place
+From  : Variant [[No Variations]] of PCB Document [LuxLogger_V2_pcb.PcbDoc]
+   Generated File[LuxLogger V2_04.txt]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 10:40:12 On 2020-09-23

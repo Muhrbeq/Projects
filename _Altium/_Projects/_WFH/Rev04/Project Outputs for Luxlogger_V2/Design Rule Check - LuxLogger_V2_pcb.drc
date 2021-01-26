@@ -1,0 +1,72 @@
+Protel Design System Design Rule Check
+PCB File : G:\Prototyping\Projects\EXEGER\LuxLogger V2\Hardware\Rev04\LuxLogger_V2_pcb.PcbDoc
+Date     : 2020-09-23
+Time     : 10:39:21
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (OnLayer('Layer 1') OR OnLayer('Layer 4')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (OnLayer('Layer 2') OR OnLayer('Layer 3')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (HasFootprint('SOTFL50P160X60-6N')),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=2mm) (Preferred=0.2mm) (All)
+Rule Violations :0
+
+Processing Rule : Routing Layers(All)
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=0.3mm) (MaxHoleWidth=0.5mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.6mm) (MaxWidth=1mm) (PreferedWidth=0.6mm) (All)
+Rule Violations :0
+
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.15mm) (Max=0.3mm) (Prefered=0.3mm)  and Width Constraints (Min=0.2mm) (Max=0.6mm) (Prefered=0.6mm) (InDifferentialPair('USB'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.3mm) (Max=4mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (OnLayer('Layer 1') OR OnLayer('Layer 4'))
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (OnLayer('Layer 2 - GND') OR OnLayer('Layer 3 - PWR'))
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (HasFootprint('BU2032SM-HD-G')),(HasFootprint('JST_S2B-PH-SM4-TB') OR HasFootprint('SOD123 SODFL360X130-2N')) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (All),(HasFootprint('HOLE_PLATED_2900um')) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0.2mm, Vertical Gap = Infinite ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (HasFootprint('FIDUCIAL_01')),(All) 
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Waived Violations : 0
+Time Elapsed        : 00:00:02

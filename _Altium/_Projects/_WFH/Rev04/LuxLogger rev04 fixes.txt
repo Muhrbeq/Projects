@@ -1,0 +1,11 @@
+	- Korrigera ledningsdragning pinnar LuxLogger, dra ut som "U" från MCU/mfl istället för att dra direkt mellan paddarna
+	- Förtydliga LED-rotationen i underlagen 
+	- Avmontera coincellhållaren
+	- Fixa BOM-kommentarer i mail
+	- Gå igenom BOM, nolla NMtd
+	- DRC/ERC
+
+Changelog to inform supplier of:
+- BT1 unmounted
+- Rotation of D2 needs to be checked more carefully
+- Can use same paste mask
