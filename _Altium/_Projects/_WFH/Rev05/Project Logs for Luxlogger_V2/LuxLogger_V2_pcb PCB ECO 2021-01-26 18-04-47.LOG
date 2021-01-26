@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=SENS_V Pin=R26-1
+Removed Pin From Net: NetName=SENS_V Pin=R29-1
+Change Net Name : Old Net Name=SENS_V New Net Name=EXT_BAT
+Added Pin To Net: NetName=SENS_V Pin=R26-1
+Added Pin To Net: NetName=SENS_V Pin=R29-1
+Added Net: Name=SENS_V

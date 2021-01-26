@@ -1,0 +1,26 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: LuxLogger V2_04.GBR   2020-09-23  10:39:54
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.gbr                Layer 1                                 
+.gbr                Layer 2 - GND                           
+.gbr                Layer 3 - PWR                           
+.gbr                Layer 4                                 
+.gbr                Top Paste                               
+.gbr                Bottom Overlay                          
+.gbr                Bottom Paste                            
+.gbr                Top Solder                              
+.gbr                Top Overlay                             
+.gbr                Bottom Solder                           
+.gbr                Assembly bot                            
+.gbr                Assembly top                            
+.gbr                Profile                                 
+.gbr                Non-plated through-hole drill file      
+.gbr                Plated through-hole drill file          
+.gbr                Drill Drawing                           
+.gbr                Drill Guide                             
+------------------------------------------------------------------------------------------

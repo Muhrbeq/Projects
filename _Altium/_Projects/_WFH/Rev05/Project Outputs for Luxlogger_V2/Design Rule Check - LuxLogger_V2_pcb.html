@@ -1,0 +1,663 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2021-01-26</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">21:48:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc" class="file"><acronym title="C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc">C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">97</td></tr>
+</table>
+</td>
+</table><a name="ID2HMAI34NIUAMH34KOET2CHZL0FRZ2ROSAW23EBLQGYGBG2HIMQPE"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1AQNXWRYGPC1INC4Y22JQBYBLKOBUZ2PPUSTCXK3IYL4U4MDO2BD">Clearance Constraint (Gap=0.2mm) (OnLayer('Layer 1') OR OnLayer('Layer 4')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJUP1ARZR20L2EPXNQCFOO4JQEBNIRKX3QRAZ1MDV3IFFOBSL1IB">Clearance Constraint (Gap=0.2mm) (OnLayer('Layer 2') OR OnLayer('Layer 3')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2YTG33SHGFDCFIPNAN53SVKOSHCBYIW5BSZVJDWB3REVAEJF2XG">Clearance Constraint (Gap=0.15mm) (HasFootprint('SOTFL50P160X60-6N')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDT1SVQT0UAQK2NRLAPYEF3HNP4MRLLVZMZAE3DIPIH211KHONNP5M">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">83</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWEUPD1GYHBYEPTXEW0L2R5QTZMZIODBI4VCN4MDSCADFJYX0HQF">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">7</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYYKWOVXZIDEVMQACSDBTLTNHQIPGMWZQFGZ3OBPGPJWDNIRXNC2">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4GMTG2413QTCDCIPOHIY5U4JOFMHI5CVXHX0W1JCX5VUFHHMADKC">Width Constraint (Min=0.15mm) (Max=2mm) (Preferred=0.2mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDW3ZUTTNQ2H3OLZ4Y0SCDGEKGKB0EQ4DP3O42SQIFL3PC4BTUZANK">Routing Layers(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1TPTXCNQJGUDMCZ3RT1HV2OOLE01MKPXQW4BX2OX5FSXWHXJ0BFD">Routing Via (MinHoleWidth=0.3mm) (MaxHoleWidth=0.5mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.6mm) (MaxWidth=1mm) (PreferedWidth=0.6mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIDH20C13HTBTOFCXZJBCMA2SNGP2YND3ANOEZEJ24X5AONIUAWVM">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.15mm) (Max=0.3mm) (Prefered=0.3mm)  and Width Constraints (Min=0.2mm) (Max=0.6mm) (Prefered=0.6mm) (InDifferentialPair('USB'))</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5IUAERU25U1YKSMWIBNFR3WZ3DPHSL2RVCEWNMVUUYUOVMW5JPF">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFMCXZ4QENADWDEH45310QCL31HGRQYQRMWWLN5ICGRBLZHBVBVZ">Hole Size Constraint (Min=0.3mm) (Max=4mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBMZB3JMBDL0NDQFGKMAWDHQ4RLHKULNWXA3C2UYVN4F2W1HAJGN">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGH0Z4QKCDSYBNTH4QJB3GOCRZK0U4JF3O1WXAMMFCNM1YDBIFSXJ">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYGP4THAP2OXPFEEGOGUQZNVESPN1X432QDV5STIVZA3ABVTC235J">Board Clearance Constraint (Gap=0mm) (OnLayer('Layer 1') OR OnLayer('Layer 4'))</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDY43YFI0I33QDN5YGZ40AEOKWYJCTW3CCFIKOHZNKWYGAZLROAGGJ">Board Clearance Constraint (Gap=0mm) (OnLayer('Layer 2 - GND') OR OnLayer('Layer 3 - PWR'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZETMISVBG4EICAI24OZ5AT24FVAES04B4L4AFBPVJT52KV4IK3G">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (HasFootprint('BU2032SM-HD-G')),(HasFootprint('JST_S2B-PH-SM4-TB') OR HasFootprint('SOD123 SODFL360X130-2N')) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXWLEWJWYMAK4HORB45TLF2COVHRQ5B2DDQVZBVEXN2JOWTKMSLIB">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (All),(HasFootprint('HOLE_PLATED_2900um')) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLACHW41AZWRBF1IIJQATLH1VCEFUQAFSNTLJ4DIGWVAVD50RK31L">Component Clearance Constraint ( Horizontal Gap = 0.2mm, Vertical Gap = Infinite ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKQ21QPHVQBTLJT2IUGTMXOUFQCNJNABM1ZFTDWCIAEG0BHV1USQ">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (HasFootprint('FIDUCIAL_01')),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDI1YJCQI3R3HOGT2HLJZVCFE0FBUMWN5TEDXAZODKHBBXY4VNXM1D">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">97</td>
+</tr>
+</table><br><a name="IDT1SVQT0UAQK2NRLAPYEF3HNP4MRLLVZMZAE3DIPIH211KHONNP5M"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P3-1(32.855mm,27.25mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P3-2(11.07mm,3.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P3-2(34.125mm,27.25mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P3-2(34.125mm,27.25mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P3-3(35.395mm,27.25mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P3-3(35.395mm,27.25mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P3-3(9.8mm,3.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P3-4(8.53mm,3.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P3-5(7.26mm,3.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P4-1(30.98mm,27.2mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P4-1(30.98mm,27.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P4-2(29.71mm,27.2mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P4-3(28.44mm,27.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P4-4(27.17mm,27.2mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P4-4(27.17mm,27.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P4-5(25.9mm,27.2mm) on Multi-Layer And Polygon Region (21 hole(s)) Layer 3 - PWR Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P4-5(25.9mm,27.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad P4-6(24.63mm,27.2mm) on Multi-Layer And Polygon Region (49 hole(s)) Layer 2 - GND Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1972.619mil|Location2.X=1976.783mil|Location1.Y=2384.194mil|Location2.Y=2388.358mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1972.619mil|Location2.X=1976.783mil|Location1.Y=2384.194mil|Location2.Y=2388.358mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Track (24.5mm,15.35mm)(26.2mm,15.35mm) on Layer 3 - PWR Location : [X = 50.157mm][Y = 60.611mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1972.619mil|Location2.X=1976.783mil|Location1.Y=2384.194mil|Location2.Y=2388.358mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1972.619mil|Location2.X=1976.783mil|Location1.Y=2384.194mil|Location2.Y=2388.358mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Track (26.2mm,15.35mm)(27.375mm,16.525mm) on Layer 3 - PWR Location : [X = 50.157mm][Y = 60.611mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (25.725mm,16.525mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (25.8mm,8.675mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (27.375mm,16.525mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (28.6mm,10.05mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (33.475mm,20.425mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (33.975mm,15.125mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (34.45mm,9.425mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (34.95mm,20.425mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (36.025mm,15.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (37.05mm,7.9mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (38.825mm,14.075mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (39.3mm,15.925mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (39.85mm,11.325mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (40.375mm,7.275mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (40.65mm,27.575mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (43.45mm,19.85mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (45.65mm,23.075mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (45.8mm,15.9mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (46.205mm,20.295mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (47.625mm,12.375mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (21 hole(s)) Layer 3 - PWR And Via (47.65mm,11.125mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (10.4mm,5.1mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (12.525mm,14.9mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (13.35mm,10.275mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (13.7mm,9.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (19.625mm,20.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (19.7mm,13.9mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (21.725mm,18.25mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (23.1mm,24.225mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (24.25mm,19.375mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (24.3mm,8.725mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (24.5mm,15.35mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (24.5mm,17.85mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1956.062mil|Location2.X=1992.757mil|Location1.Y=2722.794mil|Location2.Y=2759.489mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1956.062mil|Location2.X=1992.757mil|Location1.Y=2722.794mil|Location2.Y=2759.489mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (26.25mm,24.225mm) from Layer 1 to Layer 4 Location : [X = 50.15mm][Y = 69.625mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1964.92mil|Location2.X=2001.615mil|Location1.Y=2253.306mil|Location2.Y=2290.001mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1964.92mil|Location2.X=2001.615mil|Location1.Y=2253.306mil|Location2.Y=2290.001mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (26.475mm,12.3mm) from Layer 1 to Layer 4 Location : [X = 50.375mm][Y = 57.7mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (27.375mm,16.525mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2091.889mil|Location2.X=2128.584mil|Location1.Y=2280.865mil|Location2.Y=2317.56mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2091.889mil|Location2.X=2128.584mil|Location1.Y=2280.865mil|Location2.Y=2317.56mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (29.7mm,13mm) from Layer 1 to Layer 4 Location : [X = 53.6mm][Y = 58.4mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (33.475mm,20.425mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (33.975mm,15.125mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (34.95mm,20.425mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (36.025mm,15.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2438.345mil|Location2.X=2475.04mil|Location1.Y=2140.117mil|Location2.Y=2176.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2438.345mil|Location2.X=2475.04mil|Location1.Y=2140.117mil|Location2.Y=2176.812mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (38.5mm,9.425mm) from Layer 1 to Layer 4 Location : [X = 62.4mm][Y = 54.825mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (38.825mm,14.075mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (39.3mm,15.925mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (40.375mm,7.275mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (40.65mm,27.575mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (42.95mm,7.475mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (43.375mm,21.15mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (44.425mm,7.475mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (44.475mm,25.05mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (45.65mm,23.075mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (46.205mm,20.295mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (47.1mm,26.5mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (47.625mm,12.375mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (47.65mm,11.125mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (48.625mm,24.325mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (54.7mm,14.175mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (54.7mm,17.95mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (60.515mm,17mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (62.225mm,8mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (62.625mm,10.85mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (62.625mm,9.775mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Polygon Region (49 hole(s)) Layer 2 - GND And Via (9.2mm,5.1mm) from Layer 1 to Layer 4 Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDWEUPD1GYHBYEPTXEW0L2R5QTZMZIODBI4VCN4MDSCADFJYX0HQF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2608.205mil|Location2.X=2663.449mil|Location1.Y=2741.079mil|Location2.Y=2812.071mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2608.205mil|Location2.X=2663.449mil|Location1.Y=2741.079mil|Location2.Y=2812.071mil|Absolute=True">Un-Routed Net Constraint: Net VDD Between Pad D2-3(43.05mm,24.625mm) on Layer 1 And Pad D2-1(43.05mm,25.625mm) on Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=973.362mil|Location2.X=1312.992mil|Location1.Y=2253.937mil|Location2.Y=2454.724mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=973.362mil|Location2.X=1312.992mil|Location1.Y=2253.937mil|Location2.Y=2454.724mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (1.25mm,14.25mm) from Layer 1 to Layer 4 And Pad Free-1(6.9mm,14.4mm) on Layer 4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1112.205mil|Location2.X=1312.992mil|Location1.Y=2549.213mil|Location2.Y=2750mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1112.205mil|Location2.X=1312.992mil|Location1.Y=2549.213mil|Location2.Y=2750mil|Absolute=True">Un-Routed Net Constraint: Net Solar+ Between Pad L01-1(5.475mm,22.25mm) on Layer 1 And Pad Free-2(6.9mm,21.9mm) on Layer 4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1321.26mil|Location2.X=1769.291mil|Location1.Y=1818.898mil|Location2.Y=2005.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1321.26mil|Location2.X=1769.291mil|Location1.Y=1818.898mil|Location2.Y=2005.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (12.2mm,3.34mm)(12.34mm,3.2mm) on Layer 1 And Pad MH1-1(18.5mm,3mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1559.449mil|Location2.X=1830.945mil|Location1.Y=2711.024mil|Location2.Y=2784.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1559.449mil|Location2.X=1830.945mil|Location1.Y=2711.024mil|Location2.Y=2784.055mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MH2-1(18.25mm,26mm) on Multi-Layer And Track (20mm,22.709mm)(20.066mm,22.775mm) on Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1683.465mil|Location2.X=3490.748mil|Location1.Y=2039.764mil|Location2.Y=2202.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1683.465mil|Location2.X=3490.748mil|Location1.Y=2039.764mil|Location2.Y=2202.362mil|Absolute=True">Un-Routed Net Constraint: Net EXT_BAT Between Track (21.4mm,8.175mm)(21.4mm,8.95mm) on Layer 1 And Via (62.225mm,8mm) from Layer 1 to Layer 4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3306.496mil|Location2.X=3506.496mil|Location1.Y=2072.244mil|Location2.Y=2292.489mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3306.496mil|Location2.X=3506.496mil|Location1.Y=2072.244mil|Location2.Y=2292.489mil|Absolute=True">Un-Routed Net Constraint: Net 5V_USB Between Via (62.625mm,9.775mm) from Layer 1 to Layer 4 And Track (56.989mm,10.289mm)(62.625mm,10.289mm) on Layer 1 </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDIDH20C13HTBTOFCXZJBCMA2SNGP2YND3ANOEZEJ24X5AONIUAWVM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.15mm) (Max=0.3mm) (Prefered=0.3mm)  and Width Constraints (Min=0.2mm) (Max=0.6mm) (Prefered=0.6mm) (InDifferentialPair('USB'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2234.249mil|Location2.X=3034.452mil|Location1.Y=2490.155mil|Location2.Y=2878.035mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2234.249mil|Location2.X=3034.452mil|Location1.Y=2490.155mil|Location2.Y=2878.035mil|Absolute=True">Differential Pairs Routing: Between Net USB_P And Net USB_N [Uncoupled Length = 23.859mm], [Maximum Uncoupled Length = 12.7mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYGP4THAP2OXPFEEGOGUQZNVESPN1X432QDV5STIVZA3ABVTC235J"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mm) (OnLayer('Layer 1') OR OnLayer('Layer 4'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1209.476mil|Location2.X=1257.429mil|Location1.Y=3276.405mil|Location2.Y=3290.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1209.476mil|Location2.X=1257.429mil|Location1.Y=3276.405mil|Location2.Y=3290.528mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.5mm) Between Board Edge And Region (0 hole(s)) Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=933.885mil|Location2.X=981.839mil|Location1.Y=3276.405mil|Location2.Y=3290.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=933.885mil|Location2.X=981.839mil|Location1.Y=3276.405mil|Location2.Y=3290.528mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.5mm) Between Board Edge And Region (0 hole(s)) Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=658.295mil|Location2.X=706.248mil|Location1.Y=3276.405mil|Location2.Y=3290.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=658.295mil|Location2.X=706.248mil|Location1.Y=3276.405mil|Location2.Y=3290.528mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.5mm) Between Board Edge And Region (0 hole(s)) Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2036.248mil|Location2.X=2084.201mil|Location1.Y=3276.405mil|Location2.Y=3290.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2036.248mil|Location2.X=2084.201mil|Location1.Y=3276.405mil|Location2.Y=3290.528mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.5mm) Between Board Edge And Region (0 hole(s)) Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1386.639mil|Location2.X=1434.592mil|Location1.Y=3469.316mil|Location2.Y=3483.44mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1386.639mil|Location2.X=1434.592mil|Location1.Y=3469.316mil|Location2.Y=3483.44mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.5mm) Between Board Edge And Region (0 hole(s)) Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1485.067mil|Location2.X=1533.02mil|Location1.Y=3276.405mil|Location2.Y=3290.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_WFH\Rev05\LuxLogger_V2_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1485.067mil|Location2.X=1533.02mil|Location1.Y=3276.405mil|Location2.Y=3290.528mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.5mm) Between Board Edge And Region (0 hole(s)) Layer 1 </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

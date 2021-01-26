@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=SENS_V Pin=R29-1
+Added Pin To Net: NetName=EXT_BAT Pin=R29-1

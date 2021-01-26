@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=GND Pin=P6-4
+Added Pin To Net: NetName=EXT_BAT Pin=R14-2
+Added Pin To Net: NetName=EXT_BAT Pin=R20-1
+Added Pin To Net: NetName=EXT_BAT Pin=R26-1
+Added Pin To Net: NetName=EXT_BAT Pin=R29-1
+Added Room: Name=Sunboost

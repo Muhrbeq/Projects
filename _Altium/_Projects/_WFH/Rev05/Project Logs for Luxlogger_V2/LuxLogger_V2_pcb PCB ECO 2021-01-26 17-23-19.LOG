@@ -1,0 +1,110 @@
+Removed Pin From Net: NetName=ICSP Pin=P3-2
+Removed Pin From Net: NetName=VCC Pin=P3-3
+Added Component: Designator=C02(0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Radial Cap, Thru-Hole; 2 Leads; 0.3 in Pin Spacing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "RAD-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "22uF"; VariantName = "[No Variations]"
+Added Component: Designator=C03(0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Radial Cap, Thru-Hole; 2 Leads; 0.3 in Pin Spacing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "RAD-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "22uF"; VariantName = "[No Variations]"
+Added Component: Designator=C06(0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Radial Cap, Thru-Hole; 2 Leads; 0.3 in Pin Spacing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "RAD-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "22uF"; VariantName = "[No Variations]"
+Added Component: Designator=D02(SOD-923)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "08-Jul-2005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Mech Layer 1 removed."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "LED; 2 Leads"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "LED-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=L01(SRR7045-102M)
+Add component (AddParameter): Name = "Value"; Value = "X"; VariantName = "[No Variations]"
+Added Component: Designator=L02(SD53-4R7-R)
+Add component (AddParameter): Name = "Value"; Value = "X"; VariantName = "[No Variations]"
+Added Component: Designator=P01(1x2 Header 1.27)
+Added Component: Designator=P2(1x2 Header 1.27)
+Added Component: Designator=P3(1x5 Header 1.27)
+Added Component: Designator=Q01(SOT-23)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "TO, Flat Index; 3 In-Line, Axial Leads; Body Dia. 4.6mm; Lead Dia. 0.5 mm (max)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "E3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "1995/1996"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=U02(28-QFN_0.4mm)
+Added Pin To Net: NetName=GND Pin=C02-1
+Added Pin To Net: NetName=Solar+ Pin=C02-2
+Added Pin To Net: NetName=GND Pin=C03-1
+Added Pin To Net: NetName=Solar+ Pin=C03-2
+Added Pin To Net: NetName=GND Pin=C06-1
+Added Pin To Net: NetName=VCC Pin=C06-2
+Added Pin To Net: NetName=VCC Pin=D02-1
+Added Pin To Net: NetName=NetD02_2 Pin=D02-2
+Added Pin To Net: NetName=Solar+ Pin=L01-1
+Added Pin To Net: NetName=NetD02_2 Pin=L01-2
+Added Pin To Net: NetName=Solar+ Pin=L02-1
+Added Pin To Net: NetName=NetL02_2 Pin=L02-2
+Added Pin To Net: NetName=GND Pin=P01-1
+Added Pin To Net: NetName=Solar+ Pin=P01-2
+Added Pin To Net: NetName=VCC Pin=P2-1
+Added Pin To Net: NetName=GND Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P3-1
+Added Pin To Net: NetName=ICSP Pin=P3-2
+Added Pin To Net: NetName=MCU_DEBUG_RX Pin=P3-2
+Added Pin To Net: NetName=MCU_DEBUG_TX Pin=P3-3
+Added Pin To Net: NetName=VCC Pin=P3-3
+Added Pin To Net: NetName=ICSPCLK Pin=P3-4
+Added Pin To Net: NetName=ICSPDAT Pin=P3-5
+Added Pin To Net: NetName=PWM Pin=Q01-1
+Added Pin To Net: NetName=GND Pin=Q01-2
+Added Pin To Net: NetName=NetD02_2 Pin=Q01-3
+Added Pin To Net: NetName=NetL02_2 Pin=U02-1
+Added Pin To Net: NetName=GND Pin=U02-2
+Added Pin To Net: NetName=NetL02_2 Pin=U02-3
+Added Pin To Net: NetName=GND Pin=U02-4
+Added Pin To Net: NetName=NetL02_2 Pin=U02-5
+Added Pin To Net: NetName=GND Pin=U02-6
+Added Pin To Net: NetName=DGND Pin=U02-7
+Added Pin To Net: NetName=DGND Pin=U02-8
+Added Pin To Net: NetName=NetC09_2 Pin=U02-9
+Added Pin To Net: NetName=ICSPCLK Pin=U02-10
+Added Pin To Net: NetName=ICSPDAT Pin=U02-11
+Added Pin To Net: NetName=PWM Pin=U02-12
+Added Pin To Net: NetName=NetC08_2 Pin=U02-15
+Added Pin To Net: NetName=VCC Pin=U02-16
+Added Pin To Net: NetName=ICSP Pin=U02-18
+Added Pin To Net: NetName=PWM Pin=U02-19
+Added Pin To Net: NetName=VCC Pin=U02-21
+Added Pin To Net: NetName=VCC Pin=U02-22
+Added Pin To Net: NetName=NetL02_2 Pin=U02-23
+Added Pin To Net: NetName=VCC Pin=U02-24
+Added Pin To Net: NetName=NetL02_2 Pin=U02-25
+Added Pin To Net: NetName=NetL02_2 Pin=U02-26
+Added Pin To Net: NetName=GND Pin=U02-27
+Added Pin To Net: NetName=GND Pin=U02-28
+Added Pin To Net: NetName=GND Pin=U02-29
+Added Member To Class: ClassName=Sunboost Member=Component C02 Cap_0805
+Added Member To Class: ClassName=Sunboost Member=Component C03 Cap_0805
+Added Member To Class: ClassName=Sunboost Member=Component C06 Cap_0805
+Added Member To Class: ClassName=Sunboost Member=Component D02 NSR0140P2
+Added Member To Class: ClassName=Sunboost Member=Component L01 SRR7045-102M
+Added Member To Class: ClassName=Sunboost Member=Component L02 SD53-4R7-R
+Added Member To Class: ClassName=Sunboost Member=Component P01 1x2 Header
+Added Member To Class: ClassName=Sunboost Member=Component P2 1x2 Header
+Added Member To Class: ClassName=Sunboost Member=Component Q01 PMV130ENE
+Added Member To Class: ClassName=Sunboost Member=Component U02 Sunboost 3
