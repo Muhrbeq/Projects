@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
-  * File Name          : IWDG.c
-  * Description        : This file provides code for the configuration
-  *                      of the IWDG instances.
+  * @file    iwdg.c
+  * @brief   This file provides code for the configuration
+  *          of the IWDG instances.
   ******************************************************************************
   * @attention
   *
@@ -31,7 +31,7 @@ void MX_IWDG_Init(void)
 {
 
   hiwdg.Instance = IWDG;
-  hiwdg.Init.Prescaler = IWDG_PRESCALER_256;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
   hiwdg.Init.Window = 4095;
   hiwdg.Init.Reload = 4095;
   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)

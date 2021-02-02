@@ -6,7 +6,7 @@
  */
 
 #include <_HDC1080.h>
-
+#include "__ExegerGeneric.h"
 
 /*
  * Writes to a certain register. Input: data with register and data, the length of the array, error type message.
@@ -71,28 +71,24 @@ void HDC1080_Init(I2C_HandleTypeDef hi2c)
 
 	if (HDC1080_Get_Device_ID(hi2c) != HDC1080_DEVICE_ID)
 	{
-//		ErrorAddLog(LOG_FUNC_HDC1080, LOG_SUB_INIT, LOG_TYPE_ID, LOG_STATUS_FAIL, 0, 0, 0, GetErrorStruct());
-
-//		InfoLogAdd(ERRORLEVEL_SEVERE,
-//		LOG_FUNC_HDC1080, LOG_SUB_INIT, LOG_TYPE_ID, LOG_STATUS_FAIL, 0, 0, 0, GetTempInfoStruct());
+		InfoLogAdd(ERRORLEVEL_WARNING,
+		LOG_FUNC_HUMIDITY_SENS, LOG_SUB_INIT, LOG_TYPE_ID, LOG_STATUS_FAIL, 0, 0, 0, GetTempInfoStruct());
 	}
 	else
 	{
 
 		if (HDC1080_readRegister(hi2c, data, 2) != HAL_OK)
 		{
-//			ErrorAddLog(LOG_FUNC_HDC1080, LOG_SUB_INIT, LOG_TYPE_READ, LOG_STATUS_FAIL, 0, 0, 0, GetErrorStruct());
-//
-//			InfoLogAdd(
-//					ERRORLEVEL_SEVERE,
-//					LOG_FUNC_HDC1080,
-//					LOG_SUB_INIT,
-//					LOG_TYPE_READ,
-//					LOG_STATUS_FAIL,
-//					0,
-//					0,
-//					0,
-//					GetTempInfoStruct());
+			InfoLogAdd(
+					ERRORLEVEL_WARNING,
+					LOG_FUNC_HUMIDITY_SENS,
+					LOG_SUB_INIT,
+					LOG_TYPE_READ,
+					LOG_STATUS_FAIL,
+					0,
+					0,
+					0,
+					GetTempInfoStruct());
 
 		}
 		else
@@ -114,16 +110,16 @@ void HDC1080_Init(I2C_HandleTypeDef hi2c)
 			{
 //				ErrorAddLog(LOG_FUNC_HDC1080, LOG_SUB_INIT, LOG_TYPE_WRITE, LOG_STATUS_FAIL, 0, 0, 0, GetErrorStruct());
 //
-//				InfoLogAdd(
-//						ERRORLEVEL_SEVERE,
-//						LOG_FUNC_HDC1080,
-//						LOG_SUB_INIT,
-//						LOG_TYPE_WRITE,
-//						LOG_STATUS_FAIL,
-//						0,
-//						0,
-//						0,
-//						GetTempInfoStruct());
+				InfoLogAdd(
+						ERRORLEVEL_WARNING,
+						LOG_FUNC_HUMIDITY_SENS,
+						LOG_SUB_INIT,
+						LOG_TYPE_WRITE,
+						LOG_STATUS_FAIL,
+						0,
+						0,
+						0,
+						GetTempInfoStruct());
 			}
 			else
 			{
@@ -176,10 +172,10 @@ uint16_t HDC1080_Get_Humidity_raw(I2C_HandleTypeDef hi2c)
 	}
 	else
 	{
-//		InfoLogAdd(ERRORLEVEL_WARNING,
-//		LOG_FUNC_HDC1080, LOG_SUB_SENSOR,
-//		LOG_TYPE_READ,
-//		LOG_STATUS_FAIL, 0, 0, 0, GetTempInfoStruct());
+		InfoLogAdd(ERRORLEVEL_WARNING,
+		LOG_FUNC_HUMIDITY_SENS, LOG_SUB_HUM_READ_RAW,
+		LOG_TYPE_READ,
+		LOG_STATUS_FAIL, 0, 0, 0, GetTempInfoStruct());
 
 		return HDC1080_ERROR_VALUE;
 	}

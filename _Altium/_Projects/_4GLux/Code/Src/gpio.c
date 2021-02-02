@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
-  * File Name          : gpio.c
-  * Description        : This file provides code for the configuration
-  *                      of all used GPIO pins.
+  * @file    gpio.c
+  * @brief   This file provides code for the configuration
+  *          of all used GPIO pins.
   ******************************************************************************
   * @attention
   *
@@ -19,6 +19,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "gpio.h"
+
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
@@ -30,13 +31,13 @@
 
 /* USER CODE END 1 */
 
-/** Configure pins as 
-        * Analog 
-        * Input 
+/** Configure pins as
+        * Analog
+        * Input
         * Output
         * EVENT_OUT
         * EXTI
-        * Free pins are configured automatically as Analog (this feature is enabled through 
+        * Free pins are configured automatically as Analog (this feature is enabled through
         * the Code Generation settings)
 */
 void MX_GPIO_Init(void)
@@ -53,20 +54,20 @@ void MX_GPIO_Init(void)
   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOD);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOC, Spectrum_Enable_Pin|VBat_Sense_Enable_Pin|Revision_Enable_Pin|Screen_DC_Pin 
-                          |Screen_RST_Pin);
+  LL_GPIO_ResetOutputPin(GPIOC, Spectrum_Enable_Pin|LED_Green_Pin|LED_Red_Pin|Revision_Enable_Pin
+                          |Screen_DC_Pin|Screen_RST_Pin);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOA, Radio_Enable_Pin|Sara_Reset_Pin|Sara_Power_On_Pin|Screen_Busy_Pin 
-                          |LED_Green_Pin|LED_Red_Pin|SD_Enable_Pin);
+  LL_GPIO_ResetOutputPin(GPIOA, Radio_Enable_Pin|Sara_Reset_Pin|Sara_Power_On_Pin|Screen_Busy_Pin
+                          |SD_Enable_Pin);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOB, GPS_Enable_Pin|Screen_Enable_Pin|Acceleromater_Enable_Pin|SPI_CS_Pin 
+  LL_GPIO_ResetOutputPin(GPIOB, GPS_Enable_Pin|Screen_Enable_Pin|Acceleromater_Enable_Pin|SPI_CS_Pin
                           |Sensor_Enable_Pin);
 
   /**/
-  GPIO_InitStruct.Pin = Spectrum_Enable_Pin|VBat_Sense_Enable_Pin|Revision_Enable_Pin|Screen_DC_Pin 
-                          |Screen_RST_Pin;
+  GPIO_InitStruct.Pin = Spectrum_Enable_Pin|LED_Green_Pin|LED_Red_Pin|Revision_Enable_Pin
+                          |Screen_DC_Pin|Screen_RST_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
@@ -80,8 +81,8 @@ void MX_GPIO_Init(void)
   LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = Radio_Enable_Pin|Sara_Reset_Pin|Sara_Power_On_Pin|Screen_Busy_Pin 
-                          |LED_Green_Pin|LED_Red_Pin|SD_Enable_Pin;
+  GPIO_InitStruct.Pin = Radio_Enable_Pin|Sara_Reset_Pin|Sara_Power_On_Pin|Screen_Busy_Pin
+                          |SD_Enable_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
@@ -89,7 +90,7 @@ void MX_GPIO_Init(void)
   LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = GPS_Enable_Pin|Screen_Enable_Pin|Acceleromater_Enable_Pin|SPI_CS_Pin 
+  GPIO_InitStruct.Pin = GPS_Enable_Pin|Screen_Enable_Pin|Acceleromater_Enable_Pin|SPI_CS_Pin
                           |Sensor_Enable_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;

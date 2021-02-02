@@ -1,7 +1,0 @@
-DRC Rules Export File for PCB: G:\Prototyping\Projects\EXEGER\LuxLogger V2\Hardware\Rev04\LuxLogger_V2_pcb.PcbDoc
-RuleKind=Clearance|RuleName=Clearance tmp112|Scope=Board|Minimum=5.91
-RuleKind=Clearance|RuleName=Clearance inner layers|Scope=Board|Minimum=7.87
-RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
-RuleKind=Width|RuleName=Width|Scope=Board|Minimum=7.87
-RuleKind=Clearance|RuleName=Clearance outer layers|Scope=Board|Minimum=7.87
-RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0

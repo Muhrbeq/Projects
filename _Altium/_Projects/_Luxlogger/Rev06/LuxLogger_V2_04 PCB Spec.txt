@@ -1,0 +1,11 @@
+LuxLogger V2 PCB Specification
+
+Size				40 x 34 mm
+Layers				4
+Thickness			1.6 mm
+Copper thickness	35 µm finished thickness
+Buildup				Not specified
+Solder mask			Green
+Silk screen			White, top and bottom
+Minimum drill		0.3 mm 
+Minimum clearance	0.2 mm (0.15 at U9)

@@ -31,7 +31,27 @@ uint32_t Time_RTCGetDateTime(void)
 	dateTime |= (uint32_t) (0b111111 & tT.Minutes) << 6;
 	dateTime |= (uint32_t) (0b111111 & tT.Seconds);
 
+	printf("Time: %d:%d:%d - %d:%d:%d\r\n", dT.Year, dT.Month, dT.Date, tT.Hours, tT.Minutes, tT.Seconds);
+
 	return dateTime;
+}
+
+void Time_RTCSetDateTime(uint8_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t minute, uint8_t second)
+{
+	RTC_DateTypeDef dT;
+	RTC_TimeTypeDef tT;
+
+	dT.Year = year;
+	dT.Month = month;
+	dT.Date = day;
+	tT.Hours = hour;
+	tT.Minutes = minute;
+	tT.Seconds = second;
+
+	HAL_RTC_SetTime(&hrtc, &tT, RTC_FORMAT_BIN);
+	HAL_RTC_SetDate(&hrtc, &dT, RTC_FORMAT_BIN);
+
+
 }
 
 /* Set alarm A */

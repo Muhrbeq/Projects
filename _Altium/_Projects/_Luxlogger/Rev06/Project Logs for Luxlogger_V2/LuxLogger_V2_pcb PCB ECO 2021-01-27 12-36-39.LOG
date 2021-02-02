@@ -1,0 +1,9 @@
+Added Component: Designator=D5(SOD123 SODFL360X130-2N)
+Add component (AddParameter): Name = "Manufacturer"; Value = "NEXPERIA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer PN"; Value = "BAT54GW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOD123"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Specification"; Value = "BAT54GW"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=EXT_BAT Pin=D5-1
+Added Pin To Net: NetName=BAT_Drain Pin=D5-2
+Added Net: Name=BAT_Drain
+Added Room: Name=Sunboost

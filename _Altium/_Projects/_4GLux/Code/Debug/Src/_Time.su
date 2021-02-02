@@ -1,5 +1,6 @@
-_Time.c:14:10:Time_RTCGetDateTime	40	static
-_Time.c:38:9:Time_RTCSetAlarmA	120	static
-_Time.c:85:9:Time_RTCSetAlarmB	120	static
-_Time.c:132:6:GetTime	40	static
-_Time.c:165:6:printTime	40	static
+_Time.c:14:10:Time_RTCGetDateTime	64	static
+_Time.c:39:6:Time_RTCSetDateTime	48	static
+_Time.c:58:9:Time_RTCSetAlarmA	120	static
+_Time.c:105:9:Time_RTCSetAlarmB	120	static
+_Time.c:152:6:GetTime	40	static
+_Time.c:185:6:printTime	40	static

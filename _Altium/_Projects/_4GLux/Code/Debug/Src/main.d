@@ -64,7 +64,7 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
  ../Inc/i2c.h ../Inc/iwdg.h ../Inc/lptim.h ../Inc/rtc.h ../Inc/sdmmc.h \
  ../Inc/spi.h ../Inc/tim.h ../Inc/usart.h ../Inc/gpio.h \
  ../Inc/__ExegerGeneric.h ../Inc/_LowLevel.h ../Inc/__ExegerGeneric.h \
- ../Inc/rtc.h
+ ../Inc/rtc.h ../Inc/_Time.h ../Inc/_Global.h
 
 ../Inc/main.h:
 
@@ -229,3 +229,7 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 ../Inc/__ExegerGeneric.h:
 
 ../Inc/rtc.h:
+
+../Inc/_Time.h:
+
+../Inc/_Global.h:

@@ -47,6 +47,10 @@
 #endif
 #endif
 
+#ifdef HAL_I2C_MODULE_ENABLED
+
+#endif
+
 /* Linker to header file */
 #include "__ExegerGeneric.h"
 

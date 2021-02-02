@@ -30,14 +30,20 @@
 /* 8 bit
    #define LOG_FUNC_FILENAME */
 #define LOG_FUNC_MAIN				0x11
-#define LOG_FUNC_STATE				0x12
-#define LOG_FUNC_POWERSAVE			0x13
-#define LOG_FUNC_LUX_SENS			0x14
-#define LOG_FUNC_TEMPERATURE_SENS	0x15
-#define LOG_FUNC_HUMIDITY_SENS		0x16
-#define LOG_FUNC_SPECTRUM_SENS		0x17
-#define LOG_FUNC_SD					0x18
-#define LOG_FUNC_RADIO				0x19
+#define LOG_FUNC_POWERSAVE			0x12
+#define LOG_FUNC_STATE				0x13
+#define LOG_FUNC_SETTINGS			0x14
+
+#define LOG_FUNC_LUX_SENS			0x21
+#define LOG_FUNC_TEMPERATURE_SENS	0x22
+#define LOG_FUNC_HUMIDITY_SENS		0x23
+#define LOG_FUNC_SPECTRUM_SENS		0x24
+
+#define LOG_FUNC_SD					0x31
+#define LOG_FUNC_RADIO				0x32
+
+#define LOG_FUNC_BATTERY			0x41
+
 #define LOG_FUNC_ERROR				0x99
 
 
@@ -46,12 +52,24 @@
 #define LOG_SUB_NONE				0x11
 #define LOG_SUB_INIT				0x12
 #define LOG_SUB_ADD					0x13
-#define LOG_SUB_DELETE				0x14
+#define LOG_SUB_ERASE				0x14
 #define LOG_SUB_WRITE				0x15
 #define LOG_SUB_READ				0x16
 #define LOG_SUB_MOUNT				0x17
 #define LOG_SUB_MEASURE				0x18
 #define LOG_SUB_VERIFY				0x19
+
+#define LOG_SUB_DATA				0x1A
+#define LOG_SUB_MEASURE_RAW			0x1B
+#define LOG_SUB_TEMP_READ			0x1C
+#define LOG_SUB_TEMP_READ_RAW		0x1D
+#define LOG_SUB_TEMP_ONESHOT		0x1E
+
+#define LOG_SUB_HUM_READ_RAW		0x21
+#define LOG_SUB_HUM_ID				0x22
+
+#define LOG_SUB_SD_FOLDER			0x23
+#define LOG_SUB_TIMESTAMP			0x24
 
 
 /* 8 bits

@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Altium\_Projects\_Luxlogger\Rev06\6C-4L-1550um.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=luxlogger v3_rev 01-roundholes.txt|DrillLayers=gtl,g1,g2,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=luxlogger v3_rev 01-slotholes.txt|DrillLayers=gtl,g1,g2,gbl

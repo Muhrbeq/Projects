@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
-  * File Name          : CRC.c
-  * Description        : This file provides code for the configuration
-  *                      of the CRC instances.
+  * @file    crc.c
+  * @brief   This file provides code for the configuration
+  *          of the CRC instances.
   ******************************************************************************
   * @attention
   *
@@ -73,7 +73,7 @@ void HAL_CRC_MspDeInit(CRC_HandleTypeDef* crcHandle)
 
   /* USER CODE END CRC_MspDeInit 1 */
   }
-} 
+}
 
 /* USER CODE BEGIN 1 */
 uint8_t GetCRC(uint8_t *get, uint32_t *cCrc)

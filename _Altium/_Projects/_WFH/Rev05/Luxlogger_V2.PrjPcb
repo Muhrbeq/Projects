@@ -157,23 +157,6 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document8]
-DocumentPath=..\..\..\..\..\..\..\..\Downloads\USB3140-30-0170-1-C_REVE1.IntLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document9]
 DocumentPath=Sunboost.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -190,7 +173,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RWUUQQGT
 
-[Document10]
+[Document9]
 DocumentPath=..\..\..\_Library\PCB_Components.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -207,7 +190,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document11]
+[Document10]
 DocumentPath=..\..\..\_Library\Schematic_Components.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -226,106 +209,6 @@ DocumentUniqueId=
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for Luxlogger_V2\Design Rule Check - LuxLogger_V2_pcb.html
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Copper_Plane_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Copper_Plane_2.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Copper_Signal_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Copper_Signal_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Drawing_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Drillmap_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Legend_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Legend_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Mechanical_29.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Mechanical_30.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_NPTH_Drill.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Paste_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Paste_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Profile.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_PTH_Drill.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Soldermask_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument18]
-DocumentPath=Output\GerberX2\LuxLogger_V2_pcb_Soldermask_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument19]
-DocumentPath=Output\NC Drill\LuxLogger V2_04.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument20]
-DocumentPath=Output\GerberX2\LuxLogger V2_04.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=Output\NC Drill\LuxLogger V2_04.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument22]
-DocumentPath=Output\GerberX2\LuxLogger V2_04.REP
-DItemRevisionGUID=
-
-[GeneratedDocument23]
-DocumentPath=Output\GerberX2\LuxLogger V2_04.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument24]
-DocumentPath=Output\NC Drill\LuxLogger V2_04.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument25]
-DocumentPath=Output\Pick Place\LuxLogger V2_04.txt
-DItemRevisionGUID=
-
-[GeneratedDocument26]
-DocumentPath=Output\BOM\LuxLogger V2_04.xlsx
 DItemRevisionGUID=
 
 [Parameter1]
@@ -470,7 +353,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=\\PRT1\Secure Print PCL
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]

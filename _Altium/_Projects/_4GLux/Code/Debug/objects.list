@@ -47,6 +47,7 @@
 "Src/_GPS.o"
 "Src/_Global.o"
 "Src/_HDC1080.o"
+"Src/_I2C.o"
 "Src/_LIS2DW12.o"
 "Src/_LowLevel.o"
 "Src/_SaraR4.o"

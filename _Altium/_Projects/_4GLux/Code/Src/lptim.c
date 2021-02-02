@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
-  * File Name          : LPTIM.c
-  * Description        : This file provides code for the configuration
-  *                      of the LPTIM instances.
+  * @file    lptim.c
+  * @brief   This file provides code for the configuration
+  *          of the LPTIM instances.
   ******************************************************************************
   * @attention
   *
@@ -76,7 +76,7 @@ void HAL_LPTIM_MspDeInit(LPTIM_HandleTypeDef* lptimHandle)
 
   /* USER CODE END LPTIM2_MspDeInit 1 */
   }
-} 
+}
 
 /* USER CODE BEGIN 1 */
 
