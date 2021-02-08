@@ -191,7 +191,7 @@ GenerateClassCluster=0
 DocumentUniqueId=NOVCNFJU
 
 [Document10]
-DocumentPath=GPS.SchDoc
+DocumentPath=Mesh.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -440,7 +440,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=\\PRT1\Secure Print PCL
+TargetPrinter=OneNote for Windows 10
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]

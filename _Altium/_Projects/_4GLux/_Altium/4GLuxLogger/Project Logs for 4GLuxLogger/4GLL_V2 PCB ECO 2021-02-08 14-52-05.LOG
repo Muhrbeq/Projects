@@ -1,0 +1,42 @@
+Removed Pin From Net: NetName=GND Pin=C33-1
+Removed Pin From Net: NetName=GND Pin=C34-1
+Removed Pin From Net: NetName=GND Pin=C39-1
+Removed Pin From Net: NetName=VBAT Pin=C39-2
+Removed Pin From Net: NetName=GND Pin=C40-1
+Removed Pin From Net: NetName=USART3_RX Pin=R9-1
+Removed Pin From Net: NetName=USART3_TX Pin=R10-1
+Removed Pin From Net: NetName=GND Pin=R15-1
+Removed Pin From Net: NetName=GND Pin=U12-1
+Removed Pin From Net: NetName=GND Pin=U12-3
+Removed Pin From Net: NetName=GND Pin=U12-4
+Removed Pin From Net: NetName=GND Pin=U12-5
+Removed Pin From Net: NetName=VBAT Pin=U12-7
+Removed Pin From Net: NetName=GND Pin=U12-9
+Removed Pin From Net: NetName=GND Pin=U18-1
+Removed Pin From Net: NetName=GND Pin=U18-4
+Removed Pin From Net: NetName=GND Pin=U18-5
+Removed Pin From Net: NetName=GND Pin=U18-6
+Removed Pin From Net: NetName=GND Pin=U18-10
+Removed Pin From Net: NetName=GND Pin=U18-11
+Removed Pin From Net: NetName=GND Pin=U18-15
+Removed Pin From Net: NetName=GND Pin=U18-16
+Removed Pin From Net: NetName=GND Pin=U18-20
+Change Component Comment : Designator=U8 Old Comment=SARA-R4 New Comment=SARA-R5
+Change component parameters: Designator = "L4" ("L4"); Footprint = "0402"; UniqueID = "\KHGILPCC\RMCPKDNC" ("\KHGILPCC\RMCPKDNC")
+Change component parameters (AddParameter): Name = "Value"; Value = "600R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "L5" ("L5"); Footprint = "0402"; UniqueID = "\KHGILPCC\AYXXXTXT" ("\KHGILPCC\AYXXXTXT")
+Change component parameters (AddParameter): Name = "Value"; Value = "39nH"; VariantName = "[No Variations]"
+Change component parameters: Designator = "L6" ("L6"); Footprint = "0603"; UniqueID = "\KHGILPCC\VLIQCLGB" ("\KHGILPCC\VLIQCLGB")
+Change component parameters (AddParameter): Name = "Value"; Value = "68nH"; VariantName = "[No Variations]"
+Added Component: Designator=AE1(ANT_CGGBP.18.4.A.02_TAL)
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_Justin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2018 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet"; Value = "https://www.mouser.com/datasheet/2/398/CGGBP.18.4.A.02-1218625.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "CGGBP.18.4.A.02"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SourceLibrary"; Value = "Add_to_database_2020-12-18"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Taoglas Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=ANT_GNSS Pin=AE1-1
+Added Pin To Net: NetName=ANT_GNSS Pin=U8-31
+Added Net: Name=ANT_GNSS
