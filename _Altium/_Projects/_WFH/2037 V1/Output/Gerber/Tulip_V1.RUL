@@ -1,7 +1,0 @@
-DRC Rules Export File for PCB: P:\Projects\Cell Flex PCB Designs\XXXX Urbanista\FPC design\XXXX V1\PCB_V1.PcbDoc
-RuleKind=Clearance|RuleName=Clearance to footprint|Scope=Board|Minimum=15.75
-RuleKind=Clearance|RuleName=Clearance to cell connections|Scope=Board|Minimum=23.62
-RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
-RuleKind=Width|RuleName=Width|Scope=Board|Minimum=7.87
-RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=23.62
-RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
