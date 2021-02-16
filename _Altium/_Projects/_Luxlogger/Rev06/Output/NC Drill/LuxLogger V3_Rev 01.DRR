@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: 6C-4L-1550um.PcbDoc   2021-01-29  08:17:15
+NCDrill File Report For: 6C-4L-1550um.PcbDoc   2021-02-12  08:56:45
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,11 +8,10 @@ ASCII SlotHoles File : LuxLogger V3_Rev 01-SlotHoles.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      0.3mm (12mil)                                             Round             107       PTH        0.00mm (0.00inch)
+T1      0.3mm (12mil)                                             Round             116       PTH        0.00mm (0.00inch)
 T2      0.6mm (24mil)                                             Slot              2         PTH        0.00mm (0.00inch)
 T3      0.7mm (28mil)                                             Round             14        PTH        0.00mm (0.00inch)
-T4      2.3mm (91mil)                                             Round             2         PTH        0.00mm (0.00inch)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              125
+Totals                                                                              132
 
-Total Processing Time (hh:mm:ss) : 00:00:00
+Total Processing Time (hh:mm:ss) : 00:00:01

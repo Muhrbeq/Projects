@@ -4,9 +4,9 @@ C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Altium\_Projects\_Luxlogger\
 ========================================================================================================================
 File Design Information:
 
-Date:       29-01-21
-Time:       08:17
-Revision:   Not in VersionControl
+Date:       12-02-21
+Time:       08:56
+Revision:   cf7034ee5c66582ddc11b2ecf5d18600b5e92283
 Variant:    No variations
 Units used: mm
 
@@ -52,18 +52,14 @@ Q01        PMV130ENE                        TopLayer    SOT-23                  
 P5         ""                               BottomLayer 2x1_blank_pads_2              59.9000      4.9000       90       "Header, 2-Pin"                                                                     
 P4         ""                               TopLayer    Header_1x6_1.27               41.7350      27.6000      180      "Header, 6-Pin"                                                                     
 P3         ""                               TopLayer    Header_1x3_1.27               55.3000      13.4000      270      "Header, 3-Pin"                                                                     
-P3         "1x5 Header"                     TopLayer    1x5_Header_1.27               13.5700      4.3000       180      "1x5 Header"                                                                        
-MH2        "Mounting hole"                  TopLayer    HOLE_PLATED_2300um            20.0000      5.0000       0        "Mounting hole"                                                                     
-MH1        "Mounting hole"                  TopLayer    HOLE_PLATED_2300um            20.0000      25.0000      0        "Mounting hole"                                                                     
+P3         "1x5 Header"                     TopLayer    1x5_Header_1.27               13.1000      1.9000       180      "1x5 Header"                                                                        
 L02        SD53-4R7-R                       TopLayer    SD53-4R7-R                    7.6000       17.4000      360      Inductor                                                                            
 L1         ""                               TopLayer    CAP0603                       39.1000      12.8000      90       Inductor                                                                            
 L01        SRR7045-102M                     TopLayer    SRR7045-102M                  9.5000       24.1000      360      Inductor                                                                            
-FID6       Fiducial                         TopLayer    FIDUCIAL_02_small             -250.0000    -250.0000    90       ""                                                                                  
-FID5       Fiducial                         TopLayer    FIDUCIAL_02_small             -250.0000    -250.0000    90       ""                                                                                  
 FID3       Fiducial                         TopLayer    FIDUCIAL_02_small             -250.0000    -250.0000    90       ""                                                                                  
 FID2       Fiducial                         TopLayer    FIDUCIAL_02_small             -250.0000    -250.0000    90       ""                                                                                  
 FID1       Fiducial                         TopLayer    FIDUCIAL_02_small             -250.0000    -250.0000    90       ""                                                                                  
-D5         "Alternative ON BAT54T1GOSCT-ND" TopLayer    SOD123_SODFL360X130-2N        12.3000      2.4000       180      "Schottky Diode"                                                                    
+D5         "Alternative ON BAT54T1GOSCT-ND" TopLayer    SOD123_SODFL360X130-2N        12.8000      4.9000       180      "Schottky Diode"                                                                    
 D4         "Alternative ON BAT54T1GOSCT-ND" TopLayer    SOD123_SODFL360X130-2N        58.3000      6.1000       180      "Schottky Diode"                                                                    
 D3         "Alternative ON BAT54T1GOSCT-ND" TopLayer    SOD123_SODFL360X130-2N        58.3000      3.5000       180      "Schottky Diode"                                                                    
 D2         ""                               TopLayer    KPTBD-3216SURKCGKC            59.3000      9.5000       0        "Red/green LED"                                                                     
@@ -93,7 +89,7 @@ C06        Cap_0805                         TopLayer    0805                    
 C5         ""                               TopLayer    CAP0603                       41.5748      22.6758      270      Capacitor                                                                           
 C05        Cap_0402                         TopLayer    0402                          14.3000      14.0000      270      Capacitor                                                                           
 C04        Cap_0402                         TopLayer    0402                          3.8000       22.1000      360      Capacitor                                                                           
-C03        Cap_0805                         TopLayer    0805                          3.7500       23.8000      360      Capacitor                                                                           
+C03        Cap_0805                         TopLayer    0805                          3.8000       23.4000      360      Capacitor                                                                           
 C2         ""                               TopLayer    CAP0402                       35.8248      19.0000      360      Capacitor                                                                           
 C02        Cap_0805                         TopLayer    0805                          4.4000       13.5998      360      Capacitor                                                                           
 C1         ""                               TopLayer    CAP0402                       35.8000      21.5000      360      Capacitor                                                                           
