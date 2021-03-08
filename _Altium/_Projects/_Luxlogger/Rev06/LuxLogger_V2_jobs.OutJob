@@ -57,7 +57,7 @@ Configuration2_Item1=FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=T
 OutputType3=PDF3D
 OutputName3=PDF3D
 OutputCategory3=Documentation
-OutputDocumentPath3=LuxLogger_V2_pcb.PcbDoc
+OutputDocumentPath3=6C-4L-1550um.PcbDoc
 OutputVariantName3=
 OutputEnabled3=0
 OutputEnabled3_OutputMedium1=0
@@ -82,7 +82,7 @@ Configuration4_Item1=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|Ge
 OutputType5=Assembly
 OutputName5=Assembly
 OutputCategory5=Assembly
-OutputDocumentPath5=LuxLogger_V2_pcb.PcbDoc
+OutputDocumentPath5=6C-4L-1550um.PcbDoc
 OutputVariantName5=
 OutputEnabled5=0
 OutputEnabled5_OutputMedium1=0
