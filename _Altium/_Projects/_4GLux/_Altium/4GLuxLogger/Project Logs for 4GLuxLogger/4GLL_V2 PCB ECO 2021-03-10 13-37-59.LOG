@@ -1,0 +1,4 @@
+Added Component: Designator=P5(U.FL-R-SMT-1(40))
+Added Pin To Net: NetName=ANT_GNSS Pin=P5-1
+Added Pin To Net: NetName=GND Pin=P5-2
+Added Pin To Net: NetName=GND Pin=P5-3

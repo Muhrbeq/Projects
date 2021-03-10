@@ -105,13 +105,17 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UACBRLVJ
 
-[Parameter1]
-Name=Revision
-Value=v3
+[GeneratedDocument1]
+DocumentPath=Project Outputs for ExegerSolarBoost_v3\Design Rule Check - 6C-2L-1550um.html
+DItemRevisionGUID=
 
-[Parameter2]
+[Parameter1]
 Name=Project
 Value=Exeger mBoost
+
+[Parameter2]
+Name=Revision
+Value=v3
 
 [Configuration1]
 Name=Sources
