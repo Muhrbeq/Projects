@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace _LightBoxController.Instruments
 {
-    class SourceMeasurementUnit
+    public class SourceMeasurementUnit
     {
+        public string ID;
+        public double OutputCurrent;
+        public double OutputVoltage;
+
+        public bool isConnected;
     }
 }
