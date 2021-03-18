@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Course>
+
+<h3>Kurslista</h3>
+
+<select>
+    <option>Välj kurs</option>
+    @foreach (Course course in Model)
+    {
+        <option>@course.Name</option>
+    }
+</select>

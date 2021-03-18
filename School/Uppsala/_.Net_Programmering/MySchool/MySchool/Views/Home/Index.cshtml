@@ -1,0 +1,16 @@
+﻿@model Student
+
+<h1>Welcome to my homepage</h1>
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div asp-validation-summary="All"></div>
+    <p>
+        <label asp-for="Name"></label>
+        <input asp-for="Name"/>
+        <span asp-validation-for="Name"></span>
+    </p>
+    <p>
+        <input type="submit" value="Skicka in"/>
+        <input type="reset"/>
+    </p>
+</form>

@@ -1,0 +1,95 @@
+﻿h2 {
+    margin-top: -.5em;
+}
+
+form {
+    width: 40em;
+    border: 1px solid #666;
+    border-radius: 10px;
+    box-shadow: .2em .2em .5em #999;
+    background-color: #d0e9f6;
+    padding: 1em;
+    overflow: hidden;
+}
+
+label, legend {
+    width: 10em;
+    float: left;
+    text-align: right;
+    margin-right: .5em;
+    color: #04699d;
+}
+
+.textinput {
+    width: 30em;
+    height: 2em;
+    border: 1px solid #666;
+}
+
+textarea {
+    width: 30em;
+    height: 5em;
+    border: 1px solid #666;
+    margin-bottom: 1em;
+    line-height: 1.25;
+    overflow: auto;
+    resize: none;
+}
+
+.textinput, textarea {
+    font-family: Georgia, "Times New Roman", Times, Serif;
+    font-size: .875em;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-bottom: 1em;
+}
+
+#newsletter label {
+    color: #000;
+    float: none;
+    text-align: inherit;
+    width: auto;
+    font-weight: normal;
+    display: block;
+    margin-left: 11em;
+}
+
+input[type="submit"], input[type="reset"] {
+    width: 10em;
+    height: 2em;
+    background-color: white;
+    border: 1px solid #04699d;
+    border-radius: 4px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+}
+
+input[type="submit"] {
+    margin-left: 13em;
+    margin-right: 1em;
+    color: #c00;
+}
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}

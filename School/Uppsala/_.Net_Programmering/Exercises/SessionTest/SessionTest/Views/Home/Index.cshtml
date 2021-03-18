@@ -1,0 +1,24 @@
+﻿@model Customer
+<form asp-controller="Home" asp-action="ValidateCustomer" method="post">
+  <p>
+    <label asp-for="ClientName">Your Name:</label>
+    <input asp-for="ClientName" />
+  </p>
+  <p>
+    <label asp-for="ClientAdress">Your Adress:</label>
+    <input asp-for="ClientAdress" />
+  </p>
+  <p>
+    <label asp-for="ClientPhone">Your Phone:</label>
+    <input asp-for="ClientPhone" />
+  </p>
+  <p>
+    <label asp-for="ClientInfo">Extra information:</label>
+    <input asp-for="ClientInfo" />
+  </p>
+
+  <p>
+    <button type="submit">Save Customer</button>
+  </p>
+
+</form>

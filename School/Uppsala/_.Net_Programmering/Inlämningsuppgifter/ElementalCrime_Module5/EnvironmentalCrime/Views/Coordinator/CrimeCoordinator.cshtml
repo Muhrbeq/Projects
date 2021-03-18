@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "_CoordinatorLayout";
+}
+
+@model Department
+
+<h2>Detaljer för ärendet</h2>
+<p class="info">Du är inloggad som samordnare</p>
+
+@await  Component.InvokeAsync("CrimeList", ViewBag.ID)
+
+<section id="bottomColumn">
+    <h3>Redigera ärende</h3>
+    <form asp-controller="Coordinator" asp-action="SaveDepartment" method="post">
+        <p>
+            Ange enhet:
+            <select asp-for="DepartmentId" asp-items="@(new SelectList(ViewBag.ListOfDepartments, "DepartmentId", "DepartmentName"))">
+                    <option selected="selected">Välj</option>
+                @*@foreach (Department department in Model)
+                {
+                    <option value="@department.DepartmentId">@department.DepartmentName</option>
+                }@**@
+            </select>
+        </p>
+        <p><input class="button" type="submit" value="Spara" /></p>
+    </form>
+</section>

@@ -1,0 +1,11 @@
+﻿@model Customer
+
+<p>@Model.ClientName</p>
+<p>@Model.ClientAdress</p>
+<p>@Model.ClientPhone</p>
+<p>@Model.ClientInfo</p>
+
+<p>
+  <a asp-controller="Home" asp-action="Index">Go Back and change</a>
+  <a asp-controller="Home" asp-action="SavedCustomer">Save Customer</a>
+</p>

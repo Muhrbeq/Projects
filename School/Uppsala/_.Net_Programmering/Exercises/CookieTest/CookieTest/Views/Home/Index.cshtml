@@ -1,0 +1,20 @@
+﻿<h1>Specify your preferences :</h1>
+<form asp-controller="Home" asp-action="WriteCookies">
+  <select name="setting">
+    <option value="fontName">Font Name</option>
+    <option value="fontSize">Font Size</option>
+    <option value="color">Color</option>
+  </select>
+  <input type="text" name="settingValue" />
+  <input type="checkbox" name="isPersistent"
+         value="true" /> Is Persistent?
+  <input type="submit" value="Write Cookie" />
+</form>
+
+<h4>@ViewBag.Message</h4>
+
+<h4>
+  <a asp-action="ReadCookies" asp-controller="Home">
+    Read Cookies
+  </a>
+</h4>

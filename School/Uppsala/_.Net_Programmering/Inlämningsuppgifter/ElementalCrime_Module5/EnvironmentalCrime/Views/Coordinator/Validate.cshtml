@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "_CoordinatorLayout";
+
+}
+
+@model Errand
+
+<h2>Din anmälan av miljöbrott</h2>
+<p class="info">Du är inloggad som samordnare</p>
+
+<p class="label">
+    Vänligen läs igenom din anmälan och se att allt är okej.<br />
+    Om något är fel, gå tillbaka och ändra. Annars välj Bekräfta.
+</p>
+<p>
+    <span class="label"><label asp-for="Place"></label></span><br />
+    @Model.Place
+</p>
+<p>
+    <span class="label"><label asp-for="TypeOfCrime"></label></span><br />
+    @Model.TypeOfCrime
+</p>
+<p>
+    <span class="label"><label asp-for="DateOfObservation"></label></span><br />
+    @Model.DateOfObservation.ToShortDateString()
+</p>
+<p>
+    <span class="label"><label asp-for="InformerName"></label></span><br />
+    @Model.InformerName
+</p>
+<p>
+    <span class="label"><label asp-for="InformerPhone"></label></span><br />
+    @Model.InformerPhone
+</p>
+<p>
+    <span class="label"><label asp-for="Observation"></label></span><br />
+    @Model.Observation<br />
+</p>
+<p>
+    <a class="button" asp-controller="Coordinator" asp-action="ReportCrime" id="link">Tillbaka</a> <a class="button" asp-controller="Coordinator" asp-action="Thanks">Bekräfta</a>
+</p>

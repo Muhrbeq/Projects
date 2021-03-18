@@ -1,0 +1,61 @@
+Redovisning Modul 2 - Model
+
+(ÖPPNA POCO-KLASSERNA + REPO + INTERFACE)
+Jag började med att skapa mina poco-klasser utifrån det 
+bifogade dokumentet.
+Mitt interface använder jag för att bestämma 
+vad som ska behöva finnas i FakeRepo
+Vi har lite Iquearable för de olika poco-klasserna, 
+samt en task för att hitta info om rätt ärende.
+Jag skapade också databasen med hjälp av textfilen 
+som var bifogad.
+
+(STARTCOORDINATOR + COORDINATORCONTROLLER)
+Nästa sak vi ska titta på är hur jag gjort i alla 
+Start-filer (ex start coordinator)
+Det jag började med var att göra en consturktor i 
+Controller-filen, där jag lade in mitt repo
+I startcoordinator så lägger jag till variabeln repo 
+så jag kan använda den i vyn
+där använder jag mitt interface som modell, så jag 
+kan få ut all data i rätt tabeller och listor
+
+Jag har implementerat samma lösning på de resterade start-sidorna.
+
+för att ärendenumret ska vara klickbart så skickar 
+jag med ErrandID som id. Detta lägger jag in i 
+Viewbag.ID så jag kan söka och få upp rätt ärende i nästa view.
+
+Det är också därför som jag i mitt interface har 
+en Task för att kunna söka upp ett enskilt errand
+och inte få en lista.
+
+Nästa sak att göra i uppgiften var att Crime-... 
+skulle bygga på en viewcomponent. 
+
+(VIEWCOMPONENT + CRIMECOORDINATOR + CRIMELIST)
+Vyn för denna är det som förut stod hårdkodat är 
+nu beroende på vilket errand man klickar på.
+Om vi kollar i CrimeCoordinator så ser vi att View
+´componentens invokeasync anropas här, med
+Viewbag ID som parameter och om vi tittar på Denna
+ viewcomponent har en Task InvokeAsync med en string errand som syftar på errandID.
+Den försöker hitta rätt ärende genom funktionen 
+geterranddetails som definieras i fakerepo
+Den söker i errands-listan efter rätt errandID 
+och returnerar det ärende som passar.
+Klicka på ärende -> ärendeID länkas med som id
+ -> Viewbag.ID -> Invoke med ID -> ladda rätt info
+
+(INDEX + ERRAND POCO)
+Om vi tittar på index-sidan så har frågorna 
+omvandlats till att höra till modellen som är Errand.
+Så varje fråga är nu kopplad till errand där 
+jag definierat vilka som ska vara required och 
+vilka namn som ska displayas samt vilka 
+errormeddelanden som använder får om den inte fyllt i allt.
+Om man inte fyller i vissa som är required 
+så kommer det upp en inforuta om det.
+
+I validate så visas nu infon om det man skrev så att man kan 
+se så allt blivit rätt.

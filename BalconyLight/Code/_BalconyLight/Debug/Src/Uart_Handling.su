@@ -1,0 +1,5 @@
+Uart_Handling.c:20:6:EnableBLE	8	static
+Uart_Handling.c:25:6:DisableBLE	8	static
+Uart_Handling.c:30:6:USART_Callback	16	static
+Uart_Handling.c:61:6:GetStringBLE	24	static
+Uart_Handling.c:92:6:PrintFromBLE	528	static

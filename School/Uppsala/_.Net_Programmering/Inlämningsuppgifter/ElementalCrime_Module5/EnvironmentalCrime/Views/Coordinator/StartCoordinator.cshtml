@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "_CoordinatorLayout";
+}
+
+@model IEnvironmentalCrime
+
+<h2>Ärenden</h2>
+<p class="info">Du är inloggad som samordnare</p>
+
+<table id="managerForm">
+    <tr>
+        <td class="label">Välj status:</td>
+        <td class="label">Välj avdelning:</td>
+        <td>&nbsp;</td>
+        <td class="label">Ärendenummer:</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            <select name="status">
+                <option selected="selected">Välj alla</option>
+                @foreach (ErrandStatus errandStatus in Model.ErrandStatuses)
+                {
+                    <option value="@errandStatus.StatusId">@errandStatus.StatusName</option>
+                }
+            </select>
+        </td>
+        <td>
+            <select name="department">
+                <option selected="selected">Välj alla</option>
+                @foreach (Department department in Model.Departments)
+                {
+                    <option value="@department.DepartmentId">@department.DepartmentName</option>
+                }
+            </select>
+        </td>
+        <td><input class="button" type="submit" value="Hämta lista" /></td>
+        <td><input name="casenumber" /></td>
+        <td><input class="button" type="submit" value="Sök" /></td>
+    </tr>
+</table>
+
+@await Component.InvokeAsync("MyErrand", ViewBag.Role)

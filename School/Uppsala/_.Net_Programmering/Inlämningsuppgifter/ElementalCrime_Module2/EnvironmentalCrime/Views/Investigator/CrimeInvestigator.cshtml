@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "_InvestigatorLayout";
+}
+
+@model IEnumerable<Department>
+
+<h2>Detaljer för ärendet</h2>
+<p class="info">Du är inloggad som handläggare</p>
+
+@await Component.InvokeAsync("CrimeList", ViewBag.ID)
+
+<section id="bottomColumn">
+    <h3>Redigera ärende</h3>
+    <p class="label">Händelser:</p>
+    <textarea name="events" rows="5" cols="60"></textarea>
+
+    <p class="label">Mer information:</p>
+    <textarea name="information" rows="5" cols="60"></textarea>
+
+    <p class="label">Prover:</p>
+    <input type="file" name="loadSample" />
+
+    <p class="label">Ladda upp bilder:</p>
+    <input type="file" name="loadImage" />
+
+    <p class="label">Ändring av status:</p>
+    <select name="status">
+        <option selected="selected">Välj</option>
+        @foreach (Department department in Model)
+        {
+            <option value="@department.DepartmentID">@department.DepartmentName</option>
+        }
+    </select>
+
+    <p>
+        <input class="button" type="submit" value="Spara ändringarna" />
+    </p>
+</section>

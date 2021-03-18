@@ -1,0 +1,26 @@
+﻿@{ 
+    Layout = "_HeaderLayout";
+}
+<nav>
+    <ul>
+        <li><a asp-controller="Home" asp-action="Index">Hem</a></li>
+        <li><a asp-controller="Books" asp-action="Bocker">Våra böcker</a></li>
+        <li><a asp-controller="Home" asp-action="Press">Press</a></li>
+        <li><a asp-controller="Home" asp-action="Kontakt">Kontakta oss</a></li>
+    </ul>
+</nav>
+
+<main>
+    @RenderBody()
+</main>
+
+<aside>
+    <h2>Pressklipp</h2>
+    <p>
+        <a asp-controller="Home" asp-action="Press"><q>Amfibie! JAG?" (...) fångar vardagen i kärret bland grodor och paddor. Årets barnbokstips i sin genre!</q><br />Litteraturposten</a>
+    </p>
+    <p>
+        <a asp-controller="Home" asp-action="Press"><q>Knottens förlag är ett nytt litet förlag som har tagit på sig den stora rollen att väcka barns och vuxnas intresse för natur och miljö. Helt rätt i tiden!</q><br />Bokbladet</a>
+    </p>
+</aside>
+
