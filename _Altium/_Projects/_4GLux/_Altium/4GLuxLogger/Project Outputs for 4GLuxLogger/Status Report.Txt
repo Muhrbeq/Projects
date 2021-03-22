@@ -1,38 +1,38 @@
 Project Outputs Generation Report
 ---------------------------------
-Start Output Generation At 15:37:03 On 2021-01-18
+Start Output Generation At 15:28:19 On 2021-03-22
 
-Output: Gerber X2 Files
+Output: 4GLL_v2
 Type  : GerberX2
-From  : PCB Document [6C-4L-1550um.PcbDoc]
-   Generated File[6C-4L-1550um_Copper_Signal_Top.gbr]
-   Generated File[6C-4L-1550um_Copper_Signal_1.gbr]
-   Generated File[6C-4L-1550um_Copper_Signal_2.gbr]
-   Generated File[6C-4L-1550um_Copper_Signal_Bot.gbr]
-   Generated File[6C-4L-1550um_Pads_Bot.gbr]
-   Generated File[6C-4L-1550um_Pads_Top.gbr]
-   Generated File[6C-4L-1550um_Legend_Bot.gbr]
-   Generated File[6C-4L-1550um_Soldermask_Bot.gbr]
-   Generated File[6C-4L-1550um_Legend_Top.gbr]
-   Generated File[6C-4L-1550um_Paste_Top.gbr]
-   Generated File[6C-4L-1550um_Soldermask_Top.gbr]
-   Generated File[6C-4L-1550um_Mechanical_13.gbr]
-   Generated File[6C-4L-1550um_Mechanical_4.gbr]
-   Generated File[6C-4L-1550um_Mechanical_29.gbr]
-   Generated File[6C-4L-1550um_Mechanical_2.gbr]
-   Generated File[6C-4L-1550um_Mechanical_1.gbr]
-   Generated File[6C-4L-1550um_Mechanical_15.gbr]
-   Generated File[6C-4L-1550um_Profile.gbr]
-   Generated File[6C-4L-1550um_NPTH_Drill.gbr]
-   Generated File[6C-4L-1550um_PTH_Drill.gbr]
-   Generated File[6C-4L-1550um_Drawing_1.gbr]
-   Generated File[6C-4L-1550um_Drillmap_1.gbr]
-   Generated File[6C-4L-1550um.RUL]
-   Generated File[6C-4L-1550um.EXTREP]
-   Generated File[6C-4L-1550um.REP]
+From  : PCB Document [4GLL_V2.PcbDoc]
+   Generated File[4GLL_V2_Copper_Signal_Top.gbr]
+   Generated File[4GLL_V2_Copper_Signal_1.gbr]
+   Generated File[4GLL_V2_Copper_Signal_2.gbr]
+   Generated File[4GLL_V2_Copper_Signal_Bot.gbr]
+   Generated File[4GLL_V2_Pads_Bot.gbr]
+   Generated File[4GLL_V2_Pads_Top.gbr]
+   Generated File[4GLL_V2_Legend_Bot.gbr]
+   Generated File[4GLL_V2_Soldermask_Bot.gbr]
+   Generated File[4GLL_V2_Paste_Bot.gbr]
+   Generated File[4GLL_V2_Legend_Top.gbr]
+   Generated File[4GLL_V2_Paste_Top.gbr]
+   Generated File[4GLL_V2_Soldermask_Top.gbr]
+   Generated File[4GLL_V2_Mechanical_13.gbr]
+   Generated File[4GLL_V2_Mechanical_4.gbr]
+   Generated File[4GLL_V2_Mechanical_2.gbr]
+   Generated File[4GLL_V2_Mechanical_1.gbr]
+   Generated File[4GLL_V2_Mechanical_15.gbr]
+   Generated File[4GLL_V2_Profile.gbr]
+   Generated File[4GLL_V2_NPTH_Drill.gbr]
+   Generated File[4GLL_V2_PTH_Drill.gbr]
+   Generated File[4GLL_V2_Drawing_1.gbr]
+   Generated File[4GLL_V2_Drillmap_1.gbr]
+   Generated File[4GLL_V2.RUL]
+   Generated File[4GLL_V2.EXTREP]
+   Generated File[4GLL_V2.REP]
 
 
 Files Generated   : 25
 Documents Printed : 0
 
-Finished Output Generation At 15:37:09 On 2021-01-18
+Finished Output Generation At 15:28:24 On 2021-03-22

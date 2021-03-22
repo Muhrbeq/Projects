@@ -1,0 +1,31 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: 4GLL_V2.GBR   2021-03-22  15:28:19
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.gbr                Top Layer                               
+.gbr                Mid-Layer 1                             
+.gbr                Mid-Layer 2                             
+.gbr                Bottom Layer                            
+.gbr                Bottom Pad Master                       
+.gbr                Top Pad Master                          
+.gbr                Bottom Overlay                          
+.gbr                Bottom Solder                           
+.gbr                Bottom Paste                            
+.gbr                Top Overlay                             
+.gbr                Top Paste                               
+.gbr                Top Solder                              
+.gbr                Mechanical 13                           
+.gbr                Board ouline                            
+.gbr                Mechanical 2                            
+.gbr                Mechanical 1                            
+.gbr                Mechanical 15                           
+.gbr                Profile                                 
+.gbr                Non-plated through-hole drill file      
+.gbr                Plated through-hole drill file          
+.gbr                Drill Drawing                           
+.gbr                Drill Guide                             
+------------------------------------------------------------------------------------------
