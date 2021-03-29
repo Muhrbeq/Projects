@@ -1,1 +1,3 @@
-Record=TopLevelDocument|FileName=LuxLogger_V2_mcu_pwr.SchDoc
+Record=TopLevelDocument|FileName=LuxLogger_V2_mcu_pwr.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=LuxLogger_V2_mcu_pwr.SchDoc|FileName=LuxLogger_V2_sensors.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=LuxLogger_V2_mcu_pwr.SchDoc|FileName=Sunboost.SchDoc|SheetNumber= 

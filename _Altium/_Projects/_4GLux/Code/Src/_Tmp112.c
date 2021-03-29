@@ -251,6 +251,7 @@ void TMP112_StateMachine(void)
 		TRACE("[TMP112] - PASSED\r\n");
 		break;
 	default:
+		TRACE("Shouldn't get here\r\n");
 		break;
 	}
 }

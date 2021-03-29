@@ -1,0 +1,13 @@
+ina226.c:45:17:INA226_ReadReg	32	static
+ina226.c:75:16:INA226_WriteReg	32	static
+ina226.c:98:6:INA226_InitDevice	24	static
+ina226.c:112:6:INA226_Disable	24	static
+ina226.c:123:6:INA226_Enable	24	static
+ina226.c:134:6:INA226_Calibrate	48	static
+ina226.c:152:6:INA226_Configure	24	static
+ina226.c:181:5:INA226_ConversionReady	16	static
+ina226.c:195:6:INA226_ReadRaw	40	static
+ina226.c:257:6:INA226_Read	24	static
+ina226.c:272:6:INA226_PrintData	16	static
+ina226.c:282:6:INA226_ResetReadData	16	static
+ina226.c:290:6:INA226_Init	40	static
