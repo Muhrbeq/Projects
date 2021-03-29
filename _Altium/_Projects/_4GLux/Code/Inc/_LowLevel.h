@@ -12,7 +12,7 @@
 #include "__ExegerGeneric.h"
 #include "rtc.h"
 
-void SystemClock_Config(void);
+//void SystemClock_Config(void);
 void InitPeripherals(void);
 uint8_t CheckResetCause(void);
 void SystemPower_Config(void);

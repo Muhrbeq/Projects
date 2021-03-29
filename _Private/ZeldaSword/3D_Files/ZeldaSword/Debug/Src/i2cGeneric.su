@@ -1,0 +1,2 @@
+i2cGeneric.c:10:9:WriteI2C	40	static
+i2cGeneric.c:28:10:ReadI2C	40	static

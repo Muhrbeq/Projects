@@ -44,14 +44,6 @@ SensorStates SetSensorState(SensorStates sState);
 SensorStates GetSensorState(void);
 void SensorStateMachine(Data *data, Error *er);
 
-typedef enum GpsStates
-{
-	GPS_IDLE,
-	GPS_START,
-	GPS_AWAKE,
-	GPS_SAMPLING,
-	GPS_SLEEP,
-} GpsStates;
 
 
 #endif /* STATEMACHINE_H_ */

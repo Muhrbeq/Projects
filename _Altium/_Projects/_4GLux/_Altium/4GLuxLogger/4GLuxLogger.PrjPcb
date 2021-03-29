@@ -41,23 +41,6 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=..\..\..\..\_Library\PCB_Components.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=JKVNAOJO
-
-[Document2]
 DocumentPath=..\..\..\..\_Library\Schematic_Components.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -74,7 +57,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HLUQRNBV
 
-[Document3]
+[Document2]
 DocumentPath=MCU.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -91,7 +74,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UGFKADUO
 
-[Document4]
+[Document3]
 DocumentPath=SunBoost.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -108,7 +91,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RWUUQQGT
 
-[Document5]
+[Document4]
 DocumentPath=Sensors.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -125,7 +108,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NJICDYJC
 
-[Document6]
+[Document5]
 DocumentPath=4G.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -142,7 +125,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AIGZGWVD
 
-[Document7]
+[Document6]
 DocumentPath=Power.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -159,7 +142,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RZTTUFTT
 
-[Document8]
+[Document7]
 DocumentPath=UI.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -176,7 +159,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WSCGHDRQ
 
-[Document9]
+[Document8]
 DocumentPath=OverView.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -193,7 +176,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NOVCNFJU
 
-[Document10]
+[Document9]
 DocumentPath=Mesh.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -210,7 +193,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VLIZVNEZ
 
-[Document11]
+[Document10]
 DocumentPath=4GLL.PCBDwf
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -226,6 +209,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
+
+[Document11]
+DocumentPath=..\..\..\..\_Library\PCB_Components.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=JKVNAOJO
 
 [Document12]
 DocumentPath=..\..\..\..\_Library\Exeger_PCB_library.PcbLib
@@ -430,115 +430,7 @@ DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\4GLL_V2_Soldermask_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument26]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument27]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument28]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Copper_Signal_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument29]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Copper_Signal_2.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument30]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Copper_Signal_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument31]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Copper_Signal_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument32]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Drawing_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument33]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Drillmap_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument34]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Keep-out.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument35]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Legend_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument36]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Legend_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument37]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Mechanical_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument38]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Mechanical_2.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument39]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Mechanical_4.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument40]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Mechanical_13.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument41]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Mechanical_15.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument42]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Mechanical_29.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument43]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_NPTH_Drill.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument44]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Pads_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument45]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Pads_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument46]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Paste_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument47]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Paste_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument48]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Profile.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument49]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_PTH_Drill.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument50]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Soldermask_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument51]
-DocumentPath=Project Outputs for 4GLuxLogger\GerberX2\6C-4L-1550um_Soldermask_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument52]
 DocumentPath=Project Outputs for 4GLuxLogger\Design Rule Check - 4GLL_V2.html
-DItemRevisionGUID=
-
-[GeneratedDocument53]
-DocumentPath=Project Outputs for 4GLuxLogger\Design Rule Check - 6C-4L-1550um.html
 DItemRevisionGUID=
 
 [Parameter1]
@@ -558,6 +450,9 @@ Variant=[No Variations]
 OutputJobsCount=0
 ContentTypeGUID=CB6F2064-E317-11DF-B822-12313F0024A2
 ConfigurationType=Source
+
+[Generic_EDE]
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -1086,6 +981,36 @@ OutputName11=Specctra Design PCB
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
+OutputType12=Ansoft Neutral
+OutputName12=Ansoft Neutral (AutoPCB)
+OutputDocumentPath12=
+OutputVariantName12=
+OutputDefault12=0
+OutputType13=HyperLynx
+OutputName13=HyperLynx (AutoPCB)
+OutputDocumentPath13=
+OutputVariantName13=
+OutputDefault13=0
+OutputType14=Orcad v7 Capture Design
+OutputName14=Orcad v7 Capture Design (AutoSCH)
+OutputDocumentPath14=
+OutputVariantName14=
+OutputDefault14=0
+OutputType15=P-CAD ASCII
+OutputName15=P-CAD ASCII (AutoPCB)
+OutputDocumentPath15=
+OutputVariantName15=
+OutputDefault15=0
+OutputType16=P-CAD V16 Schematic Design
+OutputName16=P-CAD V16 Schematic Design (AutoSCH)
+OutputDocumentPath16=
+OutputVariantName16=
+OutputDefault16=0
+OutputType17=SiSoft
+OutputName17=SiSoft (AutoPCB)
+OutputDocumentPath17=
+OutputVariantName17=
+OutputDefault17=0
 
 [OutputGroup10]
 Name=PostProcess Outputs

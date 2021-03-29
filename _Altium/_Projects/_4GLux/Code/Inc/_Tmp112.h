@@ -29,16 +29,32 @@
 #define TMP112_TIMEOUT_RX_END		50			// Counts in receive loop
 #define TMP112_MAX_TEMP				100000			// 100 degrees
 
-uint8_t TMP112_writeRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len);
-uint16_t TMP112_readRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len);
-uint8_t TMP112_GetTemperature_raw(I2C_HandleTypeDef hi2c, uint16_t *get);
-uint8_t TMP112_StartOneShot(I2C_HandleTypeDef hi2c);
-uint8_t TMP112_WaitForOneShot(I2C_HandleTypeDef hi2c);
+typedef enum TMP112_State
+{
+	TMP112_INIT,
+	TMP112_STARTONESHOT,
+	TMP112_WAITFORONESHOTWRITE,
+	TMP112_WAITFORONESHOTREAD,
+	TMP112_GETTEMPERATURERAWWRITE,
+	TMP112_GETTEMPERATURERAWREAD,
+	TMP112_CALCULATETEMPERATURE,
+	TMP112_DONE,
+	TMP112_ERROR
 
-uint16_t TMP112_ReadTemp_raw(I2C_HandleTypeDef hi2c);
-void TMP112_Init(I2C_HandleTypeDef hi2c);
-void TMP112_ShutDown(I2C_HandleTypeDef hi2c);
-int32_t TMP112_ReadTemp(I2C_HandleTypeDef hi2c);
+}TMP112_State;
+
+TMP112_State TMP112_GetState();
+
+//uint8_t TMP112_writeRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len);
+//uint16_t TMP112_readRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len);
+//uint8_t TMP112_GetTemperature_raw(I2C_HandleTypeDef hi2c, uint16_t *get);
+//uint8_t TMP112_StartOneShot(I2C_HandleTypeDef hi2c);
+//uint8_t TMP112_WaitForOneShot(I2C_HandleTypeDef hi2c);
+//
+//uint16_t TMP112_ReadTemp_raw(I2C_HandleTypeDef hi2c);
+//void TMP112_Init(I2C_HandleTypeDef hi2c);
+//void TMP112_ShutDown(I2C_HandleTypeDef hi2c);
+//int32_t TMP112_ReadTemp(I2C_HandleTypeDef hi2c);
 
 
 #endif /* TMP112_H_ */

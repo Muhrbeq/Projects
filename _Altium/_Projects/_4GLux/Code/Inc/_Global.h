@@ -18,6 +18,12 @@
 #define POWEROFF_TIMEOUT			5
 #define MAXIMUM_WAIT_FOR_NETWORK	300
 
+typedef enum SensorStatus
+{
+	PASS,
+	FAIL
+} SensorStatus;
+
 /*############ Structs that will be sent #############*/
 
 typedef struct Spectrum
@@ -121,6 +127,13 @@ Data dataGlobal;
 UART uart1;
 UART uart2;
 UART uart3;
-
+SensorStatus TemperatureSensor;
+SensorStatus HumiditySensor;
+SensorStatus LightSensor;
+SensorStatus CurrentMeasurementSensor;
+SensorStatus SpectrumSensor;
+SensorStatus AccelerometerSensor;
+SensorStatus SDCard;
+SensorStatus SaraModule;
 
 #endif /* GLOBAL_H_ */

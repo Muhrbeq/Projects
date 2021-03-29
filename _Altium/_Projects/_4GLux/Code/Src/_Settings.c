@@ -333,36 +333,3 @@ uint8_t ParseSettingsString(char *set, SaraConfig *s)
 	return ret;
 }
 
-/* Not used, only for testing */
-//uint8_t PrintSettings(SaraConfig *s)
-//{
-//	printf("ID: %s\r\n"
-//			"IP: %s\r\n"
-//			"Port: %d\r\n", s->id, s->ip,
-//			s->port);
-//
-//	return true;
-//}
-//
-//
-//void TestSetting(void)
-//{
-//	char idJason[] = "{\"id\":\"R01M9410\"}";
-//	char ownJSON[] = "{\"ip\":\"192.168.1.2\"}";
-//	char portJSON[] = "{\"port\":\"1337\"}";
-//	char allJSON[] =
-//			"{\"id\":\"ramuramu\",\"ip\":\"192.168.1.1337\",\"port\":\"1234\"}";
-//
-//	SaraConfig ownJSONset;
-//
-//	ParseSettingsString(idJason, &ownJSONset);
-//	PrintSettings(&ownJSONset);
-//	ParseSettingsString(allJSON, &ownJSONset);
-//	PrintSettings(&ownJSONset);
-//	ParseSettingsString(ownJSON, &ownJSONset);
-//	PrintSettings(&ownJSONset);
-//	ParseSettingsString(portJSON, &ownJSONset);
-//	PrintSettings(&ownJSONset);
-//
-//}
-

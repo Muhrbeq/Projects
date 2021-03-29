@@ -1,0 +1,3 @@
+PowerManage.c:12:6:SystemPower_Config	8	static
+PowerManage.c:45:6:SystemClock_Config	200	static
+PowerManage.c:27:6:SystemSleepAndWakeup	8	static

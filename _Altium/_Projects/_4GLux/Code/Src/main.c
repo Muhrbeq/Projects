@@ -25,6 +25,7 @@
 #include "i2c.h"
 #include "iwdg.h"
 #include "lptim.h"
+#include "rng.h"
 #include "rtc.h"
 #include "sdmmc.h"
 #include "spi.h"
@@ -38,6 +39,7 @@
 #include "__ExegerGeneric.h"
 #include <_LowLevel.h>
 #include "_Time.h"
+#include "_RevisionControl.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -100,7 +102,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_CRC_Init();
-  MX_IWDG_Init();
+  //MX_IWDG_Init();
   MX_SPI2_Init();
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
@@ -115,10 +117,36 @@ int main(void)
   MX_LPTIM2_Init();
   MX_TIM2_Init();
   MX_USB_DEVICE_Init();
+  MX_RNG_Init();
   /* USER CODE BEGIN 2 */
-  Time_RTCGetDateTime();
-  Time_RTCSetDateTime(21, 2, 2, 12, 1, 2);
-  Time_RTCGetDateTime();
+//  Time_RTCGetDateTime();
+//  Time_RTCSetDateTime(21, 2, 2, 12, 1, 2);
+//  Time_RTCGetDateTime();
+
+  /*
+   * Before main:
+   *
+   *  - Check reset cause
+   *  - Check Revision
+   *  - Check status of all peripherals (ID of everyone)
+   *  -
+   *
+   *
+   *
+   * */
+
+  uint8_t ResetCause = CheckResetCause();
+  TRACE("[ResetCheck] - PASSED\r\n");
+
+  while(RevisionControl_GetState() != REVISIONSTATE_DONE &&
+		  RevisionControl_GetState() != REVISIONSTATE_ERROR)
+  {
+	  RevisionControl_StateMachine();
+  }
+
+  /* DISPLAY ALL INIT */
+
+  TRACE("[Main] - Entering While-loop\r\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -129,9 +157,64 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
+	  /* TODO:
+	   *
+	   * Order BOM of 4GLL
+	   * 	Farnell/digikey order
+	   *
+	   * Test generate random number x
+	   *
+	   * Basic functions for MCU
+	   * 	Generate CRC on data
+	   * 	LED - Use for debugging
+	   * 	Button - IRQ
+	   * 	RTC alarm
+	   * 	Low power solution
+	   * 	ADC for revision control x
+	   * 	USB communication - HID?
+	   * 	SD-card read/write
+	   * 	Redefine printf function with define
+	   * 	Window circuit for the LED
+	   * 	SPI communication
+	   * 	GPIOs
+	   * 	Sleep with different IOs
+	   *
+	   *
+	   * States
+	   * 	States of all actions
+	   * 		Have peripherals as states?
+	   *
+	   * Basic functions for peripherals
+	   * 	Code for OPT
+	   * 	Code for Spectrum sensor
+	   * 	Code for Accelerometer
+	   *	ID of each peripheral
+	   *	Rewrite all code
+	   *	Test Screen functionality
+	   *
+	   * Structure the UARTs for input from comp + Sara with IRQ
+	   * 	Arrays for each UART to store data
+	   * 	Read arrays when \r / \n received
+	   * 	Write test scenarios for Computer communication
+	   *
+	   * Structure the output data sent
+	   * 	How am I going to send the data?
+	   *
+	   * Structure startup sequence
+	   * 	Startup-cause
+	   *
+	   */
+
+
 	  /* Add State machine for sensors and radio/GPS */
 
+//	  uint32_t rngN = GenerateRandomNumber();
+//	  printf("%lu\r\n", rngN);
+//	  TRACE("%lu\r\n", rngN);
 
+
+
+	  //TRACE("_________\r\n");
 
 //	  printf("This is a test printf\r\n");
 //
@@ -140,7 +223,7 @@ int main(void)
 //	  debugPrint("Testing DebugPrint - Warning", debugLevel_Warning);
 //	  debugPrint("Testing DebugPrint - Error", debugLevel_Error);
 
-	  HAL_Delay(100);
+	  HAL_Delay(300);
   }
   /* USER CODE END 3 */
 }
@@ -196,7 +279,7 @@ void SystemClock_Config(void)
                               |RCC_PERIPHCLK_LPTIM2|RCC_PERIPHCLK_I2C1
                               |RCC_PERIPHCLK_I2C2|RCC_PERIPHCLK_I2C4
                               |RCC_PERIPHCLK_USB|RCC_PERIPHCLK_SDMMC1
-                              |RCC_PERIPHCLK_ADC;
+                              |RCC_PERIPHCLK_RNG|RCC_PERIPHCLK_ADC;
   PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
   PeriphClkInit.Usart3ClockSelection = RCC_USART3CLKSOURCE_PCLK1;
@@ -207,6 +290,7 @@ void SystemClock_Config(void)
   PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_PLLSAI1;
   PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSE;
   PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLLSAI1;
+  PeriphClkInit.RngClockSelection = RCC_RNGCLKSOURCE_PLLSAI1;
   PeriphClkInit.Sdmmc1ClockSelection = RCC_SDMMC1CLKSOURCE_PLLSAI1;
   PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_HSE;
   PeriphClkInit.PLLSAI1.PLLSAI1M = 1;

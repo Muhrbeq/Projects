@@ -1,0 +1,9 @@
+LIS2DW12.c:59:17:LIS_ReadI2C.isra.1.constprop	32	static
+LIS2DW12.c:130:16:LIS_GetOutputDataRate	16	static
+LIS2DW12.c:41:16:LIS_WriteI2C.isra.0.constprop	32	static
+LIS2DW12.c:16:15:LIS_GetAccelerationStruct	0	static
+LIS2DW12.c:33:6:LIS_initStruct	0	static
+LIS2DW12.c:93:9:LIS_ReadID	16	static
+LIS2DW12.c:256:9:LIS_CTRL1_Read	16	static
+LIS2DW12.c:268:9:LIS_Start	40	static
+LIS2DW12.c:399:6:LIS_ReadAxesXYZ	40	static

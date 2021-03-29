@@ -9,8 +9,6 @@
 #include <_SensorControl.h>
 #include <_Global.h>
 
-#include <_AS726x.h>
-#include <_Battery.h>
 #include <_HDC1080.h>
 #include <_LIS2DW12.h>
 #include <_Tmp112.h>
@@ -19,42 +17,17 @@
 
 void EnableSpectrum(uint8_t On)
 {
-	if(On != 0)
-	{
-		LL_GPIO_SetOutputPin(Spectrum_Enable_GPIO_Port, Spectrum_Enable_Pin);
-		return;
-	}
-	LL_GPIO_ResetOutputPin(Spectrum_Enable_GPIO_Port, Spectrum_Enable_Pin);
+	HAL_GPIO_WritePin(Spectrum_Enable_GPIO_Port, Spectrum_Enable_Pin, On);
 }
 
-void EnablesDatasors(uint8_t On)
+void EnableSensors(uint8_t On)
 {
-	if(On != 0)
-		{
-			LL_GPIO_SetOutputPin(Sensor_Enable_GPIO_Port, Sensor_Enable_Pin);
-			return;
-		}
-	LL_GPIO_ResetOutputPin(Sensor_Enable_GPIO_Port, Sensor_Enable_Pin);
+	HAL_GPIO_WritePin(Sensor_Enable_GPIO_Port, Sensor_Enable_Pin, On);
 }
 
 void EnableAccelerometer(uint8_t On)
 {
-	if(On != 0)
-		{
-			LL_GPIO_SetOutputPin(Acceleromater_Enable_GPIO_Port, Acceleromater_Enable_Pin);
-			return;
-		}
-	LL_GPIO_ResetOutputPin(Acceleromater_Enable_GPIO_Port, Acceleromater_Enable_Pin);
-}
-
-void EnableGPS(uint8_t On)
-{
-	if(On != 0)
-	{
-		LL_GPIO_SetOutputPin(GPS_Enable_GPIO_Port, GPS_Enable_Pin);
-		return;
-	}
-	LL_GPIO_ResetOutputPin(GPS_Enable_GPIO_Port, GPS_Enable_Pin);
+	HAL_GPIO_WritePin(Acceleromater_Enable_GPIO_Port, Acceleromater_Enable_Pin, On);
 }
 
 void SensorTakeMeasurement(SensorData *sD)
@@ -75,7 +48,7 @@ void SensorTakeMeasurement(SensorData *sD)
 	sD->tempHumLux = (((0b1 & tempSign << 9) | (0xFF & tmp) << 8) | (0b11111 & humidity)
 			| (0b11111111111111111 & (int) lux << 15));
 
-	AS726X_takeMeasurements(AS7262_GAIN_3_7,  &(sD->spectrum));
+	//AS726X_takeMeasurements(AS7262_GAIN_3_7,  &(sD->spectrum));
 }
 
 

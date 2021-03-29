@@ -1,0 +1,51 @@
+Removed Pin From Net: NetName=VBAT Pin=C35-2
+Removed Pin From Net: NetName=VBAT Pin=C37-2
+Removed Pin From Net: NetName=VBAT Pin=C48-2
+Removed Pin From Net: NetName=VBAT Pin=C56-2
+Removed Pin From Net: NetName=VDD_Screen Pin=R24-2
+Removed Pin From Net: NetName=VDD Pin=R25-2
+Removed Pin From Net: NetName=VDD_Sensor Pin=R45-2
+Removed Pin From Net: NetName=VDD_SD Pin=R46-2
+Removed Pin From Net: NetName=VDD_Spectrum Pin=R47-2
+Removed Pin From Net: NetName=VBAT Pin=U9-1
+Removed Pin From Net: NetName=VBAT Pin=U10-7
+Removed Pin From Net: NetName=VBAT Pin=U11-7
+Removed Pin From Net: NetName=VBAT Pin=U13-1
+Removed Pin From Net: NetName=VBAT Pin=U14-7
+Added Pin To Net: NetName=VDD Pin=C36-2
+Added Pin To Net: NetName=VDD_Sensor Pin=C38-2
+Added Pin To Net: NetName=VDD_SD Pin=C49-2
+Added Pin To Net: NetName=VDD_Spectrum Pin=C57-2
+Added Pin To Net: NetName=VDD_Screen Pin=C92-2
+Added Pin To Net: NetName=VBAT Pin=R24-1
+Added Pin To Net: NetName=VBAT Pin=R25-1
+Added Pin To Net: NetName=VBAT Pin=R45-1
+Added Pin To Net: NetName=VBAT Pin=R46-1
+Added Pin To Net: NetName=VBAT Pin=R47-1
+Added Pin To Net: NetName=VDD_Screen Pin=U9-5
+Added Pin To Net: NetName=VDD Pin=U10-2
+Added Pin To Net: NetName=VDD Pin=U10-6
+Added Pin To Net: NetName=VDD_Sensor Pin=U11-2
+Added Pin To Net: NetName=VDD_Sensor Pin=U11-6
+Added Pin To Net: NetName=VDD_Spectrum Pin=U13-5
+Added Pin To Net: NetName=VDD_SD Pin=U14-2
+Added Pin To Net: NetName=VDD_SD Pin=U14-6
+Added Pin To Net: NetName=NetC35_2 Pin=C35-2
+Added Pin To Net: NetName=NetC35_2 Pin=R25-2
+Added Pin To Net: NetName=NetC35_2 Pin=U10-7
+Added Net: Name=NetC35_2
+Added Pin To Net: NetName=NetC37_2 Pin=C37-2
+Added Pin To Net: NetName=NetC37_2 Pin=R45-2
+Added Pin To Net: NetName=NetC37_2 Pin=U11-7
+Added Net: Name=NetC37_2
+Added Pin To Net: NetName=NetC48_2 Pin=C48-2
+Added Pin To Net: NetName=NetC48_2 Pin=R46-2
+Added Pin To Net: NetName=NetC48_2 Pin=U14-7
+Added Net: Name=NetC48_2
+Added Pin To Net: NetName=NetC56_2 Pin=C56-2
+Added Pin To Net: NetName=NetC56_2 Pin=R47-2
+Added Pin To Net: NetName=NetC56_2 Pin=U13-1
+Added Net: Name=NetC56_2
+Added Pin To Net: NetName=NetR24_2 Pin=R24-2
+Added Pin To Net: NetName=NetR24_2 Pin=U9-1
+Added Net: Name=NetR24_2

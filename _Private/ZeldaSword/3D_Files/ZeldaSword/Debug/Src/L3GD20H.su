@@ -1,0 +1,8 @@
+L3GD20H.c:65:17:L3_ReadI2C.isra.1.constprop	32	static
+L3GD20H.c:47:16:L3_WriteI2C.isra.0.constprop	32	static
+L3GD20H.c:22:16:L3_GetGyroStruct	0	static
+L3GD20H.c:39:6:L3_initStruct	0	static
+L3GD20H.c:97:9:L3_ReadID	16	static
+L3GD20H.c:338:9:L3_EnableAllAxes	24	static
+L3GD20H.c:356:9:L3_Start	40	static
+L3GD20H.c:464:6:L3_ReadAxesXYZ	40	static

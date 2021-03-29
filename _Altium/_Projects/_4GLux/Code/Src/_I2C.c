@@ -58,3 +58,34 @@ uint16_t I2C_ReadRegister(I2C_HandleTypeDef hi2c, uint16_t writeAddr, uint16_t r
 	}
 	return HAL_OK;
 }
+
+uint8_t I2C_Write(I2C_HandleTypeDef hi2c, uint16_t addr, uint8_t* data, uint8_t len)
+{
+	if(HAL_I2C_Master_Transmit(&hi2c, addr, data,
+			len, 1) == HAL_OK)
+	{
+		return HAL_OK;
+	}
+	return HAL_ERROR;
+}
+
+uint8_t I2C_ReadWrite(I2C_HandleTypeDef hi2c, uint16_t writeAddr, uint8_t* data, uint8_t len)
+{
+	if(HAL_I2C_Master_Transmit(&hi2c, writeAddr, data,
+				len, 1) == HAL_OK)
+	{
+		return HAL_OK;
+	}
+	return HAL_ERROR;
+}
+
+uint16_t I2C_ReadRead(I2C_HandleTypeDef hi2c, uint16_t readAddr, uint8_t* data, uint8_t len)
+{
+	if(HAL_I2C_Master_Receive(&hi2c, readAddr, data,
+			len, 1) == HAL_OK)
+	{
+		return HAL_OK;
+	}
+	return HAL_ERROR;
+}
+

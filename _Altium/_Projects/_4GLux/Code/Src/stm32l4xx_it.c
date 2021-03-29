@@ -209,20 +209,7 @@ void EXTI0_IRQHandler(void)
   /* USER CODE BEGIN EXTI0_IRQn 0 */
 
   /* USER CODE END EXTI0_IRQn 0 */
-  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_0) != RESET)
-  {
-    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_0);
-    /* USER CODE BEGIN LL_EXTI_LINE_0 */
-    /* IRQ active!!
-     *
-     *
-     * Do Button things
-     *
-     *
-     * */
-    
-    /* USER CODE END LL_EXTI_LINE_0 */
-  }
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
   /* USER CODE BEGIN EXTI0_IRQn 1 */
 
   /* USER CODE END EXTI0_IRQn 1 */
@@ -236,16 +223,29 @@ void EXTI4_IRQHandler(void)
   /* USER CODE BEGIN EXTI4_IRQn 0 */
 
   /* USER CODE END EXTI4_IRQn 0 */
-  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_4) != RESET)
-  {
-    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_4);
-    /* USER CODE BEGIN LL_EXTI_LINE_4 */
-    
-    /* USER CODE END LL_EXTI_LINE_4 */
-  }
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_4);
   /* USER CODE BEGIN EXTI4_IRQn 1 */
 
   /* USER CODE END EXTI4_IRQn 1 */
+}
+
+/**
+  * @brief This function handles USART1 global interrupt.
+  */
+void USART1_IRQHandler(void)
+{
+  /* USER CODE BEGIN USART1_IRQn 0 */
+
+	/*
+	 * PC Communications
+	 *
+	 *
+	 *
+	 * */
+  /* USER CODE END USART1_IRQn 0 */
+  /* USER CODE BEGIN USART1_IRQn 1 */
+
+  /* USER CODE END USART1_IRQn 1 */
 }
 
 /**
@@ -259,19 +259,6 @@ void USART2_IRQHandler(void)
   /* USER CODE BEGIN USART2_IRQn 1 */
 
   /* USER CODE END USART2_IRQn 1 */
-}
-
-/**
-  * @brief This function handles USART3 global interrupt.
-  */
-void USART3_IRQHandler(void)
-{
-  /* USER CODE BEGIN USART3_IRQn 0 */
-	USART3_Callback();
-  /* USER CODE END USART3_IRQn 0 */
-  /* USER CODE BEGIN USART3_IRQn 1 */
-
-  /* USER CODE END USART3_IRQn 1 */
 }
 
 /**

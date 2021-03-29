@@ -1,0 +1,80 @@
+Added Component: Designator=P1(HDR2X13)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P?(HDR1X2)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P?(HDR1X2)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=U1(SOT65P210X110-6N)
+Add component (AddParameter): Name = "Availability"; Value = "Good"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/SN74LVC1G3157DCKR/Texas%20Instruments/view-part/270736/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN74LVC1G3157DCKR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-SC70-6 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/SN74LVC1G3157DCKR/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN74LVC1G3157DCKR/Texas%20Instruments/view-part/270736/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3V Pin=P1-5
+Added Pin To Net: NetName=+3V Pin=P1-6
+Added Pin To Net: NetName=+3V Pin=P1-9
+Added Pin To Net: NetName=+3V Pin=P1-10
+Added Pin To Net: NetName=+3V Pin=P1-19
+Added Net: Name=+3V
+Added Pin To Net: NetName=Drain Pin=P?-2
+Added Pin To Net: NetName=Drain Pin=U1-1
+Added Net: Name=Drain
+Added Pin To Net: NetName=Gain Pin=P?-2
+Added Pin To Net: NetName=Gain Pin=U1-3
+Added Net: Name=Gain
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Pin To Net: NetName=GND Pin=P1-15
+Added Pin To Net: NetName=GND Pin=P1-16
+Added Pin To Net: NetName=GND Pin=P1-18
+Added Pin To Net: NetName=GND Pin=P1-25
+Added Pin To Net: NetName=GND Pin=P1-26
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Net: Name=GND
+Added Pin To Net: NetName=I2C1_SCL Pin=P1-12
+Added Net: Name=I2C1_SCL
+Added Pin To Net: NetName=I2C1_SDA Pin=P1-14
+Added Net: Name=I2C1_SDA
+Added Pin To Net: NetName=I2C3_SCL Pin=P1-11
+Added Net: Name=I2C3_SCL
+Added Pin To Net: NetName=I2C3_SDA Pin=P1-13
+Added Net: Name=I2C3_SDA
+Added Net: Name=NetC2_1
+Added Net: Name=NetC2_2
+Added Net: Name=NetD1_2
+Added Net: Name=NetIC1_8
+Added Pin To Net: NetName=PA0 Pin=P1-20
+Added Net: Name=PA0
+Added Pin To Net: NetName=PA1 Pin=P1-22
+Added Net: Name=PA1
+Added Pin To Net: NetName=PA2 Pin=P1-21
+Added Net: Name=PA2
+Added Pin To Net: NetName=PA3 Pin=P1-23
+Added Net: Name=PA3
+Added Pin To Net: NetName=PA4 Pin=P1-24
+Added Net: Name=PA4
+Added Pin To Net: NetName=PB5 Pin=P1-8
+Added Pin To Net: NetName=PB5 Pin=U1-6
+Added Net: Name=PB5
+Added Pin To Net: NetName=PC3 Pin=P1-17
+Added Net: Name=PC3
+Added Pin To Net: NetName=Switch Pin=U1-4
+Added Net: Name=Switch
+Added Pin To Net: NetName=VBAT Pin=P1-2
+Added Pin To Net: NetName=VBAT Pin=P1-4
+Added Pin To Net: NetName=VBAT Pin=U1-5
+Added Net: Name=VBAT
+Added Class: Name=GainDrain
+Added Room: Name=GainDrain

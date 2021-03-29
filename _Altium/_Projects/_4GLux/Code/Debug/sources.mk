@@ -20,6 +20,8 @@ OBJCOPY_BIN :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Drivers/STM32L4xx_HAL_Driver/Src \
+Middlewares/ST/STM32_USB_Device_Library/Class/HID/Src \
+Middlewares/ST/STM32_USB_Device_Library/Core/Src \
 Middlewares/Third_Party/FatFs/src \
 Middlewares/Third_Party/FatFs/src/option \
 Src \
