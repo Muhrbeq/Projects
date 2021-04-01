@@ -5488,11 +5488,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj",
+      "projectUniqueName": "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\_Private\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj",
       "projectName": "EnvironmentalCrime",
-      "projectPath": "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj",
+      "projectPath": "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\_Private\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\EnvironmentalCrime.csproj",
       "packagesPath": "C:\\Users\\rasmu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\obj\\",
+      "outputPath": "C:\\Users\\rasmu\\OneDrive\\Documents\\GitHub\\Projects\\_Private\\School\\Uppsala\\_.Net_Programmering\\Inlämningsuppgifter\\ElementalCrime_Module5\\EnvironmentalCrime\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
