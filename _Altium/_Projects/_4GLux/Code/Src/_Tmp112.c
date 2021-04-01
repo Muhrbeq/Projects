@@ -10,92 +10,25 @@
 #include <i2c.h>
 #include "__ExegerGeneric.h"
 #include "_I2C.h"
-//#include "Error.h"
-//#include "utils.h"
 
-//
-//uint8_t TMP112_writeRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len)
-//{
-//	uint8_t timeOutCounter = 0;
-//
-//	while (HAL_I2C_Master_Transmit(&hi2c, TMP112_ADDR_WRITE, (uint8_t *) data,
-//			len, 1) != HAL_OK)
-//	{
-//
-//		if (timeOutCounter > TMP112_TIMEOUT_TX_END)
-//		{
-////			InfoLogAdd(ERRORLEVEL_SEVERE,
-////			LOG_FUNC_TMP112,
-////			LOG_SUB_WRITE,
-////			LOG_TYPE_ID,
-////			LOG_STATUS_TIMEOUT, 0, 0, 0, GetTempInfoStruct());
-////
-////			ErrorAddLog(LOG_FUNC_TMP112, LOG_SUB_WRITE, throw, LOG_STATUS_TIMEOUT, data[1], data[0], 0, GetErrorStruct());
-//			return HAL_ERROR;
-//		}
-//
-//		timeOutCounter++;
-//	}
-//	return HAL_OK;
-//}
-//
-//uint16_t TMP112_readRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len)
-//{
-//	uint8_t timeOutCounter = 0;
-//
-//	while (HAL_I2C_Master_Transmit(&hi2c, TMP112_ADDR_WRITE, (uint8_t *) data,
-//			1, 1) != HAL_OK)
-//	{
-//
-//		if (timeOutCounter > TMP112_TIMEOUT_TX_END)
-//		{
-////			InfoLogAdd(ERRORLEVEL_SEVERE,
-////			LOG_FUNC_TMP112,
-////			LOG_SUB_READ,
-////			LOG_TYPE_ID,
-////			LOG_STATUS_TIMEOUT, data[0], 1, 0, GetTempInfoStruct());
-////
-////			ErrorAddLog(LOG_FUNC_TMP112, LOG_SUB_READ, throw, LOG_STATUS_TIMEOUT, data[0], 1, 0, GetErrorStruct());
-//			return HAL_ERROR;
-//		}
-//		timeOutCounter++;
-//	}
-//
-//	timeOutCounter = 0;
-//	while (HAL_I2C_Master_Receive(&hi2c, TMP112_ADDR_READ, (uint8_t *) data,
-//			len, 1) != HAL_OK)
-//	{
-//		if (timeOutCounter > TMP112_TIMEOUT_RX_END)
-//		{
-////			InfoLogAdd(ERRORLEVEL_SEVERE,
-////			LOG_FUNC_TMP112,
-////			LOG_SUB_READ,
-////			LOG_TYPE_ID,
-////			LOG_STATUS_TIMEOUT, data[0], 2, 0, GetTempInfoStruct());
-////
-////			ErrorAddLog(LOG_FUNC_TMP112, LOG_SUB_READ, throw, LOG_STATUS_TIMEOUT, data[0], 2, 0, GetErrorStruct());
-//			return HAL_ERROR;
-//		}
-//		timeOutCounter++;
-//	}
-//	return HAL_OK;
-//}
-
-TMP112_State TMP_State;
-uint16_t temperatureRaw = 0;
-int32_t temperatureCalculated = 0;
-
-void TMP112_SetState(TMP112_State tState)
+void TMP112_SetState(TMP112 *tSense, TMP112_State tState)
 {
-	TMP_State = tState;
+	tSense->tState = tState;
 }
 
-TMP112_State TMP112_GetState(void)
+TMP112_State TMP112_GetState(TMP112 *tSense)
 {
-	return TMP_State;
+	return tSense->tState;
 }
 
-static HAL_StatusTypeDef TMP112_Init(I2C_HandleTypeDef hi2c)
+void TMP112_InitDevice(TMP112 *device, I2C_HandleTypeDef *hi2c, uint8_t devWriteAddr, uint8_t devReadAddr)
+{
+	device->hi2c = *hi2c;
+	device->i2cWrite = devWriteAddr;
+	device->i2cRead = devReadAddr;
+}
+
+static HAL_StatusTypeDef TMP112_Init(TMP112 *device)
 {
 	unsigned char data_t[4] = { 0 };
 
@@ -104,10 +37,10 @@ static HAL_StatusTypeDef TMP112_Init(I2C_HandleTypeDef hi2c)
 	data_t[1] = 0x61; //0x61 = SD enable
 	data_t[2] = 0xA0; //Default values of byte 2 in configuration register
 
-	return I2C_Write(hi2c, TMP112_ADDR_WRITE, data_t, 3);
+	return I2C_Write(device->hi2c, device->i2cWrite, data_t, 3);
 }
 
-static HAL_StatusTypeDef TMP112_StartOneShot(I2C_HandleTypeDef hi2c)
+static HAL_StatusTypeDef TMP112_StartOneShot(TMP112 *device)
 {
 	unsigned char data_t[4] = { 0 };
 
@@ -117,21 +50,21 @@ static HAL_StatusTypeDef TMP112_StartOneShot(I2C_HandleTypeDef hi2c)
 	data_t[2] = 0xA0; //Default values of byte 2 in configuration register
 
 	/* Send data to sensor */
-	return I2C_Write(hi2c, TMP112_ADDR_WRITE, data_t, 3);
+	return I2C_Write(device->hi2c, device->i2cWrite, data_t, 3);
 }
 
-static HAL_StatusTypeDef TMP112_WaitForOneShotWrite(I2C_HandleTypeDef hi2c)
+static HAL_StatusTypeDef TMP112_WaitForOneShotWrite(TMP112 *device)
 {
 	unsigned char data[2] = { 0 };
 	data[0] = TMP112_CONF_REG;
-	return I2C_ReadWrite(hi2c, TMP112_ADDR_WRITE, data, 2);
+	return I2C_ReadWrite(device->hi2c, device->i2cWrite, data, 2);
 }
 
-static HAL_StatusTypeDef TMP112_WaitForOneShotRead(I2C_HandleTypeDef hi2c)
+static HAL_StatusTypeDef TMP112_WaitForOneShotRead(TMP112 *device)
 {
 	unsigned char data[2] = { 0 };
 	data[0] = TMP112_CONF_REG;
-	if(I2C_ReadRead(hi2c, TMP112_ADDR_WRITE, data, 2) == HAL_OK)
+	if(I2C_ReadRead(device->hi2c, device->i2cRead, data, 2) == HAL_OK)
 	{
 		if ((data[0] & 0x80) != 0)
 		{
@@ -141,24 +74,24 @@ static HAL_StatusTypeDef TMP112_WaitForOneShotRead(I2C_HandleTypeDef hi2c)
 	return HAL_ERROR;
 }
 
-static HAL_StatusTypeDef TMP112_GetTemperatureRawWrite(I2C_HandleTypeDef hi2c)
+static HAL_StatusTypeDef TMP112_GetTemperatureRawWrite(TMP112 *device)
 {
 	unsigned char data[2] = { 0 };
 
 	data[0] = TMP112_TEMP_REG;
 
-	return I2C_ReadWrite(hi2c, TMP112_ADDR_WRITE, data, 2);
+	return I2C_ReadWrite(device->hi2c, device->i2cWrite, data, 2);
 }
 
-static HAL_StatusTypeDef TMP112_GetTemperatureRawRead(I2C_HandleTypeDef hi2c, uint16_t *get)
+static HAL_StatusTypeDef TMP112_GetTemperatureRawRead(TMP112 *device)
 {
 	unsigned char data[2] = { 0 };
 
 	data[0] = TMP112_TEMP_REG;
 
-	if(I2C_ReadRead(hi2c, TMP112_ADDR_READ, data, 2) == HAL_OK)
+	if(I2C_ReadRead(device->hi2c, device->i2cRead, data, 2) == HAL_OK)
 	{
-		*get = (((data[0] << 8) | data[1]) >> 4);
+		device->temperatureRaw = (((data[0] << 8) | data[1]) >> 4);
 		return HAL_OK;
 	}
 	return HAL_ERROR;
@@ -194,57 +127,55 @@ static int32_t TMP112_CalculateTemperature(uint16_t raw)
 	return signOfTemp * temp;
 }
 
-void TMP112_StateMachine(void)
+void TMP112_StateMachine(TMP112 *device)
 {
-	TMP112_State tState = TMP112_GetState();
-
-	switch(tState)
+	switch(device->tState)
 	{
 	case TMP112_INIT:
-		if(TMP112_Init(hi2c1) == HAL_OK)
+		if(TMP112_Init(device) == HAL_OK)
 		{
-			TMP112_SetState(TMP112_STARTONESHOT);
+			TMP112_SetState(device, TMP112_STARTONESHOT);
 			TRACE_DEBUG("TMP112 Init passed\r\n");
 		}
 		break;
 	case TMP112_STARTONESHOT:
-		if(TMP112_StartOneShot(hi2c1) == HAL_OK)
+		if(TMP112_StartOneShot(device) == HAL_OK)
 		{
-			TMP112_SetState(TMP112_WAITFORONESHOTWRITE);
+			TMP112_SetState(device, TMP112_WAITFORONESHOTWRITE);
 			TRACE_DEBUG("TMP112_STARTONESHOT passed\r\n");
 		}
 		break;
 	case TMP112_WAITFORONESHOTWRITE:
-		if(TMP112_WaitForOneShotWrite(hi2c1) == HAL_OK)
+		if(TMP112_WaitForOneShotWrite(device) == HAL_OK)
 		{
-			TMP112_SetState(TMP112_WAITFORONESHOTREAD);
+			TMP112_SetState(device, TMP112_WAITFORONESHOTREAD);
 			TRACE_DEBUG("TMP112_WAITFORONESHOTWRITE passed\r\n");
 		}
 		break;
 	case TMP112_WAITFORONESHOTREAD:
-		if(TMP112_WaitForOneShotRead(hi2c1) == HAL_OK)
+		if(TMP112_WaitForOneShotRead(device) == HAL_OK)
 		{
-			TMP112_SetState(TMP112_GETTEMPERATURERAWWRITE);
+			TMP112_SetState(device, TMP112_GETTEMPERATURERAWWRITE);
 			TRACE_DEBUG("TMP112_WAITFORONESHOTREAD passed\r\n");
 		}
 		break;
 	case TMP112_GETTEMPERATURERAWWRITE:
-		if(TMP112_GetTemperatureRawWrite(hi2c1) == HAL_OK)
+		if(TMP112_GetTemperatureRawWrite(device) == HAL_OK)
 		{
-			TMP112_SetState(TMP112_GETTEMPERATURERAWREAD);
+			TMP112_SetState(device, TMP112_GETTEMPERATURERAWREAD);
 			TRACE_DEBUG("TMP112_GETTEMPERATURERAWWRITE passed\r\n");
 		}
 		break;
 	case TMP112_GETTEMPERATURERAWREAD:
-		if(TMP112_GetTemperatureRawRead(hi2c1, &temperatureRaw) == HAL_OK)
+		if(TMP112_GetTemperatureRawRead(device) == HAL_OK)
 		{
-			TMP112_SetState(TMP112_CALCULATETEMPERATURE);
+			TMP112_SetState(device, TMP112_CALCULATETEMPERATURE);
 			TRACE_DEBUG("TMP112_GETTEMPERATURERAWREAD passed\r\n");
 		}
 		break;
 	case TMP112_CALCULATETEMPERATURE:
-		temperatureCalculated = TMP112_CalculateTemperature(temperatureRaw);
-		TMP112_SetState(TMP112_DONE);
+		device->temperature = TMP112_CalculateTemperature(device->temperatureRaw);
+		TMP112_SetState(device, TMP112_DONE);
 		TRACE_DEBUG("TMP112_CALCULATETEMPERATURE passed\r\n");
 		break;
 	case TMP112_DONE:

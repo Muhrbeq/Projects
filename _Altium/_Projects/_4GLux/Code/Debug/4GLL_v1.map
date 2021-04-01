@@ -187,7 +187,6 @@ hiwdg               0x10              Src/iwdg.o
 hcrc                0x24              Src/crc.o
 hi2c2               0x4c              Src/i2c.o
 uart1               0x4               Src/_GPS.o
-TMP_State           0x1               Src/_Tmp112.o
 hsd1                0x84              Src/sdmmc.o
 uwTick              0x4               Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
 HumiditySensor      0x1               Src/_GPS.o
@@ -11599,36 +11598,34 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 Src/_Tmp112.o
  .rodata.CHANNEL_OFFSET_TAB
                 0x0000000000000000        0x7 Src/_Tmp112.o
- .bss.temperatureRaw
-                0x0000000000000000        0x2 Src/_Tmp112.o
- .bss.temperatureCalculated
-                0x0000000000000000        0x4 Src/_Tmp112.o
  .text.TMP112_SetState
-                0x0000000000000000       0x20 Src/_Tmp112.o
+                0x0000000000000000       0x1e Src/_Tmp112.o
  .text.TMP112_GetState
                 0x0000000000000000       0x18 Src/_Tmp112.o
+ .text.TMP112_InitDevice
+                0x0000000000000000       0x3e Src/_Tmp112.o
  .text.TMP112_Init
-                0x0000000000000000       0x60 Src/_Tmp112.o
+                0x0000000000000000       0x5a Src/_Tmp112.o
  .text.TMP112_StartOneShot
-                0x0000000000000000       0x60 Src/_Tmp112.o
+                0x0000000000000000       0x5a Src/_Tmp112.o
  .text.TMP112_WaitForOneShotWrite
-                0x0000000000000000       0x58 Src/_Tmp112.o
+                0x0000000000000000       0x52 Src/_Tmp112.o
  .text.TMP112_WaitForOneShotRead
-                0x0000000000000000       0x6a Src/_Tmp112.o
+                0x0000000000000000       0x64 Src/_Tmp112.o
  .text.TMP112_GetTemperatureRawWrite
-                0x0000000000000000       0x58 Src/_Tmp112.o
+                0x0000000000000000       0x52 Src/_Tmp112.o
  .text.TMP112_GetTemperatureRawRead
-                0x0000000000000000       0x72 Src/_Tmp112.o
+                0x0000000000000000       0x6e Src/_Tmp112.o
  .text.TMP112_CalculateTemperature
                 0x0000000000000000       0xcc Src/_Tmp112.o
- .rodata        0x0000000000000000       0xec Src/_Tmp112.o
+ .rodata        0x0000000000000000      0x114 Src/_Tmp112.o
  .text.TMP112_StateMachine
-                0x0000000000000000      0x1fc Src/_Tmp112.o
- .debug_info    0x0000000000000000     0x145b Src/_Tmp112.o
- .debug_abbrev  0x0000000000000000      0x258 Src/_Tmp112.o
+                0x0000000000000000      0x154 Src/_Tmp112.o
+ .debug_info    0x0000000000000000     0x14ef Src/_Tmp112.o
+ .debug_abbrev  0x0000000000000000      0x25a Src/_Tmp112.o
  .debug_aranges
-                0x0000000000000000       0x68 Src/_Tmp112.o
- .debug_ranges  0x0000000000000000       0x58 Src/_Tmp112.o
+                0x0000000000000000       0x70 Src/_Tmp112.o
+ .debug_ranges  0x0000000000000000       0x60 Src/_Tmp112.o
  .debug_macro   0x0000000000000000      0x4ce Src/_Tmp112.o
  .debug_macro   0x0000000000000000      0xa60 Src/_Tmp112.o
  .debug_macro   0x0000000000000000      0x1dd Src/_Tmp112.o
@@ -11727,13 +11724,12 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x51a Src/_Tmp112.o
  .debug_macro   0x0000000000000000      0x171 Src/_Tmp112.o
  .debug_macro   0x0000000000000000       0x16 Src/_Tmp112.o
- .debug_line    0x0000000000000000      0xc88 Src/_Tmp112.o
- .debug_str     0x0000000000000000   0x100688 Src/_Tmp112.o
+ .debug_line    0x0000000000000000      0xc91 Src/_Tmp112.o
+ .debug_str     0x0000000000000000   0x1006c5 Src/_Tmp112.o
  .comment       0x0000000000000000       0x7c Src/_Tmp112.o
- .debug_frame   0x0000000000000000      0x1fc Src/_Tmp112.o
+ .debug_frame   0x0000000000000000      0x1d8 Src/_Tmp112.o
  .ARM.attributes
                 0x0000000000000000       0x39 Src/_Tmp112.o
- COMMON         0x0000000000000000        0x1 Src/_Tmp112.o
  .group         0x0000000000000000        0xc Src/__ExegerGeneric.o
  .group         0x0000000000000000        0xc Src/__ExegerGeneric.o
  .group         0x0000000000000000        0xc Src/__ExegerGeneric.o

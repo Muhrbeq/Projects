@@ -43,6 +43,17 @@ typedef enum TMP112_State
 
 }TMP112_State;
 
+typedef struct TMP112
+{
+	TMP112_State tState;
+	I2C_HandleTypeDef hi2c;
+	uint8_t i2cWrite;
+	uint8_t i2cRead;
+
+	uint16_t temperatureRaw;
+	int32_t temperature;
+}TMP112;
+
 TMP112_State TMP112_GetState();
 
 //uint8_t TMP112_writeRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len);
