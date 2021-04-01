@@ -34,6 +34,36 @@
 #define HDC1080_TIMEOUT_RX_END		100		// Counts in receive loop
 #define HDC1080_ERROR_VALUE			0xDEAD
 
+typedef enum HDC1080_State
+{
+	HDC1080_INIT,
+	HDC1080_GETIDWRITE,
+	HDC1080_GETIDREAD,
+	HDC1080_INITWRITE,
+	HDC1080_INITREAD,
+	HDC1080_CONFIGUREREGISTER,
+	HDC1080_GETHUMIDITYRAWWRITE,
+	HDC1080_GETHUMIDITYRAWREAD,
+	HDC1080_CALCULATEHUMIDITY,
+	HDC1080_DONE,
+	HDC1080_ERROR
+} HDC1080_State;
+
+typedef struct HDC1080
+{
+	HDC1080_State sState;
+	I2C_HandleTypeDef hi2c;
+	uint8_t i2cWrite;
+	uint8_t i2cRead;
+	uint16_t deviceID;
+	uint16_t confReg;
+
+	uint16_t humidityRaw;
+	uint8_t humidity;
+} HDC1080;
+
+
+
 uint8_t HDC1080_readRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len);
 uint8_t HDC1080_writeRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len);
 uint16_t HDC1080_Get_Device_ID(I2C_HandleTypeDef hi2c);

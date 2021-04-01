@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  000201e0  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00040e5f  00000000  00000000  00020210  2**0
+ 12 .debug_info   00040e60  00000000  00000000  00020210  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_abbrev 00007b49  00000000  00000000  0006106f  2**0
+ 13 .debug_abbrev 00007b49  00000000  00000000  00061070  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_aranges 00002b48  00000000  00000000  00068bb8  2**3
+ 14 .debug_aranges 00002b48  00000000  00000000  00068bc0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_ranges 00002770  00000000  00000000  0006b700  2**3
+ 15 .debug_ranges 00002770  00000000  00000000  0006b708  2**3
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_macro  000342bd  00000000  00000000  0006de70  2**0
+ 16 .debug_macro  000342bd  00000000  00000000  0006de78  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_line   00030922  00000000  00000000  000a212d  2**0
+ 17 .debug_line   00030922  00000000  00000000  000a2135  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_str    0010d8e2  00000000  00000000  000d2a4f  2**0
+ 18 .debug_str    0010d8e2  00000000  00000000  000d2a57  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .comment      0000007b  00000000  00000000  001e0331  2**0
+ 19 .comment      0000007b  00000000  00000000  001e0339  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  0000b734  00000000  00000000  001e03ac  2**2
+ 20 .debug_frame  0000b734  00000000  00000000  001e03b4  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -37680,7 +37680,9 @@ void EXTI0_IRQHandler(void)
  800e1d0:	b580      	push	{r7, lr}
  800e1d2:	af00      	add	r7, sp, #0
   /* USER CODE BEGIN EXTI0_IRQn 0 */
-
+/*
+ * Button pressed!!
+ * */
   /* USER CODE END EXTI0_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
  800e1d4:	2001      	movs	r0, #1
@@ -37702,7 +37704,9 @@ void EXTI4_IRQHandler(void)
  800e1de:	b580      	push	{r7, lr}
  800e1e0:	af00      	add	r7, sp, #0
   /* USER CODE BEGIN EXTI4_IRQn 0 */
-
+/*
+ * USB Connected!
+ *  */
   /* USER CODE END EXTI4_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_4);
  800e1e2:	2010      	movs	r0, #16

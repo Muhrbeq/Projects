@@ -1,206 +1,105 @@
 /*
- * HDC1080.c
+ * _HDC1080.c
  *
- *  Created on: 27 Nov 2018
- *      Author: andreas.fredlund
+ *  Created on: Apr 1, 2021
+ *      Author: Rasmus.Muhrbeck
  */
 
-#include <_HDC1080.h>
 #include "__ExegerGeneric.h"
+#include "_HDC1080.h"
+#include "_I2C.h"
 
-/*
- * Writes to a certain register. Input: data with register and data, the length of the array, error type message.
- * Return hal_ok if success, else hal_error
- */
-uint8_t HDC1080_writeRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len)
+static void HDC1080_SetState(HDC1080 *sSense, HDC1080_State sState)
 {
-	uint8_t timeOutCounter = 0;
-
-	while (HAL_I2C_Master_Transmit(&hi2c, HDC1080_ADDR_WRITE, (uint8_t *) data,
-			len, 1) != HAL_OK)
-	{
-		if (timeOutCounter > HDC1080_TIMEOUT_TX_END)
-		{
-
-
-//			ErrorAddLog(LOG_FUNC_HDC1080, LOG_SUB_WRITE, throw, LOG_STATUS_TIMEOUT, data[0], data[1], 0, GetErrorStruct());
-			return HAL_ERROR;
-		}
-		timeOutCounter++;
-	}
-	return HAL_OK;
+	sSense->sState = sState;
 }
 
-
-
-uint8_t HDC1080_readRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len)
+void HDC1080_InitDevice(HDC1080 *device, I2C_HandleTypeDef *hi2c, uint8_t devWriteAddr, uint8_t devReadAddr)
 {
-	uint8_t timeOutCounter = 0;
-
-	while (HAL_I2C_Master_Transmit(&hi2c, HDC1080_ADDR_WRITE, (uint8_t *) data,
-			1, 1) != HAL_OK)
-	{
-		if (timeOutCounter > HDC1080_TIMEOUT_TX_END)
-		{
-//			ErrorAddLog(LOG_FUNC_HDC1080, LOG_SUB_READ, throw, LOG_STATUS_TIMEOUT, data[0], 1, 0, GetErrorStruct());
-			return HAL_ERROR;
-		}
-		timeOutCounter++;
-	}
-
-	HAL_Delay(20);	// todo dont know if needed
-
-	timeOutCounter = 0;
-	while (HAL_I2C_Master_Receive(&hi2c, HDC1080_ADDR_READ, (uint8_t *) data,
-			len, 1) != HAL_OK)
-	{
-		if (timeOutCounter > HDC1080_TIMEOUT_RX_END)
-		{
-//			ErrorAddLog(LOG_FUNC_HDC1080, LOG_SUB_READ, throw, LOG_STATUS_TIMEOUT, data[0], 2, 0, GetErrorStruct());
-			return HAL_ERROR;
-		}
-		timeOutCounter++;
-	}
-	return HAL_OK;
+	device->hi2c = *hi2c;
+	device->i2cWrite = devWriteAddr;
+	device->i2cRead = devReadAddr;
 }
 
-void HDC1080_Init(I2C_HandleTypeDef hi2c)
+static HAL_StatusTypeDef HDC1080_InitWrite(HDC1080 *device)
 {
 	unsigned char data[4] = { 0 };
 	data[0] = HDC1080_CONF_REG;
-
-	if (HDC1080_Get_Device_ID(hi2c) != HDC1080_DEVICE_ID)
-	{
-		InfoLogAdd(ERRORLEVEL_WARNING,
-		LOG_FUNC_HUMIDITY_SENS, LOG_SUB_INIT, LOG_TYPE_ID, LOG_STATUS_FAIL, 0, 0, 0, GetTempInfoStruct());
-	}
-	else
-	{
-
-		if (HDC1080_readRegister(hi2c, data, 2) != HAL_OK)
-		{
-			InfoLogAdd(
-					ERRORLEVEL_WARNING,
-					LOG_FUNC_HUMIDITY_SENS,
-					LOG_SUB_INIT,
-					LOG_TYPE_READ,
-					LOG_STATUS_FAIL,
-					0,
-					0,
-					0,
-					GetTempInfoStruct());
-
-		}
-		else
-		{
-
-			uint16_t confReg = (data[0] << 8) | data[1];
-
-			confReg |= 1 << 13;		//	heater disabled 0 ; enable 1
-			confReg |= 0 << 12;		//	Temperature or Humidity is acquired 0 ; Temperature and Humidity is acquired 1.
-			confReg |= 0 << 10;		//	Temp Resolution. 0 = 14 bit	;	1 = 11 bit
-			confReg |= 0 << 9;		//	Hum Resolution. bit [9:8]. 00 = 14 bit ; 01 = 11 bit ; 10 = 8 bit
-			confReg |= 0 << 8;
-
-			data[0] = HDC1080_CONF_REG;
-			data[1] = (uint8_t) ((confReg >> 8) & 0xFF);  	//	msb
-			data[2] = (uint8_t) (confReg & 0xFF);  			//	lsb
-
-			if (HDC1080_writeRegister(hi2c, data, 3) != HAL_OK)
-			{
-//				ErrorAddLog(LOG_FUNC_HDC1080, LOG_SUB_INIT, LOG_TYPE_WRITE, LOG_STATUS_FAIL, 0, 0, 0, GetErrorStruct());
-//
-				InfoLogAdd(
-						ERRORLEVEL_WARNING,
-						LOG_FUNC_HUMIDITY_SENS,
-						LOG_SUB_INIT,
-						LOG_TYPE_WRITE,
-						LOG_STATUS_FAIL,
-						0,
-						0,
-						0,
-						GetTempInfoStruct());
-			}
-			else
-			{
-				data[0] = HDC1080_CONF_REG;
-				HDC1080_readRegister(hi2c, data, 2);
-			}
-		}
-	}
+	return I2C_ReadWrite(device->hi2c, device->i2cWrite, data, 2);
 }
 
-
-uint16_t HDC1080_Get_Device_ID(I2C_HandleTypeDef hi2c)
+static HAL_StatusTypeDef HDC1080_InitRead(HDC1080 *device)
 {
 	unsigned char data[2] = { 0 };
-	data[0] = HDC1080_DEV_ID_REG; 					 // address of the register
+	data[0] = HDC1080_CONF_REG;
 
-	if (HDC1080_readRegister(hi2c, data, 2) == HAL_OK)  // data, length, LOG_TYPE error
+	if(I2C_ReadRead(device->hi2c, device->i2cRead, data, 2) == HAL_OK)
 	{
-		return (data[0] << 8) | data[1];
+		device->confReg = (data[0] << 8) | data[1];
+		return HAL_OK;
 	}
-	else
-	{
-		return HDC1080_ERROR_VALUE;
-	}
+	return HAL_ERROR;
 }
 
-uint16_t HDC1080_Get_Temp_raw(I2C_HandleTypeDef hi2c)
+static HAL_StatusTypeDef HDC1080_ConfigureRegister(HDC1080 *device)
+{
+	unsigned char data[4] = { 0 };
+	device->confReg |= 1 << 13;		//	heater disabled 0 ; enable 1
+	device->confReg |= 0 << 12;		//	Temperature or Humidity is acquired 0 ; Temperature and Humidity is acquired 1.
+	device->confReg |= 0 << 10;		//	Temp Resolution. 0 = 14 bit	;	1 = 11 bit
+	device->confReg |= 0 << 9;		//	Hum Resolution. bit [9:8]. 00 = 14 bit ; 01 = 11 bit ; 10 = 8 bit
+	device->confReg |= 0 << 8;
+
+	data[0] = HDC1080_CONF_REG;
+	data[1] = (uint8_t) ((device->confReg >> 8) & 0xFF);  	//	msb
+	data[2] = (uint8_t) (device->confReg & 0xFF);  			//	lsb
+
+	return  I2C_ReadWrite(device->hi2c, device->i2cWrite, data, 3);
+}
+
+static HAL_StatusTypeDef HDC1080_GetDeviceIDWrite(HDC1080 *device)
 {
 	unsigned char data[2] = { 0 };
-	data[0] = HDC1080_TEMP_REG;
-
-	if (HDC1080_readRegister(hi2c, data, 2) == HAL_OK)
-	{
-		return (data[0] << 8) | data[1];
-	}
-	else
-	{
-		return HDC1080_ERROR_VALUE;
-	}
+	data[0] = HDC1080_DEV_ID_REG;
+	return I2C_ReadWrite(device->hi2c, device->i2cWrite, data, 2);
 }
 
+static HAL_StatusTypeDef HDC1080_GetDeviceIDRead(HDC1080 *device)
+{
+	unsigned char data[2] = { 0 };
+	data[0] = HDC1080_DEV_ID_REG;
 
-uint16_t HDC1080_Get_Humidity_raw(I2C_HandleTypeDef hi2c)
+	if(I2C_ReadRead(device->hi2c, device->i2cRead, data, 2) == HAL_OK)
+	{
+		device->deviceID = (data[0] << 8) | data[1];
+		return HAL_OK;
+	}
+	return HAL_ERROR;
+}
+
+static HAL_StatusTypeDef HDC1080_GetHumidityRawWrite(HDC1080 *device)
 {
 	unsigned char data[2] = { 0 };
 	data[0] = HDC1080_HUM_REG;
-	if (HDC1080_readRegister(hi2c, data, 2) == HAL_OK)
-	{
-		return (data[0] << 8) | data[1];
-	}
-	else
-	{
-		InfoLogAdd(ERRORLEVEL_WARNING,
-		LOG_FUNC_HUMIDITY_SENS, LOG_SUB_HUM_READ_RAW,
-		LOG_TYPE_READ,
-		LOG_STATUS_FAIL, 0, 0, 0, GetTempInfoStruct());
-
-		return HDC1080_ERROR_VALUE;
-	}
+	return I2C_ReadWrite(device->hi2c, device->i2cWrite, data, 2);
 }
 
-
-/*
- * Calc from datasheet
- * Mult by 100 to get 4 digit number (2 decimals).
- */
-uint16_t HDC1080_Get_Temp(I2C_HandleTypeDef hi2c)
+static HAL_StatusTypeDef HDC1080_GetHumidityRawRead(HDC1080 *device)
 {
-	float temp = (float) HDC1080_Get_Temp_raw(hi2c);
-	temp = 165 * temp / 65536.0 - 40.0;
-	return (uint16_t) (temp * 100);
+	unsigned char data[2] = { 0 };
+	data[0] = HDC1080_HUM_REG;
+
+	if(I2C_ReadRead(device->hi2c, device->i2cRead, data, 2) == HAL_OK)
+	{
+		device->humidityRaw = (data[0] << 8) | data[1];
+		return HAL_OK;
+	}
+	return HAL_ERROR;
 }
 
-
-/*
- * Calc from datasheet.
- * Gives Relative Humidity in %
- */
-uint8_t HDC1080_Get_Humidity(I2C_HandleTypeDef hi2c)
+static uint8_t HDC1080_CalculateHumidity(HDC1080 *device)
 {
-	float hum = 100.0 * (float) HDC1080_Get_Humidity_raw(hi2c) / 65536.0;
+	float hum = 100.0 * (float) device->humidityRaw / 65536.0;
 
 	if (hum > 100)
 	{
@@ -214,7 +113,75 @@ uint8_t HDC1080_Get_Humidity(I2C_HandleTypeDef hi2c)
 	return (uint8_t) hum;
 }
 
+/* Add errorhandling to statemachine */
+void HDC1080_StateMachine(HDC1080 *device)
+{
+	switch(device->sState)
+	{
+	case HDC1080_GETIDWRITE:
+		if(HDC1080_GetDeviceIDWrite(device) == HAL_OK)
+		{
+			HDC1080_SetState(device, HDC1080_GETIDREAD);
+			TRACE_DEBUG("DevID: write - Passed\r\n");
+		}
+		break;
+	case HDC1080_GETIDREAD:
+		if(HDC1080_GetDeviceIDRead(device) == HAL_OK)
+		{
+			HDC1080_SetState(device, HDC1080_INITWRITE);
+			TRACE_DEBUG("DevID: Read - Passed\r\n");
+		}
+		break;
+	case HDC1080_INITWRITE:
+		if(HDC1080_InitWrite(device) == HAL_OK)
+		{
+			HDC1080_SetState(device, HDC1080_INITREAD);
+			TRACE_DEBUG("Init: write - Passed\r\n");
+		}
 
+		break;
+	case HDC1080_INITREAD:
+		if(HDC1080_InitRead(device) == HAL_OK)
+		{
+			HDC1080_SetState(device, HDC1080_CONFIGUREREGISTER);
+			TRACE_DEBUG("Init: Read - Passed\r\n");
+		}
 
-
+		break;
+	case HDC1080_CONFIGUREREGISTER:
+		if(HDC1080_ConfigureRegister(device) == HAL_OK)
+		{
+			HDC1080_SetState(device, HDC1080_GETHUMIDITYRAWWRITE);
+			TRACE_DEBUG("Configure Register - Passed\r\n");
+		}
+		break;
+	case HDC1080_GETHUMIDITYRAWWRITE:
+		if(HDC1080_GetHumidityRawWrite(device) == HAL_OK)
+		{
+			HDC1080_SetState(device, HDC1080_GETHUMIDITYRAWREAD);
+			TRACE_DEBUG("Get Humidity raw: write - Passed\r\n");
+		}
+		break;
+	case HDC1080_GETHUMIDITYRAWREAD:
+		if(HDC1080_GetHumidityRawRead(device) == HAL_OK)
+		{
+			HDC1080_SetState(device, HDC1080_CALCULATEHUMIDITY);
+			TRACE_DEBUG("Get humidity raw: Read - Passed\r\n");
+		}
+		break;
+	case HDC1080_CALCULATEHUMIDITY:
+		if(HDC1080_CalculateHumidity(device) == HAL_OK)
+		{
+			HDC1080_SetState(device, HDC1080_DONE);
+			TRACE_DEBUG("Calculate Humidity - Passed\r\n");
+		}
+		break;
+	case HDC1080_DONE:
+			TRACE("[HDC1080] - PASSED\r\n");
+		break;
+	default:
+			TRACE("[HDC1080] - ERROR\r\n");
+		break;
+	}
+}
 

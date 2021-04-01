@@ -160,9 +160,9 @@ int main(void)
 	  /* TODO:
 	   *
 	   * Order BOM of 4GLL
-	   * 	Farnell/digikey order
+	   * 	Farnell/digikey order x (no sara)
 	   *
-	   * Test generate random number x
+	   * Test generate random number		x
 	   *
 	   * Basic functions for MCU
 	   * 	Generate CRC on data
@@ -170,7 +170,7 @@ int main(void)
 	   * 	Button - IRQ
 	   * 	RTC alarm
 	   * 	Low power solution
-	   * 	ADC for revision control x
+	   * 	ADC for revision control 		x
 	   * 	USB communication - HID?
 	   * 	SD-card read/write
 	   * 	Redefine printf function with define
@@ -185,6 +185,8 @@ int main(void)
 	   * 		Have peripherals as states?
 	   *
 	   * Basic functions for peripherals
+	   * 	Code for TMP112				x
+	   * 	Code for HDC1080 			x
 	   * 	Code for OPT
 	   * 	Code for Spectrum sensor
 	   * 	Code for Accelerometer

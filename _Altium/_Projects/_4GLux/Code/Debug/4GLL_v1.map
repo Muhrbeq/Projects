@@ -13,7 +13,7 @@ c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externalt
 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcmp.o)
                               Src/_SdCard.o (memcmp)
 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
-                              Src/_SdCard.o (memcpy)
+                              Src/_HDC1080.o (memcpy)
 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
                               c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (memset)
 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-mktime.o)
@@ -155,7 +155,7 @@ c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externalt
 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libm.a(lib_a-s_copysign.o)
                               c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libm.a(lib_a-s_scalbn.o) (copysign)
 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
-                              Src/_HDC1080.o (__aeabi_dsub)
+                              Src/_HDC1080_afre.o (__aeabi_dsub)
 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
                               Src/OPT3001.o (__aeabi_dmul)
 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_cmpdf2.o)
@@ -8839,33 +8839,41 @@ Discarded input sections
  .group         0x0000000000000000        0xc Src/_HDC1080.o
  .group         0x0000000000000000        0xc Src/_HDC1080.o
  .group         0x0000000000000000        0xc Src/_HDC1080.o
+ .group         0x0000000000000000        0xc Src/_HDC1080.o
  .text          0x0000000000000000        0x0 Src/_HDC1080.o
  .data          0x0000000000000000        0x0 Src/_HDC1080.o
  .bss           0x0000000000000000        0x0 Src/_HDC1080.o
  .rodata.CHANNEL_OFFSET_TAB
                 0x0000000000000000        0x7 Src/_HDC1080.o
- .text.HDC1080_writeRegister
-                0x0000000000000000       0x54 Src/_HDC1080.o
- .text.HDC1080_readRegister
-                0x0000000000000000       0x88 Src/_HDC1080.o
- .text.HDC1080_Init
-                0x0000000000000000      0x188 Src/_HDC1080.o
- .text.HDC1080_Get_Device_ID
-                0x0000000000000000       0x6e Src/_HDC1080.o
- .text.HDC1080_Get_Temp_raw
-                0x0000000000000000       0x6e Src/_HDC1080.o
- .text.HDC1080_Get_Humidity_raw
-                0x0000000000000000       0x92 Src/_HDC1080.o
- .text.HDC1080_Get_Temp
-                0x0000000000000000       0xb8 Src/_HDC1080.o
- .text.HDC1080_Get_Humidity
-                0x0000000000000000       0xcc Src/_HDC1080.o
- .debug_info    0x0000000000000000     0x1393 Src/_HDC1080.o
- .debug_abbrev  0x0000000000000000      0x24f Src/_HDC1080.o
+ .text.HDC1080_SetState
+                0x0000000000000000       0x1e Src/_HDC1080.o
+ .text.HDC1080_InitDevice
+                0x0000000000000000       0x3e Src/_HDC1080.o
+ .text.HDC1080_InitWrite
+                0x0000000000000000       0x52 Src/_HDC1080.o
+ .text.HDC1080_InitRead
+                0x0000000000000000       0x72 Src/_HDC1080.o
+ .text.HDC1080_ConfigureRegister
+                0x0000000000000000       0xac Src/_HDC1080.o
+ .text.HDC1080_GetDeviceIDWrite
+                0x0000000000000000       0x52 Src/_HDC1080.o
+ .text.HDC1080_GetDeviceIDRead
+                0x0000000000000000       0x72 Src/_HDC1080.o
+ .text.HDC1080_GetHumidityRawWrite
+                0x0000000000000000       0x52 Src/_HDC1080.o
+ .text.HDC1080_GetHumidityRawRead
+                0x0000000000000000       0x72 Src/_HDC1080.o
+ .text.HDC1080_CalculateHumidity
+                0x0000000000000000       0xa0 Src/_HDC1080.o
+ .rodata        0x0000000000000000      0x10f Src/_HDC1080.o
+ .text.HDC1080_StateMachine
+                0x0000000000000000      0x180 Src/_HDC1080.o
+ .debug_info    0x0000000000000000     0x14a0 Src/_HDC1080.o
+ .debug_abbrev  0x0000000000000000      0x233 Src/_HDC1080.o
  .debug_aranges
-                0x0000000000000000       0x58 Src/_HDC1080.o
+                0x0000000000000000       0x70 Src/_HDC1080.o
  .debug_ranges  0x0000000000000000       0x60 Src/_HDC1080.o
- .debug_macro   0x0000000000000000      0x4bb Src/_HDC1080.o
+ .debug_macro   0x0000000000000000      0x4be Src/_HDC1080.o
  .debug_macro   0x0000000000000000      0xa60 Src/_HDC1080.o
  .debug_macro   0x0000000000000000      0x1dd Src/_HDC1080.o
  .debug_macro   0x0000000000000000       0x2e Src/_HDC1080.o
@@ -8930,7 +8938,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x2cb Src/_HDC1080.o
  .debug_macro   0x0000000000000000      0x14f Src/_HDC1080.o
  .debug_macro   0x0000000000000000      0x118 Src/_HDC1080.o
- .debug_macro   0x0000000000000000       0x64 Src/_HDC1080.o
  .debug_macro   0x0000000000000000       0x46 Src/_HDC1080.o
  .debug_macro   0x0000000000000000       0x18 Src/_HDC1080.o
  .debug_macro   0x0000000000000000       0x3c Src/_HDC1080.o
@@ -8962,12 +8969,239 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 Src/_HDC1080.o
  .debug_macro   0x0000000000000000      0x51a Src/_HDC1080.o
  .debug_macro   0x0000000000000000      0x171 Src/_HDC1080.o
- .debug_line    0x0000000000000000      0xc5c Src/_HDC1080.o
- .debug_str     0x0000000000000000   0x10059e Src/_HDC1080.o
+ .debug_macro   0x0000000000000000       0x6a Src/_HDC1080.o
+ .debug_macro   0x0000000000000000       0x16 Src/_HDC1080.o
+ .debug_line    0x0000000000000000      0xc97 Src/_HDC1080.o
+ .debug_str     0x0000000000000000   0x100707 Src/_HDC1080.o
  .comment       0x0000000000000000       0x7c Src/_HDC1080.o
- .debug_frame   0x0000000000000000      0x1c0 Src/_HDC1080.o
+ .debug_frame   0x0000000000000000      0x1dc Src/_HDC1080.o
  .ARM.attributes
                 0x0000000000000000       0x39 Src/_HDC1080.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .group         0x0000000000000000        0xc Src/_HDC1080_afre.o
+ .text          0x0000000000000000        0x0 Src/_HDC1080_afre.o
+ .data          0x0000000000000000        0x0 Src/_HDC1080_afre.o
+ .bss           0x0000000000000000        0x0 Src/_HDC1080_afre.o
+ .rodata.CHANNEL_OFFSET_TAB
+                0x0000000000000000        0x7 Src/_HDC1080_afre.o
+ .text.HDC1080_writeRegister
+                0x0000000000000000       0x54 Src/_HDC1080_afre.o
+ .text.HDC1080_readRegister
+                0x0000000000000000       0x88 Src/_HDC1080_afre.o
+ .text.HDC1080_Init
+                0x0000000000000000      0x188 Src/_HDC1080_afre.o
+ .text.HDC1080_Get_Device_ID
+                0x0000000000000000       0x6e Src/_HDC1080_afre.o
+ .text.HDC1080_Get_Temp_raw
+                0x0000000000000000       0x6e Src/_HDC1080_afre.o
+ .text.HDC1080_Get_Humidity_raw
+                0x0000000000000000       0x92 Src/_HDC1080_afre.o
+ .text.HDC1080_Get_Temp
+                0x0000000000000000       0xb8 Src/_HDC1080_afre.o
+ .text.HDC1080_Get_Humidity
+                0x0000000000000000       0xcc Src/_HDC1080_afre.o
+ .debug_info    0x0000000000000000     0x1393 Src/_HDC1080_afre.o
+ .debug_abbrev  0x0000000000000000      0x24f Src/_HDC1080_afre.o
+ .debug_aranges
+                0x0000000000000000       0x58 Src/_HDC1080_afre.o
+ .debug_ranges  0x0000000000000000       0x60 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x4bb Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0xa60 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x1dd Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x2e Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x28 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x22 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x8e Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x51 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0xef Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x6a Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x1df Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x1c Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x22 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x101 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000     0x1011 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x11f Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000    0x16336 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x43 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000     0x3890 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x174 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x5c Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000     0x13bb Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x63f Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x13d Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x168 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x26b Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x23d Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0xdf4 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x624 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x24f Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0xd5 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x4c Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x241 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x375 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0xd6 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x22c Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x61 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0xa5 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x85 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x2b6 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x65 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x234 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x122 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x365 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0xa4 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x31a Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x4fb Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0xe4 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x773 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x1d5 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x2fe Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0xa75 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x151 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x2ec Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x30c Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x812 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x18a Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x1a7 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x2bf Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0xa7 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x1ed Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x16a Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x2cb Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x14f Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x118 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x64 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x46 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x18 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x3c Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x34 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x52 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x1f Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x43 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x20 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x1a3 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x32a Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x10 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x35 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x20 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x1c Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x10 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x10 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x1c Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x52 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x40 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x10 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x40 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0xd7 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x1c Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x3d Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x16 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x145 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x10 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x241 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000       0x16 Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x51a Src/_HDC1080_afre.o
+ .debug_macro   0x0000000000000000      0x171 Src/_HDC1080_afre.o
+ .debug_line    0x0000000000000000      0xc61 Src/_HDC1080_afre.o
+ .debug_str     0x0000000000000000   0x1005a3 Src/_HDC1080_afre.o
+ .comment       0x0000000000000000       0x7c Src/_HDC1080_afre.o
+ .debug_frame   0x0000000000000000      0x1c0 Src/_HDC1080_afre.o
+ .ARM.attributes
+                0x0000000000000000       0x39 Src/_HDC1080_afre.o
  .group         0x0000000000000000        0xc Src/_I2C.o
  .group         0x0000000000000000        0xc Src/_I2C.o
  .group         0x0000000000000000        0xc Src/_I2C.o
@@ -10493,9 +10727,9 @@ Discarded input sections
  .text.EnableAccelerometer
                 0x0000000000000000       0x24 Src/_SensorControl.o
  .text.SensorTakeMeasurement
-                0x0000000000000000       0xac Src/_SensorControl.o
- .debug_info    0x0000000000000000     0x168d Src/_SensorControl.o
- .debug_abbrev  0x0000000000000000      0x240 Src/_SensorControl.o
+                0x0000000000000000       0x88 Src/_SensorControl.o
+ .debug_info    0x0000000000000000     0x167c Src/_SensorControl.o
+ .debug_abbrev  0x0000000000000000      0x228 Src/_SensorControl.o
  .debug_aranges
                 0x0000000000000000       0x38 Src/_SensorControl.o
  .debug_ranges  0x0000000000000000       0x28 Src/_SensorControl.o
@@ -10599,8 +10833,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x6a Src/_SensorControl.o
  .debug_macro   0x0000000000000000      0x269 Src/_SensorControl.o
  .debug_macro   0x0000000000000000       0x4c Src/_SensorControl.o
- .debug_line    0x0000000000000000      0xc01 Src/_SensorControl.o
- .debug_str     0x0000000000000000   0x101049 Src/_SensorControl.o
+ .debug_line    0x0000000000000000      0xc00 Src/_SensorControl.o
+ .debug_str     0x0000000000000000   0x101039 Src/_SensorControl.o
  .comment       0x0000000000000000       0x7c Src/_SensorControl.o
  .debug_frame   0x0000000000000000       0xa8 Src/_SensorControl.o
  .ARM.attributes
@@ -11600,8 +11834,6 @@ Discarded input sections
                 0x0000000000000000        0x7 Src/_Tmp112.o
  .text.TMP112_SetState
                 0x0000000000000000       0x1e Src/_Tmp112.o
- .text.TMP112_GetState
-                0x0000000000000000       0x18 Src/_Tmp112.o
  .text.TMP112_InitDevice
                 0x0000000000000000       0x3e Src/_Tmp112.o
  .text.TMP112_Init
@@ -11621,11 +11853,11 @@ Discarded input sections
  .rodata        0x0000000000000000      0x114 Src/_Tmp112.o
  .text.TMP112_StateMachine
                 0x0000000000000000      0x154 Src/_Tmp112.o
- .debug_info    0x0000000000000000     0x14ef Src/_Tmp112.o
- .debug_abbrev  0x0000000000000000      0x25a Src/_Tmp112.o
+ .debug_info    0x0000000000000000     0x14c7 Src/_Tmp112.o
+ .debug_abbrev  0x0000000000000000      0x23c Src/_Tmp112.o
  .debug_aranges
-                0x0000000000000000       0x70 Src/_Tmp112.o
- .debug_ranges  0x0000000000000000       0x60 Src/_Tmp112.o
+                0x0000000000000000       0x68 Src/_Tmp112.o
+ .debug_ranges  0x0000000000000000       0x58 Src/_Tmp112.o
  .debug_macro   0x0000000000000000      0x4ce Src/_Tmp112.o
  .debug_macro   0x0000000000000000      0xa60 Src/_Tmp112.o
  .debug_macro   0x0000000000000000      0x1dd Src/_Tmp112.o
@@ -11724,10 +11956,10 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x51a Src/_Tmp112.o
  .debug_macro   0x0000000000000000      0x171 Src/_Tmp112.o
  .debug_macro   0x0000000000000000       0x16 Src/_Tmp112.o
- .debug_line    0x0000000000000000      0xc91 Src/_Tmp112.o
- .debug_str     0x0000000000000000   0x1006c5 Src/_Tmp112.o
+ .debug_line    0x0000000000000000      0xc80 Src/_Tmp112.o
+ .debug_str     0x0000000000000000   0x1006b5 Src/_Tmp112.o
  .comment       0x0000000000000000       0x7c Src/_Tmp112.o
- .debug_frame   0x0000000000000000      0x1d8 Src/_Tmp112.o
+ .debug_frame   0x0000000000000000      0x1b0 Src/_Tmp112.o
  .ARM.attributes
                 0x0000000000000000       0x39 Src/_Tmp112.o
  .group         0x0000000000000000        0xc Src/__ExegerGeneric.o
@@ -16461,6 +16693,7 @@ LOAD Src/OPT3001.o
 LOAD Src/_GPS.o
 LOAD Src/_Global.o
 LOAD Src/_HDC1080.o
+LOAD Src/_HDC1080_afre.o
 LOAD Src/_I2C.o
 LOAD Src/_LIS2DW12.o
 LOAD Src/_LowLevel.o
@@ -18180,7 +18413,7 @@ LOAD c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x00000000000012ec       0x22 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(4GLL_v1.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x40e5f
+.debug_info     0x0000000000000000    0x40e60
  .debug_info    0x0000000000000000      0xbf2 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
  .debug_info    0x0000000000000bf2     0x1df6 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc.o
  .debug_info    0x00000000000029e8     0x1967 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.o
@@ -18233,16 +18466,16 @@ OUTPUT(4GLL_v1.elf elf32-littlearm)
  .debug_info    0x00000000000354e0      0xc13 Src/sdmmc.o
  .debug_info    0x00000000000360f3      0xb49 Src/spi.o
  .debug_info    0x0000000000036c3c      0x539 Src/stm32l4xx_hal_msp.o
- .debug_info    0x0000000000037175     0x1516 Src/stm32l4xx_it.o
- .debug_info    0x000000000003868b      0xebd Src/syscalls.o
- .debug_info    0x0000000000039548      0x91c Src/sysmem.o
- .debug_info    0x0000000000039e64      0x741 Src/system_stm32l4xx.o
- .debug_info    0x000000000003a5a5      0xc23 Src/tim.o
- .debug_info    0x000000000003b1c8     0x1b18 Src/usart.o
- .debug_info    0x000000000003cce0      0xf8e Src/usb_device.o
- .debug_info    0x000000000003dc6e     0x22e3 Src/usbd_conf.o
- .debug_info    0x000000000003ff51      0xeec Src/usbd_desc.o
- .debug_info    0x0000000000040e3d       0x22 Startup/startup_stm32l452retx.o
+ .debug_info    0x0000000000037175     0x1517 Src/stm32l4xx_it.o
+ .debug_info    0x000000000003868c      0xebd Src/syscalls.o
+ .debug_info    0x0000000000039549      0x91c Src/sysmem.o
+ .debug_info    0x0000000000039e65      0x741 Src/system_stm32l4xx.o
+ .debug_info    0x000000000003a5a6      0xc23 Src/tim.o
+ .debug_info    0x000000000003b1c9     0x1b18 Src/usart.o
+ .debug_info    0x000000000003cce1      0xf8e Src/usb_device.o
+ .debug_info    0x000000000003dc6f     0x22e3 Src/usbd_conf.o
+ .debug_info    0x000000000003ff52      0xeec Src/usbd_desc.o
+ .debug_info    0x0000000000040e3e       0x22 Startup/startup_stm32l452retx.o
 
 .debug_abbrev   0x0000000000000000     0x7b49
  .debug_abbrev  0x0000000000000000      0x1fb Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o

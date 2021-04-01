@@ -54,8 +54,6 @@ typedef struct TMP112
 	int32_t temperature;
 }TMP112;
 
-TMP112_State TMP112_GetState();
-
 //uint8_t TMP112_writeRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len);
 //uint16_t TMP112_readRegister(I2C_HandleTypeDef hi2c, unsigned char* data, uint8_t len);
 //uint8_t TMP112_GetTemperature_raw(I2C_HandleTypeDef hi2c, uint16_t *get);

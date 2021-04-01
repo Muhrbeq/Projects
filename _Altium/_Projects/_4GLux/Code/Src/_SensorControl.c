@@ -34,7 +34,7 @@ void SensorTakeMeasurement(SensorData *sD)
 {
 	float lux = 0;
 	//Code from ChEn OPT3001
-	int tmp = TMP112_ReadTemp(hi2c2);
+	int tmp = 3;//TMP112_ReadTemp(hi2c2);
 	uint8_t tempSign = 1;
 	uint8_t humidity = HDC1080_Get_Humidity(hi2c2);
 	humidity = humidity / 4;
