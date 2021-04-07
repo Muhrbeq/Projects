@@ -193,6 +193,7 @@ int main(void)
 	   *	ID of each peripheral
 	   *	Rewrite all code
 	   *	Test Screen functionality
+	   *	Comment for readability
 	   *
 	   * Structure the UARTs for input from comp + Sara with IRQ
 	   * 	Arrays for each UART to store data
