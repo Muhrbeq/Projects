@@ -30,7 +30,7 @@ namespace ModernLogin
         {
             if(e.LeftButton == MouseButtonState.Pressed)
             {
-                this.Opacity = 0;
+                this.Opacity = 0.5;
                 DragMove();
             }
             if(e.LeftButton == MouseButtonState.Released)
@@ -41,31 +41,7 @@ namespace ModernLogin
 
         private void Button_Register_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                MailMessage mail = new MailMessage();
-                
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                
-                mail.From = new MailAddress("rmuhrbeck.test@gmail.com");
-                mail.To.Add("rasmus.muhrbeck@gmail.com");
-                mail.Subject = "Test Mail";
-                mail.Body = "This is for testing SMTP mail from GMAIL, usrnm:" + TextBox_Name.Text + "psw: " + PasswordBox.Password;
-
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("rmuhrbeck.test@gmail.com", "Stefan0512");
-                SmtpServer.EnableSsl = true;
-
-                SmtpServer.Send(mail);
-                MessageBox.Show("mail Send");
-                ((IDisposable)mail).Dispose();
-                ((IDisposable)SmtpServer).Dispose();
-            }
-            catch (Exception ex)
-            {
-                
-                MessageBox.Show(ex.ToString());
-            }
+            SendMail();
         }
 
         private void Button_Login_Click(object sender, RoutedEventArgs e)
@@ -76,6 +52,45 @@ namespace ModernLogin
         private void Button_Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private bool SendMail()
+        {
+            try
+            {
+                /* Check for internet connection!! otherwise just save to db */
+                MailMessage mail = new MailMessage();
+
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress("rmuhrbeck.test@gmail.com");
+                mail.To.Add(TextBox_Name.Text);
+                mail.Subject = "Registation mail";
+                mail.Body = "Your account has been created and added to the database\n" + "Username: " + TextBox_Name.Text + "\n" + "Password: " + PasswordBox.Password;
+
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("rmuhrbeck.test@gmail.com", "Stefan0512");
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+                MessageBox.Show("mail Send");
+                ((IDisposable)mail).Dispose();
+                ((IDisposable)SmtpServer).Dispose();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+            return false;
+        }
+
+        private bool CheckForCredentials()
+        {
+            return true;
         }
     }
 }

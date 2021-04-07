@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:ModernLogin"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="400"
@@ -36,6 +37,7 @@
         <StackPanel Grid.Row="1" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TextBox_Name" 
+                     materialDesign:HintAssist.Hint="email"
                      FontFamily="Arial"
                      FontWeight="Light"
                      FontSize="20"
@@ -45,7 +47,7 @@
                      BorderThickness="0"
                      Background="Transparent"
                      Foreground="White"
-                     Height="25"
+                     Height="30"
                      Width="200"
                      Opacity="0.5"/>
                 <iconPacks:PackIconMaterial Width="15"
@@ -64,6 +66,7 @@
 
             <StackPanel Orientation="Horizontal">
                 <PasswordBox Name="PasswordBox" 
+                     materialDesign:HintAssist.Hint="password"
                      FontFamily="Arial"
                      FontWeight="Light"
                      FontSize="20"
@@ -73,10 +76,10 @@
                      BorderThickness="0"
                      Background="Transparent"
                      Foreground="White"
-                     Height="25"
+                     Height="30"
                      Width="200"
                      Opacity="0.5"
-                     Margin="0, 20, 0 , 0"/>
+                     Margin="0, 0, 0 , 0"/>
                 <iconPacks:PackIconMaterial Width="15"
                                        Height="15"
                                        HorizontalAlignment="Center"
@@ -104,7 +107,7 @@
                    Margin="0, 50, 0, 0"/>
 
             <Button x:Name="Button_Exit"
-                Width="80" Height="30" Content="EXIT" Margin="0, 50, 0, 0" Click="Button_Exit_Click"/>
+                Width="80" Height="30" Content="EXIT" Margin="0, 40, 0, 0" Click="Button_Exit_Click"/>
         </StackPanel>
         
     </Grid>

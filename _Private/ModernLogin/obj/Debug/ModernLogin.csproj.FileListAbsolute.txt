@@ -108,3 +108,8 @@ C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Private\ModernLogin\obj\Debug
 C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Private\ModernLogin\obj\Debug\ModernLogin.csproj.CopyComplete
 C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Private\ModernLogin\obj\Debug\ModernLogin.exe
 C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Private\ModernLogin\obj\Debug\ModernLogin.pdb
+C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Private\ModernLogin\bin\Debug\MaterialDesignColors.dll
+C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Private\ModernLogin\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Private\ModernLogin\bin\Debug\MaterialDesignColors.pdb
+C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Private\ModernLogin\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Private\ModernLogin\bin\Debug\MaterialDesignThemes.Wpf.xml
