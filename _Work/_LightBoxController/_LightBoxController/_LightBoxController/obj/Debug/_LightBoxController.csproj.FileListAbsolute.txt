@@ -1,0 +1,15 @@
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\_LightBoxController.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\MainWindow.g.cs
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\App.g.cs
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\_LightBoxController_MarkupCompile.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\_LightBoxController_MarkupCompile.lref
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\bin\Debug\_LightBoxController.exe.config
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\bin\Debug\_LightBoxController.exe
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\bin\Debug\_LightBoxController.pdb
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\MainWindow.baml
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\_LightBoxController.g.resources
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\_LightBoxController.Properties.Resources.resources
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\_LightBoxController.csproj.GenerateResource.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\_LightBoxController.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\_LightBoxController.exe
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\_LightBoxController\_LightBoxController\_LightBoxController\obj\Debug\_LightBoxController.pdb

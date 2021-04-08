@@ -10,13 +10,13 @@ namespace _LightBoxController.Instruments
     {
         public string ID
         {
-            get { return _ID; };
+            get { return _ID; }
         }
         private string _ID;
 
         public double CurrentLightIntensity
         {
-            get { return _CurrentLightIntensity; };
+            get { return _CurrentLightIntensity; }
         }
         private double _CurrentLightIntensity;
     }

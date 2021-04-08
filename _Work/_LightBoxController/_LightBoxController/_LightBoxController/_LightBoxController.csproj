@@ -56,12 +56,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataHandling\SampleData.cs" />
-    <Compile Include="USART\ComCommands.cs" />
-    <Compile Include="USART\Comport_Interface.cs" />
-    <Compile Include="USART\ConverterClass.cs" />
-    <Compile Include="USART\CRC32.cs" />
-    <Compile Include="USART\PropertyRef.cs" />
-    <Compile Include="USART\USARTclass.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -110,8 +104,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
     <Folder Include="Themes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icons8-futurama-bender-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,8 +5,108 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_LightBoxController"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="600" 
+        Width="800"
+        ResizeMode="NoResize"
+        Topmost="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+    </Window.Resources>
+    
     <Grid>
+        
+        <!--// Background color //-->
+        <Grid   Background="Black">
+
+            <Grid   x:Name="navigation_pnl"
+                    HorizontalAlignment="Left"
+                    Width="65"
+                    Background="#2E333A">
+
+                <StackPanel x:Name="stack_pnl">
+                    
+                    <!--Grid for the menu toggle-->
+                    <Grid   Height="90">
+                        
+                        <!--Toggle botton-->
+
+                        <ToggleButton   x:Name="toggle_btn"
+                                        Grid.Column="0"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Left"
+                                        Margin="12, -20, 0, 0"
+                                        Height="30"
+                                        Width="30"
+                                        BorderThickness="0">
+                            
+                            <!--Toggle button default background image-->
+                            <ToggleButton.Background>
+
+                                <ImageBrush ImageSource="Images/icons8-futurama-bender-64.png"
+                                            Stretch="Fill"/>
+
+                            </ToggleButton.Background>
+
+                            <ToggleButton.Triggers>
+
+                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+
+                                    <BeginStoryboard>
+
+                                        <Storyboard x:Name="HideStackPanel">
+
+                                            <DoubleAnimation
+                                                
+                                                Storyboard.TargetName="navigation_pnl"
+                                                Storyboard.TargetProperty="Width"
+                                                BeginTime="0:0:0"
+                                                From="230" To="65"
+                                                Duration="0:0:0.2">
+
+                                            </DoubleAnimation>
+
+                                        </Storyboard>
+
+                                    </BeginStoryboard>
+
+                                </EventTrigger>
+
+                                <EventTrigger RoutedEvent="ToggleButton.Checked">
+
+                                    <BeginStoryboard>
+
+                                        <Storyboard x:Name="ShowStackPanel">
+
+                                            <DoubleAnimation
+                                                
+                                                Storyboard.TargetName="navigation_pnl"
+                                                Storyboard.TargetProperty="Width"
+                                                BeginTime="0:0:0"
+                                                From="65" To="230"
+                                                Duration="0:0:0.3">
+
+                                            </DoubleAnimation>
+                                            
+                                        </Storyboard>
+                                        
+                                    </BeginStoryboard>
+                                    
+                                </EventTrigger>
+
+                            </ToggleButton.Triggers>
+
+                        </ToggleButton>
+                        
+                    </Grid>
+                    
+                </StackPanel>
+                
+            </Grid>
+            
+        </Grid>
         
     </Grid>
 </Window>
