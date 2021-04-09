@@ -19,6 +19,7 @@ namespace ModernLogin
     /// </summary>
     public partial class RegisterUserWindow : Window
     {
+
         public RegisterUserWindow()
         {
             InitializeComponent();
