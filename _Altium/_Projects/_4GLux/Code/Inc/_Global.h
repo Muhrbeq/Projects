@@ -20,8 +20,8 @@
 
 typedef enum SensorStatus
 {
-	PASS,
-	FAIL
+	SENSORSTATUS_PASS,
+	SENSORSTATUS_FAIL
 } SensorStatus;
 
 /*############ Structs that will be sent #############*/

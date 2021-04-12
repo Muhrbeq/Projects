@@ -9,6 +9,7 @@
 #define TMP112_H_
 
 #include "main.h"
+#include "_Global.h"
 
 /*
  * Defines for TMP112
@@ -51,6 +52,8 @@ typedef struct TMP112
 	uint8_t i2cRead;
 
 	uint16_t temperatureRaw;
+	SensorStatus sStatus;
+	uint8_t errorCounter;
 	int32_t temperature;
 }TMP112;
 

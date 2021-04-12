@@ -54,7 +54,8 @@ Src/_HDC1080.o: ../Src/_HDC1080.c ../Inc/__ExegerGeneric.h ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_gpio.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h \
- ../Inc/_HDC1080.h ../Inc/_I2C.h
+ ../Inc/_HDC1080.h ../Inc/_Global.h ../Inc/__ExegerGeneric.h \
+ ../Inc/_I2C.h
 
 ../Inc/__ExegerGeneric.h:
 
@@ -171,5 +172,9 @@ Src/_HDC1080.o: ../Src/_HDC1080.c ../Inc/__ExegerGeneric.h ../Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h:
 
 ../Inc/_HDC1080.h:
+
+../Inc/_Global.h:
+
+../Inc/__ExegerGeneric.h:
 
 ../Inc/_I2C.h:

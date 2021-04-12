@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=Coin1_Force Pin=P2-1
+Removed Pin From Net: NetName=Coin1_Sense Pin=P2-2
+Removed Pin From Net: NetName=Coin2_Force Pin=P2-3
+Removed Pin From Net: NetName=Coin2_Sense Pin=P2-4
+Change Component Designator: OldDesignator=1 NewDesignator=P1
+Change Component Designator: OldDesignator=2 NewDesignator=P3
+Added Pin To Net: NetName=Coin2_Force Pin=P2-1
+Added Pin To Net: NetName=Coin2_Sense Pin=P2-2
+Added Pin To Net: NetName=Coin1_Force Pin=P2-3
+Added Pin To Net: NetName=Coin1_Sense Pin=P2-4

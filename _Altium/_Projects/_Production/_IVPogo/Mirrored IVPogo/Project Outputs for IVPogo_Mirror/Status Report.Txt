@@ -1,0 +1,30 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 14:33:08 On 2021-04-12
+
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : PCB Document [6C-2L-1550um.PcbDoc]
+   Generated File[6C-2L-1550um_Copper_Signal_Top.gbr]
+   Generated File[6C-2L-1550um_Copper_Signal_Bot.gbr]
+   Generated File[6C-2L-1550um_Pads_Bot.gbr]
+   Generated File[6C-2L-1550um_Pads_Top.gbr]
+   Generated File[6C-2L-1550um_Legend_Bot.gbr]
+   Generated File[6C-2L-1550um_Soldermask_Bot.gbr]
+   Generated File[6C-2L-1550um_Legend_Top.gbr]
+   Generated File[6C-2L-1550um_Soldermask_Top.gbr]
+   Generated File[6C-2L-1550um_Mechanical_4.gbr]
+   Generated File[6C-2L-1550um_Profile.gbr]
+   Generated File[6C-2L-1550um_NPTH_Drill.gbr]
+   Generated File[6C-2L-1550um_PTH_Drill.gbr]
+   Generated File[6C-2L-1550um_Drawing_1.gbr]
+   Generated File[6C-2L-1550um_Drillmap_1.gbr]
+   Generated File[6C-2L-1550um.RUL]
+   Generated File[6C-2L-1550um.EXTREP]
+   Generated File[6C-2L-1550um.REP]
+
+
+Files Generated   : 17
+Documents Printed : 0
+
+Finished Output Generation At 14:33:10 On 2021-04-12

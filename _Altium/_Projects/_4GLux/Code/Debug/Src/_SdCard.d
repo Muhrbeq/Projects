@@ -1,4 +1,4 @@
-Src/_SdCard.o: ../Src/_SdCard.c ../Inc/__ExegerGeneric.h ../Inc/main.h \
+Src/_SDCard.o: ../Src/_SDCard.c ../Inc/_SDCard.h ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -53,9 +53,9 @@ Src/_SdCard.o: ../Src/_SdCard.c ../Inc/__ExegerGeneric.h ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_gpio.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h ../Inc/_SDCard.h \
- ../Inc/_Global.h ../Inc/__ExegerGeneric.h ../Inc/_LowLevel.h \
- ../Inc/rtc.h ../Inc/_Time.h ../Inc/_Global.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h \
+ ../Inc/__ExegerGeneric.h ../Inc/_Global.h ../Inc/__ExegerGeneric.h \
+ ../Inc/_LowLevel.h ../Inc/rtc.h ../Inc/_Time.h ../Inc/_Global.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h \
  ../Middlewares/Third_Party/FatFs/src/integer.h ../Inc/ffconf.h \
  ../Inc/bsp_driver_sd.h ../Inc/fatfs_platform.h ../Inc/bsp_driver_sd.h \
@@ -64,7 +64,7 @@ Src/_SdCard.o: ../Src/_SdCard.c ../Inc/__ExegerGeneric.h ../Inc/main.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../Inc/sd_diskio.h \
  ../Inc/sdmmc.h ../Inc/rtc.h
 
-../Inc/__ExegerGeneric.h:
+../Inc/_SDCard.h:
 
 ../Inc/main.h:
 
@@ -178,7 +178,7 @@ Src/_SdCard.o: ../Src/_SdCard.c ../Inc/__ExegerGeneric.h ../Inc/main.h \
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h:
 
-../Inc/_SDCard.h:
+../Inc/__ExegerGeneric.h:
 
 ../Inc/_Global.h:
 
