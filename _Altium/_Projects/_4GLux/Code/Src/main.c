@@ -126,8 +126,8 @@ int main(void)
   /*
    * Before main:
    *
-   *  - Check reset cause
-   *  - Check Revision
+   *  - Check reset cause	x
+   *  - Check Revision		x
    *  - Check status of all peripherals (ID of everyone)
    *  -
    *
@@ -172,12 +172,13 @@ int main(void)
 	   * 	Low power solution
 	   * 	ADC for revision control 		x
 	   * 	USB communication - HID?
-	   * 	SD-card read/write
+	   * 	SD-card read/write				x
 	   * 	Redefine printf function with define
 	   * 	Window circuit for the LED
 	   * 	SPI communication
 	   * 	GPIOs
 	   * 	Sleep with different IOs
+	   * 	Implement returnCodes for all error states
 	   *
 	   *
 	   * States
@@ -185,11 +186,11 @@ int main(void)
 	   * 		Have peripherals as states?
 	   *
 	   * Basic functions for peripherals
-	   * 	Code for TMP112				x
-	   * 	Code for HDC1080 			x
-	   * 	Code for OPT
-	   * 	Code for Spectrum sensor
-	   * 	Code for Accelerometer
+	   * 	Code for TMP112	(OOP)		x
+	   * 	Code for HDC1080 (OOP)		x
+	   * 	Code for OPT (OOP)
+	   * 	Code for Spectrum sensor (OOP)
+	   * 	Code for Accelerometer (OOP)
 	   *	ID of each peripheral
 	   *	Rewrite all code
 	   *	Test Screen functionality

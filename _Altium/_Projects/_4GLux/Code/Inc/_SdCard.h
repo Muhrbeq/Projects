@@ -17,6 +17,30 @@
 #define ERROR_PATH			"error"
 #define INFO_PATH			"info"
 
+typedef enum SD_States
+{
+	SD_STARTUP,
+	SD_INIT,
+	SD_INITFOLDERSONSD,
+	SD_WRITEDATA,
+	SD_WRITEINFO,
+	SD_ARCHIVE,
+	SD_READANDSENDDATA,
+	SD_SENDDATA,
+	SD_UNMOUNT,
+	SD_IDLE,
+}SD_States;
+
+typedef enum SD_Folder
+{
+	SD_FolderInitiated,
+	SD_FolderNotInitiated,
+}SD_Folder;
+
+SD_States SD_GetState(void);
+void SD_SetState(SD_States sState);
+
+
 void EnableSD_Card(void);
 void SD_DeInit(void);
 void InitFoldersSD(void);
