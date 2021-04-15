@@ -9,18 +9,23 @@
 #include "_HDC1080.h"
 #include "_I2C.h"
 
+/* Sets state of sensor */
 static void HDC1080_SetState(HDC1080 *sSense, HDC1080_State sState)
 {
 	sSense->sState = sState;
 }
 
+/* Init device with read/write addr and i2c channel */
 void HDC1080_InitDevice(HDC1080 *device, I2C_HandleTypeDef *hi2c, uint8_t devWriteAddr, uint8_t devReadAddr)
 {
 	device->hi2c = *hi2c;
 	device->i2cWrite = devWriteAddr;
 	device->i2cRead = devReadAddr;
+	device->errorCounter = 0;
+	device->sStatus = SENSORSTATUS_FAIL;
 }
 
+/* Sends write command for init */
 static HAL_StatusTypeDef HDC1080_InitWrite(HDC1080 *device)
 {
 	unsigned char data[4] = { 0 };
@@ -28,6 +33,7 @@ static HAL_StatusTypeDef HDC1080_InitWrite(HDC1080 *device)
 	return I2C_ReadWrite(device->hi2c, device->i2cWrite, data, 2);
 }
 
+/* Reads back the Init command from sensor */
 static HAL_StatusTypeDef HDC1080_InitRead(HDC1080 *device)
 {
 	unsigned char data[2] = { 0 };
@@ -41,6 +47,7 @@ static HAL_StatusTypeDef HDC1080_InitRead(HDC1080 *device)
 	return HAL_ERROR;
 }
 
+/* Configure register for sensor */
 static HAL_StatusTypeDef HDC1080_ConfigureRegister(HDC1080 *device)
 {
 	unsigned char data[4] = { 0 };
@@ -57,6 +64,7 @@ static HAL_StatusTypeDef HDC1080_ConfigureRegister(HDC1080 *device)
 	return  I2C_ReadWrite(device->hi2c, device->i2cWrite, data, 3);
 }
 
+/* Write to sensor to aquire ID */
 static HAL_StatusTypeDef HDC1080_GetDeviceIDWrite(HDC1080 *device)
 {
 	unsigned char data[2] = { 0 };
@@ -64,6 +72,7 @@ static HAL_StatusTypeDef HDC1080_GetDeviceIDWrite(HDC1080 *device)
 	return I2C_ReadWrite(device->hi2c, device->i2cWrite, data, 2);
 }
 
+/* Read ID from sensor */
 static HAL_StatusTypeDef HDC1080_GetDeviceIDRead(HDC1080 *device)
 {
 	unsigned char data[2] = { 0 };
@@ -113,7 +122,7 @@ static uint8_t HDC1080_CalculateHumidity(HDC1080 *device)
 	return (uint8_t) hum;
 }
 
-/* Add errorhandling to statemachine */
+/* State machine to optimize time in each sector */
 void HDC1080_StateMachine(HDC1080 *device)
 {
 
@@ -122,6 +131,7 @@ void HDC1080_StateMachine(HDC1080 *device)
 		/* Error occur */
 		TRACE("[HDC1080] - FAILED\r\n");
 		device->errorCounter = 0;
+		device->sStatus = SENSORSTATUS_FAIL;
 		HDC1080_SetState(device, HDC1080_ERROR);
 	}
 
@@ -141,7 +151,7 @@ void HDC1080_StateMachine(HDC1080 *device)
 	case HDC1080_GETIDREAD:
 		if(HDC1080_GetDeviceIDRead(device) == HAL_OK)
 		{
-			HDC1080_SetState(device, HDC1080_INITWRITE);
+			HDC1080_SetState(device, HDC1080_DONE);
 			TRACE_DEBUG("DevID: Read - Passed\r\n");
 		}
 		else
@@ -208,6 +218,7 @@ void HDC1080_StateMachine(HDC1080 *device)
 		if(HDC1080_CalculateHumidity(device) == HAL_OK)
 		{
 			HDC1080_SetState(device, HDC1080_DONE);
+			device->sStatus = SENSORSTATUS_PASS;
 			TRACE_DEBUG("Calculate Humidity - Passed\r\n");
 		}
 		else
@@ -217,7 +228,9 @@ void HDC1080_StateMachine(HDC1080 *device)
 		break;
 	case HDC1080_DONE:
 			device->errorCounter = 0;
+			device->sStatus = SENSORSTATUS_PASS;
 			TRACE("[HDC1080] - PASSED\r\n");
+			HDC1080_SetState(device, HDC1080_IDLE);
 		break;
 	default:
 			device->errorCounter = 0;

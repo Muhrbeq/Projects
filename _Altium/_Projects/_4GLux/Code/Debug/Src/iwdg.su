@@ -1,3 +1,3 @@
-iwdg.c:30:6:MX_IWDG_Init	8	static
-iwdg.c:45:6:ResetIWDG	4	static
-iwdg.c:50:6:Program_IWDG_Freeze_Shutdown	48	static
+iwdg.c:31:6:MX_IWDG_Init	8	static
+iwdg.c:46:6:ResetIWDG	4	static
+iwdg.c:51:6:Program_IWDG_Freeze_Shutdown	48	static

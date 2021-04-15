@@ -22,6 +22,8 @@ void TMP112_InitDevice(TMP112 *device, I2C_HandleTypeDef *hi2c, uint8_t devWrite
 	device->hi2c = *hi2c;
 	device->i2cWrite = devWriteAddr;
 	device->i2cRead = devReadAddr;
+	device->errorCounter = 0;
+	device->sStatus = SENSORSTATUS_FAIL;
 }
 
 static HAL_StatusTypeDef TMP112_Init(TMP112 *device)
@@ -132,6 +134,7 @@ void TMP112_StateMachine(TMP112 *device)
 		/* Error occur */
 		TRACE("[TMP112] - FAILED\r\n");
 		device->errorCounter = 0;
+		device->sStatus = SENSORSTATUS_FAIL;
 		TMP112_SetState(device, TMP112_ERROR);
 	}
 
@@ -210,7 +213,8 @@ void TMP112_StateMachine(TMP112 *device)
 		break;
 	case TMP112_DONE:
 		device->errorCounter = 0;
-		device->sStatus =
+		device->sStatus = SENSORSTATUS_PASS;
+		TMP112_SetState(device, TMP112_IDLE);
 		TRACE("[TMP112] - PASSED\r\n");
 		break;
 	default:

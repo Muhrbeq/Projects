@@ -20,9 +20,18 @@
 
 typedef enum OPT3001_State
 {
-	OPT3001_STARTUP,
+	OPT3001_IDLE,
 	OPT3001_INITIATE,
+	OPT3001_IDWRITE,
+	OPT3001_IDREAD,
+	OPT3001_REQUESTREADING,
+	OPT3001_READINGREADYWRITE,
+	OPT3001_READINGREADYREAD,
+	OPT3001_GETLUXWRITE,
+	OPT3001_GETLUXREAD,
 	OPT3001_SHUTDOWN,
+	OPT3001_DONE,
+	OPT3001_ERROR,
 }OPT3001_State;
 
 typedef struct OPT3001
@@ -35,15 +44,11 @@ typedef struct OPT3001
 	SensorStatus sStatus;
 	uint8_t errorCounter;
 
-	uint16_t iMantissa;
-	uint16_t iExponent;
 	float currentLux;
 }OPT3001;
 
-void OPT_3001_shutdown(void);
-uint8_t OPT_3001_init_for_single_shot(void);
-uint8_t OPT_3001_request_reading(void);
-uint8_t OPT_3001_reading_ready(void);
-uint8_t OPT_3001_get_reading(float* lux_ptr);
-uint8_t all_sensors_have_data_ready(void);
+void OPT3001_InitDevice(OPT3001 *device, I2C_HandleTypeDef *hi2c, uint8_t devWriteAddr, uint8_t devReadAddr);
+uint8_t OPT3001_GetDeviceID(OPT3001 *device);
+void OPT3001_StateMachine(OPT3001 *device);
+
 #endif /* INC_OPT3001_H_ */

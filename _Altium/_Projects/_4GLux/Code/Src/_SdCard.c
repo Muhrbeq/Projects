@@ -315,6 +315,27 @@ static HAL_StatusTypeDef SD_WriteDataToFile(Data *data)
 	return HAL_ERROR;
 }
 
+static HAL_StatusTypeDef SD_ReadDataFromFile(char *filename)
+{
+	FIL sendFile;
+
+	if(f_open(&sendFile, filename, FA_READ) == FR_OK)
+	{
+		char data[256] = {0};
+		while(f_gets(data, 256, &sendFile) != NULL)
+		{
+			/*
+			 * Push to server
+			 * */
+
+			memset(data, '\0', 256);
+		}
+		f_close(&sendFile);
+		return HAL_OK;
+	}
+	return HAL_ERROR;
+}
+
 void SD_WriteStateMachine(Data *data)
 {
 	switch(sdState)
@@ -412,8 +433,12 @@ void SD_ReadStateMachine(Data *data)
 		 *
 		 * Archive everyexcept newest
 		 * */
+		break;
 	}
-
+	case SD_CHECKFORMOREFILES:
+	{
+		break;
+	}
 	case SD_UNMOUNT:
 	{
 		if(SD_Unmount() == HAL_OK)

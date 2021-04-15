@@ -53,7 +53,8 @@ Src/iwdg.o: ../Src/iwdg.c ../Inc/iwdg.h ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_gpio.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h \
+ ../Inc/__ExegerGeneric.h
 
 ../Inc/iwdg.h:
 
@@ -168,3 +169,5 @@ Src/iwdg.o: ../Src/iwdg.c ../Inc/iwdg.h ../Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h:
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h:
+
+../Inc/__ExegerGeneric.h:

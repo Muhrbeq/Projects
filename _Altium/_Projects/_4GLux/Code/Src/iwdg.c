@@ -19,6 +19,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "iwdg.h"
+#include "__ExegerGeneric.h"
 
 /* USER CODE BEGIN 0 */
 
