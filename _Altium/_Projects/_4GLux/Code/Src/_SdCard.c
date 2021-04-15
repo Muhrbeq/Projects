@@ -437,6 +437,11 @@ void SD_ReadStateMachine(Data *data)
 	}
 	case SD_CHECKFORMOREFILES:
 	{
+		/*
+		 * Check if there are more files -> Back to READANDSEND
+		 * else unmount
+		 *
+		 * */
 		break;
 	}
 	case SD_UNMOUNT:
