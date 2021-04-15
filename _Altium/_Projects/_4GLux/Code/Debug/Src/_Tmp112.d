@@ -53,8 +53,9 @@ Src/_Tmp112.o: ../Src/_Tmp112.c ../Inc/_Tmp112.h ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_gpio.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h ../Inc/i2c.h \
- ../Inc/__ExegerGeneric.h ../Inc/_I2C.h
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h ../Inc/_Global.h \
+ ../Inc/__ExegerGeneric.h ../Inc/i2c.h ../Inc/__ExegerGeneric.h \
+ ../Inc/_I2C.h
 
 ../Inc/_Tmp112.h:
 
@@ -169,6 +170,10 @@ Src/_Tmp112.o: ../Src/_Tmp112.c ../Inc/_Tmp112.h ../Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h:
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h:
+
+../Inc/_Global.h:
+
+../Inc/__ExegerGeneric.h:
 
 ../Inc/i2c.h:
 

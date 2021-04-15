@@ -55,7 +55,8 @@ Src/_SensorControl.o: ../Src/_SensorControl.c ../Inc/__ExegerGeneric.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h \
  ../Inc/_SensorControl.h ../Inc/_Global.h ../Inc/__ExegerGeneric.h \
- ../Inc/_HDC1080.h ../Inc/_LIS2DW12.h ../Inc/_Tmp112.h ../Inc/i2c.h
+ ../Inc/_HDC1080.h ../Inc/_Global.h ../Inc/_LIS2DW12.h ../Inc/_Tmp112.h \
+ ../Inc/i2c.h
 
 ../Inc/__ExegerGeneric.h:
 
@@ -178,6 +179,8 @@ Src/_SensorControl.o: ../Src/_SensorControl.c ../Inc/__ExegerGeneric.h \
 ../Inc/__ExegerGeneric.h:
 
 ../Inc/_HDC1080.h:
+
+../Inc/_Global.h:
 
 ../Inc/_LIS2DW12.h:
 

@@ -9,6 +9,7 @@
 #define HDC1080_H_
 
 #include "main.h"
+#include "_Global.h"
 
 /*
  *  Defines for Humidity sensor HDC1080
@@ -58,6 +59,8 @@ typedef struct HDC1080
 	uint16_t deviceID;
 	uint16_t confReg;
 
+	uint8_t errorCounter;
+	SensorStatus sStatus;
 	uint16_t humidityRaw;
 	uint8_t humidity;
 } HDC1080;

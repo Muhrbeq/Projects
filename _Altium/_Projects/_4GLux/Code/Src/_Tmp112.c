@@ -127,6 +127,14 @@ static int32_t TMP112_CalculateTemperature(uint16_t raw)
  * */
 void TMP112_StateMachine(TMP112 *device)
 {
+	if(device->errorCounter > 100)
+	{
+		/* Error occur */
+		TRACE("[TMP112] - FAILED\r\n");
+		device->errorCounter = 0;
+		TMP112_SetState(device, TMP112_ERROR);
+	}
+
 	switch(device->tState)
 	{
 	case TMP112_INIT:
@@ -135,12 +143,20 @@ void TMP112_StateMachine(TMP112 *device)
 			TMP112_SetState(device, TMP112_STARTONESHOT);
 			TRACE_DEBUG("TMP112 Init passed\r\n");
 		}
+		else
+		{
+			device->errorCounter++;
+		}
 		break;
 	case TMP112_STARTONESHOT:
 		if(TMP112_StartOneShot(device) == HAL_OK)
 		{
 			TMP112_SetState(device, TMP112_WAITFORONESHOTWRITE);
 			TRACE_DEBUG("TMP112_STARTONESHOT passed\r\n");
+		}
+		else
+		{
+			device->errorCounter++;
 		}
 		break;
 	case TMP112_WAITFORONESHOTWRITE:
@@ -149,12 +165,20 @@ void TMP112_StateMachine(TMP112 *device)
 			TMP112_SetState(device, TMP112_WAITFORONESHOTREAD);
 			TRACE_DEBUG("TMP112_WAITFORONESHOTWRITE passed\r\n");
 		}
+		else
+		{
+			device->errorCounter++;
+		}
 		break;
 	case TMP112_WAITFORONESHOTREAD:
 		if(TMP112_WaitForOneShotRead(device) == HAL_OK)
 		{
 			TMP112_SetState(device, TMP112_GETTEMPERATURERAWWRITE);
 			TRACE_DEBUG("TMP112_WAITFORONESHOTREAD passed\r\n");
+		}
+		else
+		{
+			device->errorCounter++;
 		}
 		break;
 	case TMP112_GETTEMPERATURERAWWRITE:
@@ -163,12 +187,20 @@ void TMP112_StateMachine(TMP112 *device)
 			TMP112_SetState(device, TMP112_GETTEMPERATURERAWREAD);
 			TRACE_DEBUG("TMP112_GETTEMPERATURERAWWRITE passed\r\n");
 		}
+		else
+		{
+			device->errorCounter++;
+		}
 		break;
 	case TMP112_GETTEMPERATURERAWREAD:
 		if(TMP112_GetTemperatureRawRead(device) == HAL_OK)
 		{
 			TMP112_SetState(device, TMP112_CALCULATETEMPERATURE);
 			TRACE_DEBUG("TMP112_GETTEMPERATURERAWREAD passed\r\n");
+		}
+		else
+		{
+			device->errorCounter++;
 		}
 		break;
 	case TMP112_CALCULATETEMPERATURE:
@@ -177,10 +209,13 @@ void TMP112_StateMachine(TMP112 *device)
 		TRACE_DEBUG("TMP112_CALCULATETEMPERATURE passed\r\n");
 		break;
 	case TMP112_DONE:
+		device->errorCounter = 0;
+		device->sStatus =
 		TRACE("[TMP112] - PASSED\r\n");
 		break;
 	default:
 		TRACE("Shouldn't get here\r\n");
+		device->errorCounter = 0;
 		break;
 	}
 }

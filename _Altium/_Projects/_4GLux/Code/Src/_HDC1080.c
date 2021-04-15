@@ -116,6 +116,15 @@ static uint8_t HDC1080_CalculateHumidity(HDC1080 *device)
 /* Add errorhandling to statemachine */
 void HDC1080_StateMachine(HDC1080 *device)
 {
+
+	if(device->errorCounter > 100)
+	{
+		/* Error occur */
+		TRACE("[HDC1080] - FAILED\r\n");
+		device->errorCounter = 0;
+		HDC1080_SetState(device, HDC1080_ERROR);
+	}
+
 	switch(device->sState)
 	{
 	case HDC1080_GETIDWRITE:
@@ -124,12 +133,20 @@ void HDC1080_StateMachine(HDC1080 *device)
 			HDC1080_SetState(device, HDC1080_GETIDREAD);
 			TRACE_DEBUG("DevID: write - Passed\r\n");
 		}
+		else
+		{
+			device->errorCounter++;
+		}
 		break;
 	case HDC1080_GETIDREAD:
 		if(HDC1080_GetDeviceIDRead(device) == HAL_OK)
 		{
 			HDC1080_SetState(device, HDC1080_INITWRITE);
 			TRACE_DEBUG("DevID: Read - Passed\r\n");
+		}
+		else
+		{
+			device->errorCounter++;
 		}
 		break;
 	case HDC1080_INITWRITE:
@@ -138,7 +155,10 @@ void HDC1080_StateMachine(HDC1080 *device)
 			HDC1080_SetState(device, HDC1080_INITREAD);
 			TRACE_DEBUG("Init: write - Passed\r\n");
 		}
-
+		else
+		{
+			device->errorCounter++;
+		}
 		break;
 	case HDC1080_INITREAD:
 		if(HDC1080_InitRead(device) == HAL_OK)
@@ -146,13 +166,20 @@ void HDC1080_StateMachine(HDC1080 *device)
 			HDC1080_SetState(device, HDC1080_CONFIGUREREGISTER);
 			TRACE_DEBUG("Init: Read - Passed\r\n");
 		}
-
+		else
+		{
+			device->errorCounter++;
+		}
 		break;
 	case HDC1080_CONFIGUREREGISTER:
 		if(HDC1080_ConfigureRegister(device) == HAL_OK)
 		{
 			HDC1080_SetState(device, HDC1080_GETHUMIDITYRAWWRITE);
 			TRACE_DEBUG("Configure Register - Passed\r\n");
+		}
+		else
+		{
+			device->errorCounter++;
 		}
 		break;
 	case HDC1080_GETHUMIDITYRAWWRITE:
@@ -161,12 +188,20 @@ void HDC1080_StateMachine(HDC1080 *device)
 			HDC1080_SetState(device, HDC1080_GETHUMIDITYRAWREAD);
 			TRACE_DEBUG("Get Humidity raw: write - Passed\r\n");
 		}
+		else
+		{
+			device->errorCounter++;
+		}
 		break;
 	case HDC1080_GETHUMIDITYRAWREAD:
 		if(HDC1080_GetHumidityRawRead(device) == HAL_OK)
 		{
 			HDC1080_SetState(device, HDC1080_CALCULATEHUMIDITY);
 			TRACE_DEBUG("Get humidity raw: Read - Passed\r\n");
+		}
+		else
+		{
+			device->errorCounter++;
 		}
 		break;
 	case HDC1080_CALCULATEHUMIDITY:
@@ -175,11 +210,17 @@ void HDC1080_StateMachine(HDC1080 *device)
 			HDC1080_SetState(device, HDC1080_DONE);
 			TRACE_DEBUG("Calculate Humidity - Passed\r\n");
 		}
+		else
+		{
+			device->errorCounter++;
+		}
 		break;
 	case HDC1080_DONE:
+			device->errorCounter = 0;
 			TRACE("[HDC1080] - PASSED\r\n");
 		break;
 	default:
+			device->errorCounter = 0;
 			TRACE("[HDC1080] - ERROR\r\n");
 		break;
 	}

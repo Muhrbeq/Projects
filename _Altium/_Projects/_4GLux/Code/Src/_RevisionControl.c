@@ -192,6 +192,7 @@ void RevisionControl_StateMachine(void)
 			if(RevisionControl_DisableRead() == HAL_OK)
 			{
 				RevisionControl_SetState(REVISIONSTATE_DONE);
+				revisionControl_Counter = 0;
 				TRACE_DEBUG("RevisionControl Disable read passed\r\n");
 				TRACE("[Revision Control] - PASSED\r\n");
 			}
@@ -202,6 +203,7 @@ void RevisionControl_StateMachine(void)
 			break;
 		default:
 			TRACE_DEBUG("RevisionControl ERROR, disabling state machine\r\n");
+			revisionControl_Counter = 0;
 			break;
 			/* DeInit ADC and bind GPIOs to analog inputs */
 
