@@ -11,9 +11,10 @@
         Height="600" 
         Width="800"
         ResizeMode="NoResize"
-        Topmost="True"
         WindowStyle="None"
-        WindowStartupLocation="CenterScreen">
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown">
 
     <Window.Resources>
         
@@ -68,6 +69,8 @@
                                 <Setter Property="BorderBrush"
                                         TargetName="border"
                                         Value="{StaticResource tb_mouse_over}"/>
+
+                                <Setter Property="Cursor" Value="Hand"/>
 
                             </Trigger>
 
@@ -145,7 +148,8 @@
                                         Height="30"
                                         Width="30"
                                         BorderThickness="0"
-                                        Style="{StaticResource tb_style}">
+                                        Style="{StaticResource tb_style}"
+                                        >
                             
                             <!--Toggle button default background image-->
                             <ToggleButton.Background>

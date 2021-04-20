@@ -24,5 +24,18 @@ namespace _LightBoxController
         {
             InitializeComponent();
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.Opacity = 0.5;
+                DragMove();
+            }
+            if(e.LeftButton == MouseButtonState.Released)
+            {
+                this.Opacity = 1;
+            }
+        }
     }
 }

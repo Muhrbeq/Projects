@@ -1,0 +1,15 @@
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\LightSensorCalibration.exe.config
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\LightSensorCalibration.exe
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\LightSensorCalibration.pdb
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\LightSensorCalibration.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\MainWindow.g.cs
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\App.g.cs
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\LightSensorCalibration_MarkupCompile.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\LightSensorCalibration_MarkupCompile.lref
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\MainWindow.baml
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\LightSensorCalibration.g.resources
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\LightSensorCalibration.Properties.Resources.resources
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\LightSensorCalibration.csproj.GenerateResource.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\LightSensorCalibration.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\LightSensorCalibration.exe
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\LightSensorCalibration.pdb
