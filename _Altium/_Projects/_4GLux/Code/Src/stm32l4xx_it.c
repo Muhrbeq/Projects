@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
+#include <_SaraR.h>
 #include "main.h"
 #include "stm32l4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
@@ -26,7 +27,6 @@
 #include "_Global.h"
 #include "__ExegerGeneric.h"
 #include "_GPS.h"
-#include "_SaraR4.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

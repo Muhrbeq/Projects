@@ -58,8 +58,8 @@ all: main-build
 main-build: 4GLL_v1.elf secondary-outputs
 
 # Tool invocations
-4GLL_v1.elf: $(OBJS) $(USER_OBJS) C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_4GLux\Code\STM32L452RETX_FLASH.ld
-	arm-none-eabi-gcc -o "4GLL_v1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Altium\_Projects\_4GLux\Code\STM32L452RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4GLL_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+4GLL_v1.elf: $(OBJS) $(USER_OBJS) C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Altium\_Projects\_4GLux\Code\STM32L452RETX_FLASH.ld
+	arm-none-eabi-gcc -o "4GLL_v1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Altium\_Projects\_4GLux\Code\STM32L452RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4GLL_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

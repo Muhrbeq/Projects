@@ -6,11 +6,11 @@
  */
 
 
+#include <_SaraR.h>
 #include "_Global.h"
 #include "__ExegerGeneric.h"
 #include "usart.h"
 
-#include <_SaraR4.h>
 
 volatile uint8_t uart2_Buffer[TX_BUFF_SIZE] = { 0 };
 

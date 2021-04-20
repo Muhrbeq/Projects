@@ -1,4 +1,4 @@
-Src/_TextParse.o: ../Src/_TextParse.c ../Src/_TextParse.h \
+Src/_TextParse.o: ../Src/_TextParse.c ../Inc/_TextParse.h \
  ../Inc/__ExegerGeneric.h ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Inc/stm32l4xx_hal_conf.h \
@@ -54,10 +54,9 @@ Src/_TextParse.o: ../Src/_TextParse.c ../Src/_TextParse.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_gpio.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h ../Inc/_Global.h \
- ../Inc/__ExegerGeneric.h
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h ../Inc/_Global.h
 
-../Src/_TextParse.h:
+../Inc/_TextParse.h:
 
 ../Inc/__ExegerGeneric.h:
 
@@ -174,5 +173,3 @@ Src/_TextParse.o: ../Src/_TextParse.c ../Src/_TextParse.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h:
 
 ../Inc/_Global.h:
-
-../Inc/__ExegerGeneric.h:

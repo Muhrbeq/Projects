@@ -152,7 +152,7 @@ void HDC1080_StateMachine(HDC1080 *device)
 		if(HDC1080_GetDeviceIDRead(device) == HAL_OK)
 		{
 			HDC1080_SetState(device, HDC1080_DONE);
-			TRACE_DEBUG("DevID: Read - Passed\r\n");
+			TRACE_DEBUG("DevID: Read - Passed\r\n");D
 		}
 		else
 		{
