@@ -160,6 +160,7 @@
     <Compile Include="Data\CollectedData.cs" />
     <Compile Include="Data\LightData.cs" />
     <Compile Include="Data\SensorData.cs" />
+    <Compile Include="Instruments\IInstruments.cs" />
     <Compile Include="Instruments\LightSensor.cs" />
     <Compile Include="Instruments\Microcontroller.cs" />
     <Compile Include="Instruments\PowerSupplyUnit.cs" />

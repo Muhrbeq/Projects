@@ -47,5 +47,15 @@ namespace LightSensorCalibration
         {
 
         }
+
+        private void btn_SetLightLevel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_LockLightLevel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

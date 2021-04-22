@@ -248,7 +248,7 @@
                     Foreground="Transparent"
                     BorderBrush="Transparent"
                     BorderThickness="0"
-                    >
+                    Click="btn_SetLightLevel_Click">
                     <iconPacks:PackIconMaterial Width="45"
                                        Height="45"
                                        HorizontalAlignment="Center"
@@ -267,7 +267,7 @@
                     Foreground="Transparent"
                     BorderBrush="Transparent"
                     BorderThickness="0"
-                    >
+                    Click="btn_LockLightLevel_Click">
                     <iconPacks:PackIconMaterial Width="45"
                                        Height="45"
                                        HorizontalAlignment="Center"
