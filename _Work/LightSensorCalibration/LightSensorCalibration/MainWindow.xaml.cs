@@ -24,5 +24,28 @@ namespace LightSensorCalibration
         {
             InitializeComponent();
         }
+
+        private void btn_CloseApplication_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.Opacity = 0.5;
+                DragMove();
+            }
+            if (e.LeftButton == MouseButtonState.Released)
+            {
+                this.Opacity = 1.0;
+            }
+        }
+
+        private void btn_ExportData_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
