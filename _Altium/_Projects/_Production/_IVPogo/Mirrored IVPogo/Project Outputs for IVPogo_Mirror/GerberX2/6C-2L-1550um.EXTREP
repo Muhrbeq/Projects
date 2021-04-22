@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: 6C-2L-1550um.GBR   2021-04-12  14:33:08
+Gerber File Extension Report For: 6C-2L-1550um.GBR   2021-04-22  15:00:54
 ------------------------------------------------------------------------------------------
 
 
@@ -14,7 +14,13 @@ Layer Extension     Layer Description
 .gbr                Bottom Solder                           
 .gbr                Top Overlay                             
 .gbr                Top Solder                              
+.gbr                Bottom Paste                            
+.gbr                Top Paste                               
+.gbr                Keep-Out Layer                          
 .gbr                Dimensions                              
+.gbr                Mechanical 13                           
+.gbr                Mechanical 1                            
+.gbr                Mechanical 15                           
 .gbr                Profile                                 
 .gbr                Non-plated through-hole drill file      
 .gbr                Plated through-hole drill file          
