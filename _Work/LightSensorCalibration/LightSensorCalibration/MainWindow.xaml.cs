@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LightSensorCalibration.Instruments;
 
 namespace LightSensorCalibration
 {
@@ -20,6 +21,11 @@ namespace LightSensorCalibration
     /// </summary>
     public partial class MainWindow : Window
     {
+        LightSensor ReferenceSensor = new LightSensor();
+        LightSensor CalibrationSensor = new LightSensor();
+        PowerSupplyUnit PSU = new PowerSupplyUnit();
+        Microcontroller MCU = new Microcontroller();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -56,6 +62,34 @@ namespace LightSensorCalibration
         private void btn_LockLightLevel_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btn_ConnectReferenceLightSensor_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void btn_ConnectCalibrationLightSensor_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void btn_ConnectPowerSupply_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            txb_InfoBox.Text += "Helloooooo" + Environment.NewLine;
+            scr_InfoScroll.ScrollToEnd();
+        }
+
+        private void btn_ConnectMicrocontroller_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            iConnectMicrocontroller.Foreground = Brushes.Green;
+        }
+
+        private void btn_ExtraInfo_Click(object sender, RoutedEventArgs e)
+        {
+            ExtraInfoWindow eW = new ExtraInfoWindow(ReferenceSensor, CalibrationSensor, MCU, PSU);
+
+            eW.ShowDialog();
         }
     }
 }

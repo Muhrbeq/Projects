@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\
 LightSensorCalibration
 none
 false
 DEBUG;TRACE
-c:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\App.xaml
-1219584333
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\App.xaml
+2568319361
 
-131677440391
-441553299094
-MainWindow.xaml;
+141625386759
+44-1161343232
+ExtraInfoWindow.xaml;MainWindow.xaml;
 
-True
+False
 

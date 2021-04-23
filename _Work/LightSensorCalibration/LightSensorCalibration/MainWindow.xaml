@@ -85,10 +85,11 @@
         <StackPanel Grid.Row="1" 
                     Grid.Column="2"
                     HorizontalAlignment="Center"
-                    Orientation="Vertical">
+                    Orientation="Vertical"
+                    VerticalAlignment="Top">
 
             <StackPanel Orientation="Horizontal"
-                        Margin="0,10,0,0">
+                        Margin="0,00,0,0">
 
                 <TextBlock x:Name="txb_ReferenceLightSensor"
                        FontFamily="Arial"
@@ -98,13 +99,28 @@
                        Foreground="White"
                        Opacity="1"/>
 
-                <iconPacks:PackIconMaterial Width="15"
-                                       Height="15"
+                <Button x:Name="btn_ConnectReferenceLightSensor"
+                    Height="25"
+                    Width="25"
+                    Cursor="Hand"
+                    Background="Transparent"
+                    Foreground="Transparent"
+                    BorderBrush="Transparent"
+                    BorderThickness="0"
+  
+                    MouseDoubleClick="btn_ConnectReferenceLightSensor_MouseDoubleClick"
+                    Margin="20, 0, 0, 0">
+                    <iconPacks:PackIconMaterial Width="25"
+                                       Height="25"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
                                        Kind="Connection" 
                                        Foreground="Red"
-                                       Margin="20, 0, 0, 0"/>
+                                       Margin="0, 0, 0, 0"/>
+
+                </Button>
+
+                
 
             </StackPanel>
 
@@ -118,13 +134,29 @@
                        Foreground="White"
                        Opacity="1"/>
 
-                <iconPacks:PackIconMaterial Width="15"
-                                       Height="15"
+                <Button x:Name="btn_ConnectCalibrationLightSensor"
+                    Height="25"
+                    Width="25"
+                    Cursor="Hand"
+                    Background="Transparent"
+                    Foreground="Transparent"
+                    BorderBrush="Transparent"
+                    BorderThickness="0"
+                    Margin="16, 0, 0, 0"
+                    MouseDoubleClick="btn_ConnectCalibrationLightSensor_MouseDoubleClick"
+                        >
+                    
+                    <iconPacks:PackIconMaterial Width="25"
+                                       Height="25"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
                                        Kind="Connection" 
                                        Foreground="Red"
-                                       Margin="16, 0, 0, 0"/>
+                                      />
+                    
+                </Button>
+                
+                
                 
                 
             </StackPanel>
@@ -139,13 +171,66 @@
                        Foreground="White"
                        Opacity="1"/>
 
-                <iconPacks:PackIconMaterial Width="15"
-                                       Height="15"
+                <Button x:Name="btn_ConnectPowerSupply"
+                    Height="25"
+                    Width="25"
+                    Cursor="Hand"
+                    Background="Transparent"
+                    Foreground="Transparent"
+                    BorderBrush="Transparent"
+                    BorderThickness="0"
+                    Margin="103, 0, 0, 0"
+                    MouseDoubleClick="btn_ConnectPowerSupply_MouseDoubleClick"
+                    >
+
+                    <iconPacks:PackIconMaterial Width="25"
+                                       Height="25"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
                                        Kind="Connection" 
                                        Foreground="Red"
-                                       Margin="103, 0, 0, 0"/>
+                                       Margin="0, 0, 0, 0"/>
+
+                </Button>
+                
+                
+
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,10,0,0">
+                <TextBlock x:Name="txb_Microcontroller"
+                       FontFamily="Arial"
+                       FontSize="20"
+                       Text="Microcontoller"
+                       Background="Transparent"
+                       Foreground="White"
+                       Opacity="1"/>
+
+                <Button x:Name="btn_ConnectMicrocontroller"
+                    Height="25"
+                    Width="25"
+                    Cursor="Hand"
+                    Background="Transparent"
+                    Foreground="Transparent"
+                    BorderBrush="Transparent"
+                    BorderThickness="0"
+                    Margin="103, 0, 0, 0"
+                    MouseDoubleClick="btn_ConnectMicrocontroller_MouseDoubleClick">
+
+                    <iconPacks:PackIconMaterial Width="25"
+                                       Height="25"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Kind="Connection" 
+                                       Foreground="Red"
+                                       x:Name="iConnectMicrocontroller"
+                                       Margin="0, 0, 0, 0"/>
+
+                </Button>
+
+                
 
 
             </StackPanel>
@@ -166,13 +251,15 @@
             Grid.Row="1"
             Grid.Column="0"
             Orientation="Horizontal"
+            VerticalAlignment="Top"
+            Margin="5,0,5,0"
             >
 
             <StackPanel
                 Orientation="Vertical"
                 VerticalAlignment="Center">
 
-                <TextBlock Text="Reference"
+                <TextBlock Text=" Reference |"
                            Foreground="White"
                            FontFamily="Helvetica"
                            FontSize="24"/>
@@ -183,6 +270,8 @@
                            FontFamily="Helvetica"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"
+                           Width="80"
+                           Height="30"
                            />
 
             </StackPanel>
@@ -190,9 +279,9 @@
             <StackPanel
                 Orientation="Vertical"
                 VerticalAlignment="Center"
-                Margin="45,0,0,0">
+                Margin="0,0,0,0">
 
-                <TextBlock Text="Calibration"
+                <TextBlock Text=" Calibration "
                            Foreground="White"
                            FontFamily="Helvetica"
                            FontSize="24"/>
@@ -203,6 +292,8 @@
                            FontSize="18"
                            FontFamily="Helvetica"
                            HorizontalAlignment="Center"
+                           Width="80"
+                           Height="30"
                            />
 
             </StackPanel>
@@ -214,7 +305,7 @@
             Grid.Column="1"
             Orientation="Vertical"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center">
+            VerticalAlignment="Top">
 
             <TextBlock Text="Set Light Level"
                        Foreground="White"
@@ -326,5 +417,82 @@
             
         </StackPanel>
 
+
+
+        <StackPanel    Grid.Row="2"
+                       Grid.Column="2"
+                       VerticalAlignment="Top">
+            <TextBlock
+                Text="I N F O"
+                Foreground="White"
+                FontFamily="Helvetica"
+                FontSize="24"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+
+            </TextBlock>
+
+            <Grid Height="110" Width="250"
+                  >
+
+                <ScrollViewer
+                    x:Name="scr_InfoScroll">
+
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        Foreground="White"
+                        FontFamily="Helvetica"
+                        FontSize="16"
+                        FontWeight="Light"
+                        FontStyle="Italic"
+                        x:Name="txb_InfoBox"
+                        TextWrapping="Wrap"
+                        >
+
+                    </TextBlock>
+
+                </ScrollViewer>
+                
+
+            </Grid>
+            
+            
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+            <Button Grid.Column="0"
+                Grid.Row="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Background="Transparent"
+                Foreground="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                Width="45"
+                Height="45"
+                Margin="0,0,0,0"
+                Cursor="Hand"
+                x:Name="btn_ExtraInfo"
+                Click="btn_ExtraInfo_Click">
+
+                <iconPacks:PackIconMaterial
+                        Width="40"
+                        Height="40"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Kind="InformationOutline" 
+                        Foreground="White"
+                        Margin="0, 0, 0, 0"/>
+
+
+            </Button>
+
+        </StackPanel>
     </Grid>
 </Window>
