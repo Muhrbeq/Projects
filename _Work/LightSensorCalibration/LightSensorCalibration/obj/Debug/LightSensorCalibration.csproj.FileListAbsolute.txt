@@ -217,3 +217,5 @@ C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\
 C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\LightSensorCalibration.csproj.CopyComplete
 C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\ExtraInfoWindow.g.cs
 C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\ExtraInfoWindow.baml
+C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\ExtraInfoWindow.g.cs
+C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\ExtraInfoWindow.baml

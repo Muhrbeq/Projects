@@ -51,7 +51,8 @@ namespace LightSensorCalibration
 
         private void btn_ExportData_Click(object sender, RoutedEventArgs e)
         {
-
+            txb_CalibrationLux.Text = "10000";
+            txb_ReferenceLux.Text = "15000";
         }
 
         private void btn_SetLightLevel_Click(object sender, RoutedEventArgs e)
@@ -90,6 +91,11 @@ namespace LightSensorCalibration
             ExtraInfoWindow eW = new ExtraInfoWindow(ReferenceSensor, CalibrationSensor, MCU, PSU);
 
             eW.ShowDialog();
+        }
+
+        private void btn_SaveLightLevel_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
