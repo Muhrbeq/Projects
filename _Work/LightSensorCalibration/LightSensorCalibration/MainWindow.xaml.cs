@@ -87,7 +87,7 @@ namespace LightSensorCalibration
 
         private void btn_ExtraInfo_Click(object sender, RoutedEventArgs e)
         {
-            ExtraInfoWindow eW = new ExtraInfoWindow(ReferenceSensor, CalibrationSensor, MCU, PSU);
+            ExtraInfoWindow eW = new ExtraInfoWindow(ref ReferenceSensor, ref CalibrationSensor, ref MCU, ref PSU);
 
             eW.ShowDialog();
         }

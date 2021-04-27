@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
+using System.IO.Ports;
+using System.Windows;
 
 namespace LightSensorCalibration.Instruments
 {
@@ -66,8 +68,20 @@ namespace LightSensorCalibration.Instruments
 
         }
 
-        private bool Connect(string Comport)
+        private string GetModelName(string Comport)
         {
+            return String.Empty;
+        }
+
+        public bool Connect(string Comport)
+        {
+            string[] ports = SerialPort.GetPortNames();
+
+            foreach (string port in ports)
+            {
+                MessageBox.Show(port);
+            }
+
             return true;
         }
     }

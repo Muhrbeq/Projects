@@ -20,9 +20,13 @@ namespace LightSensorCalibration
     /// </summary>
     public partial class ExtraInfoWindow : Window
     {
-        public ExtraInfoWindow(LightSensor ReferenceLightSensor, LightSensor CalibrationLightSensor, Microcontroller MCU, PowerSupplyUnit PSU)
+        LightSensor refLight;
+
+        public ExtraInfoWindow(ref LightSensor ReferenceLightSensor, ref LightSensor CalibrationLightSensor, ref Microcontroller MCU, ref PowerSupplyUnit PSU)
         {
             InitializeComponent();
+
+            refLight = ReferenceLightSensor;
 
             lstBox_ComPorts.Items.Add("Hello");
             lstBox_Instruments.Items.Add("There");
@@ -48,6 +52,7 @@ namespace LightSensorCalibration
 
         private void btn_ConnectInstrumentToPort_Click(object sender, RoutedEventArgs e)
         {
+            refLight.Connect("2");
             txbl_ConnectedInstruments.Text += "LightSensor Connected to Com 5" + Environment.NewLine ;
         }
     }
