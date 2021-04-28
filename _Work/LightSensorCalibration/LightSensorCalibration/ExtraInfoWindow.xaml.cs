@@ -52,7 +52,7 @@ namespace LightSensorCalibration
 
         private void btn_ConnectInstrumentToPort_Click(object sender, RoutedEventArgs e)
         {
-            refLight.Connect("2");
+            //refLight.Connect("2");
             txbl_ConnectedInstruments.Text += "LightSensor Connected to Com 5" + Environment.NewLine ;
         }
     }
