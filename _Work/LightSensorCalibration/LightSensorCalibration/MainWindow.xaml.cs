@@ -29,6 +29,38 @@ namespace LightSensorCalibration
         public MainWindow()
         {
             InitializeComponent();
+
+            //Try to connect to Reference Light sensor
+            switch (ReferenceSensor.ConnectSensor())
+            {
+                case ReturnLightSensorState.LIGHTSENSORRETURN_NOLIGHTSENSORFOUND:
+                    txb_InfoBox.Text += "Reference - No light sensor found" + Environment.NewLine;
+                    break;
+                case ReturnLightSensorState.LIGHTSENSORRETURN_SETSAMPLEFREQUENCYERROR:
+                    txb_InfoBox.Text += "Reference - Sample frequency couldn't be changed" + Environment.NewLine;
+                    break;
+
+                case ReturnLightSensorState.LIGHTSENSORRETURN_PASS:
+                    txb_InfoBox.Text += "Reference - Connected" + Environment.NewLine;
+                    break;
+            }
+
+            //Try to connect to Calibration Light sensor
+            switch (CalibrationSensor.ConnectSensor())
+            {
+                case ReturnLightSensorState.LIGHTSENSORRETURN_NOLIGHTSENSORFOUND:
+                    txb_InfoBox.Text += "Calibration - No light sensor found" + Environment.NewLine;
+                    break;
+                case ReturnLightSensorState.LIGHTSENSORRETURN_SETSAMPLEFREQUENCYERROR:
+                    txb_InfoBox.Text += "Calibration - Sample frequency couldn't be changed" + Environment.NewLine;
+                    break;
+
+                case ReturnLightSensorState.LIGHTSENSORRETURN_PASS:
+                    txb_InfoBox.Text += "Calibration - Connected" + Environment.NewLine;
+                    break;
+            }
+
+            //Try to connect to Power supply
         }
 
         private void btn_CloseApplication_Click(object sender, RoutedEventArgs e)
