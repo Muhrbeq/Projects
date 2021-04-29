@@ -1,0 +1,154 @@
+C:\GITHUB\LightboxController_V2\Modules\VisaFunctions\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\GITHUB\LightboxController_V2\Modules\VisaFunctions\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\GITHUB\LightboxController_V2\Modules\VisaFunctions\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\GITHUB\LightboxController_V2\Modules\VisaFunctions\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\GITHUB\LightboxController_V2\Modules\VisaFunctions\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\GITHUB\LightboxController_V2\Modules\VisaFunctions\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\GITHUB\LightboxController_V2\Modules\VisaFunctions\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Work\VEML7700_LUX_Sensor_Test\Windows_Apps\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Work\VEML7700_LUX_Sensor_Test\Windows_Apps\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Work\VEML7700_LUX_Sensor_Test\Windows_Apps\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Work\VEML7700_LUX_Sensor_Test\Windows_Apps\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Work\VEML7700_LUX_Sensor_Test\Windows_Apps\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Work\VEML7700_LUX_Sensor_Test\Windows_Apps\VisaFunctions\obj\Debug\VisaFunctions.pdb
+P:\Other\MIKA\Svetlana_Prototype\VisaFunctions\bin\Debug\VisaFunctions.dll
+P:\Other\MIKA\Svetlana_Prototype\VisaFunctions\bin\Debug\VisaFunctions.pdb
+P:\Other\MIKA\Svetlana_Prototype\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+P:\Other\MIKA\Svetlana_Prototype\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+P:\Other\MIKA\Svetlana_Prototype\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+P:\Other\MIKA\Svetlana_Prototype\VisaFunctions\obj\Debug\VisaFunctions.dll
+P:\Other\MIKA\Svetlana_Prototype\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\VisaFunctions\obj\Debug\VisaFunctions.pdb
+G:\Prototyping\Other\RAMU\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.dll
+G:\Prototyping\Other\RAMU\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.pdb
+G:\Prototyping\Other\RAMU\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+G:\Prototyping\Other\RAMU\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+G:\Prototyping\Other\RAMU\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+G:\Prototyping\Other\RAMU\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.dll
+G:\Prototyping\Other\RAMU\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V2\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V2\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V2\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V2\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V2\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V2\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V2\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Exeger\GlowControl\GlowControl_V3_WithPID\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Exeger\GlowControl\GlowControl_V3_WithPID\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Exeger\GlowControl\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Exeger\GlowControl\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Exeger\GlowControl\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Exeger\GlowControl\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Exeger\GlowControl\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.pdb
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.dll
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.pdb
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.dll
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.pdb
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.dll
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.pdb
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.dll
+G:\Prototyping\Other\RAMU\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl_V3_WithPID_test_0924\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Visual Studio\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.pdb
+D:\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+D:\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+D:\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+D:\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.dll
+D:\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.pdb
+D:\GlowControl\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.dll
+D:\GlowControl\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.pdb
+D:\GlowControl\GlowControl\VisaFunctions\bin\Debug\Ivi.Visa.Interop.dll
+D:\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CopyComplete
+D:\GlowControl\GlowControl\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.dll
+D:\GlowControl\GlowControl\GlowControl\VisaFunctions\bin\Debug\VisaFunctions.pdb
+D:\GlowControl\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+D:\GlowControl\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+D:\GlowControl\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+D:\GlowControl\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.dll
+D:\GlowControl\GlowControl\GlowControl\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\WorkFromHome\2020-05-26\2020-05-26\SimpleLB\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\WorkFromHome\2020-05-26\2020-05-26\SimpleLB\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\WorkFromHome\2020-05-26\2020-05-26\SimpleLB\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\WorkFromHome\2020-05-26\2020-05-26\SimpleLB\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\WorkFromHome\2020-05-26\2020-05-26\SimpleLB\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\WorkFromHome\2020-05-26\2020-05-26\SimpleLB\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\WorkFromHome\2020-05-26\2020-05-26\SimpleLB\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-06-09\References\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-06-09\References\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-06-09\References\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-06-09\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-06-09\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.CopyComplete
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-06-09\References\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-06-09\References\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-07-06\QA_LightBoxController-master\Program\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-07-06\QA_LightBoxController-master\Program\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-07-06\QA_LightBoxController-master\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-07-06\QA_LightBoxController-master\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-07-06\QA_LightBoxController-master\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.CopyComplete
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-07-06\QA_LightBoxController-master\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmu\OneDrive\Documents\WorkFolder\Corona\2020-07-06\QA_LightBoxController-master\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\admin\Desktop\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\admin\Desktop\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\admin\Desktop\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\admin\Desktop\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\admin\Desktop\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Desktop\Work\Local\QA_LightBoxController\Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\C#_Program\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\C#_Program\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\C#_Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\C#_Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\C#_Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\C#_Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\QA_LightBoxController\C#_Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\ashish.kumarbhalla\Desktop\C#_Program\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\ashish.kumarbhalla\Desktop\C#_Program\QA_LightBoxController\References\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\ashish.kumarbhalla\Desktop\C#_Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\ashish.kumarbhalla\Desktop\C#_Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\ashish.kumarbhalla\Desktop\C#_Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
+C:\Users\ashish.kumarbhalla\Desktop\C#_Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\ashish.kumarbhalla\Desktop\C#_Program\QA_LightBoxController\References\VisaFunctions\obj\Debug\VisaFunctions.pdb

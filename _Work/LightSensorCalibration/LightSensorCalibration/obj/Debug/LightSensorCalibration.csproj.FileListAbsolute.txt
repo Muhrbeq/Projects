@@ -219,3 +219,11 @@ C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\
 C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\ExtraInfoWindow.baml
 C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\ExtraInfoWindow.g.cs
 C:\Users\rasmu\OneDrive\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\obj\Debug\ExtraInfoWindow.baml
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\FTD2XX_NET.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\VisaFunctions.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\LightSensorCalibration\bin\Debug\VisaFunctions.pdb

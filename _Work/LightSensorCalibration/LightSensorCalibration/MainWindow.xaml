@@ -48,8 +48,8 @@
 
                 <LinearGradientBrush>
 
-                    <GradientStop Color="#0F0F2F" Offset="0.0"/>
-                    <GradientStop Color="#1f033f" Offset="1.0"/>
+                    <GradientStop Color="#1f033f" Offset="0.0"/>
+                    <GradientStop Color="#0F0F2F" Offset="1.0"/>
 
                 </LinearGradientBrush>
                 
@@ -120,10 +120,11 @@
                     Foreground="Transparent"
                     BorderBrush="Transparent"
                     BorderThickness="0"
-  
+                    MouseRightButtonDown="btn_ConnectReferenceLightSensor_MouseRightButtonDown"
                     MouseDoubleClick="btn_ConnectReferenceLightSensor_MouseDoubleClick"
                     Margin="20, 0, 0, 0">
                     <iconPacks:PackIconMaterial Width="25"
+                                       x:Name="icon_btnConnectReferenceSensor"
                                        Height="25"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
@@ -156,10 +157,12 @@
                     BorderBrush="Transparent"
                     BorderThickness="0"
                     Margin="16, 0, 0, 0"
+                    MouseRightButtonDown="btn_ConnectCalibrationLightSensor_MouseRightButtonDown"
                     MouseDoubleClick="btn_ConnectCalibrationLightSensor_MouseDoubleClick"
                         >
                     
                     <iconPacks:PackIconMaterial Width="25"
+                                       x:Name="icon_btnConnectCalibrationSensor"
                                        Height="25"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
@@ -194,9 +197,11 @@
                     BorderThickness="0"
                     Margin="103, 0, 0, 0"
                     MouseDoubleClick="btn_ConnectPowerSupply_MouseDoubleClick"
-                    >
+                    MouseRightButtonDown="btn_ConnectPowerSupply_MouseRightButtonDown"
+                        >
 
                     <iconPacks:PackIconMaterial Width="25"
+                                       x:Name="icon_btnConnectPSU"
                                        Height="25"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"

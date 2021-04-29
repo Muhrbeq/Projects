@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VisaFunctions;
 
 namespace LightSensorCalibration.Instruments
 {
     public class PowerSupplyUnit
     {
-        private string _ID;
+        private string _ID = "";
         public string ID
         {
             get { return _ID; }
-            set { _ID = value; }
         }
 
         private bool _IsConnected;
@@ -22,7 +23,6 @@ namespace LightSensorCalibration.Instruments
             {
                 return _IsConnected;
             }
-            set { _IsConnected = value; }
         }
 
         private double _OutputCurrent;
@@ -70,6 +70,13 @@ namespace LightSensorCalibration.Instruments
             set { _MinimumCurrent = value; }
         }
 
+        private double _MaxVoltage = 0.0d;
+
+        public PowerSupplyUnit(double maxVolt)
+        {
+            _MaxVoltage = maxVolt;
+        }
+
         public void SetMinimumVoltage(double minVoltage)
         {
             MinimumVoltage = minVoltage;
@@ -90,19 +97,94 @@ namespace LightSensorCalibration.Instruments
             MaximumCurrent = maxCurrent;
         }
 
-        public bool Connect()
+        private double LimitCurrent(double Current)
         {
-            return true;
+            if (Current < MinimumCurrent)
+                return MinimumCurrent;
+            else if (Current > MaximumCurrent)
+                return MaximumCurrent;
+            return Current;
         }
 
-        public void SetOutputCurrent(double outputCurrent)
+        private double LimitVoltage(double Voltage)
         {
-            OutputCurrent = outputCurrent;
+            if (Voltage < MinimumVoltage)
+                return MinimumVoltage;
+            else if (Voltage > MaximumVoltage)
+                return MaximumVoltage;
+            return Voltage;
         }
 
-        public void SetOutputVoltage(double outputVoltage)
+        public void SetupStandardPSU()
         {
-            OutputVoltage = outputVoltage;
+            SetMaximumCurrent(7.0);
+            SetMinimumCurrent(0.0);
+            SetMaximumVoltage(_MaxVoltage);
+            SetMinimumVoltage(0.0);
         }
+
+        public PSU_ReturnCodes SetOutputCurrent(double outputCurrent)
+        {
+            string ErrorInfo = "";
+            string CMD = "CURR " + LimitCurrent(outputCurrent).ToString("N5", System.Globalization.CultureInfo.InvariantCulture);
+
+            if (VisaIO.Send_Command(_ID, CMD, ref ErrorInfo) == true)
+            {
+                return PSU_ReturnCodes.PSU_PASSED;
+            }
+            return PSU_ReturnCodes.PSU_SETCURRENTFAIL;
+        }
+
+        public PSU_ReturnCodes SetOutputVoltage(double outputVoltage)
+        {
+            string ErrorInfo = "";
+            string CMD = "VOLT " + LimitVoltage(outputVoltage).ToString("N5", System.Globalization.CultureInfo.InvariantCulture);
+
+            if (VisaIO.Send_Command(_ID, CMD, ref ErrorInfo) == true)
+            {
+                return PSU_ReturnCodes.PSU_PASSED;
+            }
+            return PSU_ReturnCodes.PSU_SETVOLTAGEFAIL;
+        }
+
+        private ObservableCollection<InstrumentInfo> SearchForVISADevices()
+        {
+            string ErrorResult = "";
+            return VisaIO.SearchForDevices(ref ErrorResult);
+        }
+
+        public PSU_ReturnCodes Connect()
+        {
+            // Search for Visa devices
+            ObservableCollection<InstrumentInfo> instruments = SearchForVISADevices();
+
+            //Loop though devices
+            foreach (InstrumentInfo instrument in instruments)
+            {
+                // Check if device model is the correct
+                if(instrument.Device_Model == "9205")
+                {
+                    //Check if the device responed
+                    if(instrument.DidRespond == true)
+                    {
+                        //Assign ID
+                        _ID = instrument.ConnectionID;
+                        return PSU_ReturnCodes.PSU_PASSED;
+                    }
+                }
+            }
+
+            return PSU_ReturnCodes.PSU_COULDNTFINDDEVICE;
+        }
+
+
+    }
+
+    public enum PSU_ReturnCodes
+    {
+        PSU_PASSED,
+        PSU_COULDNTFINDDEVICE,
+        PSU_SETVOLTAGEFAIL,
+        PSU_SETCURRENTFAIL,
     }
 }

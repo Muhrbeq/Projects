@@ -42,6 +42,7 @@ namespace LightSensorCalibration
 
                 case ReturnLightSensorState.LIGHTSENSORRETURN_PASS:
                     txb_InfoBox.Text += "Reference - Connected" + Environment.NewLine;
+                    icon_btnConnectReferenceSensor.Foreground = Brushes.Green;
                     break;
             }
 
@@ -57,6 +58,7 @@ namespace LightSensorCalibration
 
                 case ReturnLightSensorState.LIGHTSENSORRETURN_PASS:
                     txb_InfoBox.Text += "Calibration - Connected" + Environment.NewLine;
+                    icon_btnConnectCalibrationSensor.Foreground = Brushes.Green;
                     break;
             }
 
@@ -126,6 +128,21 @@ namespace LightSensorCalibration
         }
 
         private void btn_SaveLightLevel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_ConnectReferenceLightSensor_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void btn_ConnectCalibrationLightSensor_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void btn_ConnectPowerSupply_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
 
         }

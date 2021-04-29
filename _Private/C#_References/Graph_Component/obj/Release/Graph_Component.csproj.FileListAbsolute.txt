@@ -1,0 +1,15 @@
+C:\Work\MCstudio\Code\Graph_Class\Graph_Component\bin\Release\Graph_Component.dll
+C:\Work\MCstudio\Code\Graph_Class\Graph_Component\bin\Release\Graph_Component.pdb
+C:\Work\MCstudio\Code\Graph_Class\Graph_Component\bin\Release\ZedGraph.dll
+C:\Work\MCstudio\Code\Graph_Class\Graph_Component\obj\Release\Graph_Component.Graph_Comp.resources
+C:\Work\MCstudio\Code\Graph_Class\Graph_Component\obj\Release\Graph_Component.csproj.GenerateResource.Cache
+C:\Work\MCstudio\Code\Graph_Class\Graph_Component\obj\Release\Graph_Component.dll
+C:\Work\MCstudio\Code\Graph_Class\Graph_Component\obj\Release\Graph_Component.pdb
+C:\Work\MCstudio\Code\LightBox_Controller_V2\Graph_Component\bin\Release\Graph_Component.dll
+C:\Work\MCstudio\Code\LightBox_Controller_V2\Graph_Component\bin\Release\Graph_Component.pdb
+C:\Work\MCstudio\Code\LightBox_Controller_V2\Graph_Component\bin\Release\ZedGraph.dll
+C:\Work\MCstudio\Code\LightBox_Controller_V2\Graph_Component\obj\Release\Graph_Component.Graph_Comp.resources
+C:\Work\MCstudio\Code\LightBox_Controller_V2\Graph_Component\obj\Release\Graph_Component.csproj.GenerateResource.Cache
+C:\Work\MCstudio\Code\LightBox_Controller_V2\Graph_Component\obj\Release\Graph_Component.dll
+C:\Work\MCstudio\Code\LightBox_Controller_V2\Graph_Component\obj\Release\Graph_Component.pdb
+C:\Work\MCstudio\Code\LightBox_Controller_V2\Graph_Component\obj\Release\Graph_Component.csprojResolveAssemblyReference.cache
