@@ -11,6 +11,14 @@ namespace LightSensorCalibration.Instruments
     {
         public string ID;
         public bool IsConnected;
+        
+        /// <summary>
+        /// Should return some state
+        /// </summary>
+        public void CheckForDevices()
+        {
+
+        }
 
         public void RequestData()
         {
