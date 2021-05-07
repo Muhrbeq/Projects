@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExegerHeadphoneLightSimulator", "ExegerHeadphoneLightSimulator.csproj", "{F39B997A-F5B1-485D-8E63-5A3A48D3FCAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F39B997A-F5B1-485D-8E63-5A3A48D3FCAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F39B997A-F5B1-485D-8E63-5A3A48D3FCAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F39B997A-F5B1-485D-8E63-5A3A48D3FCAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F39B997A-F5B1-485D-8E63-5A3A48D3FCAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D69CFE7E-9F0F-4CDB-AF91-46B745FBF974}
+	EndGlobalSection
+EndGlobal
