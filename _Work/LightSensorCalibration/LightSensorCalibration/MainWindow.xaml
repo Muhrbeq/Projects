@@ -120,9 +120,7 @@
                     Foreground="Transparent"
                     BorderBrush="Transparent"
                     BorderThickness="0"
-                    MouseRightButtonDown="btn_ConnectReferenceLightSensor_MouseRightButtonDown"
-                    MouseDoubleClick="btn_ConnectReferenceLightSensor_MouseDoubleClick"
-                    Margin="20, 0, 0, 0">
+                    MouseRightButtonDown="btn_ConnectReferenceLightSensor_MouseRightButtonDown"                    Margin="20, 0, 0, 0">
                     <iconPacks:PackIconMaterial Width="25"
                                        x:Name="icon_btnConnectReferenceSensor"
                                        Height="25"
@@ -157,9 +155,7 @@
                     BorderBrush="Transparent"
                     BorderThickness="0"
                     Margin="16, 0, 0, 0"
-                    MouseRightButtonDown="btn_ConnectCalibrationLightSensor_MouseRightButtonDown"
-                    MouseDoubleClick="btn_ConnectCalibrationLightSensor_MouseDoubleClick"
-                        >
+                    MouseRightButtonDown="btn_ConnectCalibrationLightSensor_MouseRightButtonDown">
                     
                     <iconPacks:PackIconMaterial Width="25"
                                        x:Name="icon_btnConnectCalibrationSensor"
@@ -196,7 +192,6 @@
                     BorderBrush="Transparent"
                     BorderThickness="0"
                     Margin="103, 0, 0, 0"
-                    MouseDoubleClick="btn_ConnectPowerSupply_MouseDoubleClick"
                     MouseRightButtonDown="btn_ConnectPowerSupply_MouseRightButtonDown"
                         >
 
@@ -234,8 +229,7 @@
                     Foreground="Transparent"
                     BorderBrush="Transparent"
                     BorderThickness="0"
-                    Margin="103, 0, 0, 0"
-                    MouseDoubleClick="btn_ConnectMicrocontroller_MouseDoubleClick">
+                    Margin="103, 0, 0, 0">
 
                     <iconPacks:PackIconMaterial Width="25"
                                        Height="25"
@@ -310,7 +304,7 @@
                            FontFamily="Helvetica"
                            FontSize="24"/>
 
-                    <TextBlock Text="{Binding ReferenceLux}"
+                    <TextBlock Text="{Binding CalibrationLux}"
                            x:Name="txb_CalibrationLux"
                            Foreground="Yellow"
                            FontWeight="Bold"
@@ -378,6 +372,7 @@
                        HorizontalAlignment="Center"/>
 
             <TextBox x:Name="tbx_SetLightLevel"
+                     Text="{Binding SetLightLevel}"
                      Foreground="White"
                      Background="Transparent"
                      BorderThickness="2"
@@ -409,7 +404,8 @@
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
                                        Kind="Lamp" 
-                                       Foreground="Yellow"
+                                       x:Name="icon_BtnSetLightLevel"
+                                       Foreground="Black"
                                        Margin="0, 0, 0, 0"/>
 
                 </Button>
@@ -424,6 +420,7 @@
                     BorderThickness="0"
                     Click="btn_LockLightLevel_Click">
                     <iconPacks:PackIconMaterial Width="45"
+                                       x:Name="icon_BtnLockLightLevel"
                                        Height="45"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"

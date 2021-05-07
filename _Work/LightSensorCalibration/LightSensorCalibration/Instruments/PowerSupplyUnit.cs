@@ -117,10 +117,15 @@ namespace LightSensorCalibration.Instruments
 
         public void SetupStandardPSU()
         {
-            SetMaximumCurrent(7.0);
-            SetMinimumCurrent(0.0);
-            SetMaximumVoltage(_MaxVoltage);
-            SetMinimumVoltage(0.0);
+            SetupStandardPSU(_MaxVoltage, 0.0, 7.0, 0.0);
+        }
+
+        public void SetupStandardPSU(double maxVoltage, double minVoltage, double maxCurrent, double minCurrent)
+        {
+            SetMaximumCurrent(maxCurrent);
+            SetMinimumCurrent(minCurrent);
+            SetMaximumVoltage(maxVoltage);
+            SetMinimumVoltage(minVoltage);
         }
 
         public PSU_ReturnCodes SetOutputCurrent(double outputCurrent)
@@ -145,6 +150,36 @@ namespace LightSensorCalibration.Instruments
                 return PSU_ReturnCodes.PSU_PASSED;
             }
             return PSU_ReturnCodes.PSU_SETVOLTAGEFAIL;
+        }
+
+        /// <summary>
+        /// Enable or disable PSU
+        /// </summary>
+        /// <param name="enable"></param>
+        /// <returns></returns>
+        public PSU_ReturnCodes SetEnable(bool enable)
+        {
+            string ErrorInfo = "";
+            string CMD = enable ? "OUTP 1" : "OUTP 0";
+
+            // Send command
+            if (VisaIO.Send_Command(_ID, CMD, ref ErrorInfo) == true)
+            {
+                //Everything passed
+                return PSU_ReturnCodes.PSU_PASSED;
+            }
+            return PSU_ReturnCodes.PSU_SETENABLEFAIL;
+        }
+
+        public PSU_ReturnCodes Reset()
+        {
+            string ErrorInfo = "";
+
+            if (VisaIO.Send_Command(_ID, "*RST", ref ErrorInfo) == true)
+            {
+                return PSU_ReturnCodes.PSU_PASSED;
+            }
+            return PSU_ReturnCodes.PSU_RESETFAIL;
         }
 
         private ObservableCollection<InstrumentInfo> SearchForVISADevices()
@@ -186,5 +221,7 @@ namespace LightSensorCalibration.Instruments
         PSU_COULDNTFINDDEVICE,
         PSU_SETVOLTAGEFAIL,
         PSU_SETCURRENTFAIL,
+        PSU_SETENABLEFAIL,
+        PSU_RESETFAIL,
     }
 }

@@ -30,6 +30,11 @@ namespace LightSensorCalibration.Instruments
             return true;
         }
 
+        public bool ConnectToPort(string comport)
+        {
+            return true;
+        }
+
         public DispatcherTimer MicrocontrollerTimer = new DispatcherTimer();
     }
 }

@@ -1,0 +1,5 @@
+_I2C.c:16:9:I2C_WriteRegister	24	static
+_I2C.c:35:10:I2C_ReadRegister	24	static
+_I2C.c:62:9:I2C_Write	16	static
+_I2C.c:72:9:I2C_ReadWrite	16	static
+_I2C.c:82:10:I2C_ReadRead	16	static
