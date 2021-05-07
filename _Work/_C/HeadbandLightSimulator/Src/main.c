@@ -17,7 +17,6 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
-
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "i2c.h"
@@ -106,18 +105,21 @@ int main(void)
   MX_I2C4_Init();
   /* USER CODE BEGIN 2 */
 
+  TRACE("[Starting...]\r\n");
 
 
-OPT3001_InitDevice(&opt1, &hi2c1, 0b1000111, 0b1000111);
-OPT3001_InitDevice(&opt2, &hi2c1, 0b1000110, 0b1000110);
-OPT3001_InitDevice(&opt3, &hi2c1, 0b1000100, 0b1000100);
-OPT3001_InitDevice(&opt4, &hi2c1, 0b1000101, 0b1000101);
-OPT3001_InitDevice(&opt5, &hi2c4, 0b1000100, 0b1000100);
-OPT3001_InitDevice(&opt6, &hi2c4, 0b1000111 , 0b1000111);
-OPT3001_InitDevice(&opt7, &hi2c3, 0b1000111, 0b1000111);
-OPT3001_InitDevice(&opt8, &hi2c3, 0b1000110, 0b1000110);
-OPT3001_InitDevice(&opt9, &hi2c3, 0b1000100, 0b1000100);
-OPT3001_InitDevice(&opt10, &hi2c3, 0b1000101, 0b1000101);
+OPT3001_InitDevice(&opt1, &hi2c1, 0b1000111<<1, 0b1000111<<1);
+OPT3001_InitDevice(&opt2, &hi2c1, 0b1000110<<1, 0b1000110<<1);
+OPT3001_InitDevice(&opt3, &hi2c1, 0b1000100<<1, 0b1000100<<1);
+OPT3001_InitDevice(&opt4, &hi2c1, 0b1000101<<1, 0b1000101<<1);
+OPT3001_InitDevice(&opt5, &hi2c4, 0b1000100<<1, 0b1000100<<1);
+OPT3001_InitDevice(&opt6, &hi2c4, 0b1000111<<1 , 0b1000111<<1);
+OPT3001_InitDevice(&opt7, &hi2c3, 0b1000111<<1, 0b1000111<<1);
+OPT3001_InitDevice(&opt8, &hi2c3, 0b1000110<<1, 0b1000110<<1);
+OPT3001_InitDevice(&opt9, &hi2c3, 0b1000100<<1, 0b1000100<<1);
+OPT3001_InitDevice(&opt10, &hi2c3, 0b1000101<<1, 0b1000101<<1);
+
+//OPT3001_SetState(&opt1, OPT3001_INITIATE);
 
   /* USER CODE END 2 */
 
@@ -125,69 +127,84 @@ OPT3001_InitDevice(&opt10, &hi2c3, 0b1000101, 0b1000101);
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+
+	 OPT3001_StateMachine(&opt1);
+	 OPT3001_StateMachine(&opt2);
+	 OPT3001_StateMachine(&opt3);
+	 OPT3001_StateMachine(&opt4);
+	 OPT3001_StateMachine(&opt5);
+	 OPT3001_StateMachine(&opt6);
+	 OPT3001_StateMachine(&opt7);
+	 OPT3001_StateMachine(&opt8);
+	 OPT3001_StateMachine(&opt9);
+	 OPT3001_StateMachine(&opt10);
+
+
+	 //
+	 if(opt1.tState == OPT3001_DONE)
+	 {
+	 	printf("OPT1:%lf\n", opt1.currentLux);
+	 	opt1.sStatus = OPT3001_INITIATE;
+	 	HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+	 	HAL_Delay(20);
+	 }
+
+	 if(opt2.tState == OPT3001_DONE)
+	 {
+	 	printf("OPT2:%lf\n", opt2.currentLux);
+	 	opt2.sStatus = OPT3001_INITIATE;
+	 	HAL_Delay(20);
+	 }
+	 if(opt3.tState == OPT3001_DONE)
+	 {
+	 	printf("OPT3:%lf\n", opt3.currentLux);
+	 	opt3.sStatus = OPT3001_INITIATE;
+	 	HAL_Delay(20);
+	 }
+	 if(opt4.tState == OPT3001_DONE)
+	 {
+	 	printf("OPT4:%lf\n", opt4.currentLux);
+	 	opt4.sStatus = OPT3001_INITIATE;
+	 	HAL_Delay(20);
+	 }
+	 if(opt5.tState == OPT3001_DONE)
+	 {
+	 	printf("OPT5:%lf\n", opt5.currentLux);
+	 	opt5.sStatus = OPT3001_INITIATE;
+	 	HAL_Delay(20);
+	 }
+	 if(opt6.tState == OPT3001_DONE)
+	 {
+	 	printf("OPT6:%lf\n", opt6.currentLux);
+	 	opt6.sStatus = OPT3001_INITIATE;
+	 	HAL_Delay(20);
+	 }
+	 if(opt7.tState == OPT3001_DONE)
+	 {
+	 	printf("OPT7:%lf\n", opt7.currentLux);
+	 	opt7.sStatus = OPT3001_INITIATE;
+	 	HAL_Delay(20);
+	 }
+	 if(opt8.tState == OPT3001_DONE)
+	 {
+	 	printf("OPT8:%lf\n", opt8.currentLux);
+	 	opt8.sStatus = OPT3001_INITIATE;
+	 	HAL_Delay(20);
+	 }
+	 if(opt9.tState == OPT3001_DONE)
+	 {
+	 	printf("OPT9:%lf\n", opt9.currentLux);
+	 	opt9.sStatus = OPT3001_INITIATE;
+	 	HAL_Delay(20);
+	 }
+	 if(opt10.tState == OPT3001_DONE)
+	 {
+	 	printf("OPT10:%lf\n", opt10.currentLux);
+	 	opt10.sStatus = OPT3001_INITIATE;
+	 	HAL_Delay(20);
+	 }
     /* USER CODE END WHILE */
-OPT3001_StateMachine(&opt1);
-OPT3001_StateMachine(&opt2);
-OPT3001_StateMachine(&opt3);
-OPT3001_StateMachine(&opt4);
-OPT3001_StateMachine(&opt5);
-OPT3001_StateMachine(&opt6);
-OPT3001_StateMachine(&opt7);
-OPT3001_StateMachine(&opt8);
-OPT3001_StateMachine(&opt9);
-OPT3001_StateMachine(&opt10);
-
-if(opt1.tState == OPT3001_DONE)
-{
-	printf("OPT1:%lf\n", opt1.currentLux);
-	opt1.sStatus = OPT3001_INITIATE;
-}
-if(opt2.tState == OPT3001_DONE)
-{
-	printf("OPT2:%lf\n", opt2.currentLux);
-	opt2.sStatus = OPT3001_INITIATE;
-}
-if(opt3.tState == OPT3001_DONE)
-{
-	printf("OPT3:%lf\n", opt3.currentLux);
-	opt3.sStatus = OPT3001_INITIATE;
-}
-if(opt4.tState == OPT3001_DONE)
-{
-	printf("OPT4:%lf\n", opt4.currentLux);
-	opt4.sStatus = OPT3001_INITIATE;
-}
-if(opt5.tState == OPT3001_DONE)
-{
-	printf("OPT5:%lf\n", opt5.currentLux);
-	opt5.sStatus = OPT3001_INITIATE;
-}
-if(opt6.tState == OPT3001_DONE)
-{
-	printf("OPT6:%lf\n", opt6.currentLux);
-	opt6.sStatus = OPT3001_INITIATE;
-}
-if(opt7.tState == OPT3001_DONE)
-{
-	printf("OPT7:%lf\n", opt7.currentLux);
-	opt7.sStatus = OPT3001_INITIATE;
-}
-if(opt8.tState == OPT3001_DONE)
-{
-	printf("OPT8:%lf\n", opt8.currentLux);
-	opt8.sStatus = OPT3001_INITIATE;
-}
-if(opt9.tState == OPT3001_DONE)
-{
-	printf("OPT9:%lf\n", opt9.currentLux);
-	opt9.sStatus = OPT3001_INITIATE;
-}
-if(opt10.tState == OPT3001_DONE)
-{
-	printf("OPT10:%lf\n", opt10.currentLux);
-	opt10.sStatus = OPT3001_INITIATE;
-}
-
 
     /* USER CODE BEGIN 3 */
   }
@@ -204,7 +221,8 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
@@ -215,7 +233,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -238,7 +256,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  /** Configure the main internal regulator output voltage 
+  /** Configure the main internal regulator output voltage
   */
   if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
   {
@@ -271,7 +289,7 @@ void Error_Handler(void)
   * @retval None
   */
 void assert_failed(uint8_t *file, uint32_t line)
-{ 
+{
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */

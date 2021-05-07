@@ -92,6 +92,7 @@ namespace ExegerHeadphoneLightSimulator
 
                 if (STM32_Com.PortConnected)
                 {
+                    isConnected = true;
                     return isConnected;
                 }
             }
@@ -127,7 +128,7 @@ namespace ExegerHeadphoneLightSimulator
 
             endPos = STM32_RxBuffer.LastIndexOf('\n', STM32_RxBuffer.Length - 1);
 
-            if (endPos == -1)
+            if (endPos < 0)
             {
                 return;
             }
@@ -142,60 +143,64 @@ namespace ExegerHeadphoneLightSimulator
 
                 try
                 {
-                    if(parts[0] == "OPT1")
+                    double outPar;
+                    double.TryParse(parts[1], System.Globalization.NumberStyles.Any, CultureInfo.InvariantCulture, out outPar);
+                    if (parts[0] == "OPT1")
                     {
-                        Gui.OPT1_Light = Double.Parse(parts[1]);
-                        Gui.OPT1_Percent = Gui.ILT_Light / Double.Parse(parts[1]);
+                        
+                        
+                        Gui.OPT1_Light = outPar;
+                        Gui.OPT1_Percent = outPar / Gui.ILT_Light ;
                     }
                     else if (parts[0] == "OPT2")
                     {
-                        Gui.OPT2_Light = Double.Parse(parts[1]);
-                        Gui.OPT2_Percent = Gui.ILT_Light / Double.Parse(parts[1]);
+                        Gui.OPT2_Light = outPar;
+                        Gui.OPT2_Percent = outPar / Gui.ILT_Light;
                     }
                     else if (parts[0] == "OPT3")
                     {
-                        Gui.OPT3_Light = Double.Parse(parts[1]);
-                        Gui.OPT3_Percent = Gui.ILT_Light / Double.Parse(parts[1]);
+                        Gui.OPT3_Light = outPar;
+                        Gui.OPT3_Percent = outPar / Gui.ILT_Light;
                     }
                     else if (parts[0] == "OPT4")
                     {
-                        Gui.OPT4_Light = Double.Parse(parts[1]);
-                        Gui.OPT4_Percent = Gui.ILT_Light / Double.Parse(parts[1]);
+                        Gui.OPT4_Light = outPar;
+                        Gui.OPT4_Percent = outPar / Gui.ILT_Light;
                     }
                     else if (parts[0] == "OPT5")
                     {
-                        Gui.OPT5_Light = Double.Parse(parts[1]);
-                        Gui.OPT5_Percent = Gui.ILT_Light / Double.Parse(parts[1]);
+                        Gui.OPT5_Light = outPar;
+                        Gui.OPT5_Percent = outPar / Gui.ILT_Light;
                     }
                     else if (parts[0] == "OPT6")
                     {
-                        Gui.OPT6_Light = Double.Parse(parts[1]);
-                        Gui.OPT6_Percent = Gui.ILT_Light / Double.Parse(parts[1]);
+                        Gui.OPT6_Light = outPar;
+                        Gui.OPT6_Percent = outPar / Gui.ILT_Light;
                     }
                     else if (parts[0] == "OPT7")
                     {
-                        Gui.OPT7_Light = Double.Parse(parts[1]);
-                        Gui.OPT7_Percent = Gui.ILT_Light / Double.Parse(parts[1]);
+                        Gui.OPT7_Light = outPar;
+                        Gui.OPT7_Percent = outPar / Gui.ILT_Light;
                     }
                     else if (parts[0] == "OPT8")
                     {
-                        Gui.OPT8_Light = Double.Parse(parts[1]);
-                        Gui.OPT8_Percent = Gui.ILT_Light / Double.Parse(parts[1]);
+                        Gui.OPT8_Light = outPar;
+                        Gui.OPT8_Percent = outPar / Gui.ILT_Light;
                     }
                     else if (parts[0] == "OPT9")
                     {
-                        Gui.OPT9_Light = Double.Parse(parts[1]);
-                        Gui.OPT9_Percent = Gui.ILT_Light / Double.Parse(parts[1]);
+                        Gui.OPT9_Light = outPar;
+                        Gui.OPT9_Percent = outPar / Gui.ILT_Light;
                     }
                     else if (parts[0] == "OPT10")
                     {
-                        Gui.OPT10_Light = Double.Parse(parts[1]);
-                        Gui.OPT10_Percent = Gui.ILT_Light / Double.Parse(parts[1]);
+                        Gui.OPT10_Light = outPar;
+                        Gui.OPT10_Percent = outPar / Gui.ILT_Light;
                     }
                 }
                 catch
                 {
-                    throw new Exception();
+                    //throw new Exception();
                 }
             }
         }

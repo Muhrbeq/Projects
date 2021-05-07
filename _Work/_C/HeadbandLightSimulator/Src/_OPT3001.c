@@ -23,11 +23,12 @@ void OPT3001_SetState(OPT3001 *device, OPT3001_State oState)
 /* Init device with read/write addr and i2c channel */
 void OPT3001_InitDevice(OPT3001 *device, I2C_HandleTypeDef *hi2c, uint8_t devWriteAddr, uint8_t devReadAddr)
 {
-	device->hi2c = *hi2c;
+	device->hi2c = hi2c;
 	device->i2cWrite = devWriteAddr;
 	device->i2cRead = devReadAddr;
 	device->errorCounter = 0;
 	device->sStatus = SENSORSTATUS_FAIL;
+	device->tState = OPT3001_IDWRITE;
 }
 
 /* Send the initial commands */
@@ -90,7 +91,7 @@ static uint8_t OPT3001_RequestReading(OPT3001 *device)
 {
 	uint8_t id_reg = 0x00;
 
-	if(I2C_Write(device->hi2c, device->i2cWrite, &id_reg, 3) == HAL_OK)
+	if(I2C_Write(device->hi2c, device->i2cWrite, &id_reg, 1) == HAL_OK)
 	{
 		return HAL_OK;
 	}
@@ -101,7 +102,7 @@ static uint8_t OPT3001_RequestReading(OPT3001 *device)
 static uint8_t OPT3001_ReadingReadyWrite(OPT3001 *device)
 {
 	uint8_t id_reg = 0x01;
-	if(I2C_ReadWrite(device->hi2c, device->i2cWrite, &id_reg, 3) == HAL_OK)
+	if(I2C_ReadWrite(device->hi2c, device->i2cWrite, &id_reg, 1) == HAL_OK)
 	{
 		return HAL_OK;
 	}
@@ -128,7 +129,7 @@ static uint8_t OPT3001_ReadingReadyRead(OPT3001 *device)
 static uint8_t OPT3001_GetLuxWrite(OPT3001 *device)
 {
 	uint8_t id_reg = 0x00;
-	if(I2C_Write(device->hi2c, device->i2cWrite, &id_reg, 3) == HAL_OK)
+	if(I2C_Write(device->hi2c, device->i2cWrite, &id_reg, 1) == HAL_OK)
 	{
 		return HAL_OK;
 	}
@@ -159,7 +160,7 @@ void OPT3001_StateMachine(OPT3001 *device)
 	if(device->errorCounter > 100)
 	{
 		/* Error occur */
-		TRACE("[HDC1080] - FAILED\r\n");
+		TRACE("[OPT3001] - FAILED\r\n");
 		device->errorCounter = 0;
 		device->sStatus = SENSORSTATUS_FAIL;
 		OPT3001_SetState(device, OPT3001_ERROR);
@@ -177,6 +178,7 @@ void OPT3001_StateMachine(OPT3001 *device)
 		else
 		{
 			device->errorCounter++;
+			TRACE_DEBUG("[OPT3001] -  OPT3001_INITIATE ERROR\r\n");
 		}
 		break;
 	}
@@ -189,6 +191,7 @@ void OPT3001_StateMachine(OPT3001 *device)
 		}
 		else
 		{
+			TRACE_DEBUG("[OPT3001] -  OPT3001_IDWRITE ERROR\r\n");
 			device->errorCounter++;
 		}
 		break;
@@ -202,6 +205,7 @@ void OPT3001_StateMachine(OPT3001 *device)
 		}
 		else
 		{
+			TRACE_DEBUG("[OPT3001] -  OPT3001_IDREAD ERROR\r\n");
 			device->errorCounter++;
 		}
 		break;
@@ -215,6 +219,7 @@ void OPT3001_StateMachine(OPT3001 *device)
 		}
 		else
 		{
+			TRACE_DEBUG("[OPT3001] -  OPT3001_REQUESTREADING ERROR\r\n");
 			device->errorCounter++;
 		}
 		break;
@@ -228,6 +233,7 @@ void OPT3001_StateMachine(OPT3001 *device)
 		}
 		else
 		{
+			TRACE_DEBUG("[OPT3001] -  OPT3001_READINGREADYWRITE ERROR\r\n");
 			device->errorCounter++;
 		}
 		break;
@@ -241,6 +247,7 @@ void OPT3001_StateMachine(OPT3001 *device)
 		}
 		else
 		{
+			TRACE_DEBUG("[OPT3001] -  OPT3001_READINGREADYREAD ERROR\r\n");
 			device->errorCounter++;
 		}
 		break;
@@ -254,6 +261,7 @@ void OPT3001_StateMachine(OPT3001 *device)
 		}
 		else
 		{
+			TRACE_DEBUG("[OPT3001] -  OPT3001_GETLUXWRITE ERROR\r\n");
 			device->errorCounter++;
 		}
 		break;
@@ -267,6 +275,7 @@ void OPT3001_StateMachine(OPT3001 *device)
 		}
 		else
 		{
+			TRACE_DEBUG("[OPT3001] -  OPT3001_GETLUXREAD ERROR\r\n");
 			device->errorCounter++;
 		}
 		break;
@@ -289,7 +298,7 @@ void OPT3001_StateMachine(OPT3001 *device)
 		TRACE("[OPT3001] - Passed\r\n");
 		device->errorCounter = 0;
 		device->sStatus = SENSORSTATUS_PASS;
-		OPT3001_SetState(device, OPT3001_IDLE);
+		OPT3001_SetState(device, OPT3001_INITIATE);
 		break;
 	}
 	default:

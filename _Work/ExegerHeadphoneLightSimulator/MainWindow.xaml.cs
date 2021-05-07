@@ -48,11 +48,14 @@ namespace ExegerHeadphoneLightSimulator
 
             this.DataContext = Gui;
 
+            i2400.SetReference(ref Gui);
+            mcu.SetReference(ref Gui);
+
             //Specify COM port (Hardcoded)
-            if(i2400.ConnectToCOM("COM4"))
+            if (i2400.ConnectToCOM("COM5"))
             {
                 //Specify COM port (Hardcoded)
-                if(mcu.ConnectSTM32("COM5"))
+                if(mcu.ConnectSTM32("COM3"))
                 {
                     InitILT_Timer();
                     StartILT_Timer(100);

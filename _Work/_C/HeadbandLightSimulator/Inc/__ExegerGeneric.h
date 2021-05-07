@@ -23,11 +23,11 @@
 
 #define DEBUG_PRINT					printf
 
-#define DEBUG_MSG(...)     do{printf(__VA_ARGS__);}while(0);
+//#define DEBUG_MSG(...)     do{printf(__VA_ARGS__);}while(0);
 
-#define TRACE_DEBUG(...)	printf(__VA_ARGS__)
+#define TRACE_DEBUG(...)//	printf(__VA_ARGS__)
 //#define TRACE_DEBUG(...)
-#define TRACE(...)		printf(__VA_ARGS__)
+#define TRACE(...)		//printf(__VA_ARGS__)
 //#define TRACE(...)
 
 #define INFO_LOGG_ARRAY_SIZE		500

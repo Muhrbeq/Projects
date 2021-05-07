@@ -1,5 +1,7 @@
-__ExegerGeneric.c:202:5:_write	32	static
-__ExegerGeneric.c:222:6:dPrint	16	static
+stm32l4xx_ll_usart.h:3159:26:LL_USART_IsActiveFlag_TXE	16	static
+stm32l4xx_ll_usart.h:4544:22:LL_USART_TransmitData8	16	static
+__ExegerGeneric.c:145:5:_write	32	static
+__ExegerGeneric.c:176:6:dPrint	24	static
 __ExegerGeneric.c:236:6:debugPrint	16	static
 __ExegerGeneric.c:415:6:HeartBeatLedBlinky	16	static
 __ExegerGeneric.c:429:6:HeartBeatToggle	8	static

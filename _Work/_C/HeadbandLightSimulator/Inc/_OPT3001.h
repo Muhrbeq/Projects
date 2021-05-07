@@ -37,7 +37,7 @@ typedef enum OPT3001_State
 typedef struct OPT3001
 {
 	OPT3001_State tState;
-	I2C_HandleTypeDef hi2c;
+	I2C_HandleTypeDef *hi2c;
 	uint8_t i2cWrite;
 	uint8_t i2cRead;
 

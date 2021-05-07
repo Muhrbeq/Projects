@@ -357,28 +357,5 @@ namespace ExegerHeadphoneLightSimulator
             ILT_ComPort.SendData("gi\r");
         }
 
-        public void InitILT_Timer()
-        {
-            ILT_Timer.Tick += new EventHandler(ILT_Timer_Tick);
-            ILT_Timer.Interval = new TimeSpan(0, 0, 0, 0, 1000);
-        }
-
-        public void StartILT_Timer(int sampleTime)
-        {
-            ILT_Timer.Interval = new TimeSpan(0, 0, 0, 0, sampleTime);
-            ILT_Timer.Start();
-        }
-
-        public void StopILT_Timer()
-        {
-            ILT_Timer.Stop();
-        }
-
-        private void ILT_Timer_Tick(object sender, EventArgs e)
-        {
-            /* get value each tick from ILT */
-            GetIrradianceValue();
-        }
-
     }
 }
