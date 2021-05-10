@@ -67,7 +67,7 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  ../Inc/usbd_conf.h ../Inc/gpio.h ../Inc/__ExegerGeneric.h \
  ../Inc/_LowLevel.h ../Inc/__ExegerGeneric.h ../Inc/rtc.h ../Inc/_Time.h \
- ../Inc/_Global.h ../Inc/_RevisionControl.h
+ ../Inc/_Global.h ../Inc/_RevisionControl.h ../Inc/_SaraR.h
 
 ../Inc/main.h:
 
@@ -246,3 +246,5 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 ../Inc/_Global.h:
 
 ../Inc/_RevisionControl.h:
+
+../Inc/_SaraR.h:

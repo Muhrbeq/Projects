@@ -43,7 +43,30 @@ void USART2_Callback(void)
 	}
 }
 
+static void SaraR_Power_Enable()
+{
+	HAL_GPIO_WritePin(Radio_Enable_GPIO_Port, Radio_Enable_Pin, GPIO_PIN_SET);
+}
 
+static void SaraR_Power_Disable()
+{
+	HAL_GPIO_WritePin(Radio_Enable_GPIO_Port, Radio_Enable_Pin, GPIO_PIN_RESET);
+}
+
+static void SaraR_Enable()
+{
+	HAL_GPIO_WritePin(Sara_Power_On_GPIO_Port, Sara_Power_On_Pin, GPIO_PIN_SET);
+}
+
+static void SaraR_Disable()
+{
+	HAL_GPIO_WritePin(Sara_Power_On_GPIO_Port, Sara_Power_On_Pin, GPIO_PIN_RESET);
+}
+
+static void SaraR_Reset_Disable()
+{
+	HAL_GPIO_WritePin(Sara_Reset_GPIO_Port, Sara_Reset_Pin, GPIO_PIN_RESET);
+}
 
 /* See if Sara is alive */
 uint8_t SaraIsAlive()
@@ -60,9 +83,11 @@ uint8_t StartUpSara()
 
 	/*-____________________________________________________-*/
 	/* Set Radio Pin high to enable power to Radio module */
+//	SaraR_Reset_Disable();
 
-	// todo DisEnableRadioPin(1);
+	SaraR_Power_Enable();
 	HAL_Delay(1000);
+
 
 	/*-____________________________________________________-*/
 
@@ -74,13 +99,14 @@ uint8_t StartUpSara()
 	}
 
 	/* Set PIN_B14 (Power_Sara) high */
-	// todo DisEnableSaraPin(1);
+	SaraR_Enable();
 
 	/* 500-1500 ms to power on Sara */
 	HAL_Delay(1050);
 
 	/* Reset PIN_B14 (Sara is now ON) */
 	//DisEnableSaraPin(0); //todo
+	SaraR_Disable();
 
 	/* Wait for 5 sec (minimum 4.5s) for Sara to be fuctional*/
 	HAL_Delay(5000);

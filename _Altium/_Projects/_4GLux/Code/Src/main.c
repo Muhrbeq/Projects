@@ -40,6 +40,7 @@
 #include <_LowLevel.h>
 #include "_Time.h"
 #include "_RevisionControl.h"
+#include "_SaraR.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -138,15 +139,39 @@ int main(void)
   uint8_t ResetCause = CheckResetCause();
   TRACE("[ResetCheck] - PASSED\r\n");
 
-  while(RevisionControl_GetState() != REVISIONSTATE_DONE &&
-		  RevisionControl_GetState() != REVISIONSTATE_ERROR)
-  {
-	  RevisionControl_StateMachine();
-  }
+  LL_USART_ClearFlag_ORE(USART2);
+  LL_USART_EnableIT_RXNE(USART2);
+
+//  while(RevisionControl_GetState() != REVISIONSTATE_DONE &&
+//		  RevisionControl_GetState() != REVISIONSTATE_ERROR)
+//  {
+//	  RevisionControl_StateMachine();
+//  }
 
   /* DISPLAY ALL INIT */
 
   TRACE("[Main] - Entering While-loop\r\n");
+  DualLed_GreenOff();
+  DualLed_RedOff();
+
+  StartUpSara() ? DualLed_BlinkGreen(11) : DualLed_BlinkRed(21);
+
+  HAL_Delay(1000);
+  SaraInitAtCommands() ? DualLed_BlinkGreen(11) : DualLed_BlinkRed(21);
+
+  HAL_Delay(1000);
+  SaraCheckCommand("AT+COPS=0\r\n", "OK", LOW_TIMEOUT);
+  SaraCheckCommand("AT+URAT=7,8\r\n", "OK", LOW_TIMEOUT);
+
+ // SaraCheckCommand("AT+CFUN?\r\n", "+CFUN: 1OK", LOW_TIMEOUT) ? DualLed_BlinkGreen(11) : DualLed_BlinkRed(21);
+  //HAL_Delay(1000);
+ // SaraCheckCommand("AT+CEREG=1\r\n", "OK", LOW_TIMEOUT) ? DualLed_BlinkGreen(11) : DualLed_BlinkRed(21);
+//  HAL_GPIO_WritePin(Radio_Enable_GPIO_Port, Radio_Enable_Pin, GPIO_PIN_SET);
+
+//  HAL_GPIO_WritePin(Sara_Reset_GPIO_Port, Sara_Reset_Pin, GPIO_PIN_SET);
+//  HAL_GPIO_WritePin(Sara_Power_On_GPIO_Port, Sara_Power_On_Pin, GPIO_PIN_SET);
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -156,6 +181,17 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+	  if(SaraCheckCommand("AT+CREG?\r\n", "+CREG: 0,1OK", LOW_TIMEOUT))
+	  {
+		  DualLed_ToggleGreen() ;
+	  }
+	  else
+	  {
+		  DualLed_ToggleRed();
+	  }
+//	  HAL_Delay(300);
+//	  DualLed_ToggleGreen();
 
 	  /* TODO:
 	   *
@@ -227,7 +263,7 @@ int main(void)
 //	  debugPrint("Testing DebugPrint - Warning", debugLevel_Warning);
 //	  debugPrint("Testing DebugPrint - Error", debugLevel_Error);
 
-	  HAL_Delay(300);
+	  HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }

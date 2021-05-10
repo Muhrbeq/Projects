@@ -1,4 +1,4 @@
-Src/stm32l4xx_it.o: ../Src/stm32l4xx_it.c ../Inc/main.h \
+Src/stm32l4xx_it.o: ../Src/stm32l4xx_it.c ../Inc/_SaraR.h ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -53,10 +53,11 @@ Src/stm32l4xx_it.o: ../Src/stm32l4xx_it.c ../Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_gpio.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h \
- ../Inc/stm32l4xx_it.h ../Inc/_Global.h ../Inc/main.h \
- ../Inc/__ExegerGeneric.h ../Inc/__ExegerGeneric.h ../Inc/_GPS.h \
- ../Inc/_SaraR4.h
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h ../Inc/main.h \
+ ../Inc/stm32l4xx_it.h ../Inc/_Global.h ../Inc/__ExegerGeneric.h \
+ ../Inc/__ExegerGeneric.h ../Inc/_GPS.h
+
+../Inc/_SaraR.h:
 
 ../Inc/main.h:
 
@@ -170,16 +171,14 @@ Src/stm32l4xx_it.o: ../Src/stm32l4xx_it.c ../Inc/main.h \
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h:
 
+../Inc/main.h:
+
 ../Inc/stm32l4xx_it.h:
 
 ../Inc/_Global.h:
-
-../Inc/main.h:
 
 ../Inc/__ExegerGeneric.h:
 
 ../Inc/__ExegerGeneric.h:
 
 ../Inc/_GPS.h:
-
-../Inc/_SaraR4.h:
