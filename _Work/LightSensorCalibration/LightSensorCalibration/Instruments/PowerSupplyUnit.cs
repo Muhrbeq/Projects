@@ -203,6 +203,7 @@ namespace LightSensorCalibration.Instruments
                     if(instrument.DidRespond == true)
                     {
                         //Assign ID
+                        _IsConnected = true;
                         _ID = instrument.ConnectionID;
                         return PSU_ReturnCodes.PSU_PASSED;
                     }

@@ -90,7 +90,97 @@
             
         </Button>
 
-        
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+            <StackPanel Orientation="Vertical">
+
+                <iconPacks:PackIconMaterial
+                    Width="40"
+                    Height="40"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Kind="ChiliHot" 
+                    Foreground="Red"
+                    Margin="0, 0, 0, 0"/>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock x:Name="txb_TemperatureSensor"
+                       FontFamily="Arial"
+                       FontWeight="ExtraBold"
+                       FontSize="20"
+                       Text="{Binding SensorTemperature}"
+                       Background="Transparent"
+                       Foreground="Red"
+                       Opacity="1"/>
+
+                    <iconPacks:PackIconMaterial
+                    Width="15"
+                    Height="15"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Kind="TemperatureCelsius" 
+                    Foreground="Red"
+                    Margin="0, 0, 0, 0"/>
+
+                </StackPanel>
+                
+                
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        Margin="50, 0, 0, 0">
+
+                <iconPacks:PackIconMaterial
+                    Width="40"
+                    Height="40"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Kind="WeatherRainy" 
+                    Foreground="CadetBlue"
+                    />
+
+
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock x:Name="txb_HumiditySensor"
+                       FontFamily="Arial"
+                       FontWeight="ExtraBold"
+                       FontSize="20"
+                       Text="{Binding SensorHumidity}"
+                       Background="Transparent"
+                       Foreground="CadetBlue"
+                       Opacity="1"/>
+
+                    <iconPacks:PackIconMaterial
+                    Width="15"
+                    Height="15"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Kind="Percent" 
+                    Foreground="CadetBlue"
+                    />
+
+                </StackPanel>
+                
+                
+
+            </StackPanel>
+
+        </StackPanel> 
 
         
 
@@ -324,7 +414,7 @@
 
             <TextBlock
                 x:Name="txb_SaveLightLevel"
-                Text="Press to save light level"
+                Text="Press to save light level to table"
                 Foreground="White"
                 FontFamily="Helvetica"
                 FontSize="16"
@@ -341,7 +431,7 @@
                     BorderBrush="Transparent"
                     BorderThickness="0"
                     Click="btn_SaveLightLevel_Click"
-                    Margin="0,20,0,0">
+                    Margin="0,10,0,0">
                 <iconPacks:PackIconMaterial Width="50"
                                        Height="50"
                                        HorizontalAlignment="Center"
@@ -382,7 +472,7 @@
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                      VerticalContentAlignment="Center"
-                     HorizontalContentAlignment="Center"/>
+                     HorizontalContentAlignment="Center" TextChanged="tbx_SetLightLevel_TextChanged"/>
 
             <StackPanel
                 Orientation="Horizontal"
@@ -409,7 +499,7 @@
                                        Margin="0, 0, 0, 0"/>
 
                 </Button>
-
+<!--
                 <Button x:Name="btn_LockLightLevel"
                     Height="45"
                     Width="45"
@@ -429,7 +519,7 @@
                                        Margin="0, 0, 0, 0"/>
 
                 </Button>
-
+-->
             </StackPanel>
 
         </StackPanel>

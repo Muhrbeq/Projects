@@ -8,11 +8,28 @@ using System.IO.Ports;
 using System.Windows;
 using USART;
 using System.Globalization;
+using System.ComponentModel;
 
 namespace LightSensorCalibration.Instruments
 {
-    public class LightSensor
+    public class LightSensor : INotifyPropertyChanged
     {
+
+        #region INotifyPropertyChanged Members
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged(string propName)
+        {
+            if (this.PropertyChanged != null)
+            {
+                this.PropertyChanged(
+                    this, new PropertyChangedEventArgs(propName));
+            }
+        }
+
+        #endregion
+
         private GlobalVariables g;
         public void SetReference(ref GlobalVariables _g)
         {
@@ -241,6 +258,10 @@ namespace LightSensorCalibration.Instruments
                 int.TryParse(parts[1], out exponentLux);
 
                 _CurrentIrradiance = lowerLux * Math.Pow(10, exponentLux);
+
+                g.ReferencePID.ProcessVariable = _CurrentIrradiance;
+
+                g.PSU.SetOutputCurrent(g.ReferencePID.Control(100));
             }
             catch
             {

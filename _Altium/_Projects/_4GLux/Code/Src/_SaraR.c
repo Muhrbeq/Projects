@@ -149,6 +149,7 @@ uint8_t SaraInitAtCommands()
 		return false;
 	}
 
+
 	/* Checks if SIM is ready */
 	/* This does not work for SIM cards with PIN code */
 	if (!SaraCheckSimStatus())

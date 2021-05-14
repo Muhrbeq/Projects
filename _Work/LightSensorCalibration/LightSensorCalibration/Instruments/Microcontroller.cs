@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +16,9 @@ namespace LightSensorCalibration.Instruments
         /// <summary>
         /// Should return some state
         /// </summary>
-        public void CheckForDevices()
+        public string[] CheckForDevices()
         {
-
+            return SerialPort.GetPortNames();
         }
 
         public void RequestData()

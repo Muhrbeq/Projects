@@ -167,6 +167,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\ExportData.cs" />
     <Compile Include="GlobalVariables.cs" />
     <Compile Include="Instruments\PID_Controller.cs" />
     <Compile Include="USART\ComCommands.cs" />
@@ -187,9 +188,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="COM_Library\IComPort.cs" />
-    <Compile Include="Data\CollectedData.cs" />
-    <Compile Include="Data\LightData.cs" />
     <Compile Include="Data\SensorData.cs" />
     <Compile Include="ExtraInfoWindow.xaml.cs">
       <DependentUpon>ExtraInfoWindow.xaml</DependentUpon>

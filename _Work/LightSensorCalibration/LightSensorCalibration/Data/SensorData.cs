@@ -40,6 +40,27 @@ namespace LightSensorCalibration.Data
             set { _OutsideHumidity = value; }
         }
 
+        private double _ReferenceLight;
+        public double ReferenceLight
+        {
+            get { return _ReferenceLight; }
+            set { _ReferenceLight = value; }
+        }
+
+        private double _CalibrationLight;
+        public double CalibrationLight
+        {
+            get { return _CalibrationLight; }
+            set { _CalibrationLight = value; }
+        }
+
+        private double _SetLight;
+        public double SetLight
+        {
+            get { return _SetLight; }
+            set { _SetLight = value; }
+        }
+
     }
 
     public class SensorDataCollection

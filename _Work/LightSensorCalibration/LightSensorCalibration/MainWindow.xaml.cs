@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using LightSensorCalibration.Data;
 using LightSensorCalibration.Instruments;
 
 namespace LightSensorCalibration
@@ -20,22 +23,34 @@ namespace LightSensorCalibration
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window , INotifyPropertyChanged
+
     {
+
+        #region INotifyPropertyChanged Members
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged(string propName)
+        {
+            if (this.PropertyChanged != null)
+            {
+                this.PropertyChanged(
+                    this, new PropertyChangedEventArgs(propName));
+            }
+    }
+
+    #endregion
+
         GlobalVariables g = new GlobalVariables();
 
         LightSensor ReferenceSensor = new LightSensor();
         LightSensor CalibrationSensor = new LightSensor();
-        PowerSupplyUnit PSU = new PowerSupplyUnit(24.0);
+        
         Microcontroller MCU = new Microcontroller();
-        PID_Controller ReferencePID = new PID_Controller(7E-05, 0.0001, 9E-07, 0, 8);
 
-        private int _SetLightLevel;
-        public int SetLightLevel
-        {
-            get { return _SetLightLevel; }
-            set { _SetLightLevel = value; }
-        }
+        ObservableCollection<SensorData> sData = new ObservableCollection<SensorData>();
+
 
         public MainWindow()
         {
@@ -75,7 +90,7 @@ namespace LightSensorCalibration
                     break;
             }
 
-            switch (PSU.Connect())
+            switch (g.PSU.Connect())
             {
                 case PSU_ReturnCodes.PSU_COULDNTFINDDEVICE:
                     txb_InfoBox.Text += "PSU - No device found" + Environment.NewLine;
@@ -124,15 +139,9 @@ namespace LightSensorCalibration
         {
             ReferenceSensor.GetIrradianceValue();
 
-            if(g.LockPowerSupplyCurrent || Math.Floor(g.CurrentIrradiance) == SetLightLevel)
+            if(g.LockPowerSupplyCurrent || Math.Floor(g.CurrentIrradiance) == g.SetLightLevel)
             {
                 g.LockPowerSupplyCurrent = true;
-            }
-            else
-            {
-                ReferencePID.ProcessVariable = g.CurrentIrradiance;
-                double CurrentToPSU = ReferencePID.Control(100);
-                PSU.SetOutputCurrent(CurrentToPSU);
             }
         }
 
@@ -163,31 +172,45 @@ namespace LightSensorCalibration
 
         private void btn_ExportData_Click(object sender, RoutedEventArgs e)
         {
-            txb_CalibrationLux.Text = "10000";
-            txb_ReferenceLux.Text = "15000";
+            
+            //g.ReferenceLux = 9876;
+            //g.CalibrationLux = 6786;
+            //g.SetLightLevel = 5000;
+            //g.SensorHumidity = 50;
+            //g.SensorTemperature = 25;
         }
 
         private void btn_SetLightLevel_Click(object sender, RoutedEventArgs e)
         {
-            icon_BtnSetLightLevel.Foreground = icon_BtnSetLightLevel.Foreground == Brushes.Yellow ? Brushes.Black : Brushes.Yellow;
+            icon_BtnSetLightLevel.Foreground = g.SetLightLevel == 0 ? Brushes.Black : Brushes.Yellow;
+
+            if(g.SetLightLevel != 0)
+            {
+                StartReferenceLightSensorTimer(100);
+            }
+            else
+            {
+                StopReferenceLightSensorTimer();
+            }
+
         }
 
-        private void btn_LockLightLevel_Click(object sender, RoutedEventArgs e)
-        {
-            switch (icon_BtnLockLightLevel.Kind)
-            {
-                case MahApps.Metro.IconPacks.PackIconMaterialKind.Lock:
-                    {
-                        icon_BtnLockLightLevel.Kind = MahApps.Metro.IconPacks.PackIconMaterialKind.LockOpen;
-                        icon_BtnLockLightLevel.Foreground = Brushes.Green;
-                        break;
-                    }
-                default:
-                    icon_BtnLockLightLevel.Kind = MahApps.Metro.IconPacks.PackIconMaterialKind.Lock;
-                    icon_BtnLockLightLevel.Foreground = Brushes.Red;
-                    break;
-            }
-        }
+        //private void btn_LockLightLevel_Click(object sender, RoutedEventArgs e)
+        //{
+        //    switch (icon_BtnLockLightLevel.Kind)
+        //    {
+        //        case MahApps.Metro.IconPacks.PackIconMaterialKind.Lock:
+        //            {
+        //                icon_BtnLockLightLevel.Kind = MahApps.Metro.IconPacks.PackIconMaterialKind.LockOpen;
+        //                icon_BtnLockLightLevel.Foreground = Brushes.Green;
+        //                break;
+        //            }
+        //        default:
+        //            icon_BtnLockLightLevel.Kind = MahApps.Metro.IconPacks.PackIconMaterialKind.Lock;
+        //            icon_BtnLockLightLevel.Foreground = Brushes.Red;
+        //            break;
+        //    }
+        //}
 
         private void btn_ExtraInfo_Click(object sender, RoutedEventArgs e)
         {
@@ -198,7 +221,18 @@ namespace LightSensorCalibration
 
         private void btn_SaveLightLevel_Click(object sender, RoutedEventArgs e)
         {
+            //g.CalibrationLux = 10000;
+            //g.ReferenceLux = 12345;
+            //g.SetLightLevel = 8888;
+            SensorData sD = new SensorData();
 
+            sD.CalibrationLight = g.CalibrationLux;
+            sD.ReferenceLight = g.ReferenceLux;
+            sD.SetLight = g.SetLightLevel;
+            sD.BoxHumidity = g.SensorHumidity;
+            sD.PlateTemperature = g.SensorTemperature;
+
+            sData.Add(sD);
         }
 
         private void btn_ConnectReferenceLightSensor_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -216,5 +250,10 @@ namespace LightSensorCalibration
 
         }
         #endregion
+
+        private void tbx_SetLightLevel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            g.LockPowerSupplyCurrent = false;
+        }
     }
 }

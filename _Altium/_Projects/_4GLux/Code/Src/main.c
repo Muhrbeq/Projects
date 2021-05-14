@@ -160,8 +160,12 @@ int main(void)
   SaraInitAtCommands() ? DualLed_BlinkGreen(11) : DualLed_BlinkRed(21);
 
   HAL_Delay(1000);
-  SaraCheckCommand("AT+COPS=0\r\n", "OK", LOW_TIMEOUT);
-  SaraCheckCommand("AT+URAT=7,8\r\n", "OK", LOW_TIMEOUT);
+
+  SaraCheckCommand("AT+GMR\r\n", "+CEREG: 0,1OK.....................................................", LOW_TIMEOUT);
+  SaraCheckCommand("AT+CGDCONT?\r\n", "+CEREG: 0,1OK.....................................................", LOW_TIMEOUT);
+  HAL_Delay(10000);
+//  SaraCheckCommand("AT+COPS=0\r\n", "OK", LOW_TIMEOUT);
+//  SaraCheckCommand("AT+URAT=7,8\r\n", "OK", LOW_TIMEOUT);
 
  // SaraCheckCommand("AT+CFUN?\r\n", "+CFUN: 1OK", LOW_TIMEOUT) ? DualLed_BlinkGreen(11) : DualLed_BlinkRed(21);
   //HAL_Delay(1000);
@@ -182,7 +186,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-	  if(SaraCheckCommand("AT+CREG?\r\n", "+CREG: 0,1OK", LOW_TIMEOUT))
+	  if(SaraCheckCommand("AT+CEREG?\r\n", "+CEREG: 0,1OK", LOW_TIMEOUT))
 	  {
 		  DualLed_ToggleGreen() ;
 	  }
