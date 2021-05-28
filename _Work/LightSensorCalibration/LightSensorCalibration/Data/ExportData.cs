@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace LightSensorCalibration.Data
 {
@@ -59,27 +60,63 @@ namespace LightSensorCalibration.Data
                             DataRow = "Set Lux" + Delimiter;
                             DataRow += "Reference Lux" + Delimiter;
                             DataRow += "Calibration Lux" + Delimiter;
+                            DataRow += "Temperature" + Delimiter;
+                            DataRow += "Humidity" + Delimiter;
                             
                             DataRow += Delimiter;
+                            DataRow += Delimiter;
 
-                            DataRow += "Reference LightSensor Name" + Delimiter;
-                            DataRow += _ref.
-                            
+                            DataRow += "Reference LightSensor" + Delimiter;
+                            //DataRow += _ref.SensorName + Delimiter + _ref.SerialNumber + Delimiter;
+                            DataRow += "Calibration LightSensor" + Delimiter;
+                            //DataRow += _cal.SensorName + Delimiter + _cal.SerialNumber + Delimiter;
 
                             swr.WriteLine(DataRow);
 
+                            DataRow = Delimiter + Delimiter + Delimiter + Delimiter + Delimiter + Delimiter + "Name" + Delimiter;
+                            DataRow += _ref.SensorName + Delimiter;
+                            DataRow += _cal.SensorName + Delimiter;
+                            swr.WriteLine(DataRow);
+
+                            DataRow = Delimiter + Delimiter + Delimiter + Delimiter + Delimiter + Delimiter + "Serial number" + Delimiter;
+                            DataRow += _ref.SerialNumber + Delimiter;
+                            DataRow += _cal.SerialNumber + Delimiter;
+                            swr.WriteLine(DataRow);
+
+                            foreach (SensorData sd in _sd)
+                            {
+                                DataRow = sd.SetLight.ToString("F1", nfi) + Delimiter;
+                                DataRow += sd.ReferenceLight.ToString("F1", nfi) + Delimiter;
+                                DataRow += sd.CalibrationLight.ToString("F1", nfi) + Delimiter;
+                                DataRow += sd.Temperature.ToString("F2", nfi) + Delimiter;
+                                DataRow += sd.Humidity.ToString("F2", nfi) + Delimiter;
+
+                                swr.WriteLine(DataRow);
+                            }
+
+                            sw.Stop();
+
+                            MessageBox.Show("Export completed, elapsed time: " + sw.ElapsedMilliseconds + "ms");
+
+                            return true;
 
                         }
                     }
+                    throw new Exception("No file selected");
                 }
+                throw new Exception("Empty collection");
 
             }
             catch (InvalidOperationException ex)
             {
-
+                MessageBox.Show(ex.Message);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             finally
-            { 
+            {
             }
 
             return false;

@@ -1,4 +1,0 @@
-_SensorControl.c:18:6:EnableSpectrum	16	static
-_SensorControl.c:23:6:EnableSensors	16	static
-_SensorControl.c:28:6:EnableAccelerometer	16	static
-_SensorControl.c:33:6:SensorTakeMeasurement	112	static

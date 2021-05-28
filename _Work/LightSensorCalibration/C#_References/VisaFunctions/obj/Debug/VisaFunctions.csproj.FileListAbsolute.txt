@@ -159,3 +159,9 @@ C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\
 C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\C#_References\VisaFunctions\obj\Debug\VisaFunctions.csproj.CoreCompileInputs.cache
 C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\C#_References\VisaFunctions\obj\Debug\VisaFunctions.dll
 C:\Users\rasmus.muhrbeck\Documents\GitHub\Projects\_Work\LightSensorCalibration\C#_References\VisaFunctions\obj\Debug\VisaFunctions.pdb
+C:\Users\admin\Desktop\LightSensorCalibration\C#_References\VisaFunctions\bin\Debug\VisaFunctions.dll
+C:\Users\admin\Desktop\LightSensorCalibration\C#_References\VisaFunctions\bin\Debug\VisaFunctions.pdb
+C:\Users\admin\Desktop\LightSensorCalibration\C#_References\VisaFunctions\obj\Debug\VisaFunctions.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\LightSensorCalibration\C#_References\VisaFunctions\obj\Debug\VisaFunctions.csproj.ResolveComReference.cache
+C:\Users\admin\Desktop\LightSensorCalibration\C#_References\VisaFunctions\obj\Debug\VisaFunctions.dll
+C:\Users\admin\Desktop\LightSensorCalibration\C#_References\VisaFunctions\obj\Debug\VisaFunctions.pdb

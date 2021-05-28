@@ -44,8 +44,8 @@ namespace LightSensorCalibration
 
         GlobalVariables g = new GlobalVariables();
 
-        LightSensor ReferenceSensor = new LightSensor();
-        LightSensor CalibrationSensor = new LightSensor();
+        LightSensor ReferenceSensor = new LightSensor(SensorState.SENSOR_REFERENCE);
+        LightSensor CalibrationSensor = new LightSensor(SensorState.SENSOR_CALIBRATION);
         
         Microcontroller MCU = new Microcontroller();
 
@@ -58,18 +58,32 @@ namespace LightSensorCalibration
 
             this.DataContext = g;
 
+            ReferenceSensor.SetReference(ref g);
+            CalibrationSensor.SetReference(ref g);
+            MCU.SetReference(ref g);
+
+            InitCalibrationLightSensorTimer();
+            InitReferenceLightSensorTimer();
+            InitMCUTimer();
+
+            g.ReferencePID = new PID_Controller(7E-05, 0.0001, 9E-07, 0, 8);
+            g.PSU = new PowerSupplyUnit(24.0);
+            g.PSU.SetupStandardPSU();
+
             //Try to connect to Reference Light sensor
+            
             switch (ReferenceSensor.ConnectSensor())
             {
                 case ReturnLightSensorState.LIGHTSENSORRETURN_NOLIGHTSENSORFOUND:
                     txb_InfoBox.Text += "Reference - No light sensor found" + Environment.NewLine;
                     break;
-                case ReturnLightSensorState.LIGHTSENSORRETURN_SETSAMPLEFREQUENCYERROR:
-                    txb_InfoBox.Text += "Reference - Sample frequency couldn't be changed" + Environment.NewLine;
+                case ReturnLightSensorState.LIGHTSENSORRETURN_WRONGREFERENCENAME:
+                    txb_InfoBox.Text += "Reference - Wrong name on reference device - Should be: QAREF" + Environment.NewLine;
                     break;
 
                 case ReturnLightSensorState.LIGHTSENSORRETURN_PASS:
                     txb_InfoBox.Text += "Reference - Connected, Serial: " + ReferenceSensor.SerialNumber + Environment.NewLine;
+                    ReferenceSensor.Connect();
                     icon_btnConnectReferenceSensor.Foreground = Brushes.Green;
                     break;
             }
@@ -86,6 +100,7 @@ namespace LightSensorCalibration
 
                 case ReturnLightSensorState.LIGHTSENSORRETURN_PASS:
                     txb_InfoBox.Text += "Calibration - Connected, Serial: " + CalibrationSensor.SerialNumber + Environment.NewLine;
+                    CalibrationSensor.Connect();
                     icon_btnConnectCalibrationSensor.Foreground = Brushes.Green;
                     break;
             }
@@ -107,6 +122,20 @@ namespace LightSensorCalibration
                     break;
             }
 
+            //switch(MCU.ConnectMCU())
+            //{
+            //    case MCU_ReturnCodes.MCU_COULDNTCONNECT:
+            //        txb_InfoBox.Text += "MCU - Couldn't connect" + Environment.NewLine;
+            //        break;
+            //    case MCU_ReturnCodes.MCU_COULDNTFINDDEVICE:
+            //        txb_InfoBox.Text += "MCU - No devices found" + Environment.NewLine;
+            //        break;
+            //    case MCU_ReturnCodes.MCU_PASSED:
+            //        iConnectMicrocontroller.Foreground = Brushes.Green;
+            //        txb_InfoBox.Text += "MCU - Connected" + Environment.NewLine;
+            //        break;
+            //}
+
             //Try to connect to Power supply
         }
 
@@ -115,7 +144,7 @@ namespace LightSensorCalibration
         public DispatcherTimer Reference_Timer
         {
             get { return _Reference_Timer; }
-            set { _Reference_Timer = value;}
+            set { _Reference_Timer = value; OnPropertyChanged("Reference_Timer"); }
         }
 
         private void InitReferenceLightSensorTimer()
@@ -139,10 +168,84 @@ namespace LightSensorCalibration
         {
             ReferenceSensor.GetIrradianceValue();
 
-            if(g.LockPowerSupplyCurrent || Math.Floor(g.CurrentIrradiance) == g.SetLightLevel)
+            g.ReferenceLux = ReferenceSensor.CurrentIrradiance;
+
+            if(g.LockPowerSupplyCurrent || Math.Floor(ReferenceSensor.CurrentIrradiance) == g.SetLightLevel)
             {
                 g.LockPowerSupplyCurrent = true;
             }
+            else
+            {
+                g.ReferencePID.ProcessVariable = ReferenceSensor.CurrentIrradiance;
+
+                g.PSU.SetOutputCurrent(g.ReferencePID.Control(100));
+            }
+
+            if(Math.Floor(ReferenceSensor.CurrentIrradiance) < g.SetLightLevel * 0.95 || Math.Floor(ReferenceSensor.CurrentIrradiance) > g.SetLightLevel * 1.05)
+            {
+                g.LockPowerSupplyCurrent = false;
+            }
+        }
+
+        private DispatcherTimer _Calibration_Timer = new DispatcherTimer();
+        public DispatcherTimer Calibration_Timer
+        {
+            get { return _Calibration_Timer; }
+            set { _Calibration_Timer = value; OnPropertyChanged("Calibration_Timer"); }
+        }
+
+        private void InitCalibrationLightSensorTimer()
+        {
+            Calibration_Timer.Tick += new EventHandler(CalibrationLightSensor_Timer_Tick);
+            Calibration_Timer.Interval = new TimeSpan(0, 0, 0, 0, 1000);
+        }
+
+        private void StartCalibrationLightSensorTimer(int UpdateRate_ms)
+        {
+            Calibration_Timer.Interval = new TimeSpan(0, 0, 0, 0, UpdateRate_ms);
+            Calibration_Timer.Start();
+        }
+
+        private void StopCalibrationLightSensorTimer()
+        {
+            Calibration_Timer.Stop();
+        }
+
+        private void CalibrationLightSensor_Timer_Tick(object sender, EventArgs e)
+        {
+            CalibrationSensor.GetIrradianceValue();
+
+            g.CalibrationLux = CalibrationSensor.CurrentIrradiance;
+        }
+
+
+        private DispatcherTimer _MCU_Timer = new DispatcherTimer();
+        public DispatcherTimer MCU_Timer
+        {
+            get { return _MCU_Timer; }
+            set { _MCU_Timer = value; OnPropertyChanged("MCU_Timer"); }
+        }
+
+        private void InitMCUTimer()
+        {
+            MCU_Timer.Tick += new EventHandler(MCU_Timer_Tick);
+            MCU_Timer.Interval = new TimeSpan(0, 0, 0, 0, 1000);
+        }
+
+        private void StartMCUTimer(int UpdateRate_ms)
+        {
+            MCU_Timer.Interval = new TimeSpan(0, 0, 0, 0, UpdateRate_ms);
+            MCU_Timer.Start();
+        }
+
+        private void StopMCUTimer()
+        {
+            MCU_Timer.Stop();
+        }
+
+        private void MCU_Timer_Tick(object sender, EventArgs e)
+        {
+            MCU.RequestData();
         }
 
         #endregion
@@ -150,6 +253,7 @@ namespace LightSensorCalibration
         #region Buttons
         private void btn_CloseApplication_Click(object sender, RoutedEventArgs e)
         {
+            g.PSU.SetEnable(false);
             this.Close();
         }
 
@@ -172,12 +276,7 @@ namespace LightSensorCalibration
 
         private void btn_ExportData_Click(object sender, RoutedEventArgs e)
         {
-            
-            //g.ReferenceLux = 9876;
-            //g.CalibrationLux = 6786;
-            //g.SetLightLevel = 5000;
-            //g.SensorHumidity = 50;
-            //g.SensorTemperature = 25;
+            ExportData.ExportToCSV(ReferenceSensor, CalibrationSensor, g.PSU, sData);
         }
 
         private void btn_SetLightLevel_Click(object sender, RoutedEventArgs e)
@@ -186,51 +285,36 @@ namespace LightSensorCalibration
 
             if(g.SetLightLevel != 0)
             {
+                g.PSU.SetEnable(true);
                 StartReferenceLightSensorTimer(100);
+                StartCalibrationLightSensorTimer(100);
+                //StartMCUTimer(1000);
             }
             else
             {
                 StopReferenceLightSensorTimer();
+                StopCalibrationLightSensorTimer();
+                //StopMCUTimer();
             }
 
         }
 
-        //private void btn_LockLightLevel_Click(object sender, RoutedEventArgs e)
-        //{
-        //    switch (icon_BtnLockLightLevel.Kind)
-        //    {
-        //        case MahApps.Metro.IconPacks.PackIconMaterialKind.Lock:
-        //            {
-        //                icon_BtnLockLightLevel.Kind = MahApps.Metro.IconPacks.PackIconMaterialKind.LockOpen;
-        //                icon_BtnLockLightLevel.Foreground = Brushes.Green;
-        //                break;
-        //            }
-        //        default:
-        //            icon_BtnLockLightLevel.Kind = MahApps.Metro.IconPacks.PackIconMaterialKind.Lock;
-        //            icon_BtnLockLightLevel.Foreground = Brushes.Red;
-        //            break;
-        //    }
-        //}
-
         private void btn_ExtraInfo_Click(object sender, RoutedEventArgs e)
         {
-            ExtraInfoWindow extraInfoW = new ExtraInfoWindow(ref ReferenceSensor, ref CalibrationSensor, ref MCU, ref PSU);
+            ExtraInfoWindow extraInfoW = new ExtraInfoWindow(ref ReferenceSensor, ref CalibrationSensor, ref MCU);
 
             extraInfoW.ShowDialog();
         }
 
         private void btn_SaveLightLevel_Click(object sender, RoutedEventArgs e)
         {
-            //g.CalibrationLux = 10000;
-            //g.ReferenceLux = 12345;
-            //g.SetLightLevel = 8888;
             SensorData sD = new SensorData();
 
             sD.CalibrationLight = g.CalibrationLux;
             sD.ReferenceLight = g.ReferenceLux;
             sD.SetLight = g.SetLightLevel;
-            sD.BoxHumidity = g.SensorHumidity;
-            sD.PlateTemperature = g.SensorTemperature;
+            sD.Humidity = g.SensorHumidity;
+            sD.Temperature = g.SensorTemperature;
 
             sData.Add(sD);
         }
@@ -254,6 +338,25 @@ namespace LightSensorCalibration
         private void tbx_SetLightLevel_TextChanged(object sender, TextChangedEventArgs e)
         {
             g.LockPowerSupplyCurrent = false;
+        }
+
+        private void btn_PSU_Voltage_Click(object sender, RoutedEventArgs e)
+        {
+            if(btn_PSU_Voltage.Content.ToString() == "32V PSU")
+            {
+                btn_PSU_Voltage.Content = "24V PSU";
+                g.PSU.SetMaximumVoltage(24);
+            }
+            else
+            {
+                btn_PSU_Voltage.Content = "32V PSU";
+                g.PSU.SetMaximumVoltage(32);
+            }
+        }
+
+        private void btn_UpdateLightLevel_Click(object sender, RoutedEventArgs e)
+        {
+            g.ReferencePID.SetPoint = g.SetLightLevel;
         }
     }
 }

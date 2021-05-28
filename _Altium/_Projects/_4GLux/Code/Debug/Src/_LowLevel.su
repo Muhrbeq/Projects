@@ -1,9 +1,0 @@
-_LowLevel.c:31:6:DualLed_RedOn	8	static
-_LowLevel.c:36:6:DualLed_RedOff	8	static
-_LowLevel.c:41:6:DualLed_GreenOn	8	static
-_LowLevel.c:46:6:DualLed_GreenOff	8	static
-_LowLevel.c:51:6:DualLed_ToggleRed	8	static
-_LowLevel.c:56:6:DualLed_ToggleGreen	8	static
-_LowLevel.c:61:6:DualLed_BlinkGreen	24	static
-_LowLevel.c:70:6:DualLed_BlinkRed	24	static
-_LowLevel.c:90:9:CheckResetCause	4	static

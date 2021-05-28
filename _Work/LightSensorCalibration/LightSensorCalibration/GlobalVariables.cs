@@ -62,8 +62,22 @@ namespace LightSensorCalibration
             set { _SensorHumidity = value; OnPropertyChanged("SensorHumidity"); }
         }
 
-        public PID_Controller ReferencePID = new PID_Controller(7E-05, 0.0001, 9E-07, 0, 8);
-        public PowerSupplyUnit PSU = new PowerSupplyUnit(24.0);
+        private PID_Controller _ReferencePID;
+        public PID_Controller ReferencePID
+        {
+            get { return _ReferencePID; }
+            set { _ReferencePID = value; OnPropertyChanged("ReferencePID"); }
+        }
+
+        public PowerSupplyUnit _PSU;
+        public PowerSupplyUnit PSU
+        {
+            get { return _PSU; }
+            set { _PSU = value; OnPropertyChanged("PSU"); }
+        }
+
+        /* = new PID_Controller(7E-05, 0.0001, 9E-07, 0, 8);*/
+        
 
         public double CurrentIrradiance = 0.0d;
         public bool LockPowerSupplyCurrent = false;

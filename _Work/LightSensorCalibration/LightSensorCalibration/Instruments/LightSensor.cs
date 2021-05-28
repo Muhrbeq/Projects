@@ -40,8 +40,8 @@ namespace LightSensorCalibration.Instruments
         public bool isConnected
         {
             set 
-            { 
-                _isConnected = value; 
+            {
+                _isConnected = value; OnPropertyChanged("isConnected") ; 
             }
             get
             {
@@ -54,7 +54,7 @@ namespace LightSensorCalibration.Instruments
         {
             set
             {
-                _LightSensorTimer = value;
+                _LightSensorTimer = value ; OnPropertyChanged("LightSensorTimer");
             }
             get
             {
@@ -66,7 +66,7 @@ namespace LightSensorCalibration.Instruments
         public Comport_Interface LightSensor_ComPort
         {
             get { return _LightSensor_ComPort; }
-            set { _LightSensor_ComPort = value; }
+            set { _LightSensor_ComPort = value; OnPropertyChanged("LightSensor_ComPort"); }
         }
 
         private bool _isSetup;
@@ -74,7 +74,7 @@ namespace LightSensorCalibration.Instruments
         {
             set
             {
-                _isSetup = value;
+                _isSetup = value; OnPropertyChanged("isSetup");
             }
             get
             {
@@ -87,7 +87,7 @@ namespace LightSensorCalibration.Instruments
         {
             set
             {
-                _SensorName = value;
+                _SensorName = value; OnPropertyChanged("SensorName");
             }
             get
             {
@@ -124,37 +124,43 @@ namespace LightSensorCalibration.Instruments
 
         private SerialPort _Serial = new SerialPort("COM1", 115200, Parity.None, 8, StopBits.One);
 
-        public LightSensor()
+        public LightSensor(SensorState _ss)
         {
             //Setup serialport
             _Serial.ReadTimeout = 2000;
             _Serial.WriteTimeout = 2000;
+
+            _sState = _ss;
         }
 
         public ReturnLightSensorState ConnectSensor()
         {
-            switch (CheckForSensors())
+            return CheckForSensors();
+        }
+
+        public bool Connect()
+        {
+            _LightSensor_ComPort.PortName = _Serial.PortName;
+            _LightSensor_ComPort.BaudRate = "115200";
+
+            _LightSensor_ComPort.COM_UseRxTimer = false;
+
+            _LightSensor_ComPort.RX_Handle += new Comport_Interface.RXHandler(Com_AddToRxBuffer);
+            _LightSensor_ComPort.RX_HandlerEvent_Enable = true;
+
+            _LightSensor_ComPort.OpenPort();
+
+            if (_LightSensor_ComPort.PortConnected)
             {
-                case SensorState.SENSOR_CALIBRATION:
-                    {
-                        _sState = SensorState.SENSOR_CALIBRATION;
-                        break;
-                        
-                    }
-                case SensorState.SENSOR_REFERENCE:
-                    {
-                        _sState = SensorState.SENSOR_REFERENCE;
-                        break;
-                    }
-                default:
-                    return ReturnLightSensorState.LIGHTSENSORRETURN_NOLIGHTSENSORFOUND;
+                isConnected = true;
+                return true;
             }
-            if (SetSampleFrequency(100))
+            else
             {
-                _isConnected = true;
-                return ReturnLightSensorState.LIGHTSENSORRETURN_PASS;
+                isConnected = false;
+                LightSensor_ComPort.ClosePorts();
+                return false;
             }
-            return ReturnLightSensorState.LIGHTSENSORRETURN_SETSAMPLEFREQUENCYERROR;
         }
 
         public bool ConnectToCOM(string ComPort)
@@ -259,9 +265,7 @@ namespace LightSensorCalibration.Instruments
 
                 _CurrentIrradiance = lowerLux * Math.Pow(10, exponentLux);
 
-                g.ReferencePID.ProcessVariable = _CurrentIrradiance;
-
-                g.PSU.SetOutputCurrent(g.ReferencePID.Control(100));
+                
             }
             catch
             {
@@ -272,19 +276,24 @@ namespace LightSensorCalibration.Instruments
 
         public void GetIrradianceValue()
         {
-            LightSensor_ComPort.SendData("gi\r");
+            try
+            {
+                LightSensor_ComPort.SendData("gi\r");
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private string GetModelName(string Comport)
         {
             string reply = String.Empty;
 
-            //Change comport
-            _Serial.PortName = Comport;
+            
             try
             {
-                // Open serial Port
-                _Serial.Open();
 
                 //Flush existing
                 _Serial.ReadExisting();
@@ -294,6 +303,8 @@ namespace LightSensorCalibration.Instruments
 
                 // save to reply variable
                 reply = _Serial.ReadLine();
+
+                _SensorName = reply.Substring(0, reply.Length - 1);
 
                 //return evertything except "\r"
                 return reply.Substring(0, reply.Length - 1); 
@@ -390,7 +401,7 @@ namespace LightSensorCalibration.Instruments
             try
             {
                 //Flush existing
-                //_Serial.ReadExisting();
+                _Serial.ReadExisting();
 
                 //Concatinating string 
                 string setSampleTime = "setsampletime " + sFreq + "\r";
@@ -415,7 +426,7 @@ namespace LightSensorCalibration.Instruments
         /// Checks comports for light sensors
         /// </summary>
         /// <returns></returns>
-        public SensorState CheckForSensors()
+        public ReturnLightSensorState CheckForSensors()
         {
             // Get serial ports open
             string[] ports = SerialPort.GetPortNames();
@@ -423,23 +434,46 @@ namespace LightSensorCalibration.Instruments
             //Loop through com ports
             foreach (string port in ports)
             {
-                //Check for model name
-                if(GetModelName(port) == "ILT2400")
+                try
                 {
-                    _SerialNumber = GetSerialNumber(port);
+                    //Change comport
+                    _Serial.PortName = port;
 
-                    //Cehck if name of light sensor is correct, otherwise its the calibration
-                    if (GetFriendlyName() == "QAREF")
+                    // Open serial Port
+                    _Serial.Open();
+
+                    //Check for model name
+                    if (GetModelName(port) == "ILT2400")
                     {
-                        // If correct, its the reference and return
-                        return SensorState.SENSOR_REFERENCE;
-                    }
-                    // Close serialport
-                    //_Serial.Close();
+                        _SerialNumber = GetSerialNumber(port);
 
-                    //Return calibration sensor
-                    return SensorState.SENSOR_CALIBRATION;
+                        if (SetSampleFrequency(100))
+                        {
+                            if (sState == SensorState.SENSOR_REFERENCE)
+                            {
+                                //Cehck if name of light sensor is correct, otherwise its the calibration
+                                if (GetFriendlyName() == "QAREF")
+                                {
+                                    _Serial.Close();
+                                    // If correct, its the reference and return
+                                    return ReturnLightSensorState.LIGHTSENSORRETURN_PASS;
+                                }
+                                return ReturnLightSensorState.LIGHTSENSORRETURN_WRONGREFERENCENAME;
+                            }
+                            // Close serialport
+                            _Serial.Close();
+
+                            //Return calibration sensor
+                            return ReturnLightSensorState.LIGHTSENSORRETURN_PASS;
+
+                        }
+                    }
                 }
+                catch
+                {
+
+                }
+                
                 //Close port for next iteration
                 _Serial.Close();
                 
@@ -447,7 +481,7 @@ namespace LightSensorCalibration.Instruments
                 //MessageBox.Show(port);
             }
             //Return that no sensor available
-            return SensorState.SENSOR_ERROR;
+            return ReturnLightSensorState.LIGHTSENSORRETURN_NOLIGHTSENSORFOUND;
         }
 
 
@@ -472,5 +506,6 @@ namespace LightSensorCalibration.Instruments
         LIGHTSENSORRETURN_PASS,
         LIGHTSENSORRETURN_NOLIGHTSENSORFOUND,
         LIGHTSENSORRETURN_SETSAMPLEFREQUENCYERROR,
+        LIGHTSENSORRETURN_WRONGREFERENCENAME,
     }
 }

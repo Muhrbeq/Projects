@@ -1,0 +1,241 @@
+Removed Member From Class: ClassName=Connections Member=P41
+Change Component Footprint: Designator=P1 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P2 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P3 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P4 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P5 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P6 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P7 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P8 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P9 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P10 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P11 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P12 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P13 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P14 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P15 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P16 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P17 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P18 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P19 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P20 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P21 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P22 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P23 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P24 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P25 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P26 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P27 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P28 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P29 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P30 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P31 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P32 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P33 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P34 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P35 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P36 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P37 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P38 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P39 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Footprint: Designator=P40 Old Footprint=1x2 Header 1.27 New Footprint=HDR1X2
+Change Component Comment : Designator=P1 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P2 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P3 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P4 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P5 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P6 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P7 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P8 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P9 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P10 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P11 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P12 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P13 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P14 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P15 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P16 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P17 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P18 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P19 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P20 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P21 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P22 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P23 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P24 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P25 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P26 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P27 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P28 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P29 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P30 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P31 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P32 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P33 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P34 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P35 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P36 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P37 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P38 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P39 Old Comment=1x2 Header New Comment=Header 2
+Change Component Comment : Designator=P40 Old Comment=1x2 Header New Comment=Header 2
+Change component parameters: Designator = "P1" ("P1"); Footprint = "1x2 Header 1.27"; UniqueID = "\OJZZTKOR" ("\OJZZTKOR")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P2" ("P2"); Footprint = "1x2 Header 1.27"; UniqueID = "\NVZMCFUH" ("\NVZMCFUH")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P3" ("P3"); Footprint = "1x2 Header 1.27"; UniqueID = "\TPURRGBM" ("\TPURRGBM")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P4" ("P4"); Footprint = "1x2 Header 1.27"; UniqueID = "\BDJOIYLY" ("\BDJOIYLY")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P5" ("P5"); Footprint = "1x2 Header 1.27"; UniqueID = "\FHCTQGZU" ("\FHCTQGZU")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P6" ("P6"); Footprint = "1x2 Header 1.27"; UniqueID = "\DWEODEDQ" ("\DWEODEDQ")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P7" ("P7"); Footprint = "1x2 Header 1.27"; UniqueID = "\LNKNJDNJ" ("\LNKNJDNJ")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P8" ("P8"); Footprint = "1x2 Header 1.27"; UniqueID = "\OCUGNDNL" ("\OCUGNDNL")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P9" ("P9"); Footprint = "1x2 Header 1.27"; UniqueID = "\WTKOOMQV" ("\WTKOOMQV")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P10" ("P10"); Footprint = "1x2 Header 1.27"; UniqueID = "\CEALRDWX" ("\CEALRDWX")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P11" ("P11"); Footprint = "1x2 Header 1.27"; UniqueID = "\MCTSRDKR" ("\MCTSRDKR")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P12" ("P12"); Footprint = "1x2 Header 1.27"; UniqueID = "\GWYNVVVK" ("\GWYNVVVK")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P13" ("P13"); Footprint = "1x2 Header 1.27"; UniqueID = "\FWBISZFP" ("\FWBISZFP")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P14" ("P14"); Footprint = "1x2 Header 1.27"; UniqueID = "\KVDEUHQY" ("\KVDEUHQY")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P15" ("P15"); Footprint = "1x2 Header 1.27"; UniqueID = "\WSRYOXMJ" ("\WSRYOXMJ")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P16" ("P16"); Footprint = "1x2 Header 1.27"; UniqueID = "\ONKQBBHI" ("\ONKQBBHI")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P17" ("P17"); Footprint = "1x2 Header 1.27"; UniqueID = "\KIPUWXSV" ("\KIPUWXSV")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P18" ("P18"); Footprint = "1x2 Header 1.27"; UniqueID = "\VCWNBPRM" ("\VCWNBPRM")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P19" ("P19"); Footprint = "1x2 Header 1.27"; UniqueID = "\SEQXRIET" ("\SEQXRIET")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P20" ("P20"); Footprint = "1x2 Header 1.27"; UniqueID = "\DWBGAFKP" ("\DWBGAFKP")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P21" ("P21"); Footprint = "1x2 Header 1.27"; UniqueID = "\FNEOFWKN" ("\FNEOFWKN")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P22" ("P22"); Footprint = "1x2 Header 1.27"; UniqueID = "\FDLEITHF" ("\FDLEITHF")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P23" ("P23"); Footprint = "1x2 Header 1.27"; UniqueID = "\ZVVFKQZP" ("\ZVVFKQZP")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P24" ("P24"); Footprint = "1x2 Header 1.27"; UniqueID = "\IFZSAJXO" ("\IFZSAJXO")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P25" ("P25"); Footprint = "1x2 Header 1.27"; UniqueID = "\DUUVWTUZ" ("\DUUVWTUZ")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P26" ("P26"); Footprint = "1x2 Header 1.27"; UniqueID = "\TTHIWOWN" ("\TTHIWOWN")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P27" ("P27"); Footprint = "1x2 Header 1.27"; UniqueID = "\VFJDHJYX" ("\VFJDHJYX")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P28" ("P28"); Footprint = "1x2 Header 1.27"; UniqueID = "\ZLNUUYMH" ("\ZLNUUYMH")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P29" ("P29"); Footprint = "1x2 Header 1.27"; UniqueID = "\BBXMWVTY" ("\BBXMWVTY")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P30" ("P30"); Footprint = "1x2 Header 1.27"; UniqueID = "\TZQKPTTX" ("\TZQKPTTX")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P31" ("P31"); Footprint = "1x2 Header 1.27"; UniqueID = "\UKUMDWHN" ("\UKUMDWHN")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P32" ("P32"); Footprint = "1x2 Header 1.27"; UniqueID = "\THFSAWRO" ("\THFSAWRO")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P33" ("P33"); Footprint = "1x2 Header 1.27"; UniqueID = "\UXAPOJZQ" ("\UXAPOJZQ")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P34" ("P34"); Footprint = "1x2 Header 1.27"; UniqueID = "\SXLSEBIY" ("\SXLSEBIY")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P35" ("P35"); Footprint = "1x2 Header 1.27"; UniqueID = "\XXPAYPTD" ("\XXPAYPTD")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P36" ("P36"); Footprint = "1x2 Header 1.27"; UniqueID = "\WZMRHDWF" ("\WZMRHDWF")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P37" ("P37"); Footprint = "1x2 Header 1.27"; UniqueID = "\GROXQUHY" ("\GROXQUHY")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P38" ("P38"); Footprint = "1x2 Header 1.27"; UniqueID = "\JSTDFQPV" ("\JSTDFQPV")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P39" ("P39"); Footprint = "1x2 Header 1.27"; UniqueID = "\UGWPOFYI" ("\UGWPOFYI")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P40" ("P40"); Footprint = "1x2 Header 1.27"; UniqueID = "\FBJTSAWN" ("\FBJTSAWN")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"

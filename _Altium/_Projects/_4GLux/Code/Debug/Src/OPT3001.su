@@ -1,8 +1,0 @@
-OPT3001.c:20:9:send_read_cmd	24	static
-OPT3001.c:33:9:read_data	24	static
-OPT3001.c:55:14:SensorOpt3001_convert	32	static
-OPT3001.c:63:9:OPT_3001_init_for_single_shot	24	static
-OPT3001.c:96:6:OPT_3001_shutdown	24	static
-OPT3001.c:109:9:OPT_3001_request_reading	16	static
-OPT3001.c:127:9:OPT_3001_reading_ready	16	static
-OPT3001.c:167:9:OPT_3001_get_reading	32	static

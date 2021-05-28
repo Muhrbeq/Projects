@@ -23,17 +23,15 @@ namespace LightSensorCalibration
     {
         private LightSensor _refLight;
         private LightSensor _calLight;
-        private PowerSupplyUnit _PSU;
         private Microcontroller _MCU;
         private int ERRORLISTINDEX = -1;
 
-        public ExtraInfoWindow(ref LightSensor ReferenceLightSensor, ref LightSensor CalibrationLightSensor, ref Microcontroller MCU, ref PowerSupplyUnit PSU)
+        public ExtraInfoWindow(ref LightSensor ReferenceLightSensor, ref LightSensor CalibrationLightSensor, ref Microcontroller MCU)
         {
             InitializeComponent();
 
             _refLight = ReferenceLightSensor;
             _calLight = CalibrationLightSensor;
-            _PSU = PSU;
             _MCU = MCU;
 
             GetComPorts();
@@ -82,7 +80,7 @@ namespace LightSensorCalibration
                 lstBox_Instruments.Items.Add(_calLight.SensorName);
             }
                 
-            if(!_MCU.IsConnected)
+            if(!_MCU.isConnected)
             {
                 _MCU.ID = _MCU.ID == null ? "MCU" : _MCU.ID;
                 lstBox_Instruments.Items.Add(_MCU.ID);

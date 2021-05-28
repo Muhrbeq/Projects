@@ -1,0 +1,55 @@
+Added Component: Designator=J1(D-SUB-9PIN-TE)
+Added Component: Designator=J2(D-SUB-9PIN-TE)
+Added Component: Designator=J3(D-SUB-9PIN-TE)
+Added Component: Designator=J4(D-SUB-9PIN-TE)
+Added Component: Designator=J5(D-SUB-9PIN-TE)
+Added Pin To Net: NetName=CF Pin=J1-1
+Added Pin To Net: NetName=CS Pin=J1-2
+Added Pin To Net: NetName=WF Pin=J1-3
+Added Pin To Net: NetName=WS Pin=J1-4
+Added Pin To Net: NetName=SHIELD Pin=J1-5
+Added Pin To Net: NetName=SHIELD Pin=J1-6
+Added Pin To Net: NetName=SHIELD Pin=J1-7
+Added Pin To Net: NetName=SHIELD Pin=J1-8
+Added Pin To Net: NetName=SHIELD Pin=J1-9
+Added Pin To Net: NetName=CF Pin=J2-1
+Added Pin To Net: NetName=CS Pin=J2-2
+Added Pin To Net: NetName=WF Pin=J2-3
+Added Pin To Net: NetName=WS Pin=J2-4
+Added Pin To Net: NetName=SHIELD Pin=J2-5
+Added Pin To Net: NetName=SHIELD Pin=J2-6
+Added Pin To Net: NetName=SHIELD Pin=J2-7
+Added Pin To Net: NetName=SHIELD Pin=J2-8
+Added Pin To Net: NetName=SHIELD Pin=J2-9
+Added Pin To Net: NetName=CF Pin=J3-1
+Added Pin To Net: NetName=CS Pin=J3-2
+Added Pin To Net: NetName=WF Pin=J3-3
+Added Pin To Net: NetName=WS Pin=J3-4
+Added Pin To Net: NetName=SHIELD Pin=J3-5
+Added Pin To Net: NetName=SHIELD Pin=J3-6
+Added Pin To Net: NetName=SHIELD Pin=J3-7
+Added Pin To Net: NetName=SHIELD Pin=J3-8
+Added Pin To Net: NetName=SHIELD Pin=J3-9
+Added Pin To Net: NetName=CF Pin=J4-1
+Added Pin To Net: NetName=CS Pin=J4-2
+Added Pin To Net: NetName=WF Pin=J4-3
+Added Pin To Net: NetName=WS Pin=J4-4
+Added Pin To Net: NetName=SHIELD Pin=J4-5
+Added Pin To Net: NetName=SHIELD Pin=J4-6
+Added Pin To Net: NetName=SHIELD Pin=J4-7
+Added Pin To Net: NetName=SHIELD Pin=J4-8
+Added Pin To Net: NetName=SHIELD Pin=J4-9
+Added Pin To Net: NetName=CF Pin=J5-1
+Added Pin To Net: NetName=CS Pin=J5-2
+Added Pin To Net: NetName=WF Pin=J5-3
+Added Pin To Net: NetName=WS Pin=J5-4
+Added Pin To Net: NetName=SHIELD Pin=J5-5
+Added Pin To Net: NetName=SHIELD Pin=J5-6
+Added Pin To Net: NetName=SHIELD Pin=J5-7
+Added Pin To Net: NetName=SHIELD Pin=J5-8
+Added Pin To Net: NetName=SHIELD Pin=J5-9
+Added Member To Class: ClassName=Schematic Member=Component J1 1x9 Header
+Added Member To Class: ClassName=Schematic Member=Component J2 1x9 Header
+Added Member To Class: ClassName=Schematic Member=Component J3 1x9 Header
+Added Member To Class: ClassName=Schematic Member=Component J4 1x9 Header
+Added Member To Class: ClassName=Schematic Member=Component J5 1x9 Header

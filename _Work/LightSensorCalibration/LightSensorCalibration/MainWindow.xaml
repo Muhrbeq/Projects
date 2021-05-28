@@ -414,7 +414,7 @@
 
             <TextBlock
                 x:Name="txb_SaveLightLevel"
-                Text="Press to save light level to table"
+                Text="Press to save data to table"
                 Foreground="White"
                 FontFamily="Helvetica"
                 FontSize="16"
@@ -499,8 +499,8 @@
                                        Margin="0, 0, 0, 0"/>
 
                 </Button>
-<!--
-                <Button x:Name="btn_LockLightLevel"
+
+                <Button x:Name="btn_UpdateLightLevel"
                     Height="45"
                     Width="45"
                     Cursor="Hand"
@@ -508,18 +508,18 @@
                     Foreground="Transparent"
                     BorderBrush="Transparent"
                     BorderThickness="0"
-                    Click="btn_LockLightLevel_Click">
-                    <iconPacks:PackIconMaterial Width="45"
-                                       x:Name="icon_BtnLockLightLevel"
-                                       Height="45"
+                    Click="btn_UpdateLightLevel_Click">
+                    <iconPacks:PackIconMaterial Width="40"
+                                       x:Name="icon_BtnUpdateLightLevel"
+                                       Height="40"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
-                                       Kind="Lock" 
-                                       Foreground="Red"
+                                       Kind="Update" 
+                                       Foreground="White"
                                        Margin="0, 0, 0, 0"/>
 
                 </Button>
--->
+
             </StackPanel>
 
         </StackPanel>
@@ -643,6 +643,19 @@
                         Margin="0, 0, 0, 0"/>
 
 
+            </Button>
+
+            <Button Height="30"
+                    Width="50"
+                    Margin="0,20,0,0"
+                    Content="24V PSU"
+                    x:Name="btn_PSU_Voltage"
+                    Background="Transparent"
+                    Foreground="White"
+                    Cursor="Hand"
+                    Click="btn_PSU_Voltage_Click">
+                
+                
             </Button>
 
         </StackPanel>

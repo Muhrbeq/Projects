@@ -1,3 +1,0 @@
-_TextParse.c:16:9:CharToHex	24	static
-_TextParse.c:46:9:StringToHEX	40	static
-_TextParse.c:84:9:TextParse_ParseText	56	dynamic

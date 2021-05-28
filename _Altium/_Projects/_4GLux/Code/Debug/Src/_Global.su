@@ -1,6 +1,0 @@
-_Global.c:16:7:GetDataStruct	4	static
-_Global.c:22:13:GetSaraConfigurationStruct	4	static
-_Global.c:27:13:GetRadioFlagStruct	4	static
-_Global.c:32:14:GetSensorFlagStruct	4	static
-_Global.c:38:6:DataStruct_init	24	static
-_Global.c:59:6:PrintsDatasorData	72	static

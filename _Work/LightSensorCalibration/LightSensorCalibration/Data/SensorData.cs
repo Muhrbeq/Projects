@@ -61,6 +61,20 @@ namespace LightSensorCalibration.Data
             set { _SetLight = value; }
         }
 
+        private double _Temperature;
+        public double Temperature
+        {
+            get { return _Temperature; }
+            set { _Temperature = value; }
+        }
+
+        private double _Humidity;
+        public double Humidity
+        {
+            get { return _Humidity; }
+            set { _Humidity = value; }
+        }
+
     }
 
     public class SensorDataCollection

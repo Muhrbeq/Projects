@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html id="_html" class="no-js" lang="en">
+<head id="Head1"><title>	404 | DigiKey</title>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width" />
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="https://www.digikey.com/-/media/Designer/Global/MVC/CSS/global.css">
+<link rel="stylesheet" type="text/css" href="https://www.digikey.com/-/media/Designer/Footer/Mvc/CSS/footer.css" />
+<meta name="keywords" content="Page Not Found, DigiKey, 404">
+<meta name="description" content="We're sorry. This is not a functioning page on our site.">
+<!--
+<meta name="digikey.fss.guid" content="{A25D28E9-0369-46B6-8ED7-E16A95970699}"></meta>
+<meta name="digikey.fss.site" content="US"></meta>
+<meta name="digikey.fss.language" content="en"></meta>
+<meta name="digikey.fss.date" content="-62135575200000"></meta>
+-->
+<style>
+<!--
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial,Helvetica,sans-serif,'dk';
+    font-size: 12px;
+}
+
+body,
+body.fullsite,
+.header {
+    background: none;
+    max-width: none;
+}
+
+#header-black {
+  background-color: black;
+  height: 55px;
+}
+
+.resp .header__left {
+display: block;
+height: 50px;
+text-align: center;
+margin: 0 10px;
+}
+
+    .resp .header__logo {
+        padding: 0px;
+        height: 55px;
+        width: auto;
+    }
+    
+    .searchbox-wrapper {
+        display: table;
+        width: 100%;
+        margin-top: 15px;
+                position: relative;
+
+    }
+    
+    .searchbox {
+        border: solid 2px #ccc;
+        border-radius: 25px;
+        box-sizing: border-box;
+        padding:5px 10px;
+        white-space: nowrap;
+    }
+    
+    .searchbox select {
+    }
+    
+    .searchbox * {
+        display: table-cell;
+    }
+.searchbox select
+ {
+    border-radius:0;
+    border:none;
+     font-size: 11px;
+     position: absolute;
+     right:55px;
+     top:8px;
+    width: 98px;
+}
+    
+    .searchbox input {
+        border: none;
+        background-color: transparent;
+        z-index: -1;
+    }
+
+.search-button {
+       float: right;
+    height: 31px;
+    margin: 0 0 0 -10px;
+    padding: 14px 10px;
+    background: #fff;
+    border: 2px solid #aaa;
+    border-radius: 50em;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    -webkit-appearance: none;
+    z-index: 9999;
+    background-image: url("https://www.digikey.com/-/media/Images/Global/Icons/search-glass.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width:50px;
+}
+    
+    .search-button:hover {background: #ccc; color: #fff; border: 2px solid #999;
+        background-image: url("https://www.digikey.com/-/media/Images/Global/Icons/search-glass.png");
+        background-repeat: no-repeat;
+    background-position: center;
+    width:50px;
+}
+    
+.header__searchinput {
+
+}
+
+  .layout-onecolumn {display: block;margin-left: auto;margin-right: auto;}
+  .layout-onecolumn h1 {color: #cc0000; margin: 0;}
+  .layout-onecolumn h2 {margin-top: 0;}
+  .layout-onecolumn h4 {margin: 0 0 5px 0;}
+  .layout-onecolumn li {list-style:none; text-decoration:none; padding-bottom: 2px;}
+  .layout-onecolumn ul {padding: 0px 30px 0px 0px; margin: 0px;}
+  .layout-onecolumn td {vertical-align:top;}
+  .main-container {display: table; /*! width:100%; */}
+  .main-image {display:table-cell; text-align: center;}
+  .main-image img {width: 100%; height: auto; max-width: 425px;}
+  .main-text { display: table-cell; vertical-align: middle;padding-top: 140px;}
+
+.blackbox__social {
+	margin-bottom:10px;
+}
+.blackbox__social img {
+	margin-right:2px;
+    height:20px;
+    width:20px;
+}
+	.rtl .blackbox__social img {
+		margin-right:0px;
+		margin-left:2px;
+	}
+
+#header-black .header-sep {
+  display: inline-block;
+  height: 20px;
+  vertical-align: middle;
+  margin: 0 5px;
+  width: 2px;
+  background-color: #fff;
+}
+
+#header-black #header-locale {
+  margin: 4px 10px;
+  height: 48px;
+  font-weight: bold;
+}
+
+#header-black #header-locale select {
+  height: 18px;
+  position: relative;
+  top: 1px;
+	font-family:arial, sans-serif;
+	font-size:100%;
+	font-weight:inherit;
+}
+
+#header-black .header-locale-row {
+  height: 20px;
+  margin: 2px 0;  
+}
+
+#header-black #header-locale a[href]:hover {
+  text-decoration: underline;
+}
+
+#header-black .header-flag {
+  vertical-align: middle;
+  border: solid 1px #666;
+  width: 20px;
+  margin: 0 5px;
+}
+
+    .locale__numbers {
+        margin-bottom:10px;
+    }
+
+@media screen and (max-width:768px) {
+
+    #header-black .search-button {
+    height: 30px;
+    }
+    
+    .main-image {
+        display: block;
+        width: 100%;
+    }
+    
+    .main-text {
+        display: block;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+    
+    .main-image img {
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+    }    
+
+    .header.resp {
+        position: static;
+        top: 0px;
+    }
+    
+    .resp .button--email:before {
+        content: "\00a0";
+        background-image: url("https://www.digikey.com/-/media/Images/Footer/white-mail.png");
+        width:30px;
+        display: inline-block;
+        background-size:30px;
+        background-repeat: no-repeat;
+        
+    }
+    
+    .resp .button--phone:before {
+        content: "\00a0";
+        background-image: url("https://www.digikey.com/-/media/Images/Footer/white-phone.png");
+        width:30px;
+        display: inline-block;
+        background-size:25px;
+        background-repeat: no-repeat;
+    }
+    
+}
+-->
+</style>
+
+</head>
+<body id="_body" itemscope="" itemtype="https://schema.org/WebPage" class="ltr">
+
+<script src="/CMS/WebResource.axd?d=wld7MSthh_C02LTAhWX7xhB8P73GhDI8-OVVZoYwZbC94JirZtMGA9bQAZiqHpo9qTV_y6QdbyjTPtU7sxTIgn8nsIY1&amp;t=635418460260000000" type="text/javascript"></script>
+<script src="/CMS/ScriptResource.axd?d=nS9vzoHHlm99apaE2vu3cvwHu_-eF1NNmwp4nWvTiS4KL1dW2kq1y4BUPjQhpvyrjaYL30ZawEo2SUjx8nx8XZSpa-pZPyZLHb1jQpPoOrB7jQuc0&amp;t=ffffffffe4ec58b9" type="text/javascript"></script>
+<script src="/CMS/ScriptResource.axd?d=vZs_oa16qgCnF6UTwzaPiRwS5Hz001f7KBa2WUnoLbmcMjQPxZOGamvgmk9g93Yc7A_dWu1fvghyDqEom6tANFtOj4tXmgcAkiLd-pKWkOp3s4_EQZSthcY4wQTPBj44FZpD9Q2&amp;t=ffffffffe4ec58b9" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6C15D515" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAKa3xeQ/WtiJXJ5OdGftB8G4sLluiS4Mg4JnNvFtphlnyWgOoRoV+08Dob3KsMAxiqIZY9x" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', [], [], [], 90, '');
+//]]>
+	</script>
+
+        <div id="header-black" class="header nav-down resp" cookie-tracking="ref_page_type=HE;ref_page_sub_type=HE;ref_page_id=%7BE94A0570-DDBC-4813-AA94-113FBFEF2E93%7D;header_flag=link">
+
+    <div class="header__left">
+        <a href="/en"><img src="https://www.digikey.com/~/media/Images/Header/logo.png" alt="DK logo" class="header__logo"></a>
+    </div>
+   </div>
+
+<div class="layout-onecolumn">
+<div class="main-container">
+<div class="main-image"><img src="https://www.digikey.com/-/media/Images/Global/404/404.jpg"></div>
+<div class="main-text">
+    <h1>Let’s try again.</h1>
+    <h2>The page you requested is unavailable.</h2>
+    <h4>Visit our <a href="/">Home Page</a></h4>
+    <h4>Browse our <a href="/products/en">Product Categories</a></h4>
+     <div class="searchbox-wrapper">
+    <button class="search-button" type="button" value="" id="search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link"></button>
+        <div class="searchbox">
+                <input class="header__searchinput dkdirchanger product-search-text search-textbox" autocomplete="off" style="direction: ltr;" name="keywords" placeholder="" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer" class="footer resp">
+    <div class="footer__wrapper">
+        <div class="footer__wrapper--left">
+            <div class="footer__locale" style="background-image: url(https://www.digikey.com/-/media/Images/Footer/Countries/us.png);">
+                <span class="footer__headline">United States</span>
+                <a href="mailto:sales@digikey.com" class="footer__button button--email">
+                    sales@digikey.com
+                </a>
+                <a class="footer__button button--phone" href="tel:+18003444539">
+                    1-800-344-4539
+                </a>
+                <div class="locale__numbers">
+                    Toll Free: 1-800-344-4539<br>Phone: 218-681-6674<br>Fax: 218-681-3380
+                </div>
+
+<script type="text/javascript" src="https://sealserver.trustkeeper.net/compliance/seal_js.php?code=84EDAB68F81B2B31985E5E20392A8AC1&amp;style=normal&amp;size=105x54&amp;language=en"></script>
+            </div>
+
+                <div id="_international" class="footer__intl">
+                    <span id="_internationalTitle" class="footer__headline">International</span>
+                        <a href="/en/resources/international?region=africa">Africa</a>
+                        <a href="/en/resources/international?region=asia">Asia</a>
+                        <a href="/en/resources/international?region=australia">Australia</a>
+                        <a href="/en/resources/international?region=europe">Europe</a>
+                        <a href="/en/resources/international?region=middleeast">Middle East</a>
+                        <a href="/en/resources/international?region=northamerica">North America</a>
+                        <a href="/en/resources/international?region=southamerica">South America</a>
+                </div>
+        </div>
+        <div class="footer__wrapper--right">
+            <div class="footer__blackbox">
+                <div id="_social" class="blackbox__social">
+                        <a href="https://www.facebook.com/digikey.electronics">
+                            <img src="https://www.digikey.com/-/media/Images/Icons/Social/facebook_white_icon.png" alt="Facebook">
+                        </a>
+                        <a href="https://twitter.com/digikey">
+                            <img src="https://www.digikey.com/-/media/Images/Icons/Social/twitter_white_logo.png" alt="Twitter">
+                        </a>
+                        <a href="https://www.youtube.com/user/digikey">
+                            <img src="https://www.digikey.com/-/media/Images/Icons/Social/youtube_white_icon.png" alt="YouTube">
+                        </a>
+                        <a href="https://www.instagram.com/digikey">
+                            <img src="https://www.digikey.com/-/media/Images/Icons/Social/instagram_white_icon.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/company/digi-key-corporation">
+                            <img src="https://www.digikey.com/-/media/Images/Icons/Social/linkedin_white_icon.png" alt="LinkedIn">
+                        </a>
+                </div>
+                
+                <div class="blackbox__mobile">
+<a href="https://itunes.apple.com/us/app/digi-key/id352075219?mt=8">
+                            <img src="https://www.digikey.com/-/media/Images/Icons/appstore-button.png?la=en-US" alt="Download on the App Store">
+                        </a>
+<a href="https://play.google.com/store/apps/details?id=com.digikey.mobile">
+                            <img src="https://www.digikey.com/-/media/Images/Icons/google-play-button.png?la=en-US" alt="Get it on Google Play">
+                        </a>
+                </div>
+
+                <a class="footer__view-link view-link--view-desktop" onclick="__helpers.createCookie('fullsite','true'); location.reload(); ">View Desktop Site</a>
+                <a class="footer__view-link view-link--view-mobile" onclick="__helpers.createCookie('fullsite','false'); location.reload(); ">View Mobile Site</a>
+
+                
+                <div id="_copyright" class="blackbox__copyright">
+                    <div class="blackbox__copyright--copy">
+                        <span id="copyrightYearchange"></span>
+                        <span>All Rights Reserved.</span>
+                    </div>
+                    <div class="blackbox__copyright--address">
+                        <span>701 Brooks Avenue South,</span>
+                        <span>Thief River Falls, MN 56701 USA</span>
+                    </div>
+
+                </div>
+                
+                <div class="blackbox__associations">
+                    <a href="/en/help/authorized-distributor">
+                        <img src="https://www.digikey.com/-/media/Images/Homepage/homepage-associations.png" alt="ECIA Member">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      
+
+<script type="text/javascript" src="https://www.digikey.com/~/media/Designer/Header/Merkle/Javascript/header.js"></script>
+<script type="text/javascript">(function (a, b, c, d) { if (typeof tealiumEnvironment === 'undefined') { var tealiumEnvironment = "prod"; a = 'https://tealium.hs.llnwd.net/o43/utag/digikey/main/' + tealiumEnvironment + '/utag.js'; } else { a = 'https://tealium.hs.llnwd.net/o43/utag/digikey/main/' + tealiumEnvironment + '/utag.js'; } b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true; a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a); })();if (typeof utag_data === 'undefined') { utag_data = { wt_use_udo : "false" }; }</script>
+<script type="text/javascript" src="https://www.digikey.com/~/media/Designer/Global/JS/jquery1101min.js"></script>
+<script type="text/javascript" src="https://www.digikey.com/~/media/Designer/Web Trends/JS/digikey-webtrends.js"></script>
+<script src="https://www.digikey.com/~/media/Designer/Global/js/jQueryPostMessage.js"></script>
+<script type="text/javascript">
+function SendPostMessage(message) {
+    var target = parent.postMessage ? parent : (parent.document.postMessage ? parent.document : undefined);
+    jQuery.postMessage(message, '*', target);
+}
+$(window).load(function () {
+    SendPostMessage("error");
+});
+</script>
+<script type="text/javascript">
+    $( "#search-button" ).click(function() {
+      searchOn()
+    });
+
+    $("input[name='keywords']").keypress(function (e) {
+     var key = e.which;
+     if(key == 13) {searchOn()}
+    }); 
+    
+    function searchOn() {
+        var tld
+        var keyword = $("input[name='keywords']").val();
+        location.href = "/product-search/en?KeyWords=" + keyword;;
+    }
+</script>
+ <script type="text/javascript">
+   var date=new Date(),
+         year = date.getFullYear(),
+        text = "Copyright © 1995-" + year + ", Digi-Key Electronics.";
+   document.getElementById("copyrightYearchange").innerHTML=text;
+ </script>
+</body>
+</html>
