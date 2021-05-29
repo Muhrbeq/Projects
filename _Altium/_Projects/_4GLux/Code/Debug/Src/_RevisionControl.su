@@ -1,0 +1,11 @@
+_RevisionControl.c:16:6:RevisionControl_SetState	16	static
+_RevisionControl.c:22:23:RevisionControl_GetState	4	static
+_RevisionControl.c:28:26:RevisionControl_EnableRead	16	static
+_RevisionControl.c:45:26:RevisionControl_DisableRead	16	static
+_RevisionControl.c:61:26:RevisionControl_CalibrationStart	8	static
+_RevisionControl.c:70:26:RevisionControl_Start	8	static
+_RevisionControl.c:79:26:RevisionControl_PollConversion	8	static
+_RevisionControl.c:88:26:RevisionControl_GetADCState	8	static
+_RevisionControl.c:98:17:RevisionControl_GetADCValue	8	static
+_RevisionControl.c:103:33:RevisionControl_CheckRevision	16	static
+_RevisionControl.c:117:6:RevisionControl_StateMachine	16	static

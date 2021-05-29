@@ -1,0 +1,8 @@
+_HDC1080_afre.c:15:9:HDC1080_writeRegister	24	static
+_HDC1080_afre.c:36:9:HDC1080_readRegister	24	static
+_HDC1080_afre.c:67:6:HDC1080_Init	96	static
+_HDC1080_afre.c:134:10:HDC1080_Get_Device_ID	96	static
+_HDC1080_afre.c:149:10:HDC1080_Get_Temp_raw	96	static
+_HDC1080_afre.c:165:10:HDC1080_Get_Humidity_raw	96	static
+_HDC1080_afre.c:189:10:HDC1080_Get_Temp	88	static
+_HDC1080_afre.c:201:9:HDC1080_Get_Humidity	96	static
